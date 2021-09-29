@@ -39,7 +39,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HH0-X5-C9u">
-                                <rect key="frame" x="116" y="350" width="116" height="135"/>
+                                <rect key="frame" x="129" y="350" width="116" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -48,6 +48,10 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="18"/>
                                 </buttonConfiguration>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="mono_baedal06" translatesAutoresizingMaskIntoConstraints="NO" id="D1f-Mz-ZpM">
+                                <rect key="frame" x="277" y="369" width="78" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g26-0y-eoQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,6 +66,7 @@
         <image name="banner03" width="909" height="510"/>
         <image name="mono_baedal04" width="82" height="89"/>
         <image name="mono_baedal05" width="92" height="99"/>
+        <image name="mono_baedal06" width="78" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
