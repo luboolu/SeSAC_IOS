@@ -166,6 +166,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="passwordTextFieldInput:" destination="PLD-Fg-JYD" eventType="editingDidEnd" id="g2D-T3-edM"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agq-rd-rh6">
                                                 <rect key="frame" x="0.0" y="98" width="350" height="34"/>
@@ -173,6 +176,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="nickNameTextFieldInput:" destination="PLD-Fg-JYD" eventType="editingDidEnd" id="pFq-88-7vo"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mh7-WT-Zvs">
                                                 <rect key="frame" x="0.0" y="147" width="350" height="34"/>
@@ -180,6 +186,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="loacationTextFieldInput:" destination="PLD-Fg-JYD" eventType="editingDidEnd" id="uWg-rj-CII"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVU-Ng-uAe">
                                                 <rect key="frame" x="0.0" y="196" width="350" height="34"/>
@@ -187,6 +196,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="recomandCodeTextFieldInput:" destination="PLD-Fg-JYD" eventType="editingDidEnd" id="bIW-cC-9yU"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -199,6 +211,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="signUpButtonClick:" destination="PLD-Fg-JYD" eventType="touchUpInside" id="GbZ-qd-Epz"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="114" translatesAutoresizingMaskIntoConstraints="NO" id="GUt-Wi-aek">
                                         <rect key="frame" x="0.0" y="322" width="350" height="31"/>

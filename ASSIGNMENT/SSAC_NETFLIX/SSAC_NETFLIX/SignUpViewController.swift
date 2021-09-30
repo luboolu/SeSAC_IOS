@@ -21,6 +21,13 @@ class SignUpViewController: UIViewController {
     //Switch
     @IBOutlet var hideTextFieldSwitch: UISwitch!
     
+    //회원정보
+    var emailNum: String?
+    var password: String?
+    var nickname: String?
+    var location: String?
+    var recomandCode: String?
+    
     
     
     override func viewDidLoad() {
@@ -95,12 +102,37 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func signUpButtonClick(_ sender: UIButton) {
+        //회원가입 버튼을 누르면 입력된 회원 정보를 출력!
+        print("회원가입 정보 확인")
+        print("ID: \(emailNum)")
+        print("PW: \(password)")
+        print("NICK: \(nickname)")
+        print("LOCATION: \(location)")
+        print("CODE: \(recomandCode)")
+        
+    }
+    
     @IBAction func emailNumTextFieldInput(_ sender: UITextField) {
-        let emailNum : String? = emailNumTextField.text
-        
-        p
-        
-        
+        emailNum = emailNumTextField.text
+    }
+    
+    @IBAction func passwordTextFieldInput(_ sender: UITextField) {
+        password = passwordTextField.text
+    }
+    
+    
+    @IBAction func nickNameTextFieldInput(_ sender: UITextField) {
+        nickname = nickNameTextField.text
+    }
+    
+    @IBAction func loacationTextFieldInput(_ sender: UITextField) {
+        location = locationTextField.text
+    }
+    
+    
+    @IBAction func recomandCodeTextFieldInput(_ sender: UITextField) {
+        recomandCode = recomandCodeTextField.text
     }
     
     
