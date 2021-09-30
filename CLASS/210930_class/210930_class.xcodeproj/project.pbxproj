@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC3A50D9270555300074CE8A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3A50D8270555300074CE8A /* SignUpViewController.swift */; };
-		DC9D76A62702F51200B6B5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D76A52702F51200B6B5FE /* AppDelegate.swift */; };
-		DC9D76A82702F51200B6B5FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D76A72702F51200B6B5FE /* SceneDelegate.swift */; };
-		DC9D76AA2702F51200B6B5FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D76A92702F51200B6B5FE /* ViewController.swift */; };
-		DC9D76AD2702F51200B6B5FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9D76AB2702F51200B6B5FE /* Main.storyboard */; };
-		DC9D76AF2702F51500B6B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9D76AE2702F51500B6B5FE /* Assets.xcassets */; };
-		DC9D76B22702F51500B6B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9D76B02702F51500B6B5FE /* LaunchScreen.storyboard */; };
-		DCB993E8270431FB00491044 /* NeflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB993E7270431FB00491044 /* NeflixViewController.swift */; };
+		DC3A50C5270537100074CE8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3A50C4270537100074CE8A /* AppDelegate.swift */; };
+		DC3A50C7270537100074CE8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3A50C6270537100074CE8A /* SceneDelegate.swift */; };
+		DC3A50C9270537100074CE8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3A50C8270537100074CE8A /* ViewController.swift */; };
+		DC3A50CC270537100074CE8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3A50CA270537100074CE8A /* Main.storyboard */; };
+		DC3A50CE270537120074CE8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3A50CD270537120074CE8A /* Assets.xcassets */; };
+		DC3A50D1270537120074CE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3A50CF270537120074CE8A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC3A50D8270555300074CE8A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		DC9D76A22702F51200B6B5FE /* SSAC_NETFLIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSAC_NETFLIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC9D76A52702F51200B6B5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC9D76A72702F51200B6B5FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC9D76A92702F51200B6B5FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC9D76AC2702F51200B6B5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC9D76AE2702F51500B6B5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DC9D76B12702F51500B6B5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DC9D76B32702F51500B6B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCB993E7270431FB00491044 /* NeflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeflixViewController.swift; sourceTree = "<group>"; };
+		DC3A50C1270537100074CE8A /* 210930_class.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 210930_class.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC3A50C4270537100074CE8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC3A50C6270537100074CE8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DC3A50C8270537100074CE8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC3A50CB270537100074CE8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC3A50CD270537120074CE8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC3A50D0270537120074CE8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC3A50D2270537120074CE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DC9D769F2702F51200B6B5FE /* Frameworks */ = {
+		DC3A50BE270537100074CE8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DC9D76992702F51200B6B5FE = {
+		DC3A50B8270537100074CE8A = {
 			isa = PBXGroup;
 			children = (
-				DC9D76A42702F51200B6B5FE /* SSAC_NETFLIX */,
-				DC9D76A32702F51200B6B5FE /* Products */,
+				DC3A50C3270537100074CE8A /* 210930_class */,
+				DC3A50C2270537100074CE8A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DC9D76A32702F51200B6B5FE /* Products */ = {
+		DC3A50C2270537100074CE8A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC9D76A22702F51200B6B5FE /* SSAC_NETFLIX.app */,
+				DC3A50C1270537100074CE8A /* 210930_class.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC9D76A42702F51200B6B5FE /* SSAC_NETFLIX */ = {
+		DC3A50C3270537100074CE8A /* 210930_class */ = {
 			isa = PBXGroup;
 			children = (
-				DC9D76A52702F51200B6B5FE /* AppDelegate.swift */,
-				DC9D76A72702F51200B6B5FE /* SceneDelegate.swift */,
-				DC9D76A92702F51200B6B5FE /* ViewController.swift */,
-				DC9D76AB2702F51200B6B5FE /* Main.storyboard */,
-				DC3A50D8270555300074CE8A /* SignUpViewController.swift */,
-				DCB993E7270431FB00491044 /* NeflixViewController.swift */,
-				DC9D76AE2702F51500B6B5FE /* Assets.xcassets */,
-				DC9D76B02702F51500B6B5FE /* LaunchScreen.storyboard */,
-				DC9D76B32702F51500B6B5FE /* Info.plist */,
+				DC3A50C4270537100074CE8A /* AppDelegate.swift */,
+				DC3A50C6270537100074CE8A /* SceneDelegate.swift */,
+				DC3A50C8270537100074CE8A /* ViewController.swift */,
+				DC3A50CA270537100074CE8A /* Main.storyboard */,
+				DC3A50CD270537120074CE8A /* Assets.xcassets */,
+				DC3A50CF270537120074CE8A /* LaunchScreen.storyboard */,
+				DC3A50D2270537120074CE8A /* Info.plist */,
 			);
-			path = SSAC_NETFLIX;
+			path = 210930_class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC9D76A12702F51200B6B5FE /* SSAC_NETFLIX */ = {
+		DC3A50C0270537100074CE8A /* 210930_class */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC9D76B62702F51500B6B5FE /* Build configuration list for PBXNativeTarget "SSAC_NETFLIX" */;
+			buildConfigurationList = DC3A50D5270537120074CE8A /* Build configuration list for PBXNativeTarget "210930_class" */;
 			buildPhases = (
-				DC9D769E2702F51200B6B5FE /* Sources */,
-				DC9D769F2702F51200B6B5FE /* Frameworks */,
-				DC9D76A02702F51200B6B5FE /* Resources */,
+				DC3A50BD270537100074CE8A /* Sources */,
+				DC3A50BE270537100074CE8A /* Frameworks */,
+				DC3A50BF270537100074CE8A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SSAC_NETFLIX;
-			productName = SSAC_NETFLIX;
-			productReference = DC9D76A22702F51200B6B5FE /* SSAC_NETFLIX.app */;
+			name = 210930_class;
+			productName = 210930_class;
+			productReference = DC3A50C1270537100074CE8A /* 210930_class.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DC9D769A2702F51200B6B5FE /* Project object */ = {
+		DC3A50B9270537100074CE8A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					DC9D76A12702F51200B6B5FE = {
+					DC3A50C0270537100074CE8A = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = DC9D769D2702F51200B6B5FE /* Build configuration list for PBXProject "SSAC_NETFLIX" */;
+			buildConfigurationList = DC3A50BC270537100074CE8A /* Build configuration list for PBXProject "210930_class" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = DC9D76992702F51200B6B5FE;
-			productRefGroup = DC9D76A32702F51200B6B5FE /* Products */;
+			mainGroup = DC3A50B8270537100074CE8A;
+			productRefGroup = DC3A50C2270537100074CE8A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC9D76A12702F51200B6B5FE /* SSAC_NETFLIX */,
+				DC3A50C0270537100074CE8A /* 210930_class */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DC9D76A02702F51200B6B5FE /* Resources */ = {
+		DC3A50BF270537100074CE8A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9D76B22702F51500B6B5FE /* LaunchScreen.storyboard in Resources */,
-				DC9D76AF2702F51500B6B5FE /* Assets.xcassets in Resources */,
-				DC9D76AD2702F51200B6B5FE /* Main.storyboard in Resources */,
+				DC3A50D1270537120074CE8A /* LaunchScreen.storyboard in Resources */,
+				DC3A50CE270537120074CE8A /* Assets.xcassets in Resources */,
+				DC3A50CC270537100074CE8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DC9D769E2702F51200B6B5FE /* Sources */ = {
+		DC3A50BD270537100074CE8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9D76AA2702F51200B6B5FE /* ViewController.swift in Sources */,
-				DC9D76A62702F51200B6B5FE /* AppDelegate.swift in Sources */,
-				DCB993E8270431FB00491044 /* NeflixViewController.swift in Sources */,
-				DC9D76A82702F51200B6B5FE /* SceneDelegate.swift in Sources */,
-				DC3A50D9270555300074CE8A /* SignUpViewController.swift in Sources */,
+				DC3A50C9270537100074CE8A /* ViewController.swift in Sources */,
+				DC3A50C5270537100074CE8A /* AppDelegate.swift in Sources */,
+				DC3A50C7270537100074CE8A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DC9D76AB2702F51200B6B5FE /* Main.storyboard */ = {
+		DC3A50CA270537100074CE8A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DC9D76AC2702F51200B6B5FE /* Base */,
+				DC3A50CB270537100074CE8A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DC9D76B02702F51500B6B5FE /* LaunchScreen.storyboard */ = {
+		DC3A50CF270537120074CE8A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DC9D76B12702F51500B6B5FE /* Base */,
+				DC3A50D0270537120074CE8A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DC9D76B42702F51500B6B5FE /* Debug */ = {
+		DC3A50D3270537120074CE8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		DC9D76B52702F51500B6B5FE /* Release */ = {
+		DC3A50D4270537120074CE8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -290,7 +282,7 @@
 			};
 			name = Release;
 		};
-		DC9D76B72702F51500B6B5FE /* Debug */ = {
+		DC3A50D6270537120074CE8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,19 +290,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SSAC_NETFLIX/Info.plist;
+				INFOPLIST_FILE = 210930_class/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jy.SSAC-NETFLIX";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jy.-10930-class";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,7 +309,7 @@
 			};
 			name = Debug;
 		};
-		DC9D76B82702F51500B6B5FE /* Release */ = {
+		DC3A50D7270537120074CE8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -326,19 +317,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SSAC_NETFLIX/Info.plist;
+				INFOPLIST_FILE = 210930_class/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jy.SSAC-NETFLIX";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jy.-10930-class";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -349,25 +339,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC9D769D2702F51200B6B5FE /* Build configuration list for PBXProject "SSAC_NETFLIX" */ = {
+		DC3A50BC270537100074CE8A /* Build configuration list for PBXProject "210930_class" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC9D76B42702F51500B6B5FE /* Debug */,
-				DC9D76B52702F51500B6B5FE /* Release */,
+				DC3A50D3270537120074CE8A /* Debug */,
+				DC3A50D4270537120074CE8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC9D76B62702F51500B6B5FE /* Build configuration list for PBXNativeTarget "SSAC_NETFLIX" */ = {
+		DC3A50D5270537120074CE8A /* Build configuration list for PBXNativeTarget "210930_class" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC9D76B72702F51500B6B5FE /* Debug */,
-				DC9D76B82702F51500B6B5FE /* Release */,
+				DC3A50D6270537120074CE8A /* Debug */,
+				DC3A50D7270537120074CE8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DC9D769A2702F51200B6B5FE /* Project object */;
+	rootObject = DC3A50B9270537100074CE8A /* Project object */;
 }
