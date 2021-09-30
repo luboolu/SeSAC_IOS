@@ -18,13 +18,48 @@ class SignUpViewController: UIViewController {
     //Button
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var addInfoButton: UIButton!
-    //Switch
+    
     @IBOutlet var hideTextFieldSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        
+        //TextField 설정
+        emailNumTextField.backgroundColor = .darkGray
+        emailNumTextField.attributedPlaceholder = NSAttributedString(string: "이메일 주소 또는 전화번호", attributes: [.foregroundColor: UIColor.white])
+        emailNumTextField.keyboardType = .emailAddress
+        emailNumTextField.textAlignment = .center
+        
+        passwordTextField.backgroundColor = .darkGray
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [.foregroundColor: UIColor.white])
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.textAlignment = .center
+        
+        nickNameTextField.backgroundColor = .darkGray
+        nickNameTextField.attributedPlaceholder = NSAttributedString(string: "닉네임", attributes: [.foregroundColor: UIColor.white])
+        nickNameTextField.textAlignment = .center
+        
+        locationTextField.backgroundColor = .darkGray
+        locationTextField.attributedPlaceholder = NSAttributedString(string: "위치", attributes: [.foregroundColor: UIColor.white])
+        locationTextField.textAlignment = .center
+        
+        recomandCodeTextField.backgroundColor = .darkGray
+        recomandCodeTextField.attributedPlaceholder = NSAttributedString(string: "추천 코드 입력", attributes: [.foregroundColor: UIColor.white])
+        recomandCodeTextField.keyboardType = .numberPad
+        recomandCodeTextField.textAlignment = .center
+        
+        
+        //signUpButton 설정
         signUpButton.backgroundColor = .white
+        signUpButton.setTitle("회원가입", for: .normal)
+        signUpButton.setTitleColor(.black, for: .normal)
+        
+        addInfoButton.contentHorizontalAlignment = .left
+        
+
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -33,6 +68,10 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func hideTextFieldSwitchOn(_ sender: UISwitch) {
+        //3개의 textfield를 숨겼다가 보여줌
+        print("switch on")
+    }
     /*
     // MARK: - Navigation
 
