@@ -105,11 +105,27 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpButtonClick(_ sender: UIButton) {
         //회원가입 버튼을 누르면 입력된 회원 정보를 출력!
         print("회원가입 정보 확인")
-        print("ID: \(emailNum)")
-        print("PW: \(password)")
-        print("NICK: \(nickname)")
-        print("LOCATION: \(location)")
-        print("CODE: \(recomandCode)")
+        
+        if emailNum != nil{
+            print("ID: \(emailNum!)")
+        }
+        
+        if password != nil {
+            print("PW: \(password!)")
+        }
+        
+        if nickname != nil {
+            print("NICK: \(nickname!)")
+        }
+        
+        if location != nil {
+            print("LOCATION: \(location!)")
+        }
+        
+        if recomandCode != nil {
+            print("CODE: \(recomandCode!)")
+        }
+        
         
     }
     

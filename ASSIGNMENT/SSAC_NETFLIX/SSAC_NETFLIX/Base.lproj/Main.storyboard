@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NeflixViewController" customModule="SSAC_NETFLIX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jd8-EQ-S00">
@@ -122,6 +122,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wwL-zn-AYs"/>
                     <connections>
                         <outlet property="mainPosterImage" destination="Jd8-EQ-S00" id="9lH-gA-e1D"/>
                         <outlet property="playButton" destination="kdp-gQ-sDl" id="DyV-Qk-35X"/>
@@ -129,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
+            <point key="canvasLocation" x="23" y="84"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="VpN-AS-P4A">
@@ -213,6 +214,7 @@
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
                                             <action selector="signUpButtonClick:" destination="PLD-Fg-JYD" eventType="touchUpInside" id="GbZ-qd-Epz"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Lmy-2j-BSa"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="114" translatesAutoresizingMaskIntoConstraints="NO" id="GUt-Wi-aek">
