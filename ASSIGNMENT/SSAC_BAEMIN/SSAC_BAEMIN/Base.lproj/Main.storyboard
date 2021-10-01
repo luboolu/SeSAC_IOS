@@ -26,17 +26,18 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="256"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SNZ-bp-rVj">
-                                <rect key="frame" x="5" y="371" width="404" height="505"/>
+                                <rect key="frame" x="5" y="372" width="404" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hIw-vW-Quy">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="124"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKI-Fq-dPy">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="124"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" image="mono_baedal16"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal16" imagePlacement="top" title="패스트푸드">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal16" imagePlacement="top" title="패스트푸드" imagePadding="10">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -46,11 +47,12 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" image="mono_baedal01"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal01" imagePlacement="top" title="배민라이더스">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal01" imagePlacement="top" title="맛집배달" subtitle="배민라이더스" imagePadding="10">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="11"/>
+                                                    <fontDescription key="subtitleFontDescription" type="boldSystem" pointSize="11"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTx-L4-y5h">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTx-L4-y5h">
                                                 <rect key="frame" x="212" y="0.0" width="86" height="124"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -59,12 +61,12 @@
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EB3-8o-smF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EB3-8o-smF">
                                                 <rect key="frame" x="318" y="0.0" width="86" height="124"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button" image="mono_baedal03"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="mono_baedal03" imagePlacement="top" title="배민오더">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -101,17 +103,17 @@
                                                 <rect key="frame" x="318" y="0.0" width="86" height="128"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal07" imagePlacement="top" title="일식">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal07" imagePlacement="top" title="일식" imagePadding="15">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-b0-UgR">
-                                        <rect key="frame" x="0.0" y="262" width="404" height="123"/>
+                                        <rect key="frame" x="0.0" y="262" width="404" height="129"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrv-Ap-ftN">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="123"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="129"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="mono_baedal08" imagePlacement="top" title="치킨">
@@ -119,7 +121,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eO5-Rh-db8">
-                                                <rect key="frame" x="106" y="0.0" width="86" height="123"/>
+                                                <rect key="frame" x="106" y="0.0" width="86" height="129"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="mono_baedal09" imagePlacement="top" title="피자">
@@ -127,36 +129,36 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqz-io-Q45">
-                                                <rect key="frame" x="212" y="0.0" width="86" height="123"/>
+                                                <rect key="frame" x="212" y="0.0" width="86" height="129"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal10" imagePlacement="top" title="아시안">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal10" imagePlacement="top" title="아시안" imagePadding="10">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ie-mC-5Uv">
-                                                <rect key="frame" x="318" y="0.0" width="86" height="123"/>
+                                                <rect key="frame" x="318" y="0.0" width="86" height="129"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal11" imagePlacement="top" title="중식">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal11" imagePlacement="top" title="중식" imagePadding="11">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cQs-ih-gp1">
-                                        <rect key="frame" x="0.0" y="390" width="404" height="115"/>
+                                        <rect key="frame" x="0.0" y="396" width="404" height="108"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVx-14-Cb8">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="115"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="108"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal12" imagePlacement="top" title="족발">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal12" imagePlacement="top" title="족발" imagePadding="3">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVO-Kg-JWG">
-                                                <rect key="frame" x="106" y="0.0" width="86" height="115"/>
+                                                <rect key="frame" x="106" y="0.0" width="86" height="108"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="mono_baedal13" imagePlacement="top" title="야식">
@@ -164,18 +166,18 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eo-69-1ne">
-                                                <rect key="frame" x="212" y="0.0" width="86" height="115"/>
+                                                <rect key="frame" x="212" y="0.0" width="86" height="108"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal14" imagePlacement="top" title="찜">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal14" imagePlacement="top" title="찜" imagePadding="-7">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjx-me-sFl">
-                                                <rect key="frame" x="318" y="0.0" width="86" height="115"/>
+                                                <rect key="frame" x="318" y="0.0" width="86" height="108"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal15" imagePlacement="top" title="도시락">
+                                                <buttonConfiguration key="configuration" style="plain" image="mono_baedal15" imagePlacement="top" title="도시락" imagePadding="-19">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                                 </buttonConfiguration>
                                             </button>
