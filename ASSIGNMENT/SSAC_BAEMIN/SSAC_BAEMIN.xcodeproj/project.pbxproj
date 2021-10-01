@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC769D40270713FC00AED334 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC769D3F270713FC00AED334 /* MenuViewController.swift */; };
 		DC949C78270463D200A6BC30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC949C77270463D200A6BC30 /* AppDelegate.swift */; };
 		DC949C7A270463D200A6BC30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC949C79270463D200A6BC30 /* SceneDelegate.swift */; };
 		DC949C7C270463D200A6BC30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC949C7B270463D200A6BC30 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC769D3F270713FC00AED334 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DC949C74270463D200A6BC30 /* SSAC_BAEMIN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSAC_BAEMIN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC949C77270463D200A6BC30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC949C79270463D200A6BC30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				DC949C79270463D200A6BC30 /* SceneDelegate.swift */,
 				DC949C7B270463D200A6BC30 /* ViewController.swift */,
 				DC949C7D270463D200A6BC30 /* Main.storyboard */,
+				DC769D3F270713FC00AED334 /* MenuViewController.swift */,
 				DC949C80270463D400A6BC30 /* Assets.xcassets */,
 				DC949C82270463D400A6BC30 /* LaunchScreen.storyboard */,
 				DC949C85270463D400A6BC30 /* Info.plist */,
@@ -141,6 +144,7 @@
 				DC949C7C270463D200A6BC30 /* ViewController.swift in Sources */,
 				DC949C78270463D200A6BC30 /* AppDelegate.swift in Sources */,
 				DC949C7A270463D200A6BC30 /* SceneDelegate.swift in Sources */,
+				DC769D40270713FC00AED334 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
