@@ -37,21 +37,23 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //menuImage = UIImage(named: "mono_baedal16")
-        menuButton11.setImage(UIImage(named: "mono_baedal16"), for: .normal)
-        menuButton11.setTitle("패스트푸드", for: .normal)
-        menuButton11.setTitleColor(.black, for: .normal)
-        
-        menuButton12.setImage(UIImage(named: "mono_baedal01"), for: .normal)
-        menuButton12.setTitle("배민라이더스", for: .normal)
-        menuButton12.setTitleColor(.black, for: .normal)
-        
-        menuButton13.setImage(UIImage(named: "mono_baedal02"), for: .normal)
-        menuButton13.setTitle("1인분", for: .normal)
-        menuButton13.setTitleColor(.black, for: .normal)
-        
-        menuButton14.setImage(UIImage(named: "mono_baedal03"), for: .normal)
-        menuButton14.setTitle("배민오더", for: .normal)
-        menuButton14.setTitleColor(.black, for: .normal)
+//        menuButton11.setImage(UIImage(named: "mono_baedal16"), for: .normal)
+//
+//
+//        menuButton11.setTitle("패스트푸드", for: .normal)
+//        menuButton11.setTitleColor(.black, for: .normal)
+//
+//        menuButton12.setImage(UIImage(named: "mono_baedal01"), for: .normal)
+//        menuButton12.setTitle("배민라이더스", for: .normal)
+//        menuButton12.setTitleColor(.black, for: .normal)
+//
+//        menuButton13.setImage(UIImage(named: "mono_baedal02"), for: .normal)
+//        menuButton13.setTitle("1인분", for: .normal)
+//        menuButton13.setTitleColor(.black, for: .normal)
+//
+//        menuButton14.setImage(UIImage(named: "mono_baedal03"), for: .normal)
+//        menuButton14.setTitle("배민오더", for: .normal)
+//        menuButton14.setTitleColor(.black, for: .normal)
         
         //menuButtonSetting(menuButton: menuButton11, menuName: "패스트푸드")
         // Do any additional setup after loading the view.
