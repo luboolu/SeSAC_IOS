@@ -19,7 +19,6 @@ class FoodViewController: UIViewController {
         buttonUISetiing(foodButton1, "사탕")
         buttonUISetiing(foodButton2, "초콜릿")
         buttonUISetiing(foodButton3, "츄러스")
-                                                                                       
     }
     
     //buttonoutletName: 외부 매개변수(parameter), btn: 내부 매개변수, UIButton: 전달인자(Argument)

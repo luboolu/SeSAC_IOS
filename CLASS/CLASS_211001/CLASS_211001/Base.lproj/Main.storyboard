@@ -19,24 +19,52 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="churros" translatesAutoresizingMaskIntoConstraints="NO" id="pFM-dS-YXy">
                                 <rect key="frame" x="0.0" y="-6" width="414" height="598"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He7-xp-MeY">
-                                <rect key="frame" x="157" y="151" width="89" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="초콜릿"/>
-                                <connections>
-                                    <action selector="foodTagButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hlG-jD-aww"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JB8-F4-K6j">
+                                <rect key="frame" x="50" y="134" width="314" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-xH-1CE">
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="사탕"/>
+                                        <connections>
+                                            <action selector="foodTagButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DH-d0-vgr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He7-xp-MeY">
+                                        <rect key="frame" x="112.5" y="0.0" width="89" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="초콜릿"/>
+                                        <connections>
+                                            <action selector="foodTagButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hlG-jD-aww"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-rU-ods">
+                                        <rect key="frame" x="225.5" y="0.0" width="88.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="츄려스"/>
+                                        <connections>
+                                            <action selector="foodTagButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3s2-v1-JCl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yi3-xe-3bN"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vy-Tw-eHt">
                                 <rect key="frame" x="20" y="792" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DGi-NP-kMe"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="주문하기">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="20"/>
+                                </buttonConfiguration>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50M-CL-5fq">
                                 <rect key="frame" x="20" y="572" width="374" height="200"/>
@@ -90,30 +118,12 @@
                                     <action selector="keyboardReturnKeyClicked:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="AOF-2Z-lYA"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-xH-1CE">
-                                <rect key="frame" x="56" y="151" width="75" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="사탕"/>
-                                <connections>
-                                    <action selector="foodTagButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DH-d0-vgr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-rU-ods">
-                                <rect key="frame" x="269" y="151" width="90" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="츄려스"/>
-                                <connections>
-                                    <action selector="foodTagButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3s2-v1-JCl"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JB8-F4-K6j" firstAttribute="top" secondItem="IDE-Uo-fog" secondAttribute="bottom" constant="20" id="1eJ-mT-JZN"/>
+                            <constraint firstItem="JB8-F4-K6j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="52S-WB-W2B"/>
                             <constraint firstItem="IDE-Uo-fog" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Fli-Nt-0SB"/>
                             <constraint firstItem="5vy-Tw-eHt" firstAttribute="top" secondItem="pFM-dS-YXy" secondAttribute="bottom" constant="200" id="IXo-cQ-rUy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="50M-CL-5fq" secondAttribute="trailing" constant="20" id="Jy7-jk-8za"/>
@@ -121,6 +131,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5vy-Tw-eHt" secondAttribute="trailing" constant="20" id="KoR-gn-Bfo"/>
                             <constraint firstItem="5vy-Tw-eHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q8B-er-avh"/>
                             <constraint firstItem="pFM-dS-YXy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aUN-f9-9jY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JB8-F4-K6j" secondAttribute="trailing" constant="50" id="c8w-bI-3XD"/>
                             <constraint firstItem="5vy-Tw-eHt" firstAttribute="top" secondItem="50M-CL-5fq" secondAttribute="bottom" constant="20" id="joQ-eh-r6x"/>
                             <constraint firstItem="50M-CL-5fq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kcb-Gy-Hoa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5vy-Tw-eHt" secondAttribute="bottom" constant="20" id="oIG-DK-OCy"/>
@@ -145,9 +156,6 @@
         <image name="churros" width="200" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
