@@ -8,7 +8,6 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
     //TextField
     @IBOutlet var emailNumTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -27,7 +26,6 @@ class SignUpViewController: UIViewController {
     var nickname: String?
     var location: String?
     var recomandCode: String?
-    
     
     
     override func viewDidLoad() {
