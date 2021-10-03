@@ -74,11 +74,6 @@ class SignUpViewController: UIViewController {
         
         hideTextFieldSwitch.onTintColor = .red
         hideTextFieldSwitch.thumbTintColor = .white
-        
-
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func tapClicked(_ sender: UITapGestureRecognizer) {
