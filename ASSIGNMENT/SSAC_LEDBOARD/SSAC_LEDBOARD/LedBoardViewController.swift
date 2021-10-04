@@ -37,10 +37,7 @@ class LedBoardViewController: UIViewController {
     }
     
     @IBAction func colorChangeButtonClicked(_ sender: UIButton) {
-        LedBoardText.textColor = textColor[Int.random(in: 0...(textColor.count - 1))]
-        
-        
-        
+        LedBoardText.textColor = textColor[Int.random(in: 0...(textColor.count - 1))] 
     }
     
     
