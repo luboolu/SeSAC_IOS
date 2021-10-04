@@ -32,9 +32,6 @@ class LedBoardViewController: UIViewController {
         if LedBoardText.adjustsFontSizeToFitWidth == false {
             LedBoardText.adjustsFontSizeToFitWidth = true
         }
-        
-        
-
     }
     
     
@@ -49,13 +46,15 @@ class LedBoardViewController: UIViewController {
     }
     
 
-    //tap gesture를 이용하여 키보드 내리기!
+    
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
+        //tap gesture를 이용하여 키보드 내리기!
         view.endEditing(true)
         
+        //tap gesture가 인식되었을때, boardView가 보여진 상태라면 숨기고, 숨겨진 상태라면 다시 보이게 함
         if boardView.isHidden == true{
             boardView.isHidden = false
-        }else {
+        } else {
             boardView.isHidden = true
         }
             
