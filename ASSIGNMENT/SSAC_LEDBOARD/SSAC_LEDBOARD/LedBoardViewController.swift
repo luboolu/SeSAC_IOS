@@ -10,10 +10,14 @@ import UIKit
 class LedBoardViewController: UIViewController {
 
     
+    @IBOutlet var inputLedBoardText: UITextField!
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var colorChangeButton: UIButton!
 
     @IBOutlet var LedBoardText: UILabel!
+    
+    
+    let textColor: [UIColor] = [.white, .red, .orange, .yellow, .green, .blue ,.purple]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +26,23 @@ class LedBoardViewController: UIViewController {
     
     
     @IBAction func sendButtonClicked(_ sender: UIButton) {
-        LedBoardText.text = 
+        LedBoardText.text = inputLedBoardText.text
+
     }
+    
+    @IBAction func keyboardReturnKeyClicked(_ sender: UITextField) {
+        //키보드가 내리기
+        view.endEditing(true)
+    
+    }
+    
+    @IBAction func colorChangeButtonClicked(_ sender: UIButton) {
+        LedBoardText.textColor = textColor[Int.random(in: 0...(textColor.count - 1))]
+        
+        
+        
+    }
+    
+    
     
 }
