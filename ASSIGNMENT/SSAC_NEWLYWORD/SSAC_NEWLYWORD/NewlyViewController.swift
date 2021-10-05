@@ -21,7 +21,7 @@ class NewlyViewController: UIViewController {
     
     @IBOutlet var resultLabel: UILabel!
     
-    let newlyWord: [String: String] = ["윰차": "유모차", "꾸안꾸": "꾸민듯 안꾸민듯", "오저치고": "오늘 저녁에 치킨 고?","스드메": "스튜디오 드레스 메이크업"]
+    let newlyWord: [String: String] = ["윰차": "유모차", "꾸안꾸": "꾸민듯 안꾸민듯", "오저치고": "오늘 저녁에 치킨 고?","스드메": "스튜디오 드레스 메이크업", "싫테": "'싫어요(유튜브 기능) 테러'의 줄임말", "설참": "'설명 참고'의 줄임말", "횰로": "욜로 + 나홀로의 합성어로 본인 중심의 소비와 행복을 우선시하는 것", "가취관": "같은 취향으로 모이되, 가벼운 모임을 선호하는 밀레니엄-Z세대"]
     var searchList: [String] = ["", "", "", ""]
     
     
@@ -60,10 +60,27 @@ class NewlyViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func tagButton1Clicked(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func tagButton2Clicked(_ sender: UIButton) {
+    }
+    
+    @IBAction func tagButton3Clicked(_ sender: UIButton) {
+    }
+    
+    @IBAction func tagButton4Clicked(_ sender: UIButton) {
+    }
+    
+    func searchNewlyWord(){
+        
+    }
+    
     func updateSearchList(){
-        if searchList.count == 4{
-            searchList.popLast()
-            print(searchList)
+        if searchList.count >= 4{
+            searchList.remove(at: 4)
         }
         
         tagButton1.setTitle(searchList[0], for: .normal)
@@ -71,20 +88,15 @@ class NewlyViewController: UIViewController {
         tagButton3.setTitle(searchList[2], for: .normal)
         tagButton4.setTitle(searchList[3], for: .normal)
         
-        if searchList[0] == "" {
-            tagButton1.isHidden = true
-        } else {
-            tagButton1.isHidden = false
+        if tagButton1.titleLabel!.adjustsFontSizeToFitWidth == false {
+            tagButton1.titleLabel!.adjustsFontSizeToFitWidth = true
         }
-        
-        tagButton2.isHidden = searchList[1] != "" ? true : false
-    
-        tagButton3.isHidden = searchList[2] != "" ? true : false
-        tagButton4.isHidden = searchList[3] != "" ? true : false
-        
 
     }
     
-
-
+    
+    @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }

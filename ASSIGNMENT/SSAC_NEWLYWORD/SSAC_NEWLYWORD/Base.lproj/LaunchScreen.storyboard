@@ -16,16 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mono_logo" translatesAutoresizingMaskIntoConstraints="NO" id="PNm-iC-y3a">
-                                <rect key="frame" x="0.0" y="251" width="414" height="394"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mono_logo" id="PNm-iC-y3a">
+                                <rect key="frame" x="-17" y="362" width="448" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="PNm-iC-y3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AmS-ms-imN"/>
-                            <constraint firstItem="PNm-iC-y3a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yux-eW-Khp"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
