@@ -95,8 +95,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pzJ-jI-SN5">
                                 <rect key="frame" x="8" y="298" width="398" height="300"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-0A-SP7">
-                                <rect key="frame" x="160.5" y="438" width="93" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-0A-SP7">
+                                <rect key="frame" x="40" y="438" width="334" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,6 +109,7 @@
                             <constraint firstItem="pzJ-jI-SN5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wf-9q-gGd"/>
                             <constraint firstItem="pzJ-jI-SN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5jy-z5-3PF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pzJ-jI-SN5" secondAttribute="trailing" constant="8" id="7jo-CX-YR2"/>
+                            <constraint firstItem="zWk-0A-SP7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="B55-d0-Y7V"/>
                             <constraint firstItem="adU-qn-DxG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mtt-KL-j4D"/>
                             <constraint firstItem="p5U-6A-XGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PUp-xR-Sqt"/>
                             <constraint firstItem="p5U-6A-XGv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aHd-5l-TTY"/>
@@ -117,6 +118,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adU-qn-DxG" secondAttribute="trailing" constant="32" id="ofh-cb-UT5"/>
                             <constraint firstItem="pzJ-jI-SN5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u74-O5-lxl"/>
                             <constraint firstItem="adU-qn-DxG" firstAttribute="top" secondItem="p5U-6A-XGv" secondAttribute="bottom" constant="8" id="zBx-vp-KVs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zWk-0A-SP7" secondAttribute="trailing" constant="40" id="zwg-6E-lcr"/>
                         </constraints>
                     </view>
                     <connections>

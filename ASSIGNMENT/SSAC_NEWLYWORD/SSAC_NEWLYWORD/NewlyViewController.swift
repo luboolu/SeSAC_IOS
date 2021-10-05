@@ -21,6 +21,8 @@ class NewlyViewController: UIViewController {
     
     @IBOutlet var resultLabel: UILabel!
     
+    let newlyWord: [String: String] = ["윰차": "유모차", "꾸안꾸": "꾸민듯 안꾸민듯", "오저치고": "오늘 저녁에 치킨 고?"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +47,17 @@ class NewlyViewController: UIViewController {
         }
         
 
-
     }
     
     //Search Button이 눌리면
     @IBAction func searchButtonClicked(_ sender: UIButton) {
+        //사전에 있는 단어라면 resultLabel에 뜻을 보여주고, 없다면 지정된 문구를 보여줌
+        if searchTextField.text != nil && newlyWord[searchTextField.text!] != nil{
+            resultLabel.text = newlyWord[searchTextField.text!]!
+        } else{
+            resultLabel.text = "사전에 없는 단어에요ㅜㅜ"
+        }
+        
         
     }
     
