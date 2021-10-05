@@ -6,5 +6,12 @@ let newlyWord: [String: String] = ["윰차": "유모차", "꾸안꾸": "꾸민�
 
 
 newlyWord["없는 단어"]
-
 newlyWord
+
+
+var searchList: [String] = []
+
+searchList.insert("윰차", at: 0)
+
+//searchList.popLast()
+searchList.count
