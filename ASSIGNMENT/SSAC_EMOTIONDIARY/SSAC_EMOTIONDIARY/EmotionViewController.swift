@@ -8,8 +8,7 @@
 import UIKit
 
 class EmotionViewController: UIViewController {
-
-
+    
     @IBOutlet var emotionLabel11: UILabel!
     @IBOutlet var emotionLabel12: UILabel!
     @IBOutlet var emotionLabel13: UILabel!
