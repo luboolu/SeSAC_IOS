@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC474CFF270E93D400544CDC /* DDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC474CFE270E93D400544CDC /* DDayViewController.swift */; };
 		DC7EC259270D814000B4C9C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7EC258270D814000B4C9C4 /* AppDelegate.swift */; };
 		DC7EC25B270D814000B4C9C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7EC25A270D814000B4C9C4 /* SceneDelegate.swift */; };
 		DC7EC25D270D814000B4C9C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7EC25C270D814000B4C9C4 /* ViewController.swift */; };
@@ -14,9 +15,11 @@
 		DC7EC262270D814300B4C9C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7EC261270D814300B4C9C4 /* Assets.xcassets */; };
 		DC7EC265270D814300B4C9C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7EC263270D814300B4C9C4 /* LaunchScreen.storyboard */; };
 		DC7EC26D270DB52C00B4C9C4 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7EC26C270DB52C00B4C9C4 /* EmotionViewController.swift */; };
+		DCF71F9F270ED63000D88889 /* DDayAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71F9E270ED63000D88889 /* DDayAssignmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC474CFE270E93D400544CDC /* DDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayViewController.swift; sourceTree = "<group>"; };
 		DC7EC255270D814000B4C9C4 /* SSAC_EMOTIONDIARY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSAC_EMOTIONDIARY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7EC258270D814000B4C9C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC7EC25A270D814000B4C9C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		DC7EC264270D814300B4C9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC7EC266270D814300B4C9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC7EC26C270DB52C00B4C9C4 /* EmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
+		DCF71F9E270ED63000D88889 /* DDayAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayAssignmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				DC7EC25A270D814000B4C9C4 /* SceneDelegate.swift */,
 				DC7EC25C270D814000B4C9C4 /* ViewController.swift */,
 				DC7EC25E270D814000B4C9C4 /* Main.storyboard */,
+				DC474CFE270E93D400544CDC /* DDayViewController.swift */,
+				DCF71F9E270ED63000D88889 /* DDayAssignmentViewController.swift */,
 				DC7EC26C270DB52C00B4C9C4 /* EmotionViewController.swift */,
 				DC7EC261270D814300B4C9C4 /* Assets.xcassets */,
 				DC7EC263270D814300B4C9C4 /* LaunchScreen.storyboard */,
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC474CFF270E93D400544CDC /* DDayViewController.swift in Sources */,
 				DC7EC26D270DB52C00B4C9C4 /* EmotionViewController.swift in Sources */,
 				DC7EC25D270D814000B4C9C4 /* ViewController.swift in Sources */,
 				DC7EC259270D814000B4C9C4 /* AppDelegate.swift in Sources */,
 				DC7EC25B270D814000B4C9C4 /* SceneDelegate.swift in Sources */,
+				DCF71F9F270ED63000D88889 /* DDayAssignmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SSAC_EMOTIONDIARY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -320,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SSAC_EMOTIONDIARY/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

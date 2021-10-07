@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sMt-nW-T7x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m7K-Qx-dik">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -310,13 +310,13 @@
                                                         <rect key="frame" x="0.0" y="105.5" width="105" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="행복해" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-Q1-pO4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMM-Tp-yEC">
-                                                                <rect key="frame" x="94.5" y="0.0" width="10.5" height="20.5"/>
+                                                                <rect key="frame" x="50.5" y="0.0" width="54.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -347,13 +347,13 @@
                                                         <rect key="frame" x="0.0" y="105.5" width="105" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="행복해" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-uP-mjc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlA-eV-m7L">
-                                                                <rect key="frame" x="94.5" y="0.0" width="10.5" height="20.5"/>
+                                                                <rect key="frame" x="50.5" y="0.0" width="54.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -412,8 +412,282 @@
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="53.571428571428569"/>
         </scene>
+        <!--Day View Controller-->
+        <scene sceneID="4mh-6U-ziv">
+            <objects>
+                <viewController id="UAt-7C-Ihn" customClass="DDayViewController" customModule="SSAC_EMOTIONDIARY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKn-1m-7B6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-F8-yV4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="datePickerValueChange:" destination="UAt-7C-Ihn" eventType="valueChanged" id="BtE-Gh-9MM"/>
+                                </connections>
+                            </datePicker>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIW-fv-Fkq">
+                                <rect key="frame" x="142" y="383" width="130" height="130"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macarons" translatesAutoresizingMaskIntoConstraints="NO" id="taQ-2C-mBA">
+                                        <rect key="frame" x="0.0" y="-1" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2008년 5월 25일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzZ-ys-zEX">
+                                        <rect key="frame" x="30" y="40" width="70" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DDAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-Da-p6A">
+                                        <rect key="frame" x="8" y="8" width="49" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="caZ-Da-p6A" firstAttribute="leading" secondItem="yIW-fv-Fkq" secondAttribute="leading" constant="8" id="8Xl-4g-HD5"/>
+                                    <constraint firstItem="IzZ-ys-zEX" firstAttribute="centerX" secondItem="yIW-fv-Fkq" secondAttribute="centerX" id="I2G-qy-1eJ"/>
+                                    <constraint firstItem="caZ-Da-p6A" firstAttribute="top" secondItem="yIW-fv-Fkq" secondAttribute="top" constant="8" id="M3u-G6-Esd"/>
+                                    <constraint firstItem="IzZ-ys-zEX" firstAttribute="centerY" secondItem="yIW-fv-Fkq" secondAttribute="centerY" id="ZJA-iz-Lb2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DsJ-ap-H53"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yIW-fv-Fkq" firstAttribute="centerX" secondItem="sKn-1m-7B6" secondAttribute="centerX" id="9V6-aq-wZt"/>
+                            <constraint firstItem="yIW-fv-Fkq" firstAttribute="centerY" secondItem="sKn-1m-7B6" secondAttribute="centerY" id="ORC-Wg-Rmn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="hFe-F8-yV4" id="a6g-6Y-QEy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82i-Gz-tg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="1451"/>
+        </scene>
+        <!--Day Assignment View Controller-->
+        <scene sceneID="xcn-4m-a9H">
+            <objects>
+                <viewController id="m7K-Qx-dik" customClass="DDayAssignmentViewController" customModule="SSAC_EMOTIONDIARY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Imw-gr-cH4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="tUl-gS-uif">
+                                <rect key="frame" x="8" y="74" width="398" height="438"/>
+                                <connections>
+                                    <action selector="datePickerClicked:" destination="m7K-Qx-dik" eventType="valueChanged" id="waz-e0-MJz"/>
+                                </connections>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZPw-bU-Se8">
+                                <rect key="frame" x="62" y="542" width="290" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nUO-ny-Z07">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="130"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7M-vi-Bpg">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macarons" translatesAutoresizingMaskIntoConstraints="NO" id="HM4-xh-Gwq">
+                                                        <rect key="frame" x="0.0" y="-1" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pz5-cT-XXZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ot-5N-2JP">
+                                                        <rect key="frame" x="8" y="8" width="58" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008년 5월 05일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDw-e0-FDh">
+                                                        <rect key="frame" x="28.5" y="40" width="73" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="73" id="Bkp-BD-eSk"/>
+                                                            <constraint firstAttribute="height" constant="50" id="VeO-fe-k9r"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="3Ot-5N-2JP" firstAttribute="top" secondItem="z7M-vi-Bpg" secondAttribute="top" constant="8" id="05N-qC-Qm4"/>
+                                                    <constraint firstItem="3Ot-5N-2JP" firstAttribute="leading" secondItem="z7M-vi-Bpg" secondAttribute="leading" constant="8" id="Crw-7K-KgM"/>
+                                                    <constraint firstItem="PDw-e0-FDh" firstAttribute="centerY" secondItem="z7M-vi-Bpg" secondAttribute="centerY" id="NW0-KH-msG"/>
+                                                    <constraint firstItem="PDw-e0-FDh" firstAttribute="centerX" secondItem="z7M-vi-Bpg" secondAttribute="centerX" id="ai7-Zh-jJh"/>
+                                                    <constraint firstAttribute="width" constant="130" id="fMo-4h-Bv3"/>
+                                                    <constraint firstAttribute="height" constant="130" id="kRb-Nb-t9C"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8g-ii-aeT">
+                                                <rect key="frame" x="160" y="0.0" width="130" height="130"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pancakes" translatesAutoresizingMaskIntoConstraints="NO" id="mKQ-3d-uG5">
+                                                        <rect key="frame" x="0.0" y="-1" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-nK-euj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-FJ-e8P">
+                                                        <rect key="frame" x="8" y="8" width="60" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008년 5월 25일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amH-Ch-zU6">
+                                                        <rect key="frame" x="28.5" y="40" width="73" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="f62-Sf-yfp"/>
+                                                            <constraint firstAttribute="width" constant="73" id="qZF-TG-qgc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="4Zn-zd-rof"/>
+                                                    <constraint firstItem="qOg-FJ-e8P" firstAttribute="leading" secondItem="s8g-ii-aeT" secondAttribute="leading" constant="8" id="CTk-EO-UKc"/>
+                                                    <constraint firstItem="amH-Ch-zU6" firstAttribute="centerX" secondItem="s8g-ii-aeT" secondAttribute="centerX" id="Rbb-Uf-qXz"/>
+                                                    <constraint firstItem="amH-Ch-zU6" firstAttribute="centerY" secondItem="s8g-ii-aeT" secondAttribute="centerY" id="a1v-JR-KRI"/>
+                                                    <constraint firstItem="qOg-FJ-e8P" firstAttribute="top" secondItem="s8g-ii-aeT" secondAttribute="top" constant="8" id="hUJ-cF-kVk"/>
+                                                    <constraint firstAttribute="width" constant="130" id="jea-xi-j7c"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-jK-gO3">
+                                        <rect key="frame" x="0.0" y="160" width="290" height="130"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDs-gC-BRC">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="raspberries" translatesAutoresizingMaskIntoConstraints="NO" id="pL8-Fi-4Ce">
+                                                        <rect key="frame" x="0.0" y="-1" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-1H-8zw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qT-3x-gOm">
+                                                        <rect key="frame" x="8" y="8" width="60.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008년 5월 25일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAD-mA-nvJ">
+                                                        <rect key="frame" x="28.5" y="40" width="73" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="73" id="RlM-OI-qCE"/>
+                                                            <constraint firstAttribute="height" constant="50" id="g3m-iw-Brv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="uAD-mA-nvJ" firstAttribute="centerY" secondItem="yDs-gC-BRC" secondAttribute="centerY" id="7Sr-bP-jdB"/>
+                                                    <constraint firstAttribute="height" constant="130" id="L7w-jf-WSr"/>
+                                                    <constraint firstAttribute="width" constant="130" id="dgT-mg-7xj"/>
+                                                    <constraint firstItem="1qT-3x-gOm" firstAttribute="leading" secondItem="yDs-gC-BRC" secondAttribute="leading" constant="8" id="gFa-sq-gIP"/>
+                                                    <constraint firstItem="uAD-mA-nvJ" firstAttribute="centerX" secondItem="yDs-gC-BRC" secondAttribute="centerX" id="lv2-ht-Ubn"/>
+                                                    <constraint firstItem="1qT-3x-gOm" firstAttribute="top" secondItem="yDs-gC-BRC" secondAttribute="top" constant="8" id="nLx-32-KKA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHQ-Jg-3rd">
+                                                <rect key="frame" x="160" y="0.0" width="130" height="130"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="valentineCandy" translatesAutoresizingMaskIntoConstraints="NO" id="Vhe-L6-YvB">
+                                                        <rect key="frame" x="0.0" y="-1" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYY-24-9Tb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D+400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgz-eg-gud">
+                                                        <rect key="frame" x="8" y="8" width="61" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008년 5월 25일" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-Z2-5Ql">
+                                                        <rect key="frame" x="28.5" y="40" width="73" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="LP2-Ut-6Bc"/>
+                                                            <constraint firstAttribute="width" constant="73" id="RDb-Ox-WZo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Mgz-eg-gud" firstAttribute="leading" secondItem="IHQ-Jg-3rd" secondAttribute="leading" constant="8" id="7At-gZ-sbO"/>
+                                                    <constraint firstItem="Mgz-eg-gud" firstAttribute="top" secondItem="IHQ-Jg-3rd" secondAttribute="top" constant="8" id="DPB-bk-pr8"/>
+                                                    <constraint firstAttribute="width" constant="130" id="Wb7-Lu-fTI"/>
+                                                    <constraint firstItem="ksF-Z2-5Ql" firstAttribute="centerY" secondItem="IHQ-Jg-3rd" secondAttribute="centerY" id="hCL-hY-A6d"/>
+                                                    <constraint firstAttribute="height" constant="130" id="hv2-5f-59X"/>
+                                                    <constraint firstItem="ksF-Z2-5Ql" firstAttribute="centerX" secondItem="IHQ-Jg-3rd" secondAttribute="centerX" id="zzc-WM-3i5"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1lo-r3-445"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1lo-r3-445" firstAttribute="bottom" secondItem="ZPw-bU-Se8" secondAttribute="bottom" constant="30" id="0XU-Uq-LMg"/>
+                            <constraint firstItem="tUl-gS-uif" firstAttribute="leading" secondItem="1lo-r3-445" secondAttribute="leading" constant="8" id="Dbe-cz-88s"/>
+                            <constraint firstItem="tUl-gS-uif" firstAttribute="centerX" secondItem="Imw-gr-cH4" secondAttribute="centerX" id="T0A-DF-Dgm"/>
+                            <constraint firstItem="1lo-r3-445" firstAttribute="trailing" secondItem="tUl-gS-uif" secondAttribute="trailing" constant="8" id="bKj-Qt-kyF"/>
+                            <constraint firstItem="ZPw-bU-Se8" firstAttribute="centerX" secondItem="Imw-gr-cH4" secondAttribute="centerX" id="kVB-dp-nrF"/>
+                            <constraint firstItem="tUl-gS-uif" firstAttribute="top" secondItem="1lo-r3-445" secondAttribute="top" constant="30" id="qcf-yM-MKb"/>
+                            <constraint firstItem="ZPw-bU-Se8" firstAttribute="top" secondItem="tUl-gS-uif" secondAttribute="bottom" constant="30" id="y8V-Ux-C6m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dDay100" destination="PDw-e0-FDh" id="ZSr-py-sGQ"/>
+                        <outlet property="dDay100ImageView" destination="z7M-vi-Bpg" id="s8M-mP-nG5"/>
+                        <outlet property="dDay200" destination="amH-Ch-zU6" id="Oc9-6c-pFp"/>
+                        <outlet property="dDay200ImageView" destination="s8g-ii-aeT" id="c7U-sa-Llc"/>
+                        <outlet property="dDay300" destination="uAD-mA-nvJ" id="0Ny-mu-zcr"/>
+                        <outlet property="dDay300ImageView" destination="yDs-gC-BRC" id="hAi-Tf-txB"/>
+                        <outlet property="dDay400" destination="ksF-Z2-5Ql" id="7s2-9D-Oem"/>
+                        <outlet property="dDay400ImageView" destination="IHQ-Jg-3rd" id="Yp9-35-EL0"/>
+                        <outlet property="datePicker" destination="tUl-gS-uif" id="WKR-t6-cNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3M-dy-yG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="730.58035714285711"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="macarons" width="1920" height="1153"/>
         <image name="mono_slime1" width="278" height="258"/>
         <image name="mono_slime2" width="278" height="258"/>
         <image name="mono_slime3" width="278" height="258"/>
@@ -423,6 +697,9 @@
         <image name="mono_slime7" width="278" height="258"/>
         <image name="mono_slime8" width="278" height="258"/>
         <image name="mono_slime9" width="278" height="258"/>
+        <image name="pancakes" width="1920" height="1214"/>
+        <image name="raspberries" width="1920" height="1280"/>
+        <image name="valentineCandy" width="1920" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
