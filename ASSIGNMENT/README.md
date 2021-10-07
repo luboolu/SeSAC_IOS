@@ -10,7 +10,12 @@
 
 
 <h2>EMOTION DIARY</h2>
+<h4>emotion diary</h4>
 
 ![simulator](https://user-images.githubusercontent.com/58027136/136218208-23bf66d8-034c-481e-94d5-ff9a09d70959.gif)
+
+<h4>dday calculator</h4>
+
+![simulator_dday](https://user-images.githubusercontent.com/58027136/136355563-c8c2b9ed-62a7-466c-b892-e101186a0b3f.gif)
 
 
