@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCA8D99727108F00004844F1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCA8D99627108F00004844F1 /* IQKeyboardManagerSwift */; };
 		DCF71FAF2710080000D88889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71FAE2710080000D88889 /* AppDelegate.swift */; };
 		DCF71FB12710080000D88889 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71FB02710080000D88889 /* SceneDelegate.swift */; };
 		DCF71FB32710080000D88889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71FB22710080000D88889 /* ViewController.swift */; };
@@ -16,7 +17,6 @@
 		DCF71FC527100B1500D88889 /* DrinkWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71FC427100B1500D88889 /* DrinkWaterViewController.swift */; };
 		DCF71FC727100F1F00D88889 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71FC627100F1F00D88889 /* ProfileViewController.swift */; };
 		DCF71FCA271087E400D88889 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = DCF71FC9271087E400D88889 /* TextFieldEffects */; };
-		DCF71FCD27108C8A00D88889 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCF71FCC27108C8A00D88889 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCF71FCA271087E400D88889 /* TextFieldEffects in Frameworks */,
-				DCF71FCD27108C8A00D88889 /* IQKeyboardManagerSwift in Frameworks */,
+				DCA8D99727108F00004844F1 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			name = SeSSAC_WATER;
 			packageProductDependencies = (
 				DCF71FC9271087E400D88889 /* TextFieldEffects */,
-				DCF71FCC27108C8A00D88889 /* IQKeyboardManagerSwift */,
+				DCA8D99627108F00004844F1 /* IQKeyboardManagerSwift */,
 			);
 			productName = SeSSAC_WATER;
 			productReference = DCF71FAB2710080000D88889 /* SeSSAC_WATER.app */;
@@ -127,7 +127,7 @@
 			mainGroup = DCF71FA22710080000D88889;
 			packageReferences = (
 				DCF71FC8271087E400D88889 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
-				DCF71FCB27108C8A00D88889 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DCA8D99527108F00004844F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = DCF71FAC2710080000D88889 /* Products */;
 			projectDirPath = "";
@@ -380,6 +380,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DCA8D99527108F00004844F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		DCF71FC8271087E400D88889 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
@@ -388,26 +396,18 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DCF71FCB27108C8A00D88889 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DCA8D99627108F00004844F1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA8D99527108F00004844F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		DCF71FC9271087E400D88889 /* TextFieldEffects */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCF71FC8271087E400D88889 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
 			productName = TextFieldEffects;
-		};
-		DCF71FCC27108C8A00D88889 /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DCF71FCB27108C8A00D88889 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

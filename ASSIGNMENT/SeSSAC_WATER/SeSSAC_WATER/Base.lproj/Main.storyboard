@@ -121,7 +121,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-4" translatesAutoresizingMaskIntoConstraints="NO" id="FQo-ZV-Kqy">
                                 <rect key="frame" x="131" y="138" width="152" height="151"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="키(cm)를 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="788-gS-yom" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="키(cm)를 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="788-gS-yom" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="40" y="399" width="334" height="35"/>
                                 <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -142,7 +142,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="몸무게(kg)을 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-uu-EFY" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="몸무게(kg)을 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-uu-EFY" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="40" y="454" width="334" height="35"/>
                                 <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -208,8 +208,16 @@
                     <navigationItem key="navigationItem" title="profile" id="Oot-Gg-dlA">
                         <barButtonItem key="rightBarButtonItem" title="저장" id="CjD-g7-xcH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="bAu-xp-yID" id="T6m-DW-SRm"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="heightTextField" destination="788-gS-yom" id="xgi-uT-eYL"/>
+                        <outlet property="nickNameTextField" destination="nMB-zd-aTS" id="hKD-qk-cyq"/>
+                        <outlet property="weightTextField" destination="Hr7-uu-EFY" id="XEe-FM-ekh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdm-vI-6XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,6 +242,17 @@
             <point key="canvasLocation" x="113.04347826086958" y="53.571428571428569"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="788-gS-yom">
+            <size key="intrinsicContentSize" width="140" height="19.5"/>
+        </designable>
+        <designable name="Hr7-uu-EFY">
+            <size key="intrinsicContentSize" width="161.5" height="19.5"/>
+        </designable>
+        <designable name="nMB-zd-aTS">
+            <size key="intrinsicContentSize" width="134" height="19.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="1-4" width="152" height="151"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>

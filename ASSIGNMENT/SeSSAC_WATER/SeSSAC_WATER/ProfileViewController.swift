@@ -9,21 +9,31 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var nickNameTextField: UITextField!
+    @IBOutlet var heightTextField: UITextField!
+    @IBOutlet var weightTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
+        
+        UserDefaults.standard.set(nickNameTextField.text, forKey: "nickName")
+        UserDefaults.standard.set(heightTextField.text, forKey: "height")
+        UserDefaults.standard.set(weightTextField.text, forKey: "weight")
+        
+        let nickName = UserDefaults.standard.string(forKey: "nickName")
+        let height = UserDefaults.standard.integer(forKey: "height")
+        let weight = UserDefaults.standard.integer(forKey: "weight")
+        
+        print("\(nickName)님은 \(height)cm이고 \(weight)kg입니다.")
+        
+        
     }
-    */
-
+    
 }
