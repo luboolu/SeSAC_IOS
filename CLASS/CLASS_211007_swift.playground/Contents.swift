@@ -123,3 +123,119 @@ hardStepBoss.name = "어려운 보스"
 print(hardStepBoss.name, hardStepBoss.level, hardStepBoss.power)
 print(easyStepBoss.name, easyStepBoss.level, easyStepBoss.power)
 
+
+
+//211008 수업
+//함수 매개변수 반환값 사용
+
+func sayHello() -> String { // -> Void 반환값 표시는 swift3 이후로 생략 가능하게 됨
+    
+    print("안녕하세요")
+    
+    return "안녕하세요 반갑습니다!"
+    
+}
+
+print("자기소개: \(sayHello() )")
+
+func bmi() ->Double {
+    
+    //조건문 사용하여..해봤으니깐 생략
+    
+    return 20.1
+    
+}
+
+
+func bmiResult() -> [String] {
+    
+    let name = "고래밥"
+    let result = "정상"
+    
+    return [name, result]
+    
+}
+
+let value = bmiResult()
+
+print(value[0], "님의 bmi 수치는 ", value[1], "입니다.")
+
+
+//컬렉션(집단 자료형) : 배열, 딕셔너리, 집합, 튜플
+
+let userInfo = ("고래밥", "jack@jack.com", true, 4,5)
+
+print(userInfo.0)
+print(userInfo.1)
+
+//전체 영화 갯수, 전체 러닝타임 한번에 반환
+func getMoviewReport() -> (Int, Int) {
+    return (1000, 30000)
+}
+
+print(getMoviewReport())
+
+
+
+//swift5.1 이상 부터 return 키워드 생략 가능, 함수 안에 return 문 이외에 아무것도 없는 경우
+//@discardableResult: 반환값을 무시하는 경우, 반환값을 사용하지 않을때 뜨는 경고를 무시하게 할 수 있음
+@discardableResult
+func getMoviewReport2() -> (Int, Int) {
+    (1000, 30000)
+}
+
+getMoviewReport2()
+
+
+
+//열거형 - 오류에 대한 가능성을 낮춰줌
+enum AppleDevice {
+    case iPhone
+    case iPad
+    case watch
+}
+
+enum GameJob {
+    case rogue //도적
+    case warrior //전사
+    case mystic //도사
+    case shaman //주술사
+    case fight //격투가
+}
+
+let selectJob: GameJob = GameJob.mystic
+
+if selectJob == .mystic {
+    print("당신은 도사입니다.")
+} else if selectJob == .shaman {
+    print("당신은 주술사입니다.")
+}
+
+enum Gender {
+    case man, woman
+}
+
+enum HTTPCode: Int {
+    case Ok = 200
+    case SERVER_ERROR = 500
+    case NO_PAGE
+    
+    func showStatus() ->String {
+        switch self {
+        case .NO_PAGE:
+            return "잘못된 주소입니다."
+        case .SERVER_ERROR:
+            return "서버 점검중입닌다. 서버에 문제가 생겨서 잠시 후 시도해주세요."
+        case .Ok:
+            return "정상입니다."
+
+        }
+        
+    }
+}
+
+var status: HTTPCode = .NO_PAGE
+
+print(status.rawValue) //원시값
+
+status.showStatus()

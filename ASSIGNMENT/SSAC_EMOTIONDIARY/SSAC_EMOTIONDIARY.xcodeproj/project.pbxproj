@@ -16,6 +16,7 @@
 		DC7EC265270D814300B4C9C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7EC263270D814300B4C9C4 /* LaunchScreen.storyboard */; };
 		DC7EC26D270DB52C00B4C9C4 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7EC26C270DB52C00B4C9C4 /* EmotionViewController.swift */; };
 		DCF71F9F270ED63000D88889 /* DDayAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71F9E270ED63000D88889 /* DDayAssignmentViewController.swift */; };
+		DCF71FA1270FCA9100D88889 /* Class1008ExViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF71FA0270FCA9100D88889 /* Class1008ExViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DC7EC266270D814300B4C9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC7EC26C270DB52C00B4C9C4 /* EmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
 		DCF71F9E270ED63000D88889 /* DDayAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayAssignmentViewController.swift; sourceTree = "<group>"; };
+		DCF71FA0270FCA9100D88889 /* Class1008ExViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class1008ExViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DC7EC25A270D814000B4C9C4 /* SceneDelegate.swift */,
 				DC7EC25C270D814000B4C9C4 /* ViewController.swift */,
 				DC7EC25E270D814000B4C9C4 /* Main.storyboard */,
+				DCF71FA0270FCA9100D88889 /* Class1008ExViewController.swift */,
 				DC474CFE270E93D400544CDC /* DDayViewController.swift */,
 				DCF71F9E270ED63000D88889 /* DDayAssignmentViewController.swift */,
 				DC7EC26C270DB52C00B4C9C4 /* EmotionViewController.swift */,
@@ -153,6 +156,7 @@
 				DC7EC259270D814000B4C9C4 /* AppDelegate.swift in Sources */,
 				DC7EC25B270D814000B4C9C4 /* SceneDelegate.swift in Sources */,
 				DCF71F9F270ED63000D88889 /* DDayAssignmentViewController.swift in Sources */,
+				DCF71FA1270FCA9100D88889 /* Class1008ExViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
