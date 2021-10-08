@@ -22,6 +22,25 @@ class ProfileViewController: UIViewController {
 
 
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
+        //textfield에 입력된 값들이 정확한지 확인하고 싶음
+        //nickname은 String, height weight는 int인지 확인하고, 맞다면 userdefault에 저장하고 아니라면 textfield에 빨간색으로 틀렸다고 표시
+        if nickNameTextField.text != nil && heightTextField.text != nil && weightTextField.text != nil {
+            
+            var nickName = nickNameTextField.text!
+            var height = heightTextField.text!
+            var weight = weightTextField.text!
+            
+            print(type(of: nickName))
+            print(type(of: height))
+            print(type(of: weight))
+            
+        }
+        
+        
+        
+
+            
+        
         
         UserDefaults.standard.set(nickNameTextField.text, forKey: "nickName")
         UserDefaults.standard.set(heightTextField.text, forKey: "height")
