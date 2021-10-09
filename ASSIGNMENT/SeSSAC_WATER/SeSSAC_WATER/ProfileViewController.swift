@@ -43,9 +43,9 @@ class ProfileViewController: UIViewController {
                     let height: Double = UserDefaults.standard.double(forKey: "height")
                     let weight: Double = UserDefaults.standard.double(forKey: "weight")
                     
-                    let water
+                    let waterRecommand: Double = (weight + height) / 100
                     
-                    print("\(nickName)님은 \(height)cm이고 \(weight)kg입니다. 하루 권장 물 섭취량은 \((height + weight) / 100)L입니다.")
+                    print("\(nickName)님은 \(height)cm이고 \(weight)kg입니다. 하루 권장 물 섭취량은 \(waterRecommand)L입니다.")
                     
                 } else {
                     //heigt, weight에 숫자를 입력해달라고 표시

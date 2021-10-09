@@ -49,12 +49,6 @@
                                     <constraint firstAttribute="width" constant="250" id="hXY-Gx-WoR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHu-BN-GXL">
-                                <rect key="frame" x="184.5" y="603" width="45" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgz-p6-gCA">
                                 <rect key="frame" x="0.0" y="816" width="414" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,22 +60,31 @@
                                 <buttonConfiguration key="configuration" style="plain" title="물마시기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="drinkWaterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HY9-OA-q5H"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요님의 하루 물 권장 섭취량은 2.1L입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs3-6D-NGf">
-                                <rect key="frame" x="67.5" y="791" width="279" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필을 설정해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs3-6D-NGf">
+                                <rect key="frame" x="144.5" y="791" width="125" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="ml" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bJ-ri-qFO">
+                                <rect key="frame" x="193" y="603" width="28" height="34"/>
+                                <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="GHu-BN-GXL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1V7-15-m7Y"/>
                             <constraint firstItem="RY0-sc-hvI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="4gM-mq-GeB"/>
                             <constraint firstAttribute="bottom" secondItem="wgz-p6-gCA" secondAttribute="bottom" id="4pe-BO-hLH"/>
                             <constraint firstItem="0hU-fe-Ujo" firstAttribute="top" secondItem="1vP-Ja-MWS" secondAttribute="bottom" id="Ha5-tA-gZB"/>
-                            <constraint firstItem="GHu-BN-GXL" firstAttribute="top" secondItem="oVA-w9-pla" secondAttribute="bottom" constant="30" id="Izi-9H-XoW"/>
                             <constraint firstItem="hs3-6D-NGf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OJR-ih-iA2"/>
                             <constraint firstItem="wgz-p6-gCA" firstAttribute="top" secondItem="hs3-6D-NGf" secondAttribute="bottom" constant="8" id="RnB-VT-eJZ"/>
                             <constraint firstItem="1vP-Ja-MWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Uyf-9c-7Fp"/>
@@ -89,14 +92,19 @@
                             <constraint firstItem="wgz-p6-gCA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dsD-A5-8cP"/>
                             <constraint firstItem="RY0-sc-hvI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fsB-9G-Dnw"/>
                             <constraint firstItem="wgz-p6-gCA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g67-Co-2I6"/>
+                            <constraint firstItem="4bJ-ri-qFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hwg-5K-1r1"/>
                             <constraint firstItem="0hU-fe-Ujo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="iFK-4S-CSd"/>
                             <constraint firstItem="oVA-w9-pla" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iwH-jY-U1I"/>
                             <constraint firstItem="oVA-w9-pla" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mE8-7p-xz8"/>
+                            <constraint firstItem="4bJ-ri-qFO" firstAttribute="top" secondItem="oVA-w9-pla" secondAttribute="bottom" constant="30" id="nNu-zp-GbJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="물마시기" id="eN7-S9-jy2">
                         <barButtonItem key="leftBarButtonItem" image="arrow.clockwise" catalog="system" id="joe-Xh-tbT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="resetButtonClicked:" destination="BYZ-38-t0r" id="CWi-o8-ZHd"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="person.circle" catalog="system" id="efD-M5-rmY">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,6 +113,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="achivementRateLabel" destination="0hU-fe-Ujo" id="Vuo-CP-eij"/>
+                        <outlet property="drinkWaterTextField" destination="4bJ-ri-qFO" id="tTE-AM-gER"/>
+                        <outlet property="infoLabel" destination="hs3-6D-NGf" id="miC-U6-ZLO"/>
+                        <outlet property="mainImageView" destination="oVA-w9-pla" id="0KO-Hv-S8F"/>
+                        <outlet property="totalDrinkWaterLabel" destination="1vP-Ja-MWS" id="OGo-nR-pxz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,6 +258,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="4bJ-ri-qFO">
+            <size key="intrinsicContentSize" width="28" height="34"/>
+        </designable>
         <designable name="788-gS-yom">
             <size key="intrinsicContentSize" width="140" height="19.5"/>
         </designable>
