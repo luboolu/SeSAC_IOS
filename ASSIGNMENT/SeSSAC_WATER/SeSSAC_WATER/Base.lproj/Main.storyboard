@@ -25,9 +25,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vP-Ja-MWS">
-                                <rect key="frame" x="30" y="166" width="122" height="42"/>
+                                <rect key="frame" x="30" y="166" width="200" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="wBC-CO-qfX"/>
+                                    <constraint firstAttribute="width" constant="200" id="wBC-CO-qfX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,11 +76,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="RY0-sc-hvI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="4gM-mq-GeB"/>
                             <constraint firstAttribute="bottom" secondItem="wgz-p6-gCA" secondAttribute="bottom" id="4pe-BO-hLH"/>
@@ -98,6 +99,9 @@
                             <constraint firstItem="oVA-w9-pla" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mE8-7p-xz8"/>
                             <constraint firstItem="4bJ-ri-qFO" firstAttribute="top" secondItem="oVA-w9-pla" secondAttribute="bottom" constant="30" id="nNu-zp-GbJ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4Ku-xv-Hjh" appends="YES" id="Sdg-Em-aVk"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="물마시기" id="eN7-S9-jy2">
                         <barButtonItem key="leftBarButtonItem" image="arrow.clockwise" catalog="system" id="joe-Xh-tbT">
@@ -122,6 +126,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4Ku-xv-Hjh">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="BYZ-38-t0r" id="ior-iN-fjm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1023.1884057971015" y="53.571428571428569"/>
         </scene>
@@ -203,6 +212,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P5L-L8-nq6"/>
                         <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="788-gS-yom" firstAttribute="top" secondItem="nMB-zd-aTS" secondAttribute="bottom" constant="20" id="1wY-Bd-Afl"/>
                             <constraint firstItem="788-gS-yom" firstAttribute="centerX" secondItem="sIx-pT-o4b" secondAttribute="centerX" id="72h-Bd-MUd"/>
@@ -219,6 +229,9 @@
                             <constraint firstItem="FQo-ZV-Kqy" firstAttribute="centerX" secondItem="sIx-pT-o4b" secondAttribute="centerX" id="viT-zC-vqj"/>
                             <constraint firstItem="P5L-L8-nq6" firstAttribute="trailing" secondItem="Hr7-uu-EFY" secondAttribute="trailing" constant="40" id="wzP-W0-VRX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CPa-TJ-bSf" appends="YES" id="kx2-Gx-Fie"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="profile" id="Oot-Gg-dlA">
                         <barButtonItem key="rightBarButtonItem" title="저장" id="CjD-g7-xcH">
@@ -235,6 +248,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdm-vI-6XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CPa-TJ-bSf">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="bAu-xp-yID" id="UD6-8W-KIx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="53.571428571428569"/>
         </scene>

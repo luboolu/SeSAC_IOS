@@ -45,6 +45,8 @@ class ProfileViewController: UIViewController {
                     
                     let waterRecommand: Double = (weight + height) / 100
                     
+                    UserDefaults.standard.set(waterRecommand, forKey: "recommand")
+                    
                     print("\(nickName)님은 \(height)cm이고 \(weight)kg입니다. 하루 권장 물 섭취량은 \(waterRecommand)L입니다.")
                     
                 } else {
@@ -55,10 +57,6 @@ class ProfileViewController: UIViewController {
                 //입력안한 textfield에 입력해달라고 표시
                 print("입력하지 않은 칸이 있습니다!")
             }
-            
-            
-            
-            
         }
         
         
@@ -66,4 +64,8 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        //탭 제스쳐 인식 후, 키보드가 내리기
+        view.endEditing(true)
+    }
 }

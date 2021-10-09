@@ -11,3 +11,8 @@ let weight:Double = 50
 print((height + weight) / 100)
 
 my.count
+
+Int("sr")
+
+"".unicodeScalars.allSatisfy(CharacterSet.decimalDigits.contains)
+
