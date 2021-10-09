@@ -27,6 +27,10 @@ class DrinkWaterViewController: UIViewController {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
                     UserDefaults.standard.removeObject(forKey: key.description)
                 }
+        
+        //초기 레이블 값, 이미지 설정
+        mainImageView.image = UIImage(named: "1-1")
+        
     }
     
     //왼쪽 상단의 reset button, 눌리면 마신 양을 초기화함
