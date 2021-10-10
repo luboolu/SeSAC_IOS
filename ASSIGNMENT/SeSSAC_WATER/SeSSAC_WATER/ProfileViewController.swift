@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "backgroundColor")
         
         nickNameTextField.textColor = .white
         nickNameTextField.backgroundColor = UIColor(named: "backgroundColor")

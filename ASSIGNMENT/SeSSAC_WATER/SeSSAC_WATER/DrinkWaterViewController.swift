@@ -36,19 +36,27 @@ class DrinkWaterViewController: UIViewController {
                 }
         
         //초기 레이블 값, 이미지 설정
+        view.backgroundColor = UIColor(named: "backgroundColor")
+        
         mainImageView.image = UIImage(named: "1-1")
         
         totalDrinkWaterInfoLabel.textColor = .white
+        totalDrinkWaterInfoLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         
         totalDrinkWaterLabel.textColor = .white
+        totalDrinkWaterLabel.font = UIFont.systemFont(ofSize: 35, weight: .bold)
         
         achivementRateLabel.textColor = .white
+        achivementRateLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         
         infoLabel.textColor = .white
+        infoLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         
         drinkWaterTextField.textColor = .white
+        drinkWaterTextField.font = UIFont.systemFont(ofSize: 30, weight: .regular)
         
         drinkWaterTextFieldml.textColor = .white
+        drinkWaterTextFieldml.font = UIFont.systemFont(ofSize: 30, weight: .regular)
 
         drinkWaterButton.backgroundColor = .white
         drinkWaterButton.setTitleColor(.black, for: .normal)
@@ -64,9 +72,14 @@ class DrinkWaterViewController: UIViewController {
         //1. totalDrinkWaterLabel 초기화
         water = 0
         totalDrinkWaterLabel.text = "\(water)ml"
+        
         //2. achivementRateLabel 초기화
         achivementRateLabel.text = "목표의 0%"
-        //3. mainImageview 초기화
+        
+        //3.drinkWaterTextField 초기화
+        drinkWaterTextField.text = "\(0)"
+        
+        //4. mainImageview 초기화
         mainImageView.image = UIImage(named: "1-1")
         
         totalDrinkWaterLabel.textColor = .white
@@ -77,7 +90,7 @@ class DrinkWaterViewController: UIViewController {
     //하단의 물마시기 버튼, 눌리면 text field에 입력된 값 만큼을 물 마신 양에 추가
     @IBAction func drinkWaterButtonClicked(_ sender: UIButton) {
         //0. 프로필이 입력되지 않은 상태로 버튼이 눌린다면, 프로필을 입력해달라는 alert 띄우기
-        let recommand: Double = UserDefaults.standard.double(forKey: "recommand") ?? 0
+        let recommand: Double = UserDefaults.standard.double(forKey: "recommand")
 
         if recommand == 0 {
             alertMaker(myTitle: "error!", myMessage: "프로필을 설정해주세요!", myAction: "네")
@@ -160,7 +173,5 @@ class DrinkWaterViewController: UIViewController {
         //탭 제스쳐 인식 후, 키보드가 내리기
         view.endEditing(true)
     }
-    
-    
-    
+
 }
