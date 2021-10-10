@@ -13,8 +13,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet var heightTextField: UITextField!
     @IBOutlet var weightTextField: UITextField!
     
+    @IBOutlet var saveButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nickNameTextField.textColor = .white
+        nickNameTextField.backgroundColor = UIColor(named: "backgroundColor")
+        
+        heightTextField.textColor = .white
+        heightTextField.backgroundColor = UIColor(named: "backgroundColor")
+        
+        
+        weightTextField.textColor = .white
+        weightTextField.backgroundColor = UIColor(named: "backgroundColor")
+        
+        saveButton.tintColor = .white
     }
     
 

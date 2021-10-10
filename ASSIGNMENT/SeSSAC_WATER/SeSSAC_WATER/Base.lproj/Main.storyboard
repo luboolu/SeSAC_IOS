@@ -164,27 +164,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-4" translatesAutoresizingMaskIntoConstraints="NO" id="FQo-ZV-Kqy">
                                 <rect key="frame" x="131" y="138" width="152" height="151"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="키(cm)를 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="788-gS-yom" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="40" y="399" width="334" height="35"/>
-                                <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="kK0-2I-OLi"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="몸무게(kg)을 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-uu-EFY" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="40" y="454" width="334" height="35"/>
                                 <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -228,6 +207,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="키(cm)를 설정해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="788-gS-yom" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="40" y="395" width="334" height="35"/>
+                                <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kK0-2I-OLi"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P5L-L8-nq6"/>
                         <color key="backgroundColor" red="0.25490197539999998" green="0.58039218189999997" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -263,6 +263,7 @@
                     <connections>
                         <outlet property="heightTextField" destination="788-gS-yom" id="xgi-uT-eYL"/>
                         <outlet property="nickNameTextField" destination="nMB-zd-aTS" id="hKD-qk-cyq"/>
+                        <outlet property="saveButton" destination="CjD-g7-xcH" id="i58-UE-ad3"/>
                         <outlet property="weightTextField" destination="Hr7-uu-EFY" id="XEe-FM-ekh"/>
                     </connections>
                 </viewController>
