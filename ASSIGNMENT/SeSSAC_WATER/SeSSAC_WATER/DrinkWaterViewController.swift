@@ -9,6 +9,7 @@ import UIKit
 
 class DrinkWaterViewController: UIViewController {
 
+    @IBOutlet var totalDrinkWaterInfoLabel: UILabel!
     @IBOutlet var totalDrinkWaterLabel: UILabel!
     @IBOutlet var achivementRateLabel: UILabel!
     @IBOutlet var infoLabel: UILabel!
@@ -42,6 +43,10 @@ class DrinkWaterViewController: UIViewController {
         achivementRateLabel.text = "목표의 0%"
         //3. mainImageview 초기화
         mainImageView.image = UIImage(named: "1-1")
+        
+        totalDrinkWaterLabel.textColor = .white
+        totalDrinkWaterInfoLabel.textColor = .white
+        achivementRateLabel.textColor = .white
     }
     
     //하단의 물마시기 버튼, 눌리면 text field에 입력된 값 만큼을 물 마신 양에 추가
@@ -50,7 +55,14 @@ class DrinkWaterViewController: UIViewController {
         let recommand: Double = UserDefaults.standard.double(forKey: "recommand") ?? 0
         print(recommand)
         if recommand == 0 {
-            print("프로필이 입력되지 않았습니다!")
+            //1. UIAlertController 생성: 밑바탕 + 타이틀 + 본문
+            let alert = UIAlertController(title: "error", message: "프로필을 설정해주세요!", preferredStyle: .actionSheet)
+            //2. UIAlertAction 생성: 버튼들을...
+            let ok = UIAlertAction(title: "네", style: .default)
+            //3. 1 + 2
+            alert.addAction(ok)
+            //4. present
+            present(alert, animated: true, completion: nil)
         } else {
             infoLabel.text = "\(UserDefaults.standard.string(forKey: "nickName")!)님의 하루 물 권장 섭취량은 \(recommand)L 입니다."
             //1. drinkWaterTextField에 입력된 물 양 가져오기
@@ -58,6 +70,9 @@ class DrinkWaterViewController: UIViewController {
             
             if drinkWaterInput.count != 0 && drinkWaterInput.unicodeScalars.allSatisfy(CharacterSet.decimalDigits.contains){
                 let drinkWater: Int = Int(drinkWaterInput)!
+                
+                //drinkWaterTextField text 재설정
+                drinkWaterTextField.text = "\(drinkWater)ml"
                 
                 //2. totalDrinkWaterLabel에 1.만큼 추가
                 water += drinkWater
@@ -68,30 +83,42 @@ class DrinkWaterViewController: UIViewController {
                 achivementRateLabel.text = "목표의 \(achive)%"
                 
                 if achive >= 100 {
-                    totalDrinkWaterLabel.textColor = .red
+                    totalDrinkWaterLabel.textColor = UIColor(named: "pinkTextColor")
+                    totalDrinkWaterInfoLabel.textColor = UIColor(named: "pinkTextColor")
+                    achivementRateLabel.textColor = UIColor(named: "pinkTextColor")
+                    
                 }
                 
                 //4. mainImageView 3.의 정도에 따라 이미지가 변경되도록 함
-                if achive >= 90 {
-                    mainImageView.image = UIImage(named: "1-9")
-                } else if achive >= 80 {
-                    mainImageView.image = UIImage(named: "1-8")
-                } else if achive >= 70 {
-                    mainImageView.image = UIImage(named: "1-7")
-                } else if achive >= 60 {
-                    mainImageView.image = UIImage(named: "1-6")
-                } else if achive >= 50 {
-                    mainImageView.image = UIImage(named: "1-5")
-                } else if achive >= 40 {
-                    mainImageView.image = UIImage(named: "1-4")
-                } else if achive >= 30 {
-                    mainImageView.image = UIImage(named: "1-3")
-                } else if achive >= 20 {
-                    mainImageView.image = UIImage(named: "1-2")
-                } else {
-                    mainImageView.image = UIImage(named: "1-1")
-                }
+                setMainImageWithAchive(a: achive)
+                
             }
+        }
+        
+        func setMainImageWithAchive(a:Int){
+            let imageName: String
+            
+            if a >= 90 {
+                imageName = "1-9"
+            } else if a >= 80 {
+                imageName = "1-8"
+            } else if a >= 70 {
+                imageName = "1-7"
+            } else if a >= 60 {
+                imageName = "1-6"
+            } else if a >= 50 {
+                imageName = "1-5"
+            } else if a >= 40 {
+                imageName = "1-4"
+            } else if a >= 30 {
+                imageName = "1-3"
+            } else if a >= 20 {
+                imageName = "1-2"
+            } else {
+                imageName = "1-1"
+            }
+            
+            mainImageView.image = UIImage(named: imageName)
         }
         
         

@@ -122,6 +122,7 @@
                         <outlet property="drinkWaterTextField" destination="4bJ-ri-qFO" id="tTE-AM-gER"/>
                         <outlet property="infoLabel" destination="hs3-6D-NGf" id="miC-U6-ZLO"/>
                         <outlet property="mainImageView" destination="oVA-w9-pla" id="0KO-Hv-S8F"/>
+                        <outlet property="totalDrinkWaterInfoLabel" destination="RY0-sc-hvI" id="MnO-mI-5xG"/>
                         <outlet property="totalDrinkWaterLabel" destination="1vP-Ja-MWS" id="OGo-nR-pxz"/>
                     </connections>
                 </viewController>
@@ -276,9 +277,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="4bJ-ri-qFO">
-            <size key="intrinsicContentSize" width="28" height="34"/>
-        </designable>
         <designable name="788-gS-yom">
             <size key="intrinsicContentSize" width="140" height="19.5"/>
         </designable>
