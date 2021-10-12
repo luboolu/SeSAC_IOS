@@ -77,7 +77,6 @@ class MemoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memoCell")
         
         //섹션에 따라 다른 디자인 주기
-        
         if indexPath.section == 0 {
             cell?.textLabel?.text = "첫번째 섹션입니다! - \(indexPath)"
             cell?.textLabel?.textColor = .brown
