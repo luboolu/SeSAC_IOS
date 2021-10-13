@@ -142,9 +142,11 @@ class BMI {
     typealias BMIValue = Double //직접 타입 만들기
     //프로퍼티 감시자 - 값이 바뀌는지 안바뀌는지를 감시함
     var userName: String {
+        //변수가 바뀌기 전에 호출
         willSet {
             print("닉네임 변경 예정: \(userName) -> \(newValue)")
         }
+        //변수가 바뀌자 마자 호출
         didSet {
             changeNameCount += 1
             print("닉네임 뱐걍 결과: \(oldValue) -> \(userName)")
