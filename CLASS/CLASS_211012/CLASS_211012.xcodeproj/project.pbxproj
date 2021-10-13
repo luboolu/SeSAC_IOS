@@ -14,6 +14,8 @@
 		DCF75FA227150A3200D0C863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF75FA127150A3200D0C863 /* Assets.xcassets */; };
 		DCF75FA527150A3200D0C863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF75FA327150A3200D0C863 /* LaunchScreen.storyboard */; };
 		DCF75FAF271516F700D0C863 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF75FAE271516F700D0C863 /* MemoTableViewController.swift */; };
+		DCF75FD527165DAC00D0C863 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF75FD427165DAC00D0C863 /* MovieTableViewController.swift */; };
+		DCF75FD727165E9700D0C863 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF75FD627165E9700D0C863 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DCF75FA427150A3200D0C863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCF75FA627150A3200D0C863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF75FAE271516F700D0C863 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
+		DCF75FD427165DAC00D0C863 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		DCF75FD627165E9700D0C863 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				DCF75F9A27150A3000D0C863 /* SceneDelegate.swift */,
 				DCF75F9C27150A3000D0C863 /* ViewController.swift */,
 				DCF75F9E27150A3000D0C863 /* Main.storyboard */,
+				DCF75FD427165DAC00D0C863 /* MovieTableViewController.swift */,
+				DCF75FD627165E9700D0C863 /* MovieTableViewCell.swift */,
 				DCF75FAE271516F700D0C863 /* MemoTableViewController.swift */,
 				DCF75FA127150A3200D0C863 /* Assets.xcassets */,
 				DCF75FA327150A3200D0C863 /* LaunchScreen.storyboard */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF75FD527165DAC00D0C863 /* MovieTableViewController.swift in Sources */,
 				DCF75FAF271516F700D0C863 /* MemoTableViewController.swift in Sources */,
+				DCF75FD727165E9700D0C863 /* MovieTableViewCell.swift in Sources */,
 				DCF75F9D27150A3000D0C863 /* ViewController.swift in Sources */,
 				DCF75F9927150A3000D0C863 /* AppDelegate.swift in Sources */,
 				DCF75F9B27150A3000D0C863 /* SceneDelegate.swift in Sources */,

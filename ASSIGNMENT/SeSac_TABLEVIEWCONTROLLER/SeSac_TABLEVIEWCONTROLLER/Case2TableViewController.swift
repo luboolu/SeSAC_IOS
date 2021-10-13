@@ -29,8 +29,10 @@ class Case2TableViewController: UITableViewController {
         return headerList.count
     }
     
+    //numberOfRowsInSection으로 호출
+    //이걸 정의 안했더니 셀이 보이지 않았음
+    //각 section에 cell이 몇개 들어갈지를 반환해주면, 셀이 생긴다.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return cellList[section].count
     }
     
@@ -54,8 +56,8 @@ class Case2TableViewController: UITableViewController {
                 }
         
         cell.textLabel?.text = cellList[indexPath.section][indexPath.row]
+        cell.textLabel?.font = .systemFont(ofSize: 13)
         
-
         
         return cell
     }

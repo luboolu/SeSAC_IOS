@@ -9,7 +9,11 @@ import UIKit
 
 class MemoTableViewController: UITableViewController {
 
-    var list: [String] = ["장보기", "메모메모", "영화 보러 가기", "WWDC 시청하기"]
+    var list: [String] = ["장보기", "메모메모", "영화 보러 가기", "WWDC 시청하기"] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet weak var memoTextView: UITextView!
     
@@ -22,7 +26,7 @@ class MemoTableViewController: UITableViewController {
         //배열에 텍스트뷰의 텍스트 값 추가
         if let text = memoTextView.text {
             list.append(text)
-            tableView.reloadData()
+            //tableView.reloadData()
         } else {
             print("")
         }
@@ -113,7 +117,7 @@ class MemoTableViewController: UITableViewController {
         if indexPath.section == 1 {
             if editingStyle == .delete {
                 list.remove(at: indexPath.row)
-                tableView.reloadData()
+                //tableView.reloadData()
             }
         }
         
