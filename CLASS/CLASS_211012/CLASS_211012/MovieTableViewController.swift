@@ -8,6 +8,8 @@
 import UIKit
 
 class MovieTableViewController: UITableViewController {
+    
+    let movieInformation = MovieInformation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,21 +18,24 @@ class MovieTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return movieInformation.movie.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //커스텀 셀을 사용할땐 indexPath를 전달하는 for 매개변수도 같이 사용한다
         //타입 캐스팅
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as? MovieTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
             return UITableViewCell()
         }
         
+        let row = movieInformation.movie[indexPath.row]
+        
         cell.posterImageView.backgroundColor = .red
-        cell.titleLabel.text = "7번방의 선물"
-        cell.releaseDateLabel.text = "2021.02.02"
-        cell.overviewLabel.text = "영화 줄거리가 보이는 곳입니다.영화 줄거리가 보이는 곳입니다.영화 줄거리가 보이는 곳입니다.영화 줄거리가 보이는 곳입니다.영화 줄거리가 보이는 곳입니다.영화 줄거리가 보이는 곳입니다.영화 줄거리가 보이는 곳입니다."
+        cell.posterImageView.image = UIImage(named: row.title)
+        cell.titleLabel.text = row.title //title만 색깔이 다른 이유는,,애플의 예약어라서
+        cell.releaseDateLabel.text = row.releaseDate
+        cell.overviewLabel.text = row.overview
         cell.overviewLabel.numberOfLines = 0
         
         return cell

@@ -16,6 +16,10 @@
 		DCF75FAF271516F700D0C863 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF75FAE271516F700D0C863 /* MemoTableViewController.swift */; };
 		DCF75FD527165DAC00D0C863 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF75FD427165DAC00D0C863 /* MovieTableViewController.swift */; };
 		DCF75FD727165E9700D0C863 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF75FD627165E9700D0C863 /* MovieTableViewCell.swift */; };
+		DCF7601F2717ADA200D0C863 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7601E2717ADA200D0C863 /* Movie.swift */; };
+		DCF760212717AEEC00D0C863 /* MovieInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760202717AEEC00D0C863 /* MovieInfomation.swift */; };
+		DCF760232717B59400D0C863 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760222717B59400D0C863 /* Memo.swift */; };
+		DCF760252717D2D700D0C863 /* UIViewControllerPlusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760242717D2D700D0C863 /* UIViewControllerPlusExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		DCF75FAE271516F700D0C863 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
 		DCF75FD427165DAC00D0C863 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		DCF75FD627165E9700D0C863 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		DCF7601E2717ADA200D0C863 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DCF760202717AEEC00D0C863 /* MovieInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfomation.swift; sourceTree = "<group>"; };
+		DCF760222717B59400D0C863 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		DCF760242717D2D700D0C863 /* UIViewControllerPlusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPlusExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,13 @@
 				DCF75F9A27150A3000D0C863 /* SceneDelegate.swift */,
 				DCF75F9C27150A3000D0C863 /* ViewController.swift */,
 				DCF75F9E27150A3000D0C863 /* Main.storyboard */,
+				DCF760242717D2D700D0C863 /* UIViewControllerPlusExtension.swift */,
 				DCF75FD427165DAC00D0C863 /* MovieTableViewController.swift */,
+				DCF760202717AEEC00D0C863 /* MovieInfomation.swift */,
+				DCF7601E2717ADA200D0C863 /* Movie.swift */,
 				DCF75FD627165E9700D0C863 /* MovieTableViewCell.swift */,
 				DCF75FAE271516F700D0C863 /* MemoTableViewController.swift */,
+				DCF760222717B59400D0C863 /* Memo.swift */,
 				DCF75FA127150A3200D0C863 /* Assets.xcassets */,
 				DCF75FA327150A3200D0C863 /* LaunchScreen.storyboard */,
 				DCF75FA627150A3200D0C863 /* Info.plist */,
@@ -147,10 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF7601F2717ADA200D0C863 /* Movie.swift in Sources */,
 				DCF75FD527165DAC00D0C863 /* MovieTableViewController.swift in Sources */,
 				DCF75FAF271516F700D0C863 /* MemoTableViewController.swift in Sources */,
 				DCF75FD727165E9700D0C863 /* MovieTableViewCell.swift in Sources */,
+				DCF760252717D2D700D0C863 /* UIViewControllerPlusExtension.swift in Sources */,
+				DCF760212717AEEC00D0C863 /* MovieInfomation.swift in Sources */,
 				DCF75F9D27150A3000D0C863 /* ViewController.swift in Sources */,
+				DCF760232717B59400D0C863 /* Memo.swift in Sources */,
 				DCF75F9927150A3000D0C863 /* AppDelegate.swift in Sources */,
 				DCF75F9B27150A3000D0C863 /* SceneDelegate.swift in Sources */,
 			);

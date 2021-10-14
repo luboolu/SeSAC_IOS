@@ -9,28 +9,91 @@ import UIKit
 
 class MemoTableViewController: UITableViewController {
 
-    var list: [String] = ["장보기", "메모메모", "영화 보러 가기", "WWDC 시청하기"] {
+    
+//    var list = [Memo]() {
+//        didSet {
+//            tableView.reloadData()
+//        }
+//    }
+    //위 아래 모두 같은 선언! 방법만 다르다
+    
+    var list: [Memo] = [] {
         didSet {
-            tableView.reloadData()
+            saveDate()
         }
     }
     
     @IBOutlet weak var memoTextView: UITextView!
+    @IBOutlet weak var categorySegmentControl: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
+        //UITableView.automaticDimension 찾아보기
 
     }
     
     @IBAction func saveButtonClicked(_ sender: UIButton) {
         //배열에 텍스트뷰의 텍스트 값 추가
         if let text = memoTextView.text {
-            list.append(text)
+            
+            let segmentIndex = categorySegmentControl.selectedSegmentIndex
+            let segmentCategory = Category(rawValue: segmentIndex) ?? .others
+            
+            let memo = Memo(content: text, category: segmentCategory)
+            list.append(memo)
             //tableView.reloadData()
         } else {
             print("")
         }
  
+    }
+    
+    func loadData() {
+        
+        let userDefualts = UserDefaults.standard
+        
+        if let data = userDefualts.object(forKey: "memoList") as? [[String:Any]] {
+            
+            var memo = [Memo]()
+            
+            for datum in data {
+                
+                guard let category = datum["category"] as? Int else { return }
+                guard let content = datum["content"] as? String else { return }
+                
+                let enumCatagory = Category(rawValue: category) ?? .others
+                
+                
+                memo.append(Memo(content: content, category: enumCatagory))
+                
+            }
+            
+            self.list = memo
+            
+            
+            
+        }
+    }
+    
+    func saveDate() {
+        var memo: [[String:Any]] = []
+        
+        for i in list {
+            
+            let data: [String:Any] = [
+                "category": i.category.rawValue,
+                "content": i.content
+            ]
+            
+            memo.append(data)
+        }
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(memo, forKey: "memoList")
+        
+        tableView.reloadData()
     }
     
     
@@ -86,10 +149,22 @@ class MemoTableViewController: UITableViewController {
             cell?.textLabel?.textColor = .brown
             cell?.textLabel?.font = .boldSystemFont(ofSize: 15)
         } else {
+            
+            let row = list[indexPath.row]
+            
+            
             //if문 여러개 만들지 않고, [indexPath.row]를 사용하여 각각 다른 데이터를 넣어줄 수 있음
-            cell?.textLabel?.text = list[indexPath.row]
+            cell?.textLabel?.text = row.content
+            cell?.detailTextLabel?.text = row.content.description
             cell?.textLabel?.textColor = .blue
             cell?.textLabel?.font = .italicSystemFont(ofSize: 13)
+            
+            switch row.category {
+            case .business: cell?.imageView?.image = UIImage(systemName: "building.2")
+            case .personal: cell?.imageView?.image = UIImage(systemName: "person")
+            case .others: cell?.imageView?.image = UIImage(systemName: "square.and.pencil")
+            }
+            
         }
         return cell!
     }
