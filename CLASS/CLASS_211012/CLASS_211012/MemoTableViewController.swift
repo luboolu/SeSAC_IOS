@@ -29,6 +29,13 @@ class MemoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //UserDefaults 초기화
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    UserDefaults.standard.removeObject(forKey: key.description)
+                }
+        
+        
         loadData()
         //UITableView.automaticDimension 찾아보기
 
@@ -40,7 +47,7 @@ class MemoTableViewController: UITableViewController {
             
             let segmentIndex = categorySegmentControl.selectedSegmentIndex
             let segmentCategory = Category(rawValue: segmentIndex) ?? .others
-            
+
             let memo = Memo(content: text, category: segmentCategory)
             list.append(memo)
             //tableView.reloadData()
@@ -71,9 +78,6 @@ class MemoTableViewController: UITableViewController {
             }
             
             self.list = memo
-            
-            
-            
         }
     }
     
@@ -86,7 +90,7 @@ class MemoTableViewController: UITableViewController {
                 "category": i.category.rawValue,
                 "content": i.content
             ]
-            
+
             memo.append(data)
         }
         
@@ -148,17 +152,19 @@ class MemoTableViewController: UITableViewController {
             cell?.textLabel?.text = "첫번째 섹션입니다! - \(indexPath)"
             cell?.textLabel?.textColor = .brown
             cell?.textLabel?.font = .boldSystemFont(ofSize: 15)
+            cell?.detailTextLabel?.text = "첫번째 섹션의 detail"
+            cell?.imageView?.image = UIImage(systemName: "pencil")
         } else {
             
             let row = list[indexPath.row]
-            
+            print(row)
             
             //if문 여러개 만들지 않고, [indexPath.row]를 사용하여 각각 다른 데이터를 넣어줄 수 있음
             cell?.textLabel?.text = row.content
-            cell?.detailTextLabel?.text = row.content.description
+            cell?.detailTextLabel?.text = row.category.description
             cell?.textLabel?.textColor = .blue
             cell?.textLabel?.font = .italicSystemFont(ofSize: 13)
-            
+
             switch row.category {
             case .business: cell?.imageView?.image = UIImage(systemName: "building.2")
             case .personal: cell?.imageView?.image = UIImage(systemName: "person")
@@ -173,7 +179,7 @@ class MemoTableViewController: UITableViewController {
     //3. (옵션) 셀의 높이 : default 44 - 옵션이지만 거의 필수로 작성해주어야 함
     //heightForRowAt 이걸로 검색
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 44 : 80
+        return indexPath.section == 0 ? 44 : 80
     }
     
     //(옵션) 셀을 클릭했을때 기능

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCE7ED54271842660025BFD0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE7ED53271842660025BFD0 /* ListTableViewCell.swift */; };
 		DCF760052716D22C00D0C863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760042716D22C00D0C863 /* AppDelegate.swift */; };
 		DCF760072716D22C00D0C863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760062716D22C00D0C863 /* SceneDelegate.swift */; };
 		DCF760092716D22C00D0C863 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760082716D22C00D0C863 /* ViewController.swift */; };
@@ -14,11 +15,10 @@
 		DCF7600E2716D22F00D0C863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF7600D2716D22F00D0C863 /* Assets.xcassets */; };
 		DCF760112716D22F00D0C863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF7600F2716D22F00D0C863 /* LaunchScreen.storyboard */; };
 		DCF760192716D98800D0C863 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF760182716D98800D0C863 /* ShoppingListTableViewController.swift */; };
-		DCF7601B2716E22C00D0C863 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7601A2716E22C00D0C863 /* ListTableViewCell.swift */; };
-		DCF7601D2716F66500D0C863 /* List2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7601C2716F66500D0C863 /* List2TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCE7ED53271842660025BFD0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		DCF760012716D22C00D0C863 /* SeSAC_SHOPPING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_SHOPPING.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF760042716D22C00D0C863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF760062716D22C00D0C863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +28,6 @@
 		DCF760102716D22F00D0C863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCF760122716D22F00D0C863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCF760182716D98800D0C863 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
-		DCF7601A2716E22C00D0C863 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		DCF7601C2716F66500D0C863 /* List2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +62,10 @@
 			children = (
 				DCF760042716D22C00D0C863 /* AppDelegate.swift */,
 				DCF760062716D22C00D0C863 /* SceneDelegate.swift */,
-				DCF7601A2716E22C00D0C863 /* ListTableViewCell.swift */,
 				DCF760082716D22C00D0C863 /* ViewController.swift */,
 				DCF7600A2716D22C00D0C863 /* Main.storyboard */,
-				DCF7601C2716F66500D0C863 /* List2TableViewCell.swift */,
 				DCF760182716D98800D0C863 /* ShoppingListTableViewController.swift */,
+				DCE7ED53271842660025BFD0 /* ListTableViewCell.swift */,
 				DCF7600D2716D22F00D0C863 /* Assets.xcassets */,
 				DCF7600F2716D22F00D0C863 /* LaunchScreen.storyboard */,
 				DCF760122716D22F00D0C863 /* Info.plist */,
@@ -151,8 +148,7 @@
 				DCF760052716D22C00D0C863 /* AppDelegate.swift in Sources */,
 				DCF760072716D22C00D0C863 /* SceneDelegate.swift in Sources */,
 				DCF760192716D98800D0C863 /* ShoppingListTableViewController.swift in Sources */,
-				DCF7601D2716F66500D0C863 /* List2TableViewCell.swift in Sources */,
-				DCF7601B2716E22C00D0C863 /* ListTableViewCell.swift in Sources */,
+				DCE7ED54271842660025BFD0 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

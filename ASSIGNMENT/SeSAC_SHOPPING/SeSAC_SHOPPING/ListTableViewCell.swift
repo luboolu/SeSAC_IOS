@@ -2,7 +2,7 @@
 //  ListTableViewCell.swift
 //  SeSAC_SHOPPING
 //
-//  Created by 김진영 on 2021/10/13.
+//  Created by 김진영 on 2021/10/14.
 //
 
 import UIKit
@@ -10,8 +10,7 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var addButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +22,5 @@ class ListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
 
 }

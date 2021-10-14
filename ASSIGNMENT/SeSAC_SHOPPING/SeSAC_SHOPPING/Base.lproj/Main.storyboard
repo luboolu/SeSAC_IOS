@@ -23,7 +23,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="60" id="mMd-DM-uq4" customClass="ListTableViewCell" customModule="SeSAC_SHOPPING" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" rowHeight="60" id="mMd-DM-uq4" customClass="ListTableViewCell" customModule="SeSAC_SHOPPING" customModuleProvider="target">
                                 <rect key="frame" x="20" y="93.5" width="374" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mMd-DM-uq4" id="pH5-oj-k1P">
@@ -50,7 +50,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
-                                                <action selector="addButtonClicked:" destination="Z3i-EU-cOL" eventType="touchUpInside" id="jCR-3B-dpd"/>
+                                                <action selector="addButtonClicked:" destination="Z3i-EU-cOL" eventType="touchUpInside" id="dfQ-M6-kV0"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -64,12 +64,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <outlet property="addButton" destination="jK4-YF-Kq4" id="yyG-Fv-BRA"/>
-                                    <outlet property="searchTextField" destination="qbm-Rw-zuT" id="mem-mu-KWX"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" rowHeight="75" id="cPp-7J-2RX" customClass="List2TableViewCell" customModule="SeSAC_SHOPPING" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="cPp-7J-2RX" customClass="List2TableViewCell" customModule="SeSAC_SHOPPING" customModuleProvider="target">
                                 <rect key="frame" x="20" y="153.5" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cPp-7J-2RX" id="r2G-l4-Nft">
@@ -105,11 +101,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <outlet property="checkButton" destination="miJ-jp-LQC" id="chs-qs-pqt"/>
-                                    <outlet property="shopListLabel" destination="xnP-sD-RAU" id="Nvn-Ja-tTB"/>
-                                    <outlet property="starButton" destination="GVT-2q-3Gf" id="eaV-Z9-iP4"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,6 +108,9 @@
                             <outlet property="delegate" destination="Z3i-EU-cOL" id="nud-Pv-kZa"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchField" destination="qbm-Rw-zuT" id="xaV-pG-Ihz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkJ-vN-GiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
