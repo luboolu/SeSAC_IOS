@@ -49,9 +49,6 @@
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
-                                            <connections>
-                                                <action selector="addButtonClicked:" destination="Z3i-EU-cOL" eventType="touchUpInside" id="dfQ-M6-kV0"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -108,9 +105,6 @@
                             <outlet property="delegate" destination="Z3i-EU-cOL" id="nud-Pv-kZa"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="searchField" destination="qbm-Rw-zuT" id="xaV-pG-Ihz"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkJ-vN-GiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
