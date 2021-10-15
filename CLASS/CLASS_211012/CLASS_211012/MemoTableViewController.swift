@@ -35,10 +35,15 @@ class MemoTableViewController: UITableViewController {
                     UserDefaults.standard.removeObject(forKey: key.description)
                 }
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
         
         loadData()
         //UITableView.automaticDimension 찾아보기
 
+    }
+    
+    @objc func closeButtonClicked() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveButtonClicked(_ sender: UIButton) {

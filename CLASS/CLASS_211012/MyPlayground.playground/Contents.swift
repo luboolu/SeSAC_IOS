@@ -353,5 +353,31 @@ struct Memo {
     var category: Category
 }
 
-Category
 
+
+
+//211015 수업
+
+protocol Introduce {
+    var name: String { get set }
+    var age: Int { get }
+    
+    func introduce()
+    
+}
+
+class Human {
+    
+}
+
+class Jack: Human, Introduce {
+    
+    var name: String = "JACK"
+    
+    var age: Int = 10
+    
+    func introduce() {
+        print("자기소개하기")
+    }
+    
+}

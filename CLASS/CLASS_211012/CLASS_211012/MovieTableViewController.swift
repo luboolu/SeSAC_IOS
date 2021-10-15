@@ -13,7 +13,20 @@ class MovieTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "닫기", style: .plain, target: self, action: #selector(closeButtonClicked))
 
+    }
+    
+    @objc func closeButtonClicked() {
+        
+        //Push - Pop
+        //Push: Dismiss X, Present
+        self.navigationController?.popViewController(animated: true)
+        //이렇게 했을때 대신 백버튼 제스쳐는 동작하지 않게 됨
+        
+        //Push로 화면전환 되었을때 dismiss로 화면 닫는 것을 못한다!
+        //self.dismiss(animated: true, completion: nil)
     }
 
 
@@ -43,6 +56,17 @@ class MovieTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height / 7 //디바이스별 크기를 받아와서 각기 다르게 적용해준다
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Movie", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController else {
+            print("ERROR")
+            return
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 
