@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E74271C4EB3006E9142 /* StarringViewController.swift */; };
 		DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405A271BBE210035B3E8 /* AppDelegate.swift */; };
 		DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */; };
 		DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405E271BBE210035B3E8 /* ViewController.swift */; };
@@ -18,9 +19,11 @@
 		DC9F4073271BC6660035B3E8 /* TvShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F4072271BC6660035B3E8 /* TvShow.swift */; };
 		DCF9FFC0271BF31E00E799FE /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */; };
 		DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */; };
+		DCF9FFC4271C3BAE00E799FE /* GenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC045E74271C4EB3006E9142 /* StarringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarringViewController.swift; sourceTree = "<group>"; };
 		DC9F4057271BBE210035B3E8 /* SeSAC_TRENDMEDIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_TRENDMEDIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9F405A271BBE210035B3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		DC9F4072271BC6660035B3E8 /* TvShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShow.swift; sourceTree = "<group>"; };
 		DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
 		DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				DC9F406E271BC05F0035B3E8 /* TvShowInformation.swift */,
 				DC9F4072271BC6660035B3E8 /* TvShow.swift */,
 				DC9F4060271BBE210035B3E8 /* Main.storyboard */,
+				DC045E74271C4EB3006E9142 /* StarringViewController.swift */,
+				DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */,
 				DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */,
 				DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */,
 				DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */,
@@ -161,6 +167,8 @@
 				DCF9FFC0271BF31E00E799FE /* PosterTableViewCell.swift in Sources */,
 				DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */,
 				DC9F4071271BC4890035B3E8 /* MovieTrendInfoViewController.swift in Sources */,
+				DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */,
+				DCF9FFC4271C3BAE00E799FE /* GenreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeSAC_TRENDMEDIA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,6 +345,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeSAC_TRENDMEDIA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

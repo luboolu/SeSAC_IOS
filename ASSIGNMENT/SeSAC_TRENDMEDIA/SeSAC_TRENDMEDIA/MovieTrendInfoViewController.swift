@@ -30,12 +30,29 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "GenreCell") as? GenreTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            let row = tvShowInformation.tvShow[indexPath.section]
+            
+            cell.releaseDateLabel.text = row.releaseDate
+            cell.releaseDateLabel.font = .systemFont(ofSize: 15, weight: .medium)
+            cell.releaseDateLabel.textColor = .lightGray
+            
+            cell.genreLabel.text = "#" + row.genre
+            cell.genreLabel.font = .systemFont(ofSize: 20, weight: .medium)
+            cell.genreLabel.textColor = .black
+            
+            return cell
+            
+        } else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PosterCell") as? PosterTableViewCell else {
                 return UITableViewCell()
             }
@@ -54,10 +71,19 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
                     cell.posterImageView.image = UIImage(data: data!)
                 }
             }
+            
+            cell.rateNameLabel.text = "평점"
+            cell.rateNameLabel.font = .systemFont(ofSize: 15, weight: .medium)
+            cell.rateNameLabel.backgroundColor = .purple
+            
+            cell.rateNumLabel.text = String(row.rate)
+            cell.rateNumLabel.font = .systemFont(ofSize: 15, weight: .medium)
+            cell.rateNumLabel.backgroundColor = .white
+            
           
             
             return cell
-        } else if indexPath.row == 1 {
+        } else if indexPath.row == 2 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell") as? InfoTableViewCell else {
                 return UITableViewCell()
             }
@@ -65,9 +91,11 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
             let row = tvShowInformation.tvShow[indexPath.section]
             
             cell.movieTitleLable.text = row.title
-            cell.movieTitleLable.font = UIFont(name: .boldSystemFont(ofSize: <#T##CGFloat#>), size: <#T##CGFloat#>)
+            cell.movieTitleLable.font = .systemFont(ofSize: 25)
             
             cell.movieCastLabel.text = row.starring
+            cell.movieCastLabel.font = .systemFont(ofSize: 15, weight: .light)
+            
             
             
             return cell
@@ -83,9 +111,34 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 300 : 88
+        
+        if indexPath.row == 1 {
+            return 300
+        } else if indexPath.row == 2 {
+            return 88
+        } else {
+            return 44
+        }
+
     }
     
+    
+    @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
+        print(#function)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "StarringViewController") as? StarringViewController else {
+            print("ERROR")
+            return
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 
     
 
