@@ -128,16 +128,7 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        guard let vc = sb.instantiateViewController(withIdentifier: "StarringViewController") as? StarringViewController else {
-            print("ERROR")
-            return
-        }
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+
 
 
     

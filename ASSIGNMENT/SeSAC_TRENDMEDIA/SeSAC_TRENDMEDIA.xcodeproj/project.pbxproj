@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E74271C4EB3006E9142 /* StarringViewController.swift */; };
+		DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E76271C5761006E9142 /* ActorTableViewCell.swift */; };
+		DC045E79271C5FDA006E9142 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E78271C5FDA006E9142 /* SearchViewController.swift */; };
+		DC045E7B271C621B006E9142 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */; };
 		DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405A271BBE210035B3E8 /* AppDelegate.swift */; };
 		DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */; };
 		DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405E271BBE210035B3E8 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		DC045E74271C4EB3006E9142 /* StarringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarringViewController.swift; sourceTree = "<group>"; };
+		DC045E76271C5761006E9142 /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
+		DC045E78271C5FDA006E9142 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		DC9F4057271BBE210035B3E8 /* SeSAC_TRENDMEDIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_TRENDMEDIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9F405A271BBE210035B3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,14 +79,17 @@
 				DC9F405A271BBE210035B3E8 /* AppDelegate.swift */,
 				DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */,
 				DC9F405E271BBE210035B3E8 /* ViewController.swift */,
-				DC9F406E271BC05F0035B3E8 /* TvShowInformation.swift */,
 				DC9F4072271BC6660035B3E8 /* TvShow.swift */,
+				DC9F406E271BC05F0035B3E8 /* TvShowInformation.swift */,
 				DC9F4060271BBE210035B3E8 /* Main.storyboard */,
-				DC045E74271C4EB3006E9142 /* StarringViewController.swift */,
-				DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */,
-				DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */,
-				DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */,
+				DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */,
 				DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */,
+				DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */,
+				DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */,
+				DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */,
+				DC045E74271C4EB3006E9142 /* StarringViewController.swift */,
+				DC045E76271C5761006E9142 /* ActorTableViewCell.swift */,
+				DC045E78271C5FDA006E9142 /* SearchViewController.swift */,
 				DC9F4063271BBE230035B3E8 /* Assets.xcassets */,
 				DC9F4065271BBE230035B3E8 /* LaunchScreen.storyboard */,
 				DC9F4068271BBE230035B3E8 /* Info.plist */,
@@ -165,9 +174,12 @@
 				DC9F406F271BC05F0035B3E8 /* TvShowInformation.swift in Sources */,
 				DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */,
 				DCF9FFC0271BF31E00E799FE /* PosterTableViewCell.swift in Sources */,
+				DC045E79271C5FDA006E9142 /* SearchViewController.swift in Sources */,
 				DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */,
 				DC9F4071271BC4890035B3E8 /* MovieTrendInfoViewController.swift in Sources */,
+				DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */,
 				DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */,
+				DC045E7B271C621B006E9142 /* SearchResultTableViewCell.swift in Sources */,
 				DCF9FFC4271C3BAE00E799FE /* GenreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
