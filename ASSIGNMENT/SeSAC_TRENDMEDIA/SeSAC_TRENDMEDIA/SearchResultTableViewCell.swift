@@ -9,6 +9,8 @@ import UIKit
 
 class SearchResultTableViewCell: UITableViewCell {
 
+    
+    
     @IBOutlet weak var searchImageView: UIImageView!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var overviewLable: UILabel!

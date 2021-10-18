@@ -122,11 +122,44 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
 
     }
     
-    
-    @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
-        print(#function)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "StarringViewController") as? StarringViewController else {
+            print("ERROR")
+            return
+        }
+        
+        let row = tvShowInformation.tvShow[indexPath.section]
+        
+        vc.tvShow = row
+
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    @IBAction func searchButtonClicked(_ sender: UIButton) {
+        
+        print(#function)
+        
+        //1.스토리보드 특정
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //2. 스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
+        let vc = storyboard.instantiateViewController(withIdentifier: SearchViewController.identifier) as! SearchViewController
+        
+        //2-1. 네비게이션 컨트롤러 임베드
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        //nav.modalTransitionStyle = .partialCurl// full screen일때만 된다고 앱이 꺼진다!
+        
+        //3. present 방식으로 화면 전환
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
+
     
 
 

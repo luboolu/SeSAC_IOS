@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class StarringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var tvShow: TvShow?
     
-
+    @IBOutlet weak var mainPosterImageView: UIImageView!
+    
     @IBOutlet weak var actorTableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,6 +21,11 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         
         actorTableView.delegate = self
         actorTableView.dataSource = self
+        
+        //print(tvShow?.title)
+ 
+        let url = URL(string: tvShow!.backdropImage)
+        mainPosterImageView.kf.setImage(with: url)
         
     }
     
@@ -41,5 +49,20 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "StarringDetailViewController") as? StarringDetailViewController else {
+            print("ERROR")
+            return
+        }
+        
+        
+        vc.title = tvShow!.title
+
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }

@@ -9,8 +9,10 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    static let identifier = "SearchViewController"
     
+    
+    @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var searchResultTableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,7 +20,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         searchResultTableView.delegate = self
         searchResultTableView.dataSource = self
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
+        
 
+    }
+    
+    @objc func closeButtonClicked() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     
@@ -43,5 +52,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell
     }
+    
+    
     
 }
