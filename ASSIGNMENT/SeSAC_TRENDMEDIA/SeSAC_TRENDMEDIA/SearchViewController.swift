@@ -12,7 +12,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     static let identifier = "SearchViewController"
     
     
-    @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var searchResultTableView: UITableView!
     
     override func viewDidLoad() {

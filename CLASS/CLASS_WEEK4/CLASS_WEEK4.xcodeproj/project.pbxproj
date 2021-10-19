@@ -17,6 +17,12 @@
 		DCD916EE271CFAC500196CC4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916ED271CFAC500196CC4 /* SettingViewController.swift */; };
 		DCD916F3271CFB2E00196CC4 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916F1271CFB2E00196CC4 /* DefaultTableViewCell.swift */; };
 		DCD916F4271CFB2E00196CC4 /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD916F2271CFB2E00196CC4 /* DefaultTableViewCell.xib */; };
+		DCD916FD271E4AAA00196CC4 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916FC271E4AA900196CC4 /* MainCollectionViewController.swift */; };
+		DCD91700271E4B3300196CC4 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916FE271E4B3300196CC4 /* MainCollectionViewCell.swift */; };
+		DCD91701271E4B3300196CC4 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD916FF271E4B3300196CC4 /* MainCollectionViewCell.xib */; };
+		DCD91704271E538900196CC4 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */; };
+		DCD91705271E538900196CC4 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */; };
+		DCD91707271E662100196CC4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91706271E662000196CC4 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		DCD916ED271CFAC500196CC4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DCD916F1271CFB2E00196CC4 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		DCD916F2271CFB2E00196CC4 /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableViewCell.xib; sourceTree = "<group>"; };
+		DCD916FC271E4AA900196CC4 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		DCD916FE271E4B3300196CC4 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCD916FF271E4B3300196CC4 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
+		DCD91706271E662000196CC4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +60,7 @@
 		DCD916CB271CF5F900196CC4 = {
 			isa = PBXGroup;
 			children = (
+				DCD91706271E662000196CC4 /* WebViewController.swift */,
 				DCD916D6271CF5F900196CC4 /* SeSAC_WEEK4 */,
 				DCD916D5271CF5F900196CC4 /* Products */,
 			);
@@ -68,6 +81,11 @@
 				DCD916D9271CF5F900196CC4 /* SceneDelegate.swift */,
 				DCD916DB271CF5F900196CC4 /* ViewController.swift */,
 				DCD916DD271CF5F900196CC4 /* Main.storyboard */,
+				DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */,
+				DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */,
+				DCD916FE271E4B3300196CC4 /* MainCollectionViewCell.swift */,
+				DCD916FF271E4B3300196CC4 /* MainCollectionViewCell.xib */,
+				DCD916FC271E4AA900196CC4 /* MainCollectionViewController.swift */,
 				DCD916EB271CF88400196CC4 /* Setting.storyboard */,
 				DCD916ED271CFAC500196CC4 /* SettingViewController.swift */,
 				DCD916F1271CFB2E00196CC4 /* DefaultTableViewCell.swift */,
@@ -138,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD916E4271CF5FB00196CC4 /* LaunchScreen.storyboard in Resources */,
+				DCD91705271E538900196CC4 /* TagCollectionViewCell.xib in Resources */,
+				DCD91701271E4B3300196CC4 /* MainCollectionViewCell.xib in Resources */,
 				DCD916E1271CF5FB00196CC4 /* Assets.xcassets in Resources */,
 				DCD916DF271CF5F900196CC4 /* Main.storyboard in Resources */,
 				DCD916F4271CFB2E00196CC4 /* DefaultTableViewCell.xib in Resources */,
@@ -152,7 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD91700271E4B3300196CC4 /* MainCollectionViewCell.swift in Sources */,
+				DCD91707271E662100196CC4 /* WebViewController.swift in Sources */,
+				DCD91704271E538900196CC4 /* TagCollectionViewCell.swift in Sources */,
 				DCD916DC271CF5F900196CC4 /* ViewController.swift in Sources */,
+				DCD916FD271E4AAA00196CC4 /* MainCollectionViewController.swift in Sources */,
 				DCD916D8271CF5F900196CC4 /* AppDelegate.swift in Sources */,
 				DCD916DA271CF5F900196CC4 /* SceneDelegate.swift in Sources */,
 				DCD916EE271CFAC500196CC4 /* SettingViewController.swift in Sources */,
