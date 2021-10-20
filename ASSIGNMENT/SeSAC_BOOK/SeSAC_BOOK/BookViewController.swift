@@ -53,14 +53,16 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let row = tvShowInformation.tvShow[indexPath.row]
         
-        let r : CGFloat = CGFloat.random(in: 0.7...1)
-        let g : CGFloat = CGFloat.random(in: 0.7...1)
-        let b : CGFloat = CGFloat.random(in: 0.7...1)
+        let r : CGFloat = CGFloat.random(in: 0.5...0.9)
+        let g : CGFloat = CGFloat.random(in: 0.5...0.9)
+        let b : CGFloat = CGFloat.random(in: 0.5...0.9)
         
         cell.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         cell.layer.cornerRadius = 20
         cell.titleLabel.text = row.title
+        cell.titleLabel.textColor = .white
         cell.rateLabel.text = String(row.rate)
+        cell.rateLabel.textColor = .white
         
         let url = URL(string: row.backdropImage)
         cell.posterImageView.kf.setImage(with: url)

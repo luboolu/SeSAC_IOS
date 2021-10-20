@@ -11,6 +11,8 @@ import Kingfisher
 class StarringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tvShow: TvShow?
+    var overviewExpanse = true
+    
     
     @IBOutlet weak var mainPosterImageView: UIImageView!
 
@@ -27,11 +29,17 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         let url = URL(string: tvShow!.backdropImage)
         mainPosterImageView.kf.setImage(with: url)
         
-        let nibName = UINib(nibName: OverviewTableViewCell.identifier, bundle: nil)
-        actorTableView.register(nibName, forCellReuseIdentifier: OverviewTableViewCell.identifier)
+//        let nibName = UINib(nibName: OverviewTableViewCell.identifier, bundle: nil)
+//        actorTableView.register(nibName, forCellReuseIdentifier: OverviewTableViewCell.identifier)
 
         
     }
+    
+//    @objc func didTapOverviewButton() {
+//        //fpdlqmf line 1 > 0 > 1
+//        overviewExpanse = !overviewExpanse
+//        actorTableView.reloadRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
+//    }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,55 +48,63 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: OverviewTableViewCell.identifier) as? OverviewTableViewCell else {
-                return UITableViewCell()
-            }
-            
-            cell.overviewLabel.text = tvShow!.overview
-            
-            return cell
-            
-            
-            
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActorCell") as? ActorTableViewCell else {
-                return UITableViewCell()
-            }
-            
-            
-            cell.actorImageView.image = UIImage(named: "nevertheless")
-            
-            cell.actorProfile1.text = "주연배우"
-            cell.actorProfile1.font = .systemFont(ofSize: 18, weight: .light)
-            
-            cell.actorProfile2.text = "주연배우"
-            cell.actorProfile2.font = .systemFont(ofSize: 15, weight: .light)
-            
-            return cell
+//        if indexPath.row == 0 {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: OverviewTableViewCell.identifier) as? OverviewTableViewCell else {
+//                return UITableViewCell()
+//            }
+//
+//            cell.overviewLabel.text = tvShow!.overview
+//
+//
+//
+//            return cell
+//
+//
+//
+//        } else
+ 
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActorCell") as? ActorTableViewCell else {
+            return UITableViewCell()
         }
         
         
+        cell.actorImageView.image = UIImage(named: "nevertheless")
+        
+        cell.actorProfile1.text = "주연배우"
+        cell.actorProfile1.font = .systemFont(ofSize: 18, weight: .light)
+        
+        cell.actorProfile2.text = "주연배우"
+        cell.actorProfile2.font = .systemFont(ofSize: 15, weight: .light)
+        
+        return cell
+
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row != 0 {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            
-            guard let vc = sb.instantiateViewController(withIdentifier: "StarringDetailViewController") as? StarringDetailViewController else {
-                print("ERROR")
-                return
-            }
-            
-            
-            vc.title = tvShow!.title
 
-            self.navigationController?.pushViewController(vc, animated: true)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "StarringDetailViewController") as? StarringDetailViewController else {
+            print("ERROR")
+            return
         }
+        
+        
+        vc.title = tvShow!.title
+
+        self.navigationController?.pushViewController(vc, animated: true)
+
         
     }
     
 
 }
+

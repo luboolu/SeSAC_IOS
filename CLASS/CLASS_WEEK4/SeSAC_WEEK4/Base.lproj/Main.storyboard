@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XDU-xg-CAv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IkV-fm-ztC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -139,6 +139,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOB-Ha-5kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2128.985507246377" y="116.51785714285714"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="9Oh-7k-Z5r">
+            <objects>
+                <viewController id="IkV-fm-ztC" customClass="LocationViewController" customModule="CLASS_WEEK4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAN-QU-upX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOW-v4-91B">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2hg-Sh-Ohx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ffw-kX-2CB">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YKT-P0-VDg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TOW-v4-91B" firstAttribute="top" secondItem="YKT-P0-VDg" secondAttribute="top" constant="20" id="4rg-Lz-fVH"/>
+                            <constraint firstItem="YKT-P0-VDg" firstAttribute="trailing" secondItem="ffw-kX-2CB" secondAttribute="trailing" id="NqM-OY-CoR"/>
+                            <constraint firstItem="YKT-P0-VDg" firstAttribute="bottom" secondItem="ffw-kX-2CB" secondAttribute="bottom" id="OBp-aY-aLB"/>
+                            <constraint firstItem="YKT-P0-VDg" firstAttribute="trailing" secondItem="TOW-v4-91B" secondAttribute="trailing" constant="20" id="Zad-De-bfQ"/>
+                            <constraint firstItem="ffw-kX-2CB" firstAttribute="top" secondItem="TOW-v4-91B" secondAttribute="bottom" id="lOK-Oo-blQ"/>
+                            <constraint firstItem="ffw-kX-2CB" firstAttribute="leading" secondItem="YKT-P0-VDg" secondAttribute="leading" id="o09-cW-t3f"/>
+                            <constraint firstItem="TOW-v4-91B" firstAttribute="leading" secondItem="YKT-P0-VDg" secondAttribute="leading" constant="20" id="yB1-MU-9Mq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ffw-kX-2CB" id="VCR-ww-dTE"/>
+                        <outlet property="userCurrentLocationLable" destination="TOW-v4-91B" id="yS3-qQ-SIv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SV8-qc-3Wq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3055" y="117"/>
         </scene>
         <!--Setting-->
         <scene sceneID="JAa-3m-n0P">

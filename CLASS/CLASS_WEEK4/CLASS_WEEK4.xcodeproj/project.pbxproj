@@ -23,6 +23,7 @@
 		DCD91704271E538900196CC4 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */; };
 		DCD91705271E538900196CC4 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */; };
 		DCD91707271E662100196CC4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91706271E662000196CC4 /* WebViewController.swift */; };
+		DCD91775271FAC9E00196CC4 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91774271FAC9E00196CC4 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		DCD91706271E662000196CC4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DCD91774271FAC9E00196CC4 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,6 @@
 		DCD916CB271CF5F900196CC4 = {
 			isa = PBXGroup;
 			children = (
-				DCD91706271E662000196CC4 /* WebViewController.swift */,
 				DCD916D6271CF5F900196CC4 /* SeSAC_WEEK4 */,
 				DCD916D5271CF5F900196CC4 /* Products */,
 			);
@@ -81,11 +82,13 @@
 				DCD916D9271CF5F900196CC4 /* SceneDelegate.swift */,
 				DCD916DB271CF5F900196CC4 /* ViewController.swift */,
 				DCD916DD271CF5F900196CC4 /* Main.storyboard */,
+				DCD91774271FAC9E00196CC4 /* LocationViewController.swift */,
 				DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */,
 				DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */,
 				DCD916FE271E4B3300196CC4 /* MainCollectionViewCell.swift */,
 				DCD916FF271E4B3300196CC4 /* MainCollectionViewCell.xib */,
 				DCD916FC271E4AA900196CC4 /* MainCollectionViewController.swift */,
+				DCD91706271E662000196CC4 /* WebViewController.swift */,
 				DCD916EB271CF88400196CC4 /* Setting.storyboard */,
 				DCD916ED271CFAC500196CC4 /* SettingViewController.swift */,
 				DCD916F1271CFB2E00196CC4 /* DefaultTableViewCell.swift */,
@@ -177,6 +180,7 @@
 				DCD91704271E538900196CC4 /* TagCollectionViewCell.swift in Sources */,
 				DCD916DC271CF5F900196CC4 /* ViewController.swift in Sources */,
 				DCD916FD271E4AAA00196CC4 /* MainCollectionViewController.swift in Sources */,
+				DCD91775271FAC9E00196CC4 /* LocationViewController.swift in Sources */,
 				DCD916D8271CF5F900196CC4 /* AppDelegate.swift in Sources */,
 				DCD916DA271CF5F900196CC4 /* SceneDelegate.swift in Sources */,
 				DCD916EE271CFAC500196CC4 /* SettingViewController.swift in Sources */,

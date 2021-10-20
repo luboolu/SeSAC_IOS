@@ -132,3 +132,35 @@ var sesac = SeSACStudent() //인스턴스 생성, 인스턴스를 let으로 선�
 sesac.studentUpdate = "10" //set 실행
  
 sesac.studentUpdate //get 실행
+
+
+
+
+
+
+//21.10.20
+
+var sample = Array(repeating: "가", count: 100)
+
+sample.count
+sample.capacity
+
+sample.append(contentsOf: Array(repeating: "나", count: 100))
+
+sample.count
+sample.capacity
+
+var sample2: [Int] = []
+
+for i in 1...200 {
+    sample2.append(i)
+    sample2.count
+    sample2.capacity
+}
+
+
+
+var str = "Hello World - Hello"
+var t = "Squid game".replacingOccurrences(of: " ", with: "_").lowercased()
+//-> "Squid_game"
+

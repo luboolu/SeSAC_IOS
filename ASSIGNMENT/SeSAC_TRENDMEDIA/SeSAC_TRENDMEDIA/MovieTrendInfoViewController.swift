@@ -12,8 +12,10 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     
     let tvShowInformation = TvShowInformation()
     
-
+    @IBOutlet weak var HeaderView: UIView!
+    @IBOutlet weak var mainButtonView: UIView!
     @IBOutlet weak var InfoTableView: UITableView!
+    
     
     
     override func viewDidLoad() {
@@ -23,7 +25,11 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
         InfoTableView.dataSource = self
         
         InfoTableView.rowHeight = UITableView.automaticDimension
-
+        
+        mainButtonView.layer.zPosition = 1
+        mainButtonView.layer.cornerRadius = 20
+        
+        //InfoTableView.tableHeaderView = HeaderView
         
     }
     
@@ -63,7 +69,7 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
             let row = tvShowInformation.tvShow[indexPath.section]
             
             let url = URL(string: row.backdropImage)
-            cell.posterImageView.kf.setImage(with: url)
+            cell.posterImageView.kf.setImage(with: url) //Kingfisher 이용하여 이미지 url로 load
             
 //            let url = URL(string: row.backdropImage)
 //            //DispatchQueue를 쓰는 이유 -> 이미지가 클 경우 이미지를 다운로드 받기 까지 잠깐의 멈춤이 생길수 있다. (이유 : 싱글 쓰레드로 작동되기때문에)
@@ -117,10 +123,14 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tvShowInformation.tvShow[section].releaseDate
-
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return tvShowInformation.tvShow[section].releaseDate
+//    }
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        return HeaderView
+//
+//    }
     
 //UIVIew로 TableView Header 만드는건 보류
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -147,18 +157,22 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        guard let vc = sb.instantiateViewController(withIdentifier: "StarringViewController") as? StarringViewController else {
-            print("ERROR")
-            return
-        }
-        
-        let row = tvShowInformation.tvShow[indexPath.section]
-        
-        vc.tvShow = row
+        if indexPath.row == 2 {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            guard let vc = sb.instantiateViewController(withIdentifier: "StarringViewController") as? StarringViewController else {
+                print("ERROR")
+                return
+            }
+            
+            let row = tvShowInformation.tvShow[indexPath.section]
+            
+            vc.tvShow = row
 
-        self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+            
     }
     
     
@@ -184,10 +198,6 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
 
-    
-
-
-
-    
-
 }
+
+
