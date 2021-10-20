@@ -11,6 +11,9 @@
 		DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E76271C5761006E9142 /* ActorTableViewCell.swift */; };
 		DC045E79271C5FDA006E9142 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E78271C5FDA006E9142 /* SearchViewController.swift */; };
 		DC045E7B271C621B006E9142 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */; };
+		DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */; };
+		DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */; };
+		DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFC2720531F008B9FAA /* Theater.swift */; };
 		DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405A271BBE210035B3E8 /* AppDelegate.swift */; };
 		DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */; };
 		DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405E271BBE210035B3E8 /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		DC045E76271C5761006E9142 /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
 		DC045E78271C5FDA006E9142 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
+		DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterInformation.swift; sourceTree = "<group>"; };
+		DC2DAFFC2720531F008B9FAA /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 		DC9F4057271BBE210035B3E8 /* SeSAC_TRENDMEDIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_TRENDMEDIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9F405A271BBE210035B3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				DC9F4072271BC6660035B3E8 /* TvShow.swift */,
 				DCD916F5271DAF2400196CC4 /* TvShowInformation.swift */,
 				DC9F4060271BBE210035B3E8 /* Main.storyboard */,
+				DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */,
+				DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */,
+				DC2DAFFC2720531F008B9FAA /* Theater.swift */,
 				DCD9170A271EA68600196CC4 /* InfoHeaderView.xib */,
 				DCD9170E271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift */,
 				DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */,
@@ -186,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */,
 				DCD9170F271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift in Sources */,
 				DC9F4073271BC6660035B3E8 /* TvShow.swift in Sources */,
+				DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */,
 				DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */,
+				DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */,
 				DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */,
 				DCD916FB271DBE6F00196CC4 /* StarringDetailViewController.swift in Sources */,
 				DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */,

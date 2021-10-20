@@ -24,4 +24,8 @@
 ![Simulator Screen Recording - iPhone 11 - 2021-10-11 at 00 04 29](https://user-images.githubusercontent.com/58027136/136701612-7c05c810-b10d-43b4-bf41-b4bceb1b38dc.gif)
 
 
+<h4>TRENDMEDIA</h4>
+![Simulator Screen Recording - iPhone 11 - 2021-10-20 at 20 29 37](https://user-images.githubusercontent.com/58027136/138105918-78e379b4-b2b0-446e-a969-40d4ccbfb984.gif)
+
+
 

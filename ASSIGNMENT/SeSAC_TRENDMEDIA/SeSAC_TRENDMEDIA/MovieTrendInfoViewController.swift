@@ -123,26 +123,6 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return tvShowInformation.tvShow[section].releaseDate
-//    }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        return HeaderView
-//
-//    }
-    
-//UIVIew로 TableView Header 만드는건 보류
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: InfoUITableViewHeaderFooterView.identifier) as? InfoUITableViewHeaderFooterView else {
-//            return UITableViewHeaderFooterView()
-//        }
-//        print(tvShowInformation.tvShow[section].releaseDate)
-//        header.releaseDateLabel.text = tvShowInformation.tvShow[section].releaseDate
-//
-//        return header
-//    }
-    
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -198,6 +178,25 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
 
+    @IBAction func mapButtonClicked(_ sender: UIBarButtonItem) {
+        print(#function)
+        //1.스토리보드 특정
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //2. 스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
+        let vc = storyboard.instantiateViewController(withIdentifier: TheaterMapViewController.identifier) as! TheaterMapViewController
+        
+        //2-1. 네비게이션 컨트롤러 임베드
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        //nav.modalTransitionStyle = .partialCurl// full screen일때만 된다고 앱이 꺼진다!
+        
+        //3. present 방식으로 화면 전환
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
 }
 
 
