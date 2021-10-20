@@ -253,10 +253,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l7S-s3-Q8p">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="UJh-Ne-jed">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="QuH-mF-up8">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="UJh-Ne-jed">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hIt-O6-vT1">
+                                            <rect key="frame" x="0.0" y="114" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OverviewCell" rowHeight="130" id="Kul-x2-Vj5" customClass="OverViewTableCell" customModule="SeSAC_TRENDMEDIA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="202.5" width="414" height="130"/>
@@ -352,7 +367,9 @@
                     <navigationItem key="navigationItem" id="FSf-Xb-f50"/>
                     <connections>
                         <outlet property="actorTableView" destination="l7S-s3-Q8p" id="hLT-g0-q9W"/>
+                        <outlet property="headerView" destination="QuH-mF-up8" id="cGk-1C-eJE"/>
                         <outlet property="mainPosterImageView" destination="UJh-Ne-jed" id="utr-qt-Jer"/>
+                        <outlet property="titleLabel" destination="hIt-O6-vT1" id="m0e-Ir-MJo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8J-3w-KYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

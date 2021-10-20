@@ -25,8 +25,6 @@
 		DCD916F6271DAF2400196CC4 /* TvShowInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916F5271DAF2400196CC4 /* TvShowInformation.swift */; };
 		DCD916F9271DBC5200196CC4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCD916F8271DBC5200196CC4 /* Kingfisher */; };
 		DCD916FB271DBE6F00196CC4 /* StarringDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */; };
-		DCD9170B271EA68600196CC4 /* InfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD9170A271EA68600196CC4 /* InfoHeaderView.xib */; };
-		DCD9170F271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD9170E271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift */; };
 		DCF9FFC0271BF31E00E799FE /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */; };
 		DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */; };
 		DCF9FFC4271C3BAE00E799FE /* GenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */; };
@@ -52,8 +50,6 @@
 		DC9F4072271BC6660035B3E8 /* TvShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShow.swift; sourceTree = "<group>"; };
 		DCD916F5271DAF2400196CC4 /* TvShowInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvShowInformation.swift; sourceTree = "<group>"; };
 		DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarringDetailViewController.swift; sourceTree = "<group>"; };
-		DCD9170A271EA68600196CC4 /* InfoHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoHeaderView.xib; sourceTree = "<group>"; };
-		DCD9170E271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUITableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
 		DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,8 +95,6 @@
 				DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */,
 				DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */,
 				DC2DAFFC2720531F008B9FAA /* Theater.swift */,
-				DCD9170A271EA68600196CC4 /* InfoHeaderView.xib */,
-				DCD9170E271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift */,
 				DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */,
 				DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */,
 				DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */,
@@ -184,7 +178,6 @@
 				DC9F4067271BBE230035B3E8 /* LaunchScreen.storyboard in Resources */,
 				DC9F4064271BBE230035B3E8 /* Assets.xcassets in Resources */,
 				DC9F4062271BBE210035B3E8 /* Main.storyboard in Resources */,
-				DCD9170B271EA68600196CC4 /* InfoHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +189,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */,
-				DCD9170F271ED6CB00196CC4 /* InfoUITableViewHeaderFooterView.swift in Sources */,
 				DC9F4073271BC6660035B3E8 /* TvShow.swift in Sources */,
 				DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */,
 				DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */,

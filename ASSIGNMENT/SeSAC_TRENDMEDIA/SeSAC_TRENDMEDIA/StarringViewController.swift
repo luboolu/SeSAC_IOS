@@ -13,9 +13,11 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
     var tvShow: TvShow?
     var overviewExpanse = true
     
+    @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var mainPosterImageView: UIImageView!
-
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var actorTableView: UITableView!
     
     override func viewDidLoad() {
@@ -29,6 +31,10 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         let url = URL(string: tvShow!.backdropImage)
         mainPosterImageView.kf.setImage(with: url)
         
+        titleLabel.text = tvShow!.title
+        titleLabel.textColor = .white
+        
+        actorTableView.tableHeaderView = headerView
 //        let nibName = UINib(nibName: OverviewTableViewCell.identifier, bundle: nil)
 //        actorTableView.register(nibName, forCellReuseIdentifier: OverviewTableViewCell.identifier)
 
