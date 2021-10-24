@@ -9,6 +9,8 @@ import UIKit
 import Kingfisher
 
 class BookViewController: UIViewController {
+    
+    static let identifier = "BookViewController"
 
     let tvShowInformation = TvShowInformation()
     
@@ -35,6 +37,13 @@ class BookViewController: UIViewController {
         layout.scrollDirection = .vertical
         bookCollectionView.collectionViewLayout = layout
         
+        //Navigation Bar Button Item 생성 - 닫기 버튼 & 필터 버튼
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
+        
+    }
+    
+    @objc func closeButtonClicked() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

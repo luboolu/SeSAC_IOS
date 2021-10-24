@@ -197,6 +197,26 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
+    
+    @IBAction func bookButtonClicked(_ sender: UIButton) {
+        print(#function)
+        //1.스토리보드 특정
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //2.스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
+        let vc = storyboard.instantiateViewController(withIdentifier: BookViewController.identifier) as! BookViewController
+        
+        //2-1. 네비게이션 컨트롤러 임베드
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        
+        //3.present 방식으로 화면 전환
+        self.present(nav, animated: true, completion: nil)
+        
+        
+    }
+    
 }
 
 

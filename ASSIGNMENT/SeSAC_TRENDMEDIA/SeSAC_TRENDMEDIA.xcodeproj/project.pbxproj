@@ -22,6 +22,9 @@
 		DC9F4067271BBE230035B3E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9F4065271BBE230035B3E8 /* LaunchScreen.storyboard */; };
 		DC9F4071271BC4890035B3E8 /* MovieTrendInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */; };
 		DC9F4073271BC6660035B3E8 /* TvShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F4072271BC6660035B3E8 /* TvShow.swift */; };
+		DCD6FA3A27258AC400FD9EF4 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD6FA3727258AC400FD9EF4 /* BookCollectionViewCell.xib */; };
+		DCD6FA3B27258AC400FD9EF4 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA3827258AC400FD9EF4 /* BookViewController.swift */; };
+		DCD6FA3C27258AC400FD9EF4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA3927258AC400FD9EF4 /* BookCollectionViewCell.swift */; };
 		DCD916F6271DAF2400196CC4 /* TvShowInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916F5271DAF2400196CC4 /* TvShowInformation.swift */; };
 		DCD916F9271DBC5200196CC4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCD916F8271DBC5200196CC4 /* Kingfisher */; };
 		DCD916FB271DBE6F00196CC4 /* StarringDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */; };
@@ -48,6 +51,9 @@
 		DC9F4068271BBE230035B3E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrendInfoViewController.swift; sourceTree = "<group>"; };
 		DC9F4072271BC6660035B3E8 /* TvShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShow.swift; sourceTree = "<group>"; };
+		DCD6FA3727258AC400FD9EF4 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BookCollectionViewCell.xib; path = ../../SeSAC_BOOK/SeSAC_BOOK/BookCollectionViewCell.xib; sourceTree = "<group>"; };
+		DCD6FA3827258AC400FD9EF4 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = ../../SeSAC_BOOK/SeSAC_BOOK/BookViewController.swift; sourceTree = "<group>"; };
+		DCD6FA3927258AC400FD9EF4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookCollectionViewCell.swift; path = ../../SeSAC_BOOK/SeSAC_BOOK/BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		DCD916F5271DAF2400196CC4 /* TvShowInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvShowInformation.swift; sourceTree = "<group>"; };
 		DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarringDetailViewController.swift; sourceTree = "<group>"; };
 		DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 				DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */,
 				DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */,
 				DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */,
+				DCD6FA3927258AC400FD9EF4 /* BookCollectionViewCell.swift */,
+				DCD6FA3727258AC400FD9EF4 /* BookCollectionViewCell.xib */,
+				DCD6FA3827258AC400FD9EF4 /* BookViewController.swift */,
 				DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */,
 				DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */,
 				DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */,
@@ -176,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC9F4067271BBE230035B3E8 /* LaunchScreen.storyboard in Resources */,
+				DCD6FA3A27258AC400FD9EF4 /* BookCollectionViewCell.xib in Resources */,
 				DC9F4064271BBE230035B3E8 /* Assets.xcassets in Resources */,
 				DC9F4062271BBE210035B3E8 /* Main.storyboard in Resources */,
 			);
@@ -191,6 +201,7 @@
 				DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */,
 				DC9F4073271BC6660035B3E8 /* TvShow.swift in Sources */,
 				DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */,
+				DCD6FA3C27258AC400FD9EF4 /* BookCollectionViewCell.swift in Sources */,
 				DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */,
 				DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */,
 				DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */,
@@ -203,6 +214,7 @@
 				DC9F4071271BC4890035B3E8 /* MovieTrendInfoViewController.swift in Sources */,
 				DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */,
 				DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */,
+				DCD6FA3B27258AC400FD9EF4 /* BookViewController.swift in Sources */,
 				DC045E7B271C621B006E9142 /* SearchResultTableViewCell.swift in Sources */,
 				DCF9FFC4271C3BAE00E799FE /* GenreTableViewCell.swift in Sources */,
 			);

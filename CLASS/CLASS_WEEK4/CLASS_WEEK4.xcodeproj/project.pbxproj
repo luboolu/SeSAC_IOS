@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCBE650A272107FD0061CD8F /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE6509272107FD0061CD8F /* Alert+Extension.swift */; };
 		DCD916D8271CF5F900196CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916D7271CF5F900196CC4 /* AppDelegate.swift */; };
 		DCD916DA271CF5F900196CC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916D9271CF5F900196CC4 /* SceneDelegate.swift */; };
 		DCD916DC271CF5F900196CC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD916DB271CF5F900196CC4 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCBE6509272107FD0061CD8F /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		DCD916D4271CF5F900196CC4 /* CLASS_WEEK4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLASS_WEEK4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD916D7271CF5F900196CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCD916D9271CF5F900196CC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				DCD916DB271CF5F900196CC4 /* ViewController.swift */,
 				DCD916DD271CF5F900196CC4 /* Main.storyboard */,
 				DCD91774271FAC9E00196CC4 /* LocationViewController.swift */,
+				DCBE6509272107FD0061CD8F /* Alert+Extension.swift */,
 				DCD91702271E538900196CC4 /* TagCollectionViewCell.swift */,
 				DCD91703271E538900196CC4 /* TagCollectionViewCell.xib */,
 				DCD916FE271E4B3300196CC4 /* MainCollectionViewCell.swift */,
@@ -177,6 +180,7 @@
 			files = (
 				DCD91700271E4B3300196CC4 /* MainCollectionViewCell.swift in Sources */,
 				DCD91707271E662100196CC4 /* WebViewController.swift in Sources */,
+				DCBE650A272107FD0061CD8F /* Alert+Extension.swift in Sources */,
 				DCD91704271E538900196CC4 /* TagCollectionViewCell.swift in Sources */,
 				DCD916DC271CF5F900196CC4 /* ViewController.swift in Sources */,
 				DCD916FD271E4AAA00196CC4 /* MainCollectionViewController.swift in Sources */,

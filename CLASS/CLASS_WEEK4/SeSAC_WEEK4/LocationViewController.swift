@@ -23,6 +23,17 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userCurrentLocationLable.backgroundColor = .red
+        userCurrentLocationLable.alpha = 0
+        
+        UIView.animate(withDuration: 5) {
+            self.userCurrentLocationLable.alpha = 1
+        }
+        
+        
+        
+        
+        
         mapView.delegate = self
         
         //2.
@@ -39,6 +50,33 @@ class LocationViewController: UIViewController {
         annotation.coordinate = location
         mapView.addAnnotation(annotation)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    
+    @IBAction func updateLabelTextAlert(_ sender: UIButton) {
+        showAlert(title: "텍스트 변경", message: "레이블 글자를 바꿉니다", okTitle: "바꾸기") {
+            self.userCurrentLocationLable.text = "asdfasdf"
+        }
+    }
+    
+    @IBAction func alertButtonClicked(_ sender: UIButton) {
+        showAlert(title: "설정", message: "설정에서 권한을 허용해주세요", okTitle: "설정으로 이동") {
+            guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url) { success in
+                    print("잘 열렸다. \(success)")
+                }
+            }
+        }
     }
     
 
