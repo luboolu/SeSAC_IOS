@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lottery View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LotteryViewController" customModule="SeSAC_LOTTERY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7J-aj-unQ">
+                                <rect key="frame" x="20" y="64" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7da-uD-ucJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="986회 당첨결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykv-Ww-wuP">
+                                <rect key="frame" x="138.5" y="258" width="137" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soz-TD-SCu">
+                                <rect key="frame" x="20" y="300" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="t12-Li-NVA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAQ-gj-gKK">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZAQ-gj-gKK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6zN-mb-IFd"/>
+                            <constraint firstItem="ykv-Ww-wuP" firstAttribute="top" secondItem="i7J-aj-unQ" secondAttribute="bottom" constant="150" id="CCI-Vx-uHU"/>
+                            <constraint firstItem="ZAQ-gj-gKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O0M-HX-ROE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Soz-TD-SCu" secondAttribute="trailing" constant="20" id="Qd0-Nd-mGT"/>
+                            <constraint firstItem="Soz-TD-SCu" firstAttribute="top" secondItem="ykv-Ww-wuP" secondAttribute="bottom" constant="16" id="Qw0-h6-2vM"/>
+                            <constraint firstItem="ZAQ-gj-gKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ez5-Oq-nqD"/>
+                            <constraint firstItem="i7J-aj-unQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kxj-Qg-n1N"/>
+                            <constraint firstItem="i7J-aj-unQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rYR-y6-NKJ"/>
+                            <constraint firstItem="ykv-Ww-wuP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svI-KD-fsP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i7J-aj-unQ" secondAttribute="trailing" constant="20" id="xQP-zZ-aV4"/>
+                            <constraint firstItem="Soz-TD-SCu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xTd-hW-nxd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultRoundLabel" destination="ykv-Ww-wuP" id="2SG-AV-l5o"/>
+                        <outlet property="roundPickerView" destination="ZAQ-gj-gKK" id="m4v-fb-XSu"/>
+                        <outlet property="roundTextField" destination="i7J-aj-unQ" id="Twy-xh-7VI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
