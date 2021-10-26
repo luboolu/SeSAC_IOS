@@ -6,13 +6,18 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import Kingfisher
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     static let identifier = "SearchViewController"
     
-    
     @IBOutlet weak var searchResultTableView: UITableView!
+    
+    
+    var movieData: [MovieModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,28 +27,76 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
         
+        fetchMovieData()
 
     }
     
     @objc func closeButtonClicked() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func fetchMovieData() {
+        //네이버 영화 API 호출하여 결과 debug 찍기
+        //%형태로 인코딩 해주어야 함
+        if let searchSource = "아이언맨".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(searchSource)&display=10&start=1"
+            
+            let header: HTTPHeaders = [
+                "X-Naver-Client-Id" : "uesxBpa4kC9tztddyWGr",
+                "X-Naver-Client-Secret" : "GRMNLkQCNF"
+            ]
+            
+            AF.request(url, method: .get, headers: header).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print(json)
+                    for item in json["items"].arrayValue {
+                        let title = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
+                        let image = item["image"].stringValue
+                        let link = item["link"].stringValue
+                        let userRating = item["userRating"].stringValue
+                        let sub = item["subtitle"].stringValue
+                        
+                        let data = MovieModel(title: title, imageData: image, linkData: link, userRatingData: userRating, subtitle: sub)
+                        
+                        
+                        self.movieData.append(data)
+                    }
+                    
+                    print(self.movieData)
+                    
+                    self.searchResultTableView.reloadData()
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        
+        
+        
+    }
 
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return movieData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SerachResultCell") as? SearchResultTableViewCell else {
             return UITableViewCell()
         }
+
+        let row = movieData[indexPath.row]
         
         
-        cell.searchImageView.image = UIImage(named: "nevertheless")
+        let url = URL(string: row.imageData)
+
+        cell.searchImageView.kf.setImage(with: url) //Kingfisher 이용하여 이미지 url로 load
         
-        cell.titleLable.text = "영화 제목"
+        cell.titleLable.text = row.title
         cell.titleLable.font = .systemFont(ofSize: 18, weight: .light)
         
         cell.overviewLable.text = "영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 "

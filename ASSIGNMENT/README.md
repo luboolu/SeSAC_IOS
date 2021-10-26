@@ -28,6 +28,8 @@
 
 ![Simulator Screen Recording - iPhone 11 - 2021-10-20 at 20 29 37](https://user-images.githubusercontent.com/58027136/138105918-78e379b4-b2b0-446e-a969-40d4ccbfb984.gif)
 
+https://lumpy-chip-1b8.notion.site/SeSAC_TRENDMEDIA-12c9a3c34b2f413dbad4a2716dc87fad
+
 
 
 

@@ -14,6 +14,9 @@
 		DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */; };
 		DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */; };
 		DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFC2720531F008B9FAA /* Theater.swift */; };
+		DC90947927279D3300814B13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC90947827279D3300814B13 /* Alamofire */; };
+		DC90947C27279D4800814B13 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DC90947B27279D4800814B13 /* SwiftyJSON */; };
+		DC90947E2727A7F300814B13 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90947D2727A7F300814B13 /* MovieModel.swift */; };
 		DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405A271BBE210035B3E8 /* AppDelegate.swift */; };
 		DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */; };
 		DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F405E271BBE210035B3E8 /* ViewController.swift */; };
@@ -41,6 +44,7 @@
 		DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterInformation.swift; sourceTree = "<group>"; };
 		DC2DAFFC2720531F008B9FAA /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		DC90947D2727A7F300814B13 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		DC9F4057271BBE210035B3E8 /* SeSAC_TRENDMEDIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_TRENDMEDIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9F405A271BBE210035B3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC90947C27279D4800814B13 /* SwiftyJSON in Frameworks */,
+				DC90947927279D3300814B13 /* Alamofire in Frameworks */,
 				DCD916F9271DBC5200196CC4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +108,7 @@
 				DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */,
 				DC2DAFFC2720531F008B9FAA /* Theater.swift */,
 				DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */,
+				DC90947D2727A7F300814B13 /* MovieModel.swift */,
 				DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */,
 				DC9F4070271BC4890035B3E8 /* MovieTrendInfoViewController.swift */,
 				DCD6FA3927258AC400FD9EF4 /* BookCollectionViewCell.swift */,
@@ -138,6 +145,8 @@
 			name = SeSAC_TRENDMEDIA;
 			packageProductDependencies = (
 				DCD916F8271DBC5200196CC4 /* Kingfisher */,
+				DC90947827279D3300814B13 /* Alamofire */,
+				DC90947B27279D4800814B13 /* SwiftyJSON */,
 			);
 			productName = SeSAC_TRENDMEDIA;
 			productReference = DC9F4057271BBE210035B3E8 /* SeSAC_TRENDMEDIA.app */;
@@ -169,6 +178,8 @@
 			mainGroup = DC9F404E271BBE210035B3E8;
 			packageReferences = (
 				DCD916F7271DBC5200196CC4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				DC90947727279D3300814B13 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DC90947A27279D4800814B13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = DC9F4058271BBE210035B3E8 /* Products */;
 			projectDirPath = "";
@@ -206,6 +217,7 @@
 				DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */,
 				DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */,
 				DCD916FB271DBE6F00196CC4 /* StarringDetailViewController.swift in Sources */,
+				DC90947E2727A7F300814B13 /* MovieModel.swift in Sources */,
 				DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */,
 				DCD916F6271DAF2400196CC4 /* TvShowInformation.swift in Sources */,
 				DCF9FFC0271BF31E00E799FE /* PosterTableViewCell.swift in Sources */,
@@ -438,6 +450,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC90947727279D3300814B13 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DC90947A27279D4800814B13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
 		DCD916F7271DBC5200196CC4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -449,6 +477,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC90947827279D3300814B13 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC90947727279D3300814B13 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DC90947B27279D4800814B13 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC90947A27279D4800814B13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		DCD916F8271DBC5200196CC4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCD916F7271DBC5200196CC4 /* XCRemoteSwiftPackageReference "Kingfisher" */;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9094732727928000814B13 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9094722727928000814B13 /* TranslationViewController.swift */; };
 		DCD6FA4A2726446200FD9EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA492726446200FD9EF4 /* AppDelegate.swift */; };
 		DCD6FA4C2726446200FD9EF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA4B2726446200FD9EF4 /* SceneDelegate.swift */; };
 		DCD6FA4E2726446200FD9EF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA4D2726446200FD9EF4 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC9094722727928000814B13 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		DCD6FA462726446200FD9EF4 /* CLASS_WEEK5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLASS_WEEK5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD6FA492726446200FD9EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCD6FA4B2726446200FD9EF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				DCD6FA4B2726446200FD9EF4 /* SceneDelegate.swift */,
 				DCD6FA4D2726446200FD9EF4 /* ViewController.swift */,
 				DCD6FA4F2726446200FD9EF4 /* Main.storyboard */,
+				DC9094722727928000814B13 /* TranslationViewController.swift */,
 				DCD6FA522726446400FD9EF4 /* Assets.xcassets */,
 				DCD6FA542726446400FD9EF4 /* LaunchScreen.storyboard */,
 				DCD6FA572726446400FD9EF4 /* Info.plist */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9094732727928000814B13 /* TranslationViewController.swift in Sources */,
 				DCD6FA4E2726446200FD9EF4 /* ViewController.swift in Sources */,
 				DCD6FA4A2726446200FD9EF4 /* AppDelegate.swift in Sources */,
 				DCD6FA4C2726446200FD9EF4 /* SceneDelegate.swift in Sources */,
