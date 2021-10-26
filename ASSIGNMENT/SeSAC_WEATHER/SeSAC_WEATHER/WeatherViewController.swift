@@ -12,11 +12,25 @@ import Alamofire
 import CoreLocation
 import CoreLocationUI
 
+import Kingfisher
+
 class WeatherViewController: UIViewController {
 
     static let indetifier = "WeatherViewController"
     
     let locationManager = CLLocationManager()
+    
+    var weatherData: WeatherModel?
+    
+    var nowLatitude: Double = 37.5
+    var nowLongitude: Double = 126.5
+    
+    let ment: [String] = [
+        "  오늘도 행복한 하루 보내세요  ",
+        "  오늘도 즐거운 하루 보내세요  ",
+        "  오늘도 활기찬 하루 보내세요  ",
+        "  오늘도 좋은 하루 보내세요  "
+    ]
     
     @IBOutlet weak var dateTimeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -25,6 +39,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var mentLabel: UILabel!
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +48,12 @@ class WeatherViewController: UIViewController {
         locationManager.delegate = self
         // Do any additional setup after loading the view.
         designSetteing()
-        
-        
-        
+         
     }
     
     @IBAction func resetButtonClicked(_ sender: UIButton) {
+        print(#function)
+        getWeatherInfo(lat: nowLatitude, lon: nowLongitude)
     }
     
     func designSetteing() {
@@ -56,6 +71,73 @@ class WeatherViewController: UIViewController {
         
         windLabel.clipsToBounds = true
         windLabel.layer.cornerRadius = 10
+        
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM월 dd일 HH시 MM분"
+        
+        dateTimeLabel.text = dateFormatter.string(from: now)
+
+    }
+    
+    func showWeatherData() {
+        
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM월 dd일 HH시 MM분"
+        
+        dateTimeLabel.text = dateFormatter.string(from: now)
+        
+        temperatureLabel.text = "  지금은 \(weatherData!.temperature)℃ 에요  "
+        humidityLabel.text = "  \(weatherData!.humidity)% 만큼 습해요  "
+        windLabel.text = "  \(weatherData!.wind)m/s의 바람이 불어요  "
+        mentLabel.text = ment.randomElement()
+        
+        let url = URL(string: "https://openweathermap.org/img/wn/10d\(weatherData!.iconImage)@2x.png")
+
+        self.weatherImageView.kf.setImage(with: url) //Kingfisher 이용하여 이미지 url로 load
+        self.weatherImageView.contentMode = .scaleAspectFit
+        
+    }
+    
+    func getWeatherInfo(lat: Double, lon: Double){
+        
+        let url = "https://api.openweathermap.org/data/2.5/weather"
+        
+//        var components = URLComponents(string: url)
+//        let id = URLQueryItem(name: "memberID", value: "1234")
+//        components?.queryItems = [id]
+        //Query String에 item 집어넣기
+        
+        var queryString = URLComponents(string: url)
+        let latitude = URLQueryItem(name: "lat", value: String(lat))
+        let longitude = URLQueryItem(name: "lon", value: String(lon))
+        let tempUnit = URLQueryItem(name: "units", value: "metric")
+        let apiKey = URLQueryItem(name: "appid", value: "39c83516f908c571796fe9689e4b0bf5")
+        
+        queryString?.queryItems = [latitude, longitude, tempUnit, apiKey]
+
+        //lat=35&lon=139&appid=39c83516f908c571796fe9689e4b0bf5"
+        
+        AF.request(queryString as! URLConvertible, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                self.weatherData = WeatherModel(
+                    temperature: json["main"]["temp"].intValue,
+                    humidity: json["main"]["humidity"].intValue,
+                    wind: json["wind"]["speed"].doubleValue,
+                    iconImage: json["weather"]["icon"].stringValue
+                )
+                
+                self.showWeatherData()
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 }
@@ -99,6 +181,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         case .denied:
             print("DENIED, 설정으로 유도")
         case .authorizedWhenInUse:
+            print("authorizedWhenInUse")
             locationManager.startUpdatingLocation() //위치 접근 시작 -> didUpdateLocations 실행
         case .authorizedAlways:
             print("Always")
@@ -129,22 +212,30 @@ extension WeatherViewController: CLLocationManagerDelegate {
 
             let findLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
             let geocoder = CLGeocoder()
-            let locale = Locale(identifier: "Ko-kr")
-            
+            let locale = Locale(identifier: "ko-kr")
+
             geocoder.reverseGeocodeLocation(findLocation, preferredLocale: locale, completionHandler: {(placemarks, error) in
-                
+
                 if let address: [CLPlacemark] = placemarks { if let name: String = address.last?.name {
-                    print(name) } //전체 주소
+                    print(name)
+                    self.addressLabel.text = "\(name)"
+                } //전체 주소
+                    
                 }
                 
             })
+            
+            nowLatitude = coordinate.latitude
+            nowLongitude = coordinate.longitude
+            
+            getWeatherInfo(lat: coordinate.latitude, lon: coordinate.longitude)
                 
             
             
         } else {
             print("Location Cannot Find")
         }
-        //print(locations)
+
     }
     
     //5.위치 접근이 실패한 경우

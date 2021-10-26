@@ -31,6 +31,11 @@
 <a href="https://lumpy-chip-1b8.notion.site/SeSAC_TRENDMEDIA-12c9a3c34b2f413dbad4a2716dc87fad"><p>TrendMidia Notion</p></a>
 
 
+<h2>WEATHER</h2>
+
+![Simulator Screen Recording - iPhone 11 - 2021-10-26 at 21 53 25](https://user-images.githubusercontent.com/58027136/138883390-1ed2bc00-010b-4022-88c9-2e74f6a1c6f4.gif)
+
+<a href="https://lumpy-chip-1b8.notion.site/SeSAC_WEATHER-a241cfd4bd24427b8035d4c712567058"><p>Weather Notion</p></a>
 
 
 
