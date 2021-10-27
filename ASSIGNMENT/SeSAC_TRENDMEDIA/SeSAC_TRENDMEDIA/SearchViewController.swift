@@ -10,7 +10,23 @@ import SwiftyJSON
 import Alamofire
 import Kingfisher
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+    //셀이 화면에 보이기 전에 필요한 리소스를 미리 다운 받는 기능
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+
+        for indexPath in indexPaths {
+            if movieData.count - 1 == indexPath.row {
+                startPage += 10
+                
+                fetchMovieData()
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("취소: \(indexPaths)")
+    }
     
     static let identifier = "SearchViewController"
     
@@ -19,11 +35,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var movieData: [MovieModel] = []
     
+    var startPage = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         searchResultTableView.delegate = self
         searchResultTableView.dataSource = self
+        searchResultTableView.prefetchDataSource = self
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
         
@@ -38,8 +57,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func fetchMovieData() {
         //네이버 영화 API 호출하여 결과 debug 찍기
         //%형태로 인코딩 해주어야 함
-        if let searchSource = "아이언맨".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(searchSource)&display=10&start=1"
+        if let searchSource = "해리포터".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(searchSource)&display=10&start=\(startPage)"
             
             let header: HTTPHeaders = [
                 "X-Naver-Client-Id" : "uesxBpa4kC9tztddyWGr",

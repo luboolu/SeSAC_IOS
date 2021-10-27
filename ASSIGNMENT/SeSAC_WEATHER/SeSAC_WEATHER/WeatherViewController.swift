@@ -74,7 +74,9 @@ class WeatherViewController: UIViewController {
         
         let now = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM월 dd일 HH시 MM분"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(abbreviation: "KST")
+        dateFormatter.dateFormat = "MM월 dd일 HH시 mm분"
         
         dateTimeLabel.text = dateFormatter.string(from: now)
 
@@ -84,8 +86,10 @@ class WeatherViewController: UIViewController {
         
         let now = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM월 dd일 HH시 MM분"
-        
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(abbreviation: "KST")
+        dateFormatter.dateFormat = "MM월 dd일 HH시 mm분"
+
         dateTimeLabel.text = dateFormatter.string(from: now)
         
         temperatureLabel.text = "  지금은 \(weatherData!.temperature)℃ 에요  "
@@ -102,42 +106,18 @@ class WeatherViewController: UIViewController {
     
     func getWeatherInfo(lat: Double, lon: Double){
         
-        let url = "https://api.openweathermap.org/data/2.5/weather"
-        
-//        var components = URLComponents(string: url)
-//        let id = URLQueryItem(name: "memberID", value: "1234")
-//        components?.queryItems = [id]
-        //Query String에 item 집어넣기
-        
-        var queryString = URLComponents(string: url)
-        let latitude = URLQueryItem(name: "lat", value: String(lat))
-        let longitude = URLQueryItem(name: "lon", value: String(lon))
-        let tempUnit = URLQueryItem(name: "units", value: "metric")
-        let apiKey = URLQueryItem(name: "appid", value: "39c83516f908c571796fe9689e4b0bf5")
-        
-        queryString?.queryItems = [latitude, longitude, tempUnit, apiKey]
-
-        //lat=35&lon=139&appid=39c83516f908c571796fe9689e4b0bf5"
-        
-        AF.request(queryString as! URLConvertible, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                
-                self.weatherData = WeatherModel(
-                    temperature: json["main"]["temp"].intValue,
-                    humidity: json["main"]["humidity"].intValue,
-                    wind: json["wind"]["speed"].doubleValue,
-                    iconImage: json["weather"]["icon"].stringValue
-                )
-                
-                self.showWeatherData()
-                
-            case .failure(let error):
-                print(error)
-            }
+        WeatherAPIManager.shared.fectchWeatherData(lat: lat, lon: lon) { code, json in
+            
+            self.weatherData = WeatherModel(
+                temperature: json["main"]["temp"].intValue,
+                humidity: json["main"]["humidity"].intValue,
+                wind: json["wind"]["speed"].doubleValue,
+                iconImage: json["weather"]["icon"].stringValue
+            )
+            
+            self.showWeatherData()
         }
+        
     }
     
 }

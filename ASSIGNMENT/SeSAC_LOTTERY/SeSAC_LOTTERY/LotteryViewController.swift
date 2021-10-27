@@ -14,8 +14,18 @@ class LotteryViewController: UIViewController {
     @IBOutlet weak var roundTextField: UITextField!
     @IBOutlet weak var resultRoundLabel: UILabel!
     @IBOutlet weak var roundPickerView: UIPickerView!
+
     
-    let pickList = Array(1...986)
+    @IBOutlet weak var num1Label: UILabel!
+    @IBOutlet weak var num2Label: UILabel!
+    @IBOutlet weak var num3Label: UILabel!
+    @IBOutlet weak var num4Label: UILabel!
+    @IBOutlet weak var num5Label: UILabel!
+    @IBOutlet weak var num6Label: UILabel!
+    @IBOutlet weak var bonusNumLabel: UILabel!
+    
+    
+    let pickList = Array(1...986).sorted(by: >)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +33,31 @@ class LotteryViewController: UIViewController {
         roundPickerView.delegate = self
         roundPickerView.dataSource = self
         
+        getLotteryInfo(round: 986)
+        
         roundTextField.inputView = roundPickerView
         
     }
     
     func getLotteryInfo(round: Int) {
         
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + String(round)
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(round)"
         
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value) :
                 let json = JSON(value)
                 print("JSON: \(json)")
+                
+                self.num1Label.text = json["drwtNo1"].stringValue
+                self.num2Label.text = json["drwtNo2"].stringValue
+                self.num3Label.text = json["drwtNo3"].stringValue
+                self.num4Label.text = json["drwtNo4"].stringValue
+                self.num5Label.text = json["drwtNo5"].stringValue
+                self.num6Label.text = json["drwtNo6"].stringValue
+                self.bonusNumLabel.text = json["bnusNo"].stringValue
+                
+                
                 
             case .failure(let error):
                 print(error)

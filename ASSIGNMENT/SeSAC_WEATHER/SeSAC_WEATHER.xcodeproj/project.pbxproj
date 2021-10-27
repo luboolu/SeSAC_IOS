@@ -18,6 +18,8 @@
 		DCD6FA8A2726A29700FD9EF4 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA892726A29700FD9EF4 /* WeatherViewController.swift */; };
 		DCF979E5272818E800BE64A0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCF979E4272818E800BE64A0 /* Kingfisher */; };
 		DCF979E8272818FC00BE64A0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DCF979E7272818FC00BE64A0 /* SwiftyJSON */; };
+		DCF979F62729237900BE64A0 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF979F52729237900BE64A0 /* Constraints.swift */; };
+		DCF979F82729245500BE64A0 /* WeatherAPIManager'.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF979F72729245500BE64A0 /* WeatherAPIManager'.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		DCD6FA7B27269EB600FD9EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCD6FA7D27269EB600FD9EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD6FA892726A29700FD9EF4 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		DCF979F52729237900BE64A0 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		DCF979F72729245500BE64A0 /* WeatherAPIManager'.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherAPIManager'.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,10 @@
 				DCD6FA7127269EB400FD9EF4 /* SceneDelegate.swift */,
 				DCD6FA7327269EB400FD9EF4 /* ViewController.swift */,
 				DCD6FA7527269EB400FD9EF4 /* Main.storyboard */,
+				DCF979F52729237900BE64A0 /* Constraints.swift */,
 				DC90947F2727ED2000814B13 /* WeatherModel.swift */,
 				DCD6FA892726A29700FD9EF4 /* WeatherViewController.swift */,
+				DCF979F72729245500BE64A0 /* WeatherAPIManager'.swift */,
 				DCD6FA7827269EB600FD9EF4 /* Assets.xcassets */,
 				DCD6FA7A27269EB600FD9EF4 /* LaunchScreen.storyboard */,
 				DCD6FA7D27269EB600FD9EF4 /* Info.plist */,
@@ -161,9 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD6FA7427269EB400FD9EF4 /* ViewController.swift in Sources */,
+				DCF979F82729245500BE64A0 /* WeatherAPIManager'.swift in Sources */,
 				DCD6FA8A2726A29700FD9EF4 /* WeatherViewController.swift in Sources */,
 				DCD6FA7027269EB400FD9EF4 /* AppDelegate.swift in Sources */,
 				DCD6FA7227269EB400FD9EF4 /* SceneDelegate.swift in Sources */,
+				DCF979F62729237900BE64A0 /* Constraints.swift in Sources */,
 				DC9094802727ED2100814B13 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
