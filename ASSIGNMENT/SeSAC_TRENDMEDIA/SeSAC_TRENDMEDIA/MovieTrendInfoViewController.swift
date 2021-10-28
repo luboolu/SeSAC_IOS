@@ -15,7 +15,7 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
         for indexPath in indexPaths {
             if self.trendData.count - 1 == indexPath.section {
                 start += 1
-                fetchTBDMData()
+                fetchTMDBData()
             }
         }
         
@@ -47,10 +47,10 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
         mainButtonView.layer.zPosition = 1
         mainButtonView.layer.cornerRadius = 20
         
-        fetchTBDMData()
+        fetchTMDBData()
     }
     
-    func fetchTBDMData() {
+    func fetchTMDBData() {
         TmdbAPIManager.shared.fetchTrendData(startPage: start) {
             code, json in
 
@@ -164,9 +164,7 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
                 return
             }
             
-            let row = tvShowInformation.tvShow[indexPath.section]
-            
-            vc.tvShow = row
+            vc.movieInfo = trendData[indexPath.section]
 
             self.navigationController?.pushViewController(vc, animated: true)
         }

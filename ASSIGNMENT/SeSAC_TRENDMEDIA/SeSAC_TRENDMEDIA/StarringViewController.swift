@@ -10,7 +10,7 @@ import Kingfisher
 
 class StarringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var tvShow: TvShow?
+    var movieInfo: TMDBModel?
     var overviewExpanse = true
     
     @IBOutlet weak var headerView: UIView!
@@ -28,10 +28,10 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         
         //print(tvShow?.title)
  
-        let url = URL(string: tvShow!.backdropImage)
+        let url = URL(string: "https://image.tmdb.org/t/p/original/\(movieInfo?.backdropPath)")
         mainPosterImageView.kf.setImage(with: url)
         
-        titleLabel.text = tvShow!.title
+        titleLabel.text = movieInfo?.title
         titleLabel.textColor = .white
         
         actorTableView.tableHeaderView = headerView
@@ -104,7 +104,7 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         
-        vc.title = tvShow!.title
+        vc.title = movieInfo?.title
 
         self.navigationController?.pushViewController(vc, animated: true)
 
