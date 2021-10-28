@@ -11,12 +11,16 @@ import Kingfisher
 class StarringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var movieInfo: TMDBModel?
-    var overviewExpanse = true
+    var overviewExpanse = false
     
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var mainPosterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var overviewButton: UIButton!
+    
+
     
     @IBOutlet weak var actorTableView: UITableView!
     
@@ -28,25 +32,29 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
         
         //print(tvShow?.title)
  
-        let url = URL(string: "https://image.tmdb.org/t/p/original/\(movieInfo?.backdropPath)")
+        let url = URL(string: "https://image.tmdb.org/t/p/original/\(movieInfo!.backdropPath)")
         mainPosterImageView.kf.setImage(with: url)
         
         titleLabel.text = movieInfo?.title
         titleLabel.textColor = .white
         
         actorTableView.tableHeaderView = headerView
-//        let nibName = UINib(nibName: OverviewTableViewCell.identifier, bundle: nil)
-//        actorTableView.register(nibName, forCellReuseIdentifier: OverviewTableViewCell.identifier)
-
-        
     }
     
-//    @objc func didTapOverviewButton() {
-//        //fpdlqmf line 1 > 0 > 1
-//        overviewExpanse = !overviewExpanse
-//        actorTableView.reloadRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
-//    }
+    @IBAction func overviewButtonClicked(_ sender: UIButton) {
+        print(#function)
+        
+        overviewExpanse = !overviewExpanse
+        
+        if overviewExpanse {
+            //overviewButton.setImage(UIImage(named: "chevron.down"), for: .normal)
+        } else {
+            //overviewButton.setImage(UIImage(named: "chevron.up"), for: .normal)
+        }
+
+    }
     
+
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
@@ -54,35 +62,33 @@ class StarringViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        if indexPath.row == 0 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: OverviewTableViewCell.identifier) as? OverviewTableViewCell else {
-//                return UITableViewCell()
-//            }
-//
-//            cell.overviewLabel.text = tvShow!.overview
-//
-//
-//
-//            return cell
-//
-//
-//
-//        } else
- 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActorCell") as? ActorTableViewCell else {
-            return UITableViewCell()
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCell") as? OverviewTableViewCell else {
+                return UITableViewCell()
+            }
+
+            cell.overviewLabel.text = movieInfo?.overview
+
+            return cell
+
+        } else {
+    
+           guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActorCell") as? ActorTableViewCell else {
+               return UITableViewCell()
+           }
+           
+           
+           cell.actorImageView.image = UIImage(named: "nevertheless")
+           
+           cell.actorProfile1.text = "주연배우"
+           cell.actorProfile1.font = .systemFont(ofSize: 18, weight: .light)
+           
+           cell.actorProfile2.text = "주연배우"
+           cell.actorProfile2.font = .systemFont(ofSize: 15, weight: .light)
+           
+           return cell
+
         }
-        
-        
-        cell.actorImageView.image = UIImage(named: "nevertheless")
-        
-        cell.actorProfile1.text = "주연배우"
-        cell.actorProfile1.font = .systemFont(ofSize: 18, weight: .light)
-        
-        cell.actorProfile2.text = "주연배우"
-        cell.actorProfile2.font = .systemFont(ofSize: 15, weight: .light)
-        
-        return cell
 
         
         

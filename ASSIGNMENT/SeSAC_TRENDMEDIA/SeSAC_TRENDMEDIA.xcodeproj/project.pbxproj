@@ -38,6 +38,7 @@
 		DCF9FFC0271BF31E00E799FE /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */; };
 		DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */; };
 		DCF9FFC4271C3BAE00E799FE /* GenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */; };
+		DCFBA72F272AF66400313F8C /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBA72E272AF66400313F8C /* OverviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
 		DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreTableViewCell.swift; sourceTree = "<group>"; };
+		DCFBA72E272AF66400313F8C /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				DCD6FA3827258AC400FD9EF4 /* BookViewController.swift */,
 				DCF9FFC3271C3BAE00E799FE /* GenreTableViewCell.swift */,
 				DCF9FFBF271BF31E00E799FE /* PosterTableViewCell.swift */,
+				DCFBA72E272AF66400313F8C /* OverviewTableViewCell.swift */,
 				DCF9FFC1271BF5BE00E799FE /* InfoTableViewCell.swift */,
 				DC045E74271C4EB3006E9142 /* StarringViewController.swift */,
 				DC045E76271C5761006E9142 /* ActorTableViewCell.swift */,
@@ -240,6 +243,7 @@
 				DC045E79271C5FDA006E9142 /* SearchViewController.swift in Sources */,
 				DC9F405D271BBE210035B3E8 /* SceneDelegate.swift in Sources */,
 				DC9F4071271BC4890035B3E8 /* MovieTrendInfoViewController.swift in Sources */,
+				DCFBA72F272AF66400313F8C /* OverviewTableViewCell.swift in Sources */,
 				DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */,
 				DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */,
 				DCD6FA3B27258AC400FD9EF4 /* BookViewController.swift in Sources */,
