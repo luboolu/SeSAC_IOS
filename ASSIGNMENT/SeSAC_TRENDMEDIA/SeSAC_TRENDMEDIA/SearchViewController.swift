@@ -17,8 +17,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         for indexPath in indexPaths {
             if movieData.count - 1 == indexPath.row {
                 startPage += 10
-                
-                fetchMovieData()
+
+                fetchMovieData(query: searchBar.text!)
             }
         }
         
@@ -32,6 +32,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var searchResultTableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var movieData: [MovieModel] = []
     
@@ -43,10 +44,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchResultTableView.delegate = self
         searchResultTableView.dataSource = self
         searchResultTableView.prefetchDataSource = self
+        searchBar.delegate = self
+        
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
         
-        fetchMovieData()
+        fetchMovieData(query: "")
 
     }
     
@@ -54,17 +57,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.dismiss(animated: true, completion: nil)
     }
     
-    func fetchMovieData() {
+    func fetchMovieData(query: String) {
         //네이버 영화 API 호출하여 결과 debug 찍기
         //%형태로 인코딩 해주어야 함
-        if let searchSource = "해리포터".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(searchSource)&display=10&start=\(startPage)"
+        if let searchSource = "\(query)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let url = "\(Endpoint.NaverMovieSearchURL)?query=\(searchSource)&display=10&start=\(startPage)"
             
             let header: HTTPHeaders = [
-                "X-Naver-Client-Id" : "uesxBpa4kC9tztddyWGr",
-                "X-Naver-Client-Secret" : "GRMNLkQCNF"
+                "X-Naver-Client-Id" : APIKEY.NAVER_ID,
+                "X-Naver-Client-Secret" : APIKEY.NAVER_SECRETE
             ]
-            
+            print(url)
             AF.request(url, method: .get, headers: header).validate().responseJSON { response in
                 switch response.result {
                 case .success(let value):
@@ -104,6 +107,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SerachResultCell") as? SearchResultTableViewCell else {
             return UITableViewCell()
         }
@@ -129,4 +133,34 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    //검색 버튼(키보드 리턴키와 비슷)을 눌렀을때 실행
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        //searchBar.setShowsCancelButton(false, animated: true)
+        if let text = searchBar.text {
+            self.startPage = 1
+            self.movieData.removeAll()
+            fetchMovieData(query: text)
+        }
+    }
+    
+    //취소 버튼 눌렀을때 실행
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        self.startPage = 1
+        self.movieData.removeAll()
+        searchResultTableView.reloadData()
+        searchBar.setShowsCancelButton(false, animated: true)
+        //searchBar.showsCancelButton = false
+    }
+    
+    //서치바에 커서가 깜빡이기 시작할때를 감지
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print(#function)
+        searchBar.setShowsCancelButton(true, animated: true)
+        //searchBar.showsCancelButton = true
+    }
 }

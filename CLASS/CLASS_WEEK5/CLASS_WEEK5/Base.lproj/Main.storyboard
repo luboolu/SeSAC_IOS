@@ -125,6 +125,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-u8-jK5">
+                                <rect key="frame" x="34" y="731" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사진"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonClicked:" destination="YNo-qA-1cZ" eventType="touchUpInside" id="ytU-1j-JKt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aQ1-1K-NvG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

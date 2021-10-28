@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC9094732727928000814B13 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9094722727928000814B13 /* TranslationViewController.swift */; };
+		DCA557AD272A227900E8CA8F /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DCA557AC272A227900E8CA8F /* JGProgressHUD */; };
 		DCD6FA4A2726446200FD9EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA492726446200FD9EF4 /* AppDelegate.swift */; };
 		DCD6FA4C2726446200FD9EF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA4B2726446200FD9EF4 /* SceneDelegate.swift */; };
 		DCD6FA4E2726446200FD9EF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6FA4D2726446200FD9EF4 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD6FA622726450C00FD9EF4 /* SwiftyJSON in Frameworks */,
+				DCA557AD272A227900E8CA8F /* JGProgressHUD in Frameworks */,
 				DCD6FA5F272644B200FD9EF4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +107,7 @@
 			packageProductDependencies = (
 				DCD6FA5E272644B200FD9EF4 /* Alamofire */,
 				DCD6FA612726450C00FD9EF4 /* SwiftyJSON */,
+				DCA557AC272A227900E8CA8F /* JGProgressHUD */,
 			);
 			productName = CLASS_WEEK5;
 			productReference = DCD6FA462726446200FD9EF4 /* CLASS_WEEK5.app */;
@@ -137,6 +140,7 @@
 			packageReferences = (
 				DCD6FA5D272644B200FD9EF4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DCD6FA602726450B00FD9EF4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				DCA557AB272A227900E8CA8F /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = DCD6FA472726446200FD9EF4 /* Products */;
 			projectDirPath = "";
@@ -392,6 +396,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DCA557AB272A227900E8CA8F /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		DCD6FA5D272644B200FD9EF4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -411,6 +423,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DCA557AC272A227900E8CA8F /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA557AB272A227900E8CA8F /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
 		DCD6FA5E272644B200FD9EF4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCD6FA5D272644B200FD9EF4 /* XCRemoteSwiftPackageReference "Alamofire" */;

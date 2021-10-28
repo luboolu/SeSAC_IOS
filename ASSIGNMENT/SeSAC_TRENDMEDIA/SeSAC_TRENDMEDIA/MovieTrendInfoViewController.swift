@@ -8,7 +8,22 @@
 import UIKit
 import Kingfisher
 
-class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+    //셀이 화면에 보이기 전에 필요한 리소스를 미리 다운 받는 기능
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+
+        for indexPath in indexPaths {
+            if self.trendData.count - 1 == indexPath.section {
+                start += 1
+                fetchTBDMData()
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("취소: \(indexPaths)")
+    }
     
     let tvShowInformation = TvShowInformation()
     
@@ -16,25 +31,59 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var mainButtonView: UIView!
     @IBOutlet weak var InfoTableView: UITableView!
     
+    var trendData: [TMDBModel] = []
     
+    var start: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         InfoTableView.delegate = self
         InfoTableView.dataSource = self
+        InfoTableView.prefetchDataSource = self
         
         InfoTableView.rowHeight = UITableView.automaticDimension
         
         mainButtonView.layer.zPosition = 1
         mainButtonView.layer.cornerRadius = 20
         
-        //InfoTableView.tableHeaderView = HeaderView
-        
+        fetchTBDMData()
+    }
+    
+    func fetchTBDMData() {
+        TmdbAPIManager.shared.fetchTrendData(startPage: start) {
+            code, json in
+
+            for result in json["results"] {
+                //print(result.1["title"])
+                let data = TMDBModel(
+                    id: result.1["id"].intValue,
+                    title: result.1["title"].stringValue,
+                    backdropPath: result.1["backdrop_path"].stringValue,
+                    voteCount: result.1["vote_count"].intValue,
+                    overview: result.1["overview"].stringValue,
+                    popularity: result.1["popularity"].doubleValue,
+                    posterPath: result.1["poster_path"].stringValue,
+                    video: result.1["video"].boolValue,
+                    mediaType: result.1["media_type"].stringValue,
+                    voteAverage: result.1["vote_average"].doubleValue,
+                    adult: result.1["adult"].boolValue,
+                    originalLanguage: result.1["original_language"].stringValue,
+                    genreID: result.1["genre_ids"].rawValue as! [Int],
+                    releaseDate: result.1["release_date"].stringValue,
+                    originalTitle: result.1["original_title"].stringValue
+                )
+                
+                self.trendData.append(data)
+
+            }
+            
+            self.InfoTableView.reloadData()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tvShowInformation.tvShow.count
+        return self.trendData.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,54 +91,24 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        if indexPath.row == 0 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "GenreCell") as? GenreTableViewCell else {
-//                return UITableViewCell()
-//            }
-//
-//            let row = tvShowInformation.tvShow[indexPath.section]
-//
-//            cell.releaseDateLabel.text = row.releaseDate
-//            cell.releaseDateLabel.font = .systemFont(ofSize: 15, weight: .medium)
-//            cell.releaseDateLabel.textColor = .lightGray
-//
-//            cell.genreLabel.text = "#" + row.genre
-//            cell.genreLabel.font = .systemFont(ofSize: 20, weight: .medium)
-//            cell.genreLabel.textColor = .black
-//
-//            return cell
-//
-//        } else
+
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PosterCell") as? PosterTableViewCell else {
                 return UITableViewCell()
             }
             
-            let row = tvShowInformation.tvShow[indexPath.section]
+            //let row = tvShowInformation.tvShow[indexPath.section]
+            let row = trendData[indexPath.section]
             
-            let url = URL(string: row.backdropImage)
+            let url = URL(string: "https://image.tmdb.org/t/p/original/\(row.posterPath)")
             cell.posterImageView.kf.setImage(with: url) //Kingfisher 이용하여 이미지 url로 load
             
-//            let url = URL(string: row.backdropImage)
-//            //DispatchQueue를 쓰는 이유 -> 이미지가 클 경우 이미지를 다운로드 받기 까지 잠깐의 멈춤이 생길수 있다. (이유 : 싱글 쓰레드로 작동되기때문에)
-//            //DispatchQueue를 쓰면 멀티 쓰레드로 이미지가 클경우에도 멈춤이 생기지 않는다.
-//            //라고 하는데...아직은 잘 모르겠다.
-//
-//            DispatchQueue.global().async {
-//                let data = try?
-//                Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-//                DispatchQueue.main.async
-//                {
-//                    cell.posterImageView.image = UIImage(data: data!)
-//                }
-//            }
             
             cell.rateNameLabel.text = "평점"
             cell.rateNameLabel.font = .systemFont(ofSize: 15, weight: .medium)
             cell.rateNameLabel.backgroundColor = .purple
             
-            cell.rateNumLabel.text = String(row.rate)
+            cell.rateNumLabel.text = String(row.voteAverage)
             cell.rateNumLabel.font = .systemFont(ofSize: 15, weight: .medium)
             cell.rateNumLabel.backgroundColor = .white
             
@@ -101,15 +120,14 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
                 return UITableViewCell()
             }
             
-            let row = tvShowInformation.tvShow[indexPath.section]
+            //let row = tvShowInformation.tvShow[indexPath.section]
+            let row = trendData[indexPath.section]
             
             cell.movieTitleLable.text = row.title
             cell.movieTitleLable.font = .systemFont(ofSize: 25)
             
-            cell.movieCastLabel.text = row.starring
+            cell.movieCastLabel.text = "출연진"
             cell.movieCastLabel.font = .systemFont(ofSize: 15, weight: .light)
-            
-            
             
             return cell
         } else {

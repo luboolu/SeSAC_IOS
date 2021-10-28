@@ -11,9 +11,11 @@
 		DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E76271C5761006E9142 /* ActorTableViewCell.swift */; };
 		DC045E79271C5FDA006E9142 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E78271C5FDA006E9142 /* SearchViewController.swift */; };
 		DC045E7B271C621B006E9142 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */; };
+		DC1FABC2272AAB53002A7D63 /* TMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FABC1272AAB53002A7D63 /* TMDBModel.swift */; };
 		DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */; };
 		DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */; };
 		DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFC2720531F008B9FAA /* Theater.swift */; };
+		DC89595B272A8EBD007A4496 /* TmdbAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89595A272A8EBD007A4496 /* TmdbAPIManager.swift */; };
 		DC90947927279D3300814B13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC90947827279D3300814B13 /* Alamofire */; };
 		DC90947C27279D4800814B13 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DC90947B27279D4800814B13 /* SwiftyJSON */; };
 		DC90947E2727A7F300814B13 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90947D2727A7F300814B13 /* MovieModel.swift */; };
@@ -43,9 +45,11 @@
 		DC045E76271C5761006E9142 /* ActorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
 		DC045E78271C5FDA006E9142 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DC045E7A271C621B006E9142 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		DC1FABC1272AAB53002A7D63 /* TMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBModel.swift; sourceTree = "<group>"; };
 		DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterInformation.swift; sourceTree = "<group>"; };
 		DC2DAFFC2720531F008B9FAA /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		DC89595A272A8EBD007A4496 /* TmdbAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbAPIManager.swift; sourceTree = "<group>"; };
 		DC90947D2727A7F300814B13 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		DC9F4057271BBE210035B3E8 /* SeSAC_TRENDMEDIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_TRENDMEDIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9F405A271BBE210035B3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				DCF979F927292D3600BE64A0 /* Constraints.swift */,
 				DCF979FB27292EB500BE64A0 /* NaverMovieSearchAPIManager.swift */,
+				DC89595A272A8EBD007A4496 /* TmdbAPIManager.swift */,
+				DC1FABC1272AAB53002A7D63 /* TMDBModel.swift */,
 				DC9F405A271BBE210035B3E8 /* AppDelegate.swift */,
 				DC9F405C271BBE210035B3E8 /* SceneDelegate.swift */,
 				DC9F405E271BBE210035B3E8 /* ViewController.swift */,
@@ -223,7 +229,9 @@
 				DCF9FFC2271BF5BE00E799FE /* InfoTableViewCell.swift in Sources */,
 				DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */,
 				DC9F405F271BBE210035B3E8 /* ViewController.swift in Sources */,
+				DC89595B272A8EBD007A4496 /* TmdbAPIManager.swift in Sources */,
 				DCD916FB271DBE6F00196CC4 /* StarringDetailViewController.swift in Sources */,
+				DC1FABC2272AAB53002A7D63 /* TMDBModel.swift in Sources */,
 				DC90947E2727A7F300814B13 /* MovieModel.swift in Sources */,
 				DCF979FC27292EB500BE64A0 /* NaverMovieSearchAPIManager.swift in Sources */,
 				DC9F405B271BBE210035B3E8 /* AppDelegate.swift in Sources */,
