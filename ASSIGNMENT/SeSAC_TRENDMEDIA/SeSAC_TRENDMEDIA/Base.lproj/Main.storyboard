@@ -246,6 +246,40 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="69.642857142857139"/>
         </scene>
+        <!--Video Web View Controller-->
+        <scene sceneID="LQn-3X-9Fn">
+            <objects>
+                <viewController storyboardIdentifier="VideoWebViewController" id="mGo-1m-Rdb" customClass="VideoWebViewController" customModule="SeSAC_TRENDMEDIA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pE7-aw-MIe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs5-aT-tvJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bNu-pO-guG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bs5-aT-tvJ" firstAttribute="leading" secondItem="bNu-pO-guG" secondAttribute="leading" id="7kR-sT-3XQ"/>
+                            <constraint firstItem="bNu-pO-guG" firstAttribute="bottom" secondItem="bs5-aT-tvJ" secondAttribute="bottom" id="C2w-Gc-EA5"/>
+                            <constraint firstItem="bNu-pO-guG" firstAttribute="trailing" secondItem="bs5-aT-tvJ" secondAttribute="trailing" id="JOL-9x-Qxr"/>
+                            <constraint firstItem="bs5-aT-tvJ" firstAttribute="top" secondItem="bNu-pO-guG" secondAttribute="top" id="Rmr-xO-ttd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="bs5-aT-tvJ" id="1op-47-iYR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nI3-Ty-LW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="70"/>
+        </scene>
         <!--Book View Controller-->
         <scene sceneID="1z1-N1-TXP">
             <objects>
@@ -431,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8J-3w-KYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="369"/>
+            <point key="canvasLocation" x="1870" y="860"/>
         </scene>
         <!--Starring Detail View Controller-->
         <scene sceneID="rkC-Tw-D5t">
@@ -446,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkM-FA-8t8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="369"/>
+            <point key="canvasLocation" x="2729" y="860"/>
         </scene>
         <!--Theater Map View Controller-->
         <scene sceneID="hK3-Tr-ran">
@@ -568,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pK4-iS-wKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-316"/>
+            <point key="canvasLocation" x="1870" y="-629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ear-dN-KO4">

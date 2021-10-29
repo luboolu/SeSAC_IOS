@@ -155,7 +155,22 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == 2 {
+        if indexPath.row == 1 {
+            
+            print("video web view로 이동@")
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            
+            guard let vc = sb.instantiateViewController(withIdentifier: "VideoWebViewController") as? VideoWebViewController else {
+                print("ERROR")
+                return
+            }
+            
+            vc.movieID = trendData[indexPath.section].id
+
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else if indexPath.row == 2 {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             
             guard let vc = sb.instantiateViewController(withIdentifier: "StarringViewController") as? StarringViewController else {
