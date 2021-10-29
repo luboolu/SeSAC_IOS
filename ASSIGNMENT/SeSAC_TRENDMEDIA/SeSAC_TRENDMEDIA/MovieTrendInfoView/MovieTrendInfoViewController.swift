@@ -112,9 +112,8 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
             cell.rateNumLabel.font = .systemFont(ofSize: 15, weight: .medium)
             cell.rateNumLabel.backgroundColor = .white
             
-          
-            
             return cell
+            
         } else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell") as? InfoTableViewCell else {
                 return UITableViewCell()
