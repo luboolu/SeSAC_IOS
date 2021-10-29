@@ -21,6 +21,7 @@
 		DCF979EC2728D34E00BE64A0 /* TranslatedAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF979EB2728D34E00BE64A0 /* TranslatedAPIManager.swift */; };
 		DCF979F22728ECAB00BE64A0 /* VisionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF979F12728ECAB00BE64A0 /* VisionAPIManager.swift */; };
 		DCF979F42728F25C00BE64A0 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF979F32728F25C00BE64A0 /* VisionViewController.swift */; };
+		DCFBA735272B7F1800313F8C /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBA734272B7F1800313F8C /* AsyncViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DCF979EB2728D34E00BE64A0 /* TranslatedAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatedAPIManager.swift; sourceTree = "<group>"; };
 		DCF979F12728ECAB00BE64A0 /* VisionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPIManager.swift; sourceTree = "<group>"; };
 		DCF979F32728F25C00BE64A0 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		DCFBA734272B7F1800313F8C /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				DCD6FA4B2726446200FD9EF4 /* SceneDelegate.swift */,
 				DCD6FA4D2726446200FD9EF4 /* ViewController.swift */,
 				DCD6FA4F2726446200FD9EF4 /* Main.storyboard */,
+				DCFBA734272B7F1800313F8C /* AsyncViewController.swift */,
 				DCF979F32728F25C00BE64A0 /* VisionViewController.swift */,
 				DCF979F12728ECAB00BE64A0 /* VisionAPIManager.swift */,
 				DCF979E92728D19600BE64A0 /* Constants.swift */,
@@ -172,6 +175,7 @@
 				DCF979EA2728D19600BE64A0 /* Constants.swift in Sources */,
 				DC9094732727928000814B13 /* TranslationViewController.swift in Sources */,
 				DCD6FA4E2726446200FD9EF4 /* ViewController.swift in Sources */,
+				DCFBA735272B7F1800313F8C /* AsyncViewController.swift in Sources */,
 				DCD6FA4A2726446200FD9EF4 /* AppDelegate.swift in Sources */,
 				DCF979F42728F25C00BE64A0 /* VisionViewController.swift in Sources */,
 				DCF979EC2728D34E00BE64A0 /* TranslatedAPIManager.swift in Sources */,
@@ -325,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CLASS_WEEK5/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -352,6 +357,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CLASS_WEEK5/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

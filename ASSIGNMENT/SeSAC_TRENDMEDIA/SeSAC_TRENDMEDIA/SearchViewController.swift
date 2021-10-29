@@ -87,8 +87,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     }
                     
                     print(self.movieData)
-                    
-                    self.searchResultTableView.reloadData()
+                    //중요!!!
+                    DispatchQueue.main.async {
+                        self.searchResultTableView.reloadData()
+                    }
+                
                     
                 case .failure(let error):
                     print(error)
