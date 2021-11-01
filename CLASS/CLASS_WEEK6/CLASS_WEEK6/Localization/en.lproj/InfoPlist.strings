@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  CLASS_WEEK6
+
+  Created by 김진영 on 2021/11/01.
+  
+*/
+
+//미리 정해져있는 이름이 있음 다른것과 다르게...
+
+CFBundleDisplayName = "My Diary";
+NSCameraUsageDescripyion = "Please Access Camera";
