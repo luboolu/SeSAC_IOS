@@ -40,10 +40,10 @@ class ViewController: UIViewController {
         welcomeLabel.font = UIFont().mainBlack
         
   
-        backupLabel.text = NSLocalizedString("data_backup", comment: "")
-//        backupLabel.text = NSLocalizedString("data_backup", tableName: "Setting", bundle: .main, value: "", comment: "")
+//        backupLabel.text = NSLocalizedString("data_backup", comment: "")
+        backupLabel.text = NSLocalizedString("data_backup", tableName: "Localizable", bundle: .main, value: "", comment: "")
         
-        //backupLabel.text = LocalizableStrings.data_backup.rawValue.localized()
+//        backupLabel.text = LocalizableStrings.data_backup.rawValue.localized()
         backupLabel.font = UIFont().mainBlack
         
     }

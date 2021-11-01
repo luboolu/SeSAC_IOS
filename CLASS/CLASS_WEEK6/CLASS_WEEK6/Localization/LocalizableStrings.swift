@@ -16,7 +16,7 @@ enum LocalizableStrings: String {
     }
     
     var localizedSetting: String {
-        return self.rawValue.localized(tableName: "Setting") //Setting.strings
+        return self.rawValue.localized(tableName: "Localizable") //Setting.strings
     }
     
 }
