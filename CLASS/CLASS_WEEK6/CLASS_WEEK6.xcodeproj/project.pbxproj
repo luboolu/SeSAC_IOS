@@ -21,6 +21,20 @@
 		DC1BD412272F87BD00308E15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD414272F87BD00308E15 /* InfoPlist.strings */; };
 		DC1BD417272F88EA00308E15 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD416272F88EA00308E15 /* String+Extension.swift */; };
 		DC1BD419272F8A1E00308E15 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD418272F8A1E00308E15 /* LocalizableStrings.swift */; };
+		DC1BD41B2730270F00308E15 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD41A2730270F00308E15 /* Home.storyboard */; };
+		DC1BD41D2730271900308E15 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD41C2730271900308E15 /* Content.storyboard */; };
+		DC1BD41F2730272B00308E15 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD41E2730272B00308E15 /* Calendar.storyboard */; };
+		DC1BD4212730273100308E15 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4202730273100308E15 /* Search.storyboard */; };
+		DC1BD4232730273800308E15 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4222730273800308E15 /* Setting.storyboard */; };
+		DC1BD425273028E400308E15 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD424273028E400308E15 /* HomeViewController.swift */; };
+		DC1BD4272730290400308E15 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD4262730290400308E15 /* ContentViewController.swift */; };
+		DC1BD4292730291900308E15 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD4282730291900308E15 /* CalendarViewController.swift */; };
+		DC1BD42B2730293200308E15 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD42A2730293200308E15 /* SearchViewController.swift */; };
+		DC1BD42D2730294500308E15 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD42C2730294500308E15 /* SettingViewController.swift */; };
+		DC1BD42F273039CD00308E15 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD42E273039CD00308E15 /* AddViewController.swift */; };
+		DC1BD4332730414400308E15 /* KOTRA_SONGEULSSI.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4322730413900308E15 /* KOTRA_SONGEULSSI.otf */; };
+		DC1BD4352730419B00308E15 /* Bareun_hipi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4342730419B00308E15 /* Bareun_hipi.ttf */; };
+		DC1BD437273044E900308E15 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +58,20 @@
 		DC1BD415272F87BE00308E15 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC1BD416272F88EA00308E15 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DC1BD418272F8A1E00308E15 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		DC1BD41A2730270F00308E15 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DC1BD41C2730271900308E15 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
+		DC1BD41E2730272B00308E15 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		DC1BD4202730273100308E15 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		DC1BD4222730273800308E15 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		DC1BD424273028E400308E15 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC1BD4262730290400308E15 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		DC1BD4282730291900308E15 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DC1BD42A2730293200308E15 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DC1BD42C2730294500308E15 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DC1BD42E273039CD00308E15 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DC1BD4322730413900308E15 /* KOTRA_SONGEULSSI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRA_SONGEULSSI.otf; sourceTree = "<group>"; };
+		DC1BD4342730419B00308E15 /* Bareun_hipi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bareun_hipi.ttf; sourceTree = "<group>"; };
+		DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,15 +105,27 @@
 			isa = PBXGroup;
 			children = (
 				DC1BD408272F7FBA00308E15 /* Localization */,
-				DC1BD403272F737E00308E15 /* Extension */,
 				DC1BD3FC272F6F7D00308E15 /* Font */,
-				DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */,
-				DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */,
-				DC1BD3EC272F6F3900308E15 /* ViewController.swift */,
-				DC1BD3EE272F6F3900308E15 /* Main.storyboard */,
-				DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */,
-				DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */,
+				DC1BD403272F737E00308E15 /* Extension */,
 				DC1BD3F6272F6F3B00308E15 /* Info.plist */,
+				DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */,
+				DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */,
+				DC1BD3EE272F6F3900308E15 /* Main.storyboard */,
+				DC1BD3EC272F6F3900308E15 /* ViewController.swift */,
+				DC1BD41E2730272B00308E15 /* Calendar.storyboard */,
+				DC1BD4282730291900308E15 /* CalendarViewController.swift */,
+				DC1BD41C2730271900308E15 /* Content.storyboard */,
+				DC1BD4262730290400308E15 /* ContentViewController.swift */,
+				DC1BD41A2730270F00308E15 /* Home.storyboard */,
+				DC1BD42E273039CD00308E15 /* AddViewController.swift */,
+				DC1BD424273028E400308E15 /* HomeViewController.swift */,
+				DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */,
+				DC1BD4202730273100308E15 /* Search.storyboard */,
+				DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */,
+				DC1BD42A2730293200308E15 /* SearchViewController.swift */,
+				DC1BD4222730273800308E15 /* Setting.storyboard */,
+				DC1BD42C2730294500308E15 /* SettingViewController.swift */,
+				DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */,
 			);
 			path = CLASS_WEEK6;
 			sourceTree = "<group>";
@@ -96,6 +136,8 @@
 				DC1BD3FE272F700D00308E15 /* SCDream2.otf */,
 				DC1BD3FF272F700D00308E15 /* SCDream5.otf */,
 				DC1BD3FD272F700D00308E15 /* SCDream8.otf */,
+				DC1BD4322730413900308E15 /* KOTRA_SONGEULSSI.otf */,
+				DC1BD4342730419B00308E15 /* Bareun_hipi.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -178,14 +220,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1BD4332730414400308E15 /* KOTRA_SONGEULSSI.otf in Resources */,
 				DC1BD402272F702D00308E15 /* SCDream8.otf in Resources */,
 				DC1BD412272F87BD00308E15 /* InfoPlist.strings in Resources */,
+				DC1BD4352730419B00308E15 /* Bareun_hipi.ttf in Resources */,
 				DC1BD401272F702800308E15 /* SCDream5.otf in Resources */,
+				DC1BD41B2730270F00308E15 /* Home.storyboard in Resources */,
+				DC1BD41D2730271900308E15 /* Content.storyboard in Resources */,
+				DC1BD41F2730272B00308E15 /* Calendar.storyboard in Resources */,
 				DC1BD400272F702400308E15 /* SCDream2.otf in Resources */,
 				DC1BD40B272F802000308E15 /* Localizable.strings in Resources */,
 				DC1BD3F5272F6F3B00308E15 /* LaunchScreen.storyboard in Resources */,
 				DC1BD3F2272F6F3B00308E15 /* Assets.xcassets in Resources */,
+				DC1BD4212730273100308E15 /* Search.storyboard in Resources */,
 				DC1BD3F0272F6F3900308E15 /* Main.storyboard in Resources */,
+				DC1BD4232730273800308E15 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,11 +245,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1BD42B2730293200308E15 /* SearchViewController.swift in Sources */,
+				DC1BD42D2730294500308E15 /* SettingViewController.swift in Sources */,
+				DC1BD42F273039CD00308E15 /* AddViewController.swift in Sources */,
+				DC1BD4272730290400308E15 /* ContentViewController.swift in Sources */,
 				DC1BD3ED272F6F3900308E15 /* ViewController.swift in Sources */,
 				DC1BD419272F8A1E00308E15 /* LocalizableStrings.swift in Sources */,
 				DC1BD3E9272F6F3900308E15 /* AppDelegate.swift in Sources */,
 				DC1BD405272F739900308E15 /* UIFont+Extension.swift in Sources */,
 				DC1BD417272F88EA00308E15 /* String+Extension.swift in Sources */,
+				DC1BD4292730291900308E15 /* CalendarViewController.swift in Sources */,
+				DC1BD425273028E400308E15 /* HomeViewController.swift in Sources */,
+				DC1BD437273044E900308E15 /* SearchResultTableViewCell.swift in Sources */,
 				DC1BD3EB272F6F3900308E15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

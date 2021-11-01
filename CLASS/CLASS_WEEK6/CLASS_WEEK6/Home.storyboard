@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ar8-i1-2fc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HOME-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="CLASS_WEEK6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME" id="Usb-dZ-7Ak">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="TOm-Bk-fwe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qcJ-Xf-Qti">
+                                <rect key="frame" x="302" y="5" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0Zc-oX-mrG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="134.59821428571428"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="gur-RH-HIb">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" id="wRq-bV-0Se" customClass="AddViewController" customModule="CLASS_WEEK6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yhu-AD-92G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="station" translatesAutoresizingMaskIntoConstraints="NO" id="qm3-fR-Xhj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-EJ-qC7">
+                                <rect key="frame" x="10" y="278" width="394" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="J8D-I1-SCW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="up5-TL-pWn">
+                                <rect key="frame" x="10" y="332" width="394" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LMz-c4-Nal"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mQH-7K-Y43">
+                                <rect key="frame" x="10" y="386" width="394" height="456"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W2n-fH-5uh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qm3-fR-Xhj" firstAttribute="width" secondItem="Yhu-AD-92G" secondAttribute="width" id="5Rg-4b-ymn"/>
+                            <constraint firstItem="W2n-fH-5uh" firstAttribute="trailing" secondItem="mQH-7K-Y43" secondAttribute="trailing" constant="10" id="9Sa-Pg-Nbg"/>
+                            <constraint firstItem="qm3-fR-Xhj" firstAttribute="top" secondItem="W2n-fH-5uh" secondAttribute="top" id="Gvq-o3-KQE"/>
+                            <constraint firstItem="up5-TL-pWn" firstAttribute="leading" secondItem="W2n-fH-5uh" secondAttribute="leading" constant="10" id="MWN-oD-nMb"/>
+                            <constraint firstItem="W2n-fH-5uh" firstAttribute="trailing" secondItem="up5-TL-pWn" secondAttribute="trailing" constant="10" id="VBa-gd-CXc"/>
+                            <constraint firstItem="mQH-7K-Y43" firstAttribute="leading" secondItem="W2n-fH-5uh" secondAttribute="leading" constant="10" id="XoB-XU-5bs"/>
+                            <constraint firstItem="W2n-fH-5uh" firstAttribute="trailing" secondItem="qm3-fR-Xhj" secondAttribute="trailing" id="aIQ-tg-v0G"/>
+                            <constraint firstItem="up5-TL-pWn" firstAttribute="top" secondItem="CoA-EJ-qC7" secondAttribute="bottom" constant="10" id="cgX-Af-IZx"/>
+                            <constraint firstItem="CoA-EJ-qC7" firstAttribute="leading" secondItem="W2n-fH-5uh" secondAttribute="leading" constant="10" id="gI5-EX-20p"/>
+                            <constraint firstItem="mQH-7K-Y43" firstAttribute="top" secondItem="up5-TL-pWn" secondAttribute="bottom" constant="10" id="nkd-pA-U6K"/>
+                            <constraint firstItem="qm3-fR-Xhj" firstAttribute="leading" secondItem="W2n-fH-5uh" secondAttribute="leading" id="qb9-iN-qdm"/>
+                            <constraint firstItem="CoA-EJ-qC7" firstAttribute="top" secondItem="qm3-fR-Xhj" secondAttribute="bottom" constant="10" id="uiE-c4-Vcn"/>
+                            <constraint firstItem="W2n-fH-5uh" firstAttribute="bottom" secondItem="mQH-7K-Y43" secondAttribute="bottom" constant="20" id="vBP-yC-6is"/>
+                            <constraint firstItem="W2n-fH-5uh" firstAttribute="trailing" secondItem="CoA-EJ-qC7" secondAttribute="trailing" constant="10" id="vpL-Jf-f7H"/>
+                            <constraint firstItem="qm3-fR-Xhj" firstAttribute="height" secondItem="Yhu-AD-92G" secondAttribute="height" multiplier="0.25" id="z8m-bX-aF5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateButton" destination="up5-TL-pWn" id="7e7-sd-35h"/>
+                        <outlet property="diaryImageView" destination="qm3-fR-Xhj" id="T5x-sv-Fmr"/>
+                        <outlet property="diaryTextView" destination="mQH-7K-Y43" id="fwj-wC-65N"/>
+                        <outlet property="titleTextField" destination="CoA-EJ-qC7" id="tFk-6j-RhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLZ-ou-nhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876.811594202899" y="134.59821428571428"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="XCm-Xf-cFf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ar8-i1-2fc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="tdN-7d-ceB"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9VO-Ny-ecz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="TOu-68-CHF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPA-ni-g1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="station" width="4032" height="3024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

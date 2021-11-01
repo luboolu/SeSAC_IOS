@@ -20,4 +20,8 @@ extension UIFont {
         return UIFont(name: "S-CoreDream-8Heavy", size: 17)!
     }
     
+    var diary: UIFont {
+        return UIFont(name: "KOTRA_SONGEULSSI", size: 14)!
+    }
+    
 }
