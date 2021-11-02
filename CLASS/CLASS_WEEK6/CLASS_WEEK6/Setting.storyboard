@@ -37,7 +37,7 @@
         <scene sceneID="dwr-iZ-GVW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yEz-8P-sgK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="설정" image="person.circle" catalog="system" id="pe1-W6-UC6"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="gearshape" catalog="system" id="pe1-W6-UC6"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qne-UZ-AZG">
@@ -55,7 +55,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

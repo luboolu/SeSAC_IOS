@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SearchViewController: UIViewController {
-
+    
+    let localRealm = try! Realm()
+    
+    var tasks: Results<UserDiary>!
+    
     @IBOutlet weak var searchResultTableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,6 +21,12 @@ class SearchViewController: UIViewController {
 
         searchResultTableView.delegate = self
         searchResultTableView.dataSource = self
+        
+        // Get all tasks in the realm
+        tasks = localRealm.objects(UserDiary.self)
+        print(tasks)
+        
+        
     }
     
 }
@@ -23,7 +34,7 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -36,10 +47,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             print("return")
             return UITableViewCell()
         }
+        
+        let row = tasks[indexPath.row]
          
-        cell.titleLabel.text = "제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목"
-        cell.dateLabel.text = "2021.11.01"
-        cell.contentLabel.text = "내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용"
+        cell.titleLabel.text = row.diaryTitle
+        cell.dateLabel.text = "2021.11.02"
+        cell.contentLabel.text = row.content
+        cell.contentLabel.numberOfLines = 0
         cell.searchImageView.backgroundColor = .blue
 
 

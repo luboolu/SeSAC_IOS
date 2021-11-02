@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddViewController: UIViewController {
     
     static let identifier = "AddViewController"
+    
+    let localRealm = try! Realm()
     
     @IBOutlet weak var diaryImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
@@ -31,6 +34,10 @@ class AddViewController: UIViewController {
         
         diaryTextView.backgroundColor = .lightGray
         diaryTextView.font = UIFont().mainBlack
+        
+        print("Realm is loacaed at: ", localRealm.configuration.fileURL!)
+        
+    ///Users/gimjin-yeong/Library/Developer/CoreSimulator/Devices/323D6275-A8A0-44E0-80CE-AA24BF58B1F4/data/Containers/Data/Application/8C569E90-D0CE-46A2-BD42-449E4211B950/Documents/default.realm
 
     }
     
@@ -40,5 +47,13 @@ class AddViewController: UIViewController {
     
     @objc func saveButtonClicked() {
         print(#function)
+        
+        // Add some tasks
+        let task = UserDiary(diaryTitle: titleTextField.text!, content: diaryTextView.text! , writeDate: Date(), regDate: Date())
+        
+        try! localRealm.write {
+            localRealm.add(task)
+        }
+        
     }
 }
