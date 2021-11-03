@@ -38,5 +38,10 @@
 <a href="https://lumpy-chip-1b8.notion.site/SeSAC_WEATHER-a241cfd4bd24427b8035d4c712567058"><p>Weather Notion</p></a>
 
 
+<h2>KOFICMOVIE</h2>
+
+![Simulator Screen Recording - iPhone 11 - 2021-11-03 at 22 24 28](https://user-images.githubusercontent.com/58027136/140068037-1ab7a049-b9bf-43e7-b4b5-255dd4de76cc.gif)
+
+
 
 
