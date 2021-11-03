@@ -45,6 +45,15 @@
           "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
           "version": null
         }
+      },
+      {
+        "package": "TextFieldEffects",
+        "repositoryURL": "https://github.com/raulriera/TextFieldEffects.git",
+        "state": {
+          "branch": "master",
+          "revision": "6bcda6335403c228b02b04ed8ba5225460762edb",
+          "version": null
+        }
       }
     ]
   },

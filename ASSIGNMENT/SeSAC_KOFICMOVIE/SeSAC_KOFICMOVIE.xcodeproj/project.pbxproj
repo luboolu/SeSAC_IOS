@@ -24,6 +24,7 @@
 		DC1FBDF7273271A9005A7DBD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC1FBDF6273271A9005A7DBD /* RealmSwift */; };
 		DC1FBDFA273275FC005A7DBD /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FBDF9273275FC005A7DBD /* RealmModel.swift */; };
 		DC1FBDFD2732C098005A7DBD /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DC1FBDFC2732C098005A7DBD /* JGProgressHUD */; };
+		DC1FBE002732C6C1005A7DBD /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = DC1FBDFF2732C6C1005A7DBD /* TextFieldEffects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 				DC1FBDF7273271A9005A7DBD /* RealmSwift in Frameworks */,
 				DC1FBDF5273271A9005A7DBD /* Realm in Frameworks */,
 				DC1BD4692731573900308E15 /* SwiftyJSON in Frameworks */,
+				DC1FBE002732C6C1005A7DBD /* TextFieldEffects in Frameworks */,
 				DC1BD46C2731574B00308E15 /* Alamofire in Frameworks */,
 				DC1FBDFD2732C098005A7DBD /* JGProgressHUD in Frameworks */,
 			);
@@ -133,6 +135,7 @@
 				DC1FBDF4273271A9005A7DBD /* Realm */,
 				DC1FBDF6273271A9005A7DBD /* RealmSwift */,
 				DC1FBDFC2732C098005A7DBD /* JGProgressHUD */,
+				DC1FBDFF2732C6C1005A7DBD /* TextFieldEffects */,
 			);
 			productName = SeSAC_KOFICMOVIE;
 			productReference = DC1BD44927314B9400308E15 /* SeSAC_KOFICMOVIE.app */;
@@ -167,6 +170,7 @@
 				DC1BD46A2731574B00308E15 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DC1FBDF3273271A9005A7DBD /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				DC1FBDFB2732C098005A7DBD /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				DC1FBDFE2732C6C1005A7DBD /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 			);
 			productRefGroup = DC1BD44A27314B9400308E15 /* Products */;
 			projectDirPath = "";
@@ -457,6 +461,14 @@
 				kind = branch;
 			};
 		};
+		DC1FBDFE2732C6C1005A7DBD /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -484,6 +496,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DC1FBDFB2732C098005A7DBD /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
 			productName = JGProgressHUD;
+		};
+		DC1FBDFF2732C6C1005A7DBD /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1FBDFE2732C6C1005A7DBD /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
