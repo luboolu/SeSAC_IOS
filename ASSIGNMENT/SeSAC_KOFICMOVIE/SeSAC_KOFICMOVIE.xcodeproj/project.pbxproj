@@ -20,6 +20,10 @@
 		DC1BD46C2731574B00308E15 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC1BD46B2731574B00308E15 /* Alamofire */; };
 		DC1BD46E2731684A00308E15 /* BoxofficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD46D2731684A00308E15 /* BoxofficeViewController.swift */; };
 		DC1BD4702731779400308E15 /* BoxofficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD46F2731779400308E15 /* BoxofficeTableViewCell.swift */; };
+		DC1FBDF5273271A9005A7DBD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DC1FBDF4273271A9005A7DBD /* Realm */; };
+		DC1FBDF7273271A9005A7DBD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC1FBDF6273271A9005A7DBD /* RealmSwift */; };
+		DC1FBDFA273275FC005A7DBD /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FBDF9273275FC005A7DBD /* RealmModel.swift */; };
+		DC1FBDFD2732C098005A7DBD /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DC1FBDFC2732C098005A7DBD /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,7 @@
 		DC1BD465273156FB00308E15 /* KoficAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoficAPIManager.swift; sourceTree = "<group>"; };
 		DC1BD46D2731684A00308E15 /* BoxofficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxofficeViewController.swift; sourceTree = "<group>"; };
 		DC1BD46F2731779400308E15 /* BoxofficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxofficeTableViewCell.swift; sourceTree = "<group>"; };
+		DC1FBDF9273275FC005A7DBD /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1FBDF7273271A9005A7DBD /* RealmSwift in Frameworks */,
+				DC1FBDF5273271A9005A7DBD /* Realm in Frameworks */,
 				DC1BD4692731573900308E15 /* SwiftyJSON in Frameworks */,
 				DC1BD46C2731574B00308E15 /* Alamofire in Frameworks */,
+				DC1FBDFD2732C098005A7DBD /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +78,7 @@
 		DC1BD44B27314B9400308E15 /* SeSAC_KOFICMOVIE */ = {
 			isa = PBXGroup;
 			children = (
+				DC1FBDF8273275EC005A7DBD /* Realm */,
 				DC1BD4622731528100308E15 /* OpenAPI */,
 				DC1BD44C27314B9400308E15 /* AppDelegate.swift */,
 				DC1BD44E27314B9400308E15 /* SceneDelegate.swift */,
@@ -94,6 +103,14 @@
 			path = OpenAPI;
 			sourceTree = "<group>";
 		};
+		DC1FBDF8273275EC005A7DBD /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DC1FBDF9273275FC005A7DBD /* RealmModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +130,9 @@
 			packageProductDependencies = (
 				DC1BD4682731573900308E15 /* SwiftyJSON */,
 				DC1BD46B2731574B00308E15 /* Alamofire */,
+				DC1FBDF4273271A9005A7DBD /* Realm */,
+				DC1FBDF6273271A9005A7DBD /* RealmSwift */,
+				DC1FBDFC2732C098005A7DBD /* JGProgressHUD */,
 			);
 			productName = SeSAC_KOFICMOVIE;
 			productReference = DC1BD44927314B9400308E15 /* SeSAC_KOFICMOVIE.app */;
@@ -145,6 +165,8 @@
 			packageReferences = (
 				DC1BD4672731573900308E15 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				DC1BD46A2731574B00308E15 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DC1FBDF3273271A9005A7DBD /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				DC1FBDFB2732C098005A7DBD /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = DC1BD44A27314B9400308E15 /* Products */;
 			projectDirPath = "";
@@ -177,6 +199,7 @@
 				DC1BD45127314B9400308E15 /* ViewController.swift in Sources */,
 				DC1BD4642731568400308E15 /* KoficModel.swift in Sources */,
 				DC1BD46E2731684A00308E15 /* BoxofficeViewController.swift in Sources */,
+				DC1FBDFA273275FC005A7DBD /* RealmModel.swift in Sources */,
 				DC1BD466273156FB00308E15 /* KoficAPIManager.swift in Sources */,
 				DC1BD44D27314B9400308E15 /* AppDelegate.swift in Sources */,
 				DC1BD44F27314B9400308E15 /* SceneDelegate.swift in Sources */,
@@ -418,6 +441,22 @@
 				kind = branch;
 			};
 		};
+		DC1FBDF3273271A9005A7DBD /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		DC1FBDFB2732C098005A7DBD /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -430,6 +469,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DC1BD46A2731574B00308E15 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		DC1FBDF4273271A9005A7DBD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1FBDF3273271A9005A7DBD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		DC1FBDF6273271A9005A7DBD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1FBDF3273271A9005A7DBD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		DC1FBDFC2732C098005A7DBD /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1FBDFB2732C098005A7DBD /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

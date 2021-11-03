@@ -48,3 +48,19 @@ func guardTest() {
 }
 
 guardTest()
+
+
+
+
+let now = Date()
+let dateFomatter = DateFormatter()
+
+dateFomatter.dateFormat = "yyyyMMdd"
+
+let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: now)!
+
+let searchDate = dateFomatter.string(from: yesterday)
+
+type(of: searchDate)
+
+

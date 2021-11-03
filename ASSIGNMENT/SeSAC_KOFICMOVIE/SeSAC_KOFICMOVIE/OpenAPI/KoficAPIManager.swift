@@ -25,7 +25,7 @@ class KoficAPIManager {
         
         queryString?.queryItems = [queryApiKey, queryDate]
         
-        print(queryString as! URLConvertible)
+        //print(queryString as! URLConvertible)
 
         AF.request(queryString as! URLConvertible, method: .get).validate(statusCode: 200...500).responseJSON { response in
             switch response.result {
