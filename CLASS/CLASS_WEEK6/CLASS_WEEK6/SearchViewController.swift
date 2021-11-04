@@ -24,9 +24,10 @@ class SearchViewController: UIViewController {
         
         // Get all tasks in the realm
         tasks = localRealm.objects(UserDiary.self)
-        print(tasks)
         
         
+        //tasks = localRealm.objects(UserDiary.self).filter("favorite == true")
+        //print(tasks)
     }
     
     override func viewWillAppear(_ animated: Bool) {

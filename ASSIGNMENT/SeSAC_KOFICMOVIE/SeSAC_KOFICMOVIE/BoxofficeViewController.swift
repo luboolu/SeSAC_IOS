@@ -103,28 +103,28 @@ class BoxofficeViewController: UIViewController {
             for data in json["boxOfficeResult"]["dailyBoxOfficeList"] {
                 //print(data.1)
                 
-                let boxoffice = DaliyBoxoffice(
-                    boxofficeType: data.1["boxofficeType"].stringValue,
-                    showRange: data.1["showRange"].stringValue,
-                    rnum: data.1["rnum"].stringValue,
-                    rank: data.1["rank"].stringValue,
-                    rankInten: data.1["rankInten"].stringValue,
-                    rankOldAndNew: data.1["rankOldAndNew"].stringValue,
-                    movieCD: data.1["movieCD"].stringValue,
-                    movieNm: data.1["movieNm"].stringValue,
-                    openDt: data.1["openDt"].stringValue,
-                    salesAmt: data.1["salesAmt"].stringValue,
-                    salesShare: data.1["salesShare"].stringValue,
-                    salesChange: data.1["salesChange"].stringValue,
-                    salesAcc: data.1["salesAcc"].stringValue,
-                    audiCnt: data.1["audiCnt"].stringValue,
-                    audiIntenL: data.1["audiIntenL"].stringValue,
-                    audiChange: data.1["audiChange"].stringValue,
-                    audiAcc: data.1["audiAcc"].stringValue,
-                    scrnCnt: data.1["scrnCnt"].stringValue,
-                    showCnt: data.1["showCnt"].stringValue
-                )
-                self.boxofficeData.append(boxoffice)
+//                let boxoffice = DaliyBoxoffice(
+//                    boxofficeType: data.1["boxofficeType"].stringValue,
+//                    showRange: data.1["showRange"].stringValue,
+//                    rnum: data.1["rnum"].stringValue,
+//                    rank: data.1["rank"].stringValue,
+//                    rankInten: data.1["rankInten"].stringValue,
+//                    rankOldAndNew: data.1["rankOldAndNew"].stringValue,
+//                    movieCD: data.1["movieCD"].stringValue,
+//                    movieNm: data.1["movieNm"].stringValue,
+//                    openDt: data.1["openDt"].stringValue,
+//                    salesAmt: data.1["salesAmt"].stringValue,
+//                    salesShare: data.1["salesShare"].stringValue,
+//                    salesChange: data.1["salesChange"].stringValue,
+//                    salesAcc: data.1["salesAcc"].stringValue,
+//                    audiCnt: data.1["audiCnt"].stringValue,
+//                    audiIntenL: data.1["audiIntenL"].stringValue,
+//                    audiChange: data.1["audiChange"].stringValue,
+//                    audiAcc: data.1["audiAcc"].stringValue,
+//                    scrnCnt: data.1["scrnCnt"].stringValue,
+//                    showCnt: data.1["showCnt"].stringValue
+//                )
+//                self.boxofficeData.append(boxoffice)
                 
                 //realm에 저장할 list append
                 rankList.append(data.1["rank"].stringValue)
@@ -154,6 +154,12 @@ class BoxofficeViewController: UIViewController {
         
     }
     
+    
+    @IBAction func tabGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        //키보드가 내리기
+        view.endEditing(true)
+    }
+    
     func alertMaker(title: String, message: String, actionTitle: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -170,7 +176,11 @@ class BoxofficeViewController: UIViewController {
 
 extension BoxofficeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let task = localRealm.object(ofType: UserSearch.self, forPrimaryKey: self.searchDate) {
+            return task.rank.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

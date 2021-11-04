@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="276" height="55"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +124,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="5WU-or-ECE" firstAttribute="top" secondItem="RYr-EA-Pf1" secondAttribute="bottom" constant="20" id="MlR-fy-Cza"/>
                             <constraint firstItem="5WU-or-ECE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VNU-OY-K7n"/>
@@ -133,6 +134,9 @@
                             <constraint firstItem="RYr-EA-Pf1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rGp-mJ-s8Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RYr-EA-Pf1" secondAttribute="trailing" constant="20" id="wBd-Ub-Bsc"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MMs-1K-dfG" appends="YES" id="6Kc-F9-g5b"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="boxofficeTableView" destination="5WU-or-ECE" id="HIK-Wb-05O"/>
@@ -140,6 +144,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MMs-1K-dfG">
+                    <connections>
+                        <action selector="tabGestureRecognizer:" destination="BYZ-38-t0r" id="MMh-Zt-1ij"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </scene>
