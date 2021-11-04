@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC8FE99A2733BC86005906C0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */; };
+		DC8FE99E2733BCAB005906C0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */; };
 		DCA6C31B2733B433009DFFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31A2733B433009DFFDC /* AppDelegate.swift */; };
 		DCA6C31D2733B433009DFFDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */; };
 		DCA6C31F2733B433009DFFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31E2733B433009DFFDC /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		DCA6C3172733B433009DFFDC /* SeSAC_MYSHOPPINGLIST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_MYSHOPPINGLIST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA6C31A2733B433009DFFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */,
 				DCA6C31E2733B433009DFFDC /* ViewController.swift */,
 				DCA6C3202733B433009DFFDC /* Main.storyboard */,
+				DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */,
+				DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */,
 				DCA6C3232733B436009DFFDC /* Assets.xcassets */,
 				DCA6C3252733B436009DFFDC /* LaunchScreen.storyboard */,
 				DCA6C3282733B436009DFFDC /* Info.plist */,
@@ -149,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8FE99A2733BC86005906C0 /* ShoppingListViewController.swift in Sources */,
 				DCA6C31F2733B433009DFFDC /* ViewController.swift in Sources */,
 				DCA6C31B2733B433009DFFDC /* AppDelegate.swift in Sources */,
 				DCA6C31D2733B433009DFFDC /* SceneDelegate.swift in Sources */,
+				DC8FE99E2733BCAB005906C0 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
