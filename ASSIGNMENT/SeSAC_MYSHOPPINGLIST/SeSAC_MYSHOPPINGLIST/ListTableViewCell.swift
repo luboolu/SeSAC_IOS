@@ -14,6 +14,9 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var listLabel: UILabel!
     
+    var favorite : (() -> ()) = {}
+    var check : (() -> ()) = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +26,16 @@ class ListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func favoriteButtonClicked(_ sender: UIButton) {
+        print(#function)
+        favorite() //closure 호출
+    }
+    
+    @IBAction func checkButtonClicked(_ sender: UIButton) {
+        print(#function)
+        check()
     }
 
 }

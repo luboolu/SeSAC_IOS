@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC8FE99A2733BC86005906C0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */; };
 		DC8FE99E2733BCAB005906C0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */; };
+		DC8FE9AB27352D36005906C0 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9AA27352D36005906C0 /* RealmModel.swift */; };
 		DCA6C31B2733B433009DFFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31A2733B433009DFFDC /* AppDelegate.swift */; };
 		DCA6C31D2733B433009DFFDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */; };
 		DCA6C31F2733B433009DFFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31E2733B433009DFFDC /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		DC8FE9AA27352D36005906C0 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		DCA6C3172733B433009DFFDC /* SeSAC_MYSHOPPINGLIST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_MYSHOPPINGLIST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA6C31A2733B433009DFFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC8FE9A827352D20005906C0 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DC8FE9AA27352D36005906C0 /* RealmModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		DCA6C30E2733B433009DFFDC = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		DCA6C3192733B433009DFFDC /* SeSAC_MYSHOPPINGLIST */ = {
 			isa = PBXGroup;
 			children = (
+				DC8FE9A827352D20005906C0 /* Realm */,
 				DCA6C31A2733B433009DFFDC /* AppDelegate.swift */,
 				DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */,
 				DCA6C31E2733B433009DFFDC /* ViewController.swift */,
@@ -156,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC8FE99A2733BC86005906C0 /* ShoppingListViewController.swift in Sources */,
+				DC8FE9AB27352D36005906C0 /* RealmModel.swift in Sources */,
 				DCA6C31F2733B433009DFFDC /* ViewController.swift in Sources */,
 				DCA6C31B2733B433009DFFDC /* AppDelegate.swift in Sources */,
 				DCA6C31D2733B433009DFFDC /* SceneDelegate.swift in Sources */,

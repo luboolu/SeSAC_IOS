@@ -33,6 +33,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="favoriteButtonClicked:" destination="tCk-yb-AfE" eventType="touchUpInside" id="U53-gO-x9O"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytj-QB-biu">
                                                     <rect key="frame" x="314.5" y="8" width="39.5" height="47"/>
@@ -40,6 +43,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="checkButtonClicked:" destination="tCk-yb-AfE" eventType="touchUpInside" id="qRb-X4-atV"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdt-NP-tEc">
                                                     <rect key="frame" x="75" y="8" width="231.5" height="47"/>
