@@ -26,6 +26,10 @@
 
 <h2>MYSHOPPINGLIST</h2>
 
+
+![Simulator Screen Recording - iPhone 11 - 2021-11-06 at 00 02 53](https://user-images.githubusercontent.com/58027136/140532059-71f344b0-d0eb-4595-853c-b1739ab9b24e.gif)
+
+
 <a href="https://lumpy-chip-1b8.notion.site/SeSAC_MYSHOPPINGLIST-30fcfc1b0ca74367aa061e70f82bf048"><p>My ShoppingList Notion</p></a>
 
 <h2>TRENDMEDIA</h2>
