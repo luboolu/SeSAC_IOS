@@ -28,6 +28,7 @@ class SearchViewController: UIViewController {
         
         //tasks = localRealm.objects(UserDiary.self).filter("favorite == true")
         //print(tasks)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,9 +133,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let row = tasks[indexPath.row]
+        
+        let format = DateFormatter()
+        format.dateFormat = "yyyy년 MM월 dd일"
          
         cell.titleLabel.text = row.diaryTitle
-        cell.dateLabel.text = "2021.11.02"
+        cell.dateLabel.text = format.string(from: row.writeDate)
         cell.contentLabel.text = row.content
         cell.contentLabel.numberOfLines = 0
         cell.searchImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")

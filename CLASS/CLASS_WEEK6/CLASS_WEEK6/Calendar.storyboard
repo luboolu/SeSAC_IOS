@@ -16,9 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-fA-mbd">
-                                <rect key="frame" x="185" y="438" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKK-l6-y93" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aKK-l6-y93" secondAttribute="height" multiplier="1:1" id="zXx-ia-0JV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWf-Ms-5TU">
+                                <rect key="frame" x="20" y="522" width="374" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DhX-od-j92"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,8 +35,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AWf-Ms-5TU" firstAttribute="top" secondItem="aKK-l6-y93" secondAttribute="bottom" constant="20" id="0pd-MU-tJI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AWf-Ms-5TU" secondAttribute="trailing" constant="20" id="MUU-Bq-8kq"/>
+                            <constraint firstItem="aKK-l6-y93" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Nep-YA-NBG"/>
+                            <constraint firstItem="aKK-l6-y93" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ciq-jI-hBT"/>
+                            <constraint firstItem="aKK-l6-y93" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fPN-66-tIZ"/>
+                            <constraint firstItem="AWf-Ms-5TU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="qCz-bF-Boz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="캘린더" id="dLS-Kj-7iv"/>
+                    <connections>
+                        <outlet property="allCountLabel" destination="AWf-Ms-5TU" id="eHx-N3-Xg0"/>
+                        <outlet property="calendarView" destination="aKK-l6-y93" id="8te-EA-8fj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

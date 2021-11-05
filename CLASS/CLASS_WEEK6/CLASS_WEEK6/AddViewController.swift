@@ -47,15 +47,70 @@ class AddViewController: UIViewController {
     
     @objc func saveButtonClicked() {
         print(#function)
+        let format = DateFormatter()
+        format.dateFormat = "yyyy년 MM월 dd일"
+        
+//        let buttonDate = self.dateButton.currentTitle!
+//        let value = format.date(from: buttonDate)!
+        
+//        guard let date = dateButton.currentTitle, let value = format.date(from: date) else { return }
+        guard let date = dateButton.currentTitle, let value = DateFormatter.customFormat.date(from: date) else { return } //직접 만들어놓은 extension으로 date formatting
         
         // Add some tasks
-        let task = UserDiary(diaryTitle: titleTextField.text!, content: diaryTextView.text! , writeDate: Date(), regDate: Date())
+        let task = UserDiary(diaryTitle: titleTextField.text!,
+                             content: diaryTextView.text!,
+                             writeDate: value,
+                             regDate: Date())
         
         try! localRealm.write {
             localRealm.add(task)
             saveImageToDocumentDirectory(imageName: "\(task._id).png", image: diaryImageView.image!)
         }
         
+    }
+    
+    
+    @IBAction func dateButtonClicked(_ sender: UIButton) {
+        
+        //1. UIAlertController 생성: 밑바탕 + 타이틀 + 본문
+        //let alert = UIAlertController(title: "타이틀 테스트", message: "메시지가 입력되었습니다.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "날짜 선택", message: "날짜를 선택해주세요", preferredStyle: .alert)
+        //Alert Customizing
+        //1. 얼럿 안에 들어와서 그런가?
+        //2. 스토리보드가 인식이 안되나? DatePickerViewController()
+        //3. 스토리보드 씬 + 클래스 -> 화면전환코드
+        //let contentView = UIViewController() //코드로 뷰 만들기
+        
+        //let contentView = DatePickerViewController() //스토리보드로 만든 뷰 컨트롤러 등록 - 스토리보트랑 연결되는게 아니라 클래스만을 가져온것임 그래서 데이터피커가 보이지 않는것
+        
+        guard let contentView = self.storyboard?.instantiateViewController(withIdentifier: "DatePickerViewController") as? DatePickerViewController else {
+            print("DatePickerViewController에 오류가 있음")
+            return
+        }
+        
+        //contentView.view.backgroundColor = .green
+        contentView.preferredContentSize.height = 200
+        alert.setValue(contentView, forKey: "contentViewController")
+        //2. UIAlertAction 생성: 버튼들을...
+        let ok = UIAlertAction(title: "확인", style: .default) { _ in
+            //확인 버튼을 눌렀을때 버튼 타이틀 변경
+            let format = DateFormatter()
+            format.dateFormat = "yyyy년 MM월 dd일"
+            let value = format.string(from: contentView.myPicker.date)
+            self.dateButton.setTitle(value, for: .normal)
+        }
+        
+        
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        //3. 1 + 2
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        //4. present
+        self.present(alert, animated: true, completion: nil)
+
     }
     
     func saveImageToDocumentDirectory(imageName: String, image: UIImage) {
