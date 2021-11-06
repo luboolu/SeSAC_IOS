@@ -15,6 +15,7 @@
 		DC2DAFF927204DE9008B9FAA /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */; };
 		DC2DAFFB272052FA008B9FAA /* TheaterInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */; };
 		DC2DAFFD2720531F008B9FAA /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DAFFC2720531F008B9FAA /* Theater.swift */; };
+		DC42B15C2736B9F70039D5E7 /* StarringDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC42B15B2736B9F70039D5E7 /* StarringDetailTableViewCell.swift */; };
 		DC79B501272C4FED00BAD7EA /* VideoWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79B500272C4FED00BAD7EA /* VideoWebViewController.swift */; };
 		DC89595B272A8EBD007A4496 /* TmdbAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89595A272A8EBD007A4496 /* TmdbAPIManager.swift */; };
 		DC90947927279D3300814B13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC90947827279D3300814B13 /* Alamofire */; };
@@ -51,6 +52,7 @@
 		DC2DAFF827204DE9008B9FAA /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		DC2DAFFA272052FA008B9FAA /* TheaterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterInformation.swift; sourceTree = "<group>"; };
 		DC2DAFFC2720531F008B9FAA /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		DC42B15B2736B9F70039D5E7 /* StarringDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarringDetailTableViewCell.swift; sourceTree = "<group>"; };
 		DC79B500272C4FED00BAD7EA /* VideoWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWebViewController.swift; sourceTree = "<group>"; };
 		DC89595A272A8EBD007A4496 /* TmdbAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbAPIManager.swift; sourceTree = "<group>"; };
 		DC90947D2727A7F300814B13 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				DC045E74271C4EB3006E9142 /* StarringViewController.swift */,
 				DCD916FA271DBE6F00196CC4 /* StarringDetailViewController.swift */,
+				DC42B15B2736B9F70039D5E7 /* StarringDetailTableViewCell.swift */,
 				DC045E76271C5761006E9142 /* ActorTableViewCell.swift */,
 				DCFBA72E272AF66400313F8C /* OverviewTableViewCell.swift */,
 			);
@@ -313,6 +316,7 @@
 				DCFBA72F272AF66400313F8C /* OverviewTableViewCell.swift in Sources */,
 				DC045E77271C5761006E9142 /* ActorTableViewCell.swift in Sources */,
 				DC045E75271C4EB3006E9142 /* StarringViewController.swift in Sources */,
+				DC42B15C2736B9F70039D5E7 /* StarringDetailTableViewCell.swift in Sources */,
 				DCD6FA3B27258AC400FD9EF4 /* BookViewController.swift in Sources */,
 				DC79B501272C4FED00BAD7EA /* VideoWebViewController.swift in Sources */,
 				DC045E7B271C621B006E9142 /* SearchResultTableViewCell.swift in Sources */,

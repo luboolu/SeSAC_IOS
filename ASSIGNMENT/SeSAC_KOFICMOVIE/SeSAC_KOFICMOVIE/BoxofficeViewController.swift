@@ -16,10 +16,11 @@ class BoxofficeViewController: UIViewController {
     let localRealm = try! Realm()
     let progress = JGProgressHUD()
     
+    var tasks: Results<UserSearch>!
     var boxofficeData: [DaliyBoxoffice] = []
     var yesterday: String = ""
     var searchDate: String = ""
-    var tasks: Results<UserSearch>!
+
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var boxofficeTableView: UITableView!
@@ -28,6 +29,7 @@ class BoxofficeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tasks = localRealm.objects(UserSearch.self)
         print("Realm is loacaed at: ", localRealm.configuration.fileURL!)
         //file:///Users/gimjin-yeong/Library/Developer/CoreSimulator/Devices/323D6275-A8A0-44E0-80CE-AA24BF58B1F4/data/Containers/Data/Application/142AA108-3779-4B2F-A7FC-F35B0D01C903/Documents/default.realm
         
@@ -36,8 +38,8 @@ class BoxofficeViewController: UIViewController {
         boxofficeTableView.dataSource = self
         boxofficeTableView.delegate = self
         
-        boxofficeTableView.backgroundColor = .none
-        boxofficeTableView.backgroundView?.alpha = 0
+        boxofficeTableView.backgroundColor = .clear
+        //boxofficeTableView.backgroundView?.alpha = 0
         
         //처음에 앱을 실행했을때, 어제 날짜의 백스오피스 순위를 보여줘여함.
         //yyyyMMdd의 형식으로 Date Formatting 필요
@@ -175,12 +177,26 @@ class BoxofficeViewController: UIViewController {
 }
 
 extension BoxofficeViewController: UITableViewDelegate, UITableViewDataSource {
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let task = localRealm.object(ofType: UserSearch.self, forPrimaryKey: self.searchDate) {
             return task.rank.count
         } else {
             return 0
         }
+        //print(tasks["rank"])
+        
+//        if let rank = tasks.value(forKey: "rank") {
+//            print(Array(arrayLiteral: rank).count)
+//            print(type(of: rank))
+//        }
+        
+
+        
+        //print(tasks.value(forKey: "rank"))
+        //print(type(of: tasks.value(forKey: "rank")))
+        //return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

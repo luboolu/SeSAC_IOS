@@ -85,7 +85,7 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
         }
         
         let task = tasks[indexPath.row]
-        print("클로져 이전")
+
         //favorite 버튼 관련
         cell.favorite = { [unowned self] in
             
@@ -95,7 +95,7 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
             }
 
         }
-        print("클로져 이후")
+
         
         if task.favorite {
             cell.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)

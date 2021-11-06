@@ -10,22 +10,7 @@ import Network
 
 import Kingfisher
 
-class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
-    //셀이 화면에 보이기 전에 필요한 리소스를 미리 다운 받는 기능
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-
-        for indexPath in indexPaths {
-            if self.trendData.count - 1 == indexPath.section {
-                start += 1
-                fetchTMDBData()
-            }
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        print("취소: \(indexPaths)")
-    }
+class MovieTrendInfoViewController: UIViewController {
     
     let tvShowInformation = TvShowInformation()
     
@@ -118,6 +103,87 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
             
             self.InfoTableView.reloadData()
         }
+    }
+    
+    
+    @IBAction func searchButtonClicked(_ sender: UIButton) {
+        
+        print(#function)
+        
+        //1.스토리보드 특정
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //2. 스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
+        let vc = storyboard.instantiateViewController(withIdentifier: SearchViewController.identifier) as! SearchViewController
+        
+        //2-1. 네비게이션 컨트롤러 임베드
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        //nav.modalTransitionStyle = .partialCurl// full screen일때만 된다고 앱이 꺼진다!
+        
+        //3. present 방식으로 화면 전환
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
+
+    @IBAction func mapButtonClicked(_ sender: UIBarButtonItem) {
+        print(#function)
+        //1.스토리보드 특정
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //2. 스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
+        let vc = storyboard.instantiateViewController(withIdentifier: TheaterMapViewController.identifier) as! TheaterMapViewController
+        
+        //2-1. 네비게이션 컨트롤러 임베드
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        //nav.modalTransitionStyle = .partialCurl// full screen일때만 된다고 앱이 꺼진다!
+        
+        //3. present 방식으로 화면 전환
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func bookButtonClicked(_ sender: UIButton) {
+        print(#function)
+        //1.스토리보드 특정
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //2.스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
+        let vc = storyboard.instantiateViewController(withIdentifier: BookViewController.identifier) as! BookViewController
+        
+        //2-1. 네비게이션 컨트롤러 임베드
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        
+        //3.present 방식으로 화면 전환
+        self.present(nav, animated: true, completion: nil)
+        
+        
+    }
+    
+}
+
+extension MovieTrendInfoViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching{
+    //셀이 화면에 보이기 전에 필요한 리소스를 미리 다운 받는 기능
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+
+        for indexPath in indexPaths {
+            if self.trendData.count - 1 == indexPath.section {
+                start += 1
+                fetchTMDBData()
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("취소: \(indexPaths)")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -223,67 +289,6 @@ class MovieTrendInfoViewController: UIViewController, UITableViewDelegate, UITab
             
     }
     
-    
-    @IBAction func searchButtonClicked(_ sender: UIButton) {
-        
-        print(#function)
-        
-        //1.스토리보드 특정
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        //2. 스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
-        let vc = storyboard.instantiateViewController(withIdentifier: SearchViewController.identifier) as! SearchViewController
-        
-        //2-1. 네비게이션 컨트롤러 임베드
-        let nav = UINavigationController(rootViewController: vc)
-        
-        nav.modalPresentationStyle = .fullScreen
-        //nav.modalTransitionStyle = .partialCurl// full screen일때만 된다고 앱이 꺼진다!
-        
-        //3. present 방식으로 화면 전환
-        self.present(nav, animated: true, completion: nil)
-        
-    }
-    
-
-    @IBAction func mapButtonClicked(_ sender: UIBarButtonItem) {
-        print(#function)
-        //1.스토리보드 특정
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        //2. 스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
-        let vc = storyboard.instantiateViewController(withIdentifier: TheaterMapViewController.identifier) as! TheaterMapViewController
-        
-        //2-1. 네비게이션 컨트롤러 임베드
-        let nav = UINavigationController(rootViewController: vc)
-        
-        nav.modalPresentationStyle = .fullScreen
-        //nav.modalTransitionStyle = .partialCurl// full screen일때만 된다고 앱이 꺼진다!
-        
-        //3. present 방식으로 화면 전환
-        self.present(nav, animated: true, completion: nil)
-        
-    }
-    
-    
-    @IBAction func bookButtonClicked(_ sender: UIButton) {
-        print(#function)
-        //1.스토리보드 특정
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        //2.스토리보드 내 많은 뷰컨트롤러 중 전환하고자 하는 뷰컨트롤러 가져오기
-        let vc = storyboard.instantiateViewController(withIdentifier: BookViewController.identifier) as! BookViewController
-        
-        //2-1. 네비게이션 컨트롤러 임베드
-        let nav = UINavigationController(rootViewController: vc)
-        
-        nav.modalPresentationStyle = .fullScreen
-        
-        //3.present 방식으로 화면 전환
-        self.present(nav, animated: true, completion: nil)
-        
-        
-    }
     
 }
 

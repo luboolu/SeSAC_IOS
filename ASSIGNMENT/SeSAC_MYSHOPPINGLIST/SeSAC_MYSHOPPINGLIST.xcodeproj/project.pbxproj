@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC42B15A273652010039D5E7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC42B159273652010039D5E7 /* SettingViewController.swift */; };
 		DC8FE99A2733BC86005906C0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */; };
 		DC8FE99E2733BCAB005906C0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */; };
 		DC8FE9AB27352D36005906C0 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9AA27352D36005906C0 /* RealmModel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC42B159273652010039D5E7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		DC8FE9AA27352D36005906C0 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
@@ -47,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC42B158273651E50039D5E7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */,
+				DC42B159273652010039D5E7 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		DC8FE9A827352D20005906C0 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,12 +85,12 @@
 		DCA6C3192733B433009DFFDC /* SeSAC_MYSHOPPINGLIST */ = {
 			isa = PBXGroup;
 			children = (
+				DC42B158273651E50039D5E7 /* ViewController */,
 				DC8FE9A827352D20005906C0 /* Realm */,
 				DCA6C31A2733B433009DFFDC /* AppDelegate.swift */,
 				DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */,
 				DCA6C31E2733B433009DFFDC /* ViewController.swift */,
 				DCA6C3202733B433009DFFDC /* Main.storyboard */,
-				DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */,
 				DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */,
 				DCA6C3232733B436009DFFDC /* Assets.xcassets */,
 				DCA6C3252733B436009DFFDC /* LaunchScreen.storyboard */,
@@ -171,6 +182,7 @@
 				DCA6C31F2733B433009DFFDC /* ViewController.swift in Sources */,
 				DCA6C31B2733B433009DFFDC /* AppDelegate.swift in Sources */,
 				DCA6C31D2733B433009DFFDC /* SceneDelegate.swift in Sources */,
+				DC42B15A273652010039D5E7 /* SettingViewController.swift in Sources */,
 				DC8FE99E2733BCAB005906C0 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
