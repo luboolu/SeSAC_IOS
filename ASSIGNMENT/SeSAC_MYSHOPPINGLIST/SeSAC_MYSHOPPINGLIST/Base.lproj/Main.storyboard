@@ -152,6 +152,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="백업하기"/>
+                                <connections>
+                                    <action selector="backupButtonClicked:" destination="R09-gk-iZ3" eventType="touchUpInside" id="hQq-r0-Osr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mna-3X-aNf">
                                 <rect key="frame" x="50" y="216" width="314" height="66"/>

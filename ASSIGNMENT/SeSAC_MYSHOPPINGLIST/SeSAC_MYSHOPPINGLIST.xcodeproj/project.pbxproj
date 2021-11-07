@@ -11,6 +11,7 @@
 		DC8FE99A2733BC86005906C0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9992733BC86005906C0 /* ShoppingListViewController.swift */; };
 		DC8FE99E2733BCAB005906C0 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE99D2733BCAB005906C0 /* ListTableViewCell.swift */; };
 		DC8FE9AB27352D36005906C0 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9AA27352D36005906C0 /* RealmModel.swift */; };
+		DCA547B02737887900783CE4 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = DCA547AF2737887900783CE4 /* Zip */; };
 		DCA6C31B2733B433009DFFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31A2733B433009DFFDC /* AppDelegate.swift */; };
 		DCA6C31D2733B433009DFFDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31C2733B433009DFFDC /* SceneDelegate.swift */; };
 		DCA6C31F2733B433009DFFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6C31E2733B433009DFFDC /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA547B02737887900783CE4 /* Zip in Frameworks */,
 				DCA6C3322733B457009DFFDC /* RealmSwift in Frameworks */,
 				DCA6C3302733B457009DFFDC /* Realm in Frameworks */,
 			);
@@ -118,6 +120,7 @@
 			packageProductDependencies = (
 				DCA6C32F2733B457009DFFDC /* Realm */,
 				DCA6C3312733B457009DFFDC /* RealmSwift */,
+				DCA547AF2737887900783CE4 /* Zip */,
 			);
 			productName = SeSAC_MYSHOPPINGLIST;
 			productReference = DCA6C3172733B433009DFFDC /* SeSAC_MYSHOPPINGLIST.app */;
@@ -149,6 +152,7 @@
 			mainGroup = DCA6C30E2733B433009DFFDC;
 			packageReferences = (
 				DCA6C32E2733B457009DFFDC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				DCA547AE2737887900783CE4 /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = DCA6C3182733B433009DFFDC /* Products */;
 			projectDirPath = "";
@@ -405,6 +409,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DCA547AE2737887900783CE4 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		DCA6C32E2733B457009DFFDC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -416,6 +428,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DCA547AF2737887900783CE4 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA547AE2737887900783CE4 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
 		DCA6C32F2733B457009DFFDC /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCA6C32E2733B457009DFFDC /* XCRemoteSwiftPackageReference "realm-cocoa" */;

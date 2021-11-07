@@ -64,12 +64,10 @@ class StarringDetailViewController: UIViewController {
         print(#function)
         TmdbAPIManager.shared.fetchCreditData(creditID: creditID ?? "") {
             code, json in
-            //다른 json들 처럼 똑같이 접근하려고 했는데, 안뜬다! 다음에 해결할것
-            //print(json)
-            print(json["person"]["known_for"])
+
+            //print(json["person"]["known_for"])
             for media in json["person"]["known_for"] {
-                print(media.1["title"].stringValue)
-                
+
                 let data = TMDBCastModel(
                     genreID: media.1["genre_ids"].rawValue as! [Int],
                     overview: media.1["overview"].stringValue,
