@@ -7,6 +7,7 @@
 
 import UIKit
 import Zip
+import MobileCoreServices
 
 
 //백업,복구 기능 구현하기
@@ -36,7 +37,11 @@ class SettingViewController: UIViewController {
     //7. 백업 파일 공유하기
     func presentActivityViewController() {
         //압축파일 경로 가져오기
-        let fileName = 
+        let fileName = (documentDirectoryPath()! as NSString).appendingPathComponent("archive.zip")
+        let fileURL = URL(fileURLWithPath: fileName)
+        
+        let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
+        self.present(vc, animated: true, completion: nil)
     }
     
     
@@ -72,5 +77,70 @@ class SettingViewController: UIViewController {
         }
     }
     
+    @IBAction func restoreButtonClicked(_ sender: UIButton) {
+        
+        //복구1. 파일앱 열기 + 확장자
+        let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypeArchive as String], in: .import)
+        
+        documentPicker.delegate = self
+        documentPicker.allowsMultipleSelection = false
+        
+        self.present(documentPicker, animated: true, completion: nil)
+        
+    }
+    
+}
 
+
+extension SettingViewController: UIDocumentPickerDelegate {
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        print(#function)
+        
+        //복구 - 2. 선텍힌 핑;ㄹㅇ[ 데힌 경로 가져와야 함
+        guard let selectedFileURL = urls.first else { return }
+        
+        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let sandboxFileURL = directory.appendingPathComponent(selectedFileURL.lastPathComponent)
+        
+        //복구 - 3. 압축해제
+        if FileManager.default.fileExists(atPath: sandboxFileURL.path) {
+            
+            do {
+                let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let fileURL = documentDirectory.appendingPathComponent("archive.zip")
+                
+                try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
+                    print("progreess: \(progress)")
+                    //복구가 완료되었습니다; 메세지, 얼럿 -> 앱 재시작
+                }, fileOutputHandler: { unzippedFile in
+                    print("unzippedFile: \(unzippedFile)")
+                })
+            } catch {
+                print("ERROR")
+            }
+            
+        } else {
+            // 파일 앱의 zip -> document 폴더에 복사
+            do {
+                try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
+                
+                let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let fileURL = documentDirectory.appendingPathComponent("archive.zip")
+                
+                try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
+                    print("progreess: \(progress)")
+                    //복구가 완료되었습니다; 메세지, 얼럿 -> 앱 재시작
+                }, fileOutputHandler: { unzippedFile in
+                    print("unzippedFile: \(unzippedFile)")
+                })
+            } catch {
+                print("ERROR")
+            }
+        }
+    }
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        print(#function)
+    }
 }
