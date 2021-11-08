@@ -16,6 +16,16 @@ class SearchResultTableViewCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet var searchImageView: UIImageView!
     
+    func configureCell(row: UserDiary) {
+        titleLabel.text = row.diaryTitle
+        //dateLabel.text = format.string(from: row.writeDate)
+        contentLabel.text = row.content
+        contentLabel.numberOfLines = 0
+        //searchImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
+    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

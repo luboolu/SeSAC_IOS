@@ -42,6 +42,8 @@
 		DC8FE9A32734B533005906C0 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */; };
 		DC8FE9A52734CE82005906C0 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9A42734CE82005906C0 /* RealmQuery.swift */; };
 		DC8FE9A72734D032005906C0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9A62734D032005906C0 /* Date+Extension.swift */; };
+		DCA547B22738AAA300783CE4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */; };
+		DCA547B42738B19200783CE4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */; };
 		DCA6C30A27336DC6009DFFDC /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = DCA6C30927336DC6009DFFDC /* Zip */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		DC8FE9A42734CE82005906C0 /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
 		DC8FE9A62734D032005906C0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				DC1BD41C2730271900308E15 /* Content.storyboard */,
 				DC1BD4262730290400308E15 /* ContentViewController.swift */,
 				DC1BD41A2730270F00308E15 /* Home.storyboard */,
+				DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */,
+				DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */,
 				DC1BD42E273039CD00308E15 /* AddViewController.swift */,
 				DC1BD424273028E400308E15 /* HomeViewController.swift */,
 				DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */,
@@ -287,9 +293,11 @@
 				DC1BD42B2730293200308E15 /* SearchViewController.swift in Sources */,
 				DC1BD43F2730C98000308E15 /* RealmModel.swift in Sources */,
 				DC1BD42D2730294500308E15 /* SettingViewController.swift in Sources */,
+				DCA547B42738B19200783CE4 /* HomeCollectionViewCell.swift in Sources */,
 				DC1BD42F273039CD00308E15 /* AddViewController.swift in Sources */,
 				DC1BD4272730290400308E15 /* ContentViewController.swift in Sources */,
 				DC8FE9A52734CE82005906C0 /* RealmQuery.swift in Sources */,
+				DCA547B22738AAA300783CE4 /* HomeTableViewCell.swift in Sources */,
 				DC1BD3ED272F6F3900308E15 /* ViewController.swift in Sources */,
 				DC1BD419272F8A1E00308E15 /* LocalizableStrings.swift in Sources */,
 				DC1BD3E9272F6F3900308E15 /* AppDelegate.swift in Sources */,

@@ -137,10 +137,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let format = DateFormatter()
         format.dateFormat = "yyyy년 MM월 dd일"
          
-        cell.titleLabel.text = row.diaryTitle
+        cell.configureCell(row: tasks[indexPath.row])
+        
+        //cell.titleLabel.text = row.diaryTitle
         cell.dateLabel.text = format.string(from: row.writeDate)
-        cell.contentLabel.text = row.content
-        cell.contentLabel.numberOfLines = 0
+        //cell.contentLabel.text = row.content
+        //cell.contentLabel.numberOfLines = 0
         cell.searchImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
 
 
