@@ -131,7 +131,6 @@
 				DC1BD3F6272F6F3B00308E15 /* Info.plist */,
 				DC8FE9A42734CE82005906C0 /* RealmQuery.swift */,
 				DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */,
-				DC8FE9A62734D032005906C0 /* Date+Extension.swift */,
 				DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */,
 				DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */,
 				DC1BD3EE272F6F3900308E15 /* Main.storyboard */,
@@ -173,6 +172,7 @@
 			children = (
 				DC1BD404272F739900308E15 /* UIFont+Extension.swift */,
 				DC1BD416272F88EA00308E15 /* String+Extension.swift */,
+				DC8FE9A62734D032005906C0 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";

@@ -10,7 +10,17 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    
+    let array = [
+        Array(repeating: "a", count: 20),
+        Array(repeating: "b", count: 2),
+        Array(repeating: "c", count: 5),
+        Array(repeating: "d", count: 13),
+        Array(repeating: "e", count: 18),
+        Array(repeating: "f", count: 4),
+        Array(repeating: "g", count: 52)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +65,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,15 +73,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
         
+        cell.data = array[indexPath.row] //데이터 넘기기
+        
+        
+        //cell.categoryLable.text = "\(array[indexPath.row])"
         cell.categoryLable.backgroundColor = .yellow
         
         cell.collectionView.backgroundColor = .lightGray
 
         
-        cell.collectionView.dataSource = self
-        cell.collectionView.delegate = self
+        
         cell.collectionView.tag = indexPath.row
         cell.collectionView.isPagingEnabled = true
+        //cell.collectionView.reloadData()
         
         
         return cell
@@ -85,48 +99,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        cell.imageView.backgroundColor = .brown
-        
-        return cell
-    }
-    
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //return CGSize(width: 100, height: 100)
-        print(#function)
-        //테이블뷰 셀의 인덱스 패스를 어떻게 가지고 와야 할까?
-        if collectionView.tag == 0 {
-            print(UIScreen.main.bounds.width)
-            return CGSize(width: UIScreen.main.bounds.width, height: 100)
-        } else {
-            return CGSize(width: 150, height: 100)
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-            if collectionView.tag == 0 {
-                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            } else {
-                return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-            }
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return collectionView.tag == 0 ? 0 : 10
-    }
-    
-}
 
