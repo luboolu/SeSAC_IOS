@@ -124,33 +124,17 @@
 		DC1BD3E7272F6F3900308E15 /* CLASS_WEEK6 */ = {
 			isa = PBXGroup;
 			children = (
-				DC1BD43D2730C96A00308E15 /* Realm */,
-				DC1BD408272F7FBA00308E15 /* Localization */,
-				DC1BD3FC272F6F7D00308E15 /* Font */,
-				DC1BD403272F737E00308E15 /* Extension */,
-				DC1BD3F6272F6F3B00308E15 /* Info.plist */,
-				DC8FE9A42734CE82005906C0 /* RealmQuery.swift */,
 				DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */,
 				DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */,
-				DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */,
-				DC1BD3EE272F6F3900308E15 /* Main.storyboard */,
-				DC1BD3EC272F6F3900308E15 /* ViewController.swift */,
-				DC1BD41E2730272B00308E15 /* Calendar.storyboard */,
-				DC1BD4282730291900308E15 /* CalendarViewController.swift */,
-				DC1BD41C2730271900308E15 /* Content.storyboard */,
-				DC1BD4262730290400308E15 /* ContentViewController.swift */,
-				DC1BD41A2730270F00308E15 /* Home.storyboard */,
-				DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */,
-				DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */,
-				DC1BD42E273039CD00308E15 /* AddViewController.swift */,
-				DC1BD424273028E400308E15 /* HomeViewController.swift */,
+				DC1BD403272F737E00308E15 /* Extension */,
+				DC1BD3FC272F6F7D00308E15 /* Font */,
+				DC1BD3F6272F6F3B00308E15 /* Info.plist */,
+				DC1BD408272F7FBA00308E15 /* Localization */,
+				DC1BD43D2730C96A00308E15 /* Realm */,
 				DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */,
-				DC1BD4202730273100308E15 /* Search.storyboard */,
-				DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */,
-				DC1BD42A2730293200308E15 /* SearchViewController.swift */,
-				DC1BD4222730273800308E15 /* Setting.storyboard */,
-				DC1BD42C2730294500308E15 /* SettingViewController.swift */,
-				DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */,
+				DCB623BF273BA1EE00400A7C /* StoryBorad */,
+				DCB623C1273BA25600400A7C /* TableView */,
+				DCB623C0273BA1FD00400A7C /* ViewController */,
 			);
 			path = CLASS_WEEK6;
 			sourceTree = "<group>";
@@ -191,8 +175,48 @@
 			isa = PBXGroup;
 			children = (
 				DC1BD43E2730C98000308E15 /* RealmModel.swift */,
+				DC8FE9A42734CE82005906C0 /* RealmQuery.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		DCB623BF273BA1EE00400A7C /* StoryBorad */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD4222730273800308E15 /* Setting.storyboard */,
+				DC1BD4202730273100308E15 /* Search.storyboard */,
+				DC1BD41A2730270F00308E15 /* Home.storyboard */,
+				DC1BD41C2730271900308E15 /* Content.storyboard */,
+				DC1BD41E2730272B00308E15 /* Calendar.storyboard */,
+				DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */,
+				DC1BD3EE272F6F3900308E15 /* Main.storyboard */,
+			);
+			path = StoryBorad;
+			sourceTree = "<group>";
+		};
+		DCB623C0273BA1FD00400A7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD3EC272F6F3900308E15 /* ViewController.swift */,
+				DC1BD4282730291900308E15 /* CalendarViewController.swift */,
+				DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */,
+				DC1BD42E273039CD00308E15 /* AddViewController.swift */,
+				DC1BD42A2730293200308E15 /* SearchViewController.swift */,
+				DC1BD4262730290400308E15 /* ContentViewController.swift */,
+				DC1BD42C2730294500308E15 /* SettingViewController.swift */,
+				DC1BD424273028E400308E15 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DCB623C1273BA25600400A7C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */,
+				DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */,
+				DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
