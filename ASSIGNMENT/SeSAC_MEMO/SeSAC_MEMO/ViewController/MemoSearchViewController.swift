@@ -192,7 +192,10 @@ extension MemoSearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         cell.title.attributedText = title
+        cell.title.font = UIFont().binggraeBoldSmall
+        
         cell.content.attributedText = content
+        cell.content.font = UIFont().binggrae
         
         //date formatter 선택
         let now = convertDateToLocalTime(Date())
@@ -217,6 +220,8 @@ extension MemoSearchViewController: UITableViewDelegate, UITableViewDataSource {
             let date = DateFormatter.defaultFormat.string(from: row.date)
             cell.date.text = date
         }
+        
+        cell.date.font = UIFont().binggrae
         
         return cell
         

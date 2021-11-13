@@ -301,7 +301,7 @@ extension MemoListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.date.font = UIFont().binggrae
             
             cell.content.text = row.content
-            cell.date.font = UIFont().binggrae
+            cell.content.font = UIFont().binggrae
             
         } else {
             
