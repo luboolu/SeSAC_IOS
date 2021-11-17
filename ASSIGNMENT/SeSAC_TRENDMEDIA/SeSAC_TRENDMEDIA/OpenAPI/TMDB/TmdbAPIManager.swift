@@ -80,4 +80,26 @@ class TmdbAPIManager {
             }
         }
     }
+    
+    func fetchVideoData(movieID: String, result: @escaping (Int, JSON) -> () ) {
+        
+        var queryString = URLComponents(string: "https://api.themoviedb.org/3/movie/\(movieID)/videos")
+        let queryApiKey = URLQueryItem(name: "api_key", value: APIKEY.TMDB)
+        
+        queryString?.queryItems = [queryApiKey]
+        
+        AF.request(queryString as! URLConvertible, method: .get).validate(statusCode: 200...500).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let code = response.response?.statusCode ?? 500
+                result(code, json)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        
+    }
 }

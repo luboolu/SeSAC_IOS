@@ -53,3 +53,11 @@ struct TMDBCastModel {
     let id: Int
     let character: String
 }
+
+struct TMDBVideoModel {
+    let site: String
+    let type: String
+    let name: String
+    let official: Bool
+    let key: String
+}

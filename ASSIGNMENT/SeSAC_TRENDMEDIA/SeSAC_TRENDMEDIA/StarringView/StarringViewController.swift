@@ -159,7 +159,7 @@ extension StarringViewController: UITableViewDelegate, UITableViewDataSource {
             
             
             let row = castInfo[indexPath.row - 1]
-            
+
             let url = URL(string: "https://image.tmdb.org/t/p/original/\(row.porofilePath)")
             cell.actorImageView.kf.setImage(with: url) //Kingfisher 이용하여 이미지 url로 load
            
