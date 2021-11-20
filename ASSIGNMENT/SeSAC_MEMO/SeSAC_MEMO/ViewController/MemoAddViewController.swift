@@ -35,6 +35,7 @@ class MemoAddViewController: UIViewController {
         navigationItem.rightBarButtonItems = [shareButton, completeButton]
 
         
+        
         if task != nil {
             self.memoTextView.text = [task.title, task.content].joined(separator: "\n")
         }
