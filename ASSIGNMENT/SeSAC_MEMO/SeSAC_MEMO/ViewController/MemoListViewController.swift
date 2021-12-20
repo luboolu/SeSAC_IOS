@@ -68,7 +68,6 @@ class MemoListViewController: UIViewController {
         
         //memoListLabel 설정
         memoListLabelSet()
-        
 
         //search controller
         let storyboard = UIStoryboard(name: "MemoSearch", bundle: nil)
