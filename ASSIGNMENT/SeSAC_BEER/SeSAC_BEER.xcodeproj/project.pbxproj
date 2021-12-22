@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC62BB592773272A00404492 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC62BB582773272A00404492 /* SnapKit */; };
 		DC89B9F02770BF5400E80C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89B9EF2770BF5400E80C99 /* AppDelegate.swift */; };
 		DC89B9F22770BF5400E80C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89B9F12770BF5400E80C99 /* SceneDelegate.swift */; };
 		DC89B9F92770BF5600E80C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC89B9F82770BF5600E80C99 /* Assets.xcassets */; };
 		DC89B9FC2770BF5600E80C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC89B9FA2770BF5600E80C99 /* LaunchScreen.storyboard */; };
-		DC89BA052770C1A400E80C99 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC89BA042770C1A400E80C99 /* SnapKit */; };
 		DC89BA072770C24500E80C99 /* BeerRecommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA062770C24500E80C99 /* BeerRecommandViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC89BA052770C1A400E80C99 /* SnapKit in Frameworks */,
+				DC62BB592773272A00404492 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = SeSAC_BEER;
 			packageProductDependencies = (
-				DC89BA042770C1A400E80C99 /* SnapKit */,
+				DC62BB582773272A00404492 /* SnapKit */,
 			);
 			productName = SeSAC_BEER;
 			productReference = DC89B9EC2770BF5400E80C99 /* SeSAC_BEER.app */;
@@ -114,7 +114,7 @@
 			);
 			mainGroup = DC89B9E32770BF5300E80C99;
 			packageReferences = (
-				DC89BA032770C1A400E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DC62BB572773272A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = DC89B9ED2770BF5400E80C99 /* Products */;
 			projectDirPath = "";
@@ -356,7 +356,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DC89BA032770C1A400E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		DC62BB572773272A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -367,9 +367,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DC89BA042770C1A400E80C99 /* SnapKit */ = {
+		DC62BB582773272A00404492 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC89BA032770C1A400E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = DC62BB572773272A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
