@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC16E6CF2772A5A000BB5DE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */; };
+		DC16E6D12772A79100BB5DE7 /* NASAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6D02772A79100BB5DE7 /* NASAViewController.swift */; };
+		DC16E6D32772A91E00BB5DE7 /* SingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6D22772A91E00BB5DE7 /* SingViewController.swift */; };
+		DC16E6D52772A99800BB5DE7 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6D42772A99800BB5DE7 /* SignView.swift */; };
+		DC62BB542772BF8300404492 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC62BB532772BF8300404492 /* Alamofire */; };
+		DC62BB562772C6ED00404492 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BB552772C6ED00404492 /* SignViewModel.swift */; };
 		DC89BA15277153E800E80C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA14277153E800E80C99 /* AppDelegate.swift */; };
 		DC89BA17277153E800E80C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA16277153E800E80C99 /* SceneDelegate.swift */; };
 		DC89BA19277153E800E80C99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA18277153E800E80C99 /* ViewController.swift */; };
@@ -22,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DC16E6D02772A79100BB5DE7 /* NASAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewController.swift; sourceTree = "<group>"; };
+		DC16E6D22772A91E00BB5DE7 /* SingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingViewController.swift; sourceTree = "<group>"; };
+		DC16E6D42772A99800BB5DE7 /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		DC62BB552772C6ED00404492 /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
 		DC89BA11277153E800E80C99 /* CLASS_WEEK13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLASS_WEEK13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC89BA14277153E800E80C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC89BA16277153E800E80C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,12 +54,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC89BA2A277155D800E80C99 /* SnapKit in Frameworks */,
+				DC62BB542772BF8300404492 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC16E6D62772AE8000BB5DE7 /* NASA */ = {
+			isa = PBXGroup;
+			children = (
+				DC16E6D02772A79100BB5DE7 /* NASAViewController.swift */,
+			);
+			path = NASA;
+			sourceTree = "<group>";
+		};
+		DC16E6D72772AE8900BB5DE7 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				DC62BB552772C6ED00404492 /* SignViewModel.swift */,
+				DC16E6D22772A91E00BB5DE7 /* SingViewController.swift */,
+				DC16E6D42772A99800BB5DE7 /* SignView.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
 		DC89BA08277153E800E80C99 = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +98,10 @@
 		DC89BA13277153E800E80C99 /* CLASS_WEEK13 */ = {
 			isa = PBXGroup;
 			children = (
+				DC16E6D72772AE8900BB5DE7 /* Sign */,
 				DC89BA14277153E800E80C99 /* AppDelegate.swift */,
 				DC89BA16277153E800E80C99 /* SceneDelegate.swift */,
+				DC16E6D62772AE8000BB5DE7 /* NASA */,
 				DC89BA2B27715BF000E80C99 /* APIService.swift */,
 				DC89BA2D2771673F00E80C99 /* Cast.swift */,
 				DC89BA35277178EA00E80C99 /* TableViewCellRepresentable.swift */,
@@ -77,6 +109,7 @@
 				DC89BA332771772A00E80C99 /* DummyData.swift */,
 				DC89BA18277153E800E80C99 /* ViewController.swift */,
 				DC89BA2F2771745300E80C99 /* UITableViewCell+Extension.swift */,
+				DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */,
 				DC89BA1D277153EB00E80C99 /* Assets.xcassets */,
 				DC89BA1F277153EB00E80C99 /* LaunchScreen.storyboard */,
 				DC89BA22277153EB00E80C99 /* Info.plist */,
@@ -102,6 +135,7 @@
 			name = CLASS_WEEK13;
 			packageProductDependencies = (
 				DC89BA29277155D800E80C99 /* SnapKit */,
+				DC62BB532772BF8300404492 /* Alamofire */,
 			);
 			productName = CLASS_WEEK13;
 			productReference = DC89BA11277153E800E80C99 /* CLASS_WEEK13.app */;
@@ -133,6 +167,7 @@
 			mainGroup = DC89BA08277153E800E80C99;
 			packageReferences = (
 				DC89BA28277155D800E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DC62BB522772BF8300404492 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DC89BA12277153E800E80C99 /* Products */;
 			projectDirPath = "";
@@ -161,12 +196,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC89BA36277178EA00E80C99 /* TableViewCellRepresentable.swift in Sources */,
+				DC62BB562772C6ED00404492 /* SignViewModel.swift in Sources */,
 				DC89BA342771772A00E80C99 /* DummyData.swift in Sources */,
 				DC89BA322771762E00E80C99 /* DummyViewController.swift in Sources */,
+				DC16E6D32772A91E00BB5DE7 /* SingViewController.swift in Sources */,
 				DC89BA19277153E800E80C99 /* ViewController.swift in Sources */,
 				DC89BA302771745300E80C99 /* UITableViewCell+Extension.swift in Sources */,
+				DC16E6CF2772A5A000BB5DE7 /* BaseViewController.swift in Sources */,
 				DC89BA15277153E800E80C99 /* AppDelegate.swift in Sources */,
 				DC89BA2E2771674000E80C99 /* Cast.swift in Sources */,
+				DC16E6D52772A99800BB5DE7 /* SignView.swift in Sources */,
+				DC16E6D12772A79100BB5DE7 /* NASAViewController.swift in Sources */,
 				DC89BA2C27715BF000E80C99 /* APIService.swift in Sources */,
 				DC89BA17277153E800E80C99 /* SceneDelegate.swift in Sources */,
 			);
@@ -380,6 +420,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC62BB522772BF8300404492 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		DC89BA28277155D800E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -391,6 +439,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC62BB532772BF8300404492 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC62BB522772BF8300404492 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		DC89BA29277155D800E80C99 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DC89BA28277155D800E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */;

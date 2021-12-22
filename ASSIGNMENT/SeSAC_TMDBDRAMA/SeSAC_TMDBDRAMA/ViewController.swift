@@ -10,13 +10,14 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    let collectionView:  UICollectionView = {
+    
+    let collectionView: UICollectionView = {
         
-
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 10
         let width = UIScreen.main.bounds.width - (spacing * 4) - 0
         let height = UIScreen.main.bounds.height - (spacing * 5) - 0
+        
         
         layout.itemSize = CGSize(width: width / 3, height: (height / 4))
         //print(UIScreen.main.bounds.width, width / 3, width / 3)
@@ -36,16 +37,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
         view.addSubview(collectionView)
         
+        view.backgroundColor = .white
+        
+        //searchControllerSetting()
+        collectionViewSetting()
+
+    }
+    
+    func searchControllerSetting() {
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "검색할 드라마 제목을 입력해주세요"
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        
+    }
+    
+    func collectionViewSetting() {
+        
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.leading.trailing.equalTo(self.view).offset(0)
+            make.top.bottom.equalTo(self.view).offset(0)
         }
         
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-
     }
 
 }
