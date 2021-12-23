@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DC16E6CF2772A5A000BB5DE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */; };
-		DC16E6D12772A79100BB5DE7 /* NASAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6D02772A79100BB5DE7 /* NASAViewController.swift */; };
-		DC16E6D32772A91E00BB5DE7 /* SingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6D22772A91E00BB5DE7 /* SingViewController.swift */; };
-		DC16E6D52772A99800BB5DE7 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16E6D42772A99800BB5DE7 /* SignView.swift */; };
-		DC62BB542772BF8300404492 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC62BB532772BF8300404492 /* Alamofire */; };
-		DC62BB562772C6ED00404492 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BB552772C6ED00404492 /* SignViewModel.swift */; };
+		DC62BBC62773FF8200404492 /* FrameworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BBC52773FF8200404492 /* FrameworkViewController.swift */; };
+		DC62BBCA2774012200404492 /* CLASS_WEEK13_FRAMEWORK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC62BBC02773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.framework */; };
+		DC62BBCB2774012200404492 /* CLASS_WEEK13_FRAMEWORK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC62BBC02773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC62BBCE277405EE00404492 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BBCD277405EE00404492 /* SignView.swift */; };
+		DC62BBD0277405F800404492 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BBCF277405F800404492 /* SignViewModel.swift */; };
+		DC62BBD2277405FE00404492 /* SingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BBD1277405FE00404492 /* SingViewController.swift */; };
+		DC62BBD42774061300404492 /* NASAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62BBD32774061300404492 /* NASAViewController.swift */; };
+		DC62BBD72774072A00404492 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC62BBD62774072A00404492 /* SnapKit */; };
+		DC62BBDA2774073200404492 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC62BBD92774073200404492 /* Alamofire */; };
+		DC62BBDC2774077F00404492 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC62BBDB2774077F00404492 /* Launch Screen.storyboard */; };
 		DC89BA15277153E800E80C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA14277153E800E80C99 /* AppDelegate.swift */; };
 		DC89BA17277153E800E80C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA16277153E800E80C99 /* SceneDelegate.swift */; };
 		DC89BA19277153E800E80C99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA18277153E800E80C99 /* ViewController.swift */; };
 		DC89BA1E277153EB00E80C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC89BA1D277153EB00E80C99 /* Assets.xcassets */; };
-		DC89BA21277153EB00E80C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC89BA1F277153EB00E80C99 /* LaunchScreen.storyboard */; };
-		DC89BA2A277155D800E80C99 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC89BA29277155D800E80C99 /* SnapKit */; };
 		DC89BA2C27715BF000E80C99 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA2B27715BF000E80C99 /* APIService.swift */; };
 		DC89BA2E2771674000E80C99 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA2D2771673F00E80C99 /* Cast.swift */; };
 		DC89BA302771745300E80C99 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA2F2771745300E80C99 /* UITableViewCell+Extension.swift */; };
@@ -27,18 +30,55 @@
 		DC89BA36277178EA00E80C99 /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA35277178EA00E80C99 /* TableViewCellRepresentable.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DC62BBBF2773FF4200404492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC62BBB82773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC62BB642773FC2200404492;
+			remoteInfo = CLASS_WEEK13_FRAMEWORK;
+		};
+		DC62BBC12773FF4200404492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC62BBB82773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC62BB6E2773FC2200404492;
+			remoteInfo = CLASS_WEEK13_FRAMEWORKTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC62BBCC2774012200404492 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC62BBCB2774012200404492 /* CLASS_WEEK13_FRAMEWORK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		DC16E6D02772A79100BB5DE7 /* NASAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewController.swift; sourceTree = "<group>"; };
-		DC16E6D22772A91E00BB5DE7 /* SingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingViewController.swift; sourceTree = "<group>"; };
-		DC16E6D42772A99800BB5DE7 /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
-		DC62BB552772C6ED00404492 /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
+		DC62BBB52773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CLASS_WEEK13_FRAMEWORK.docc; sourceTree = "<group>"; };
+		DC62BBB62773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLASS_WEEK13_FRAMEWORK.h; sourceTree = "<group>"; };
+		DC62BBB72773FF4200404492 /* SeSAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSAC.swift; sourceTree = "<group>"; };
+		DC62BBB82773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CLASS_WEEK13_FRAMEWORK.xcodeproj; sourceTree = "<group>"; };
+		DC62BBBC2773FF4200404492 /* CLASS_WEEK13_FRAMEWORKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLASS_WEEK13_FRAMEWORKTests.swift; sourceTree = "<group>"; };
+		DC62BBC52773FF8200404492 /* FrameworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkViewController.swift; sourceTree = "<group>"; };
+		DC62BBCD277405EE00404492 /* SignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignView.swift; path = CLASS_WEEK13/SignView.swift; sourceTree = SOURCE_ROOT; };
+		DC62BBCF277405F800404492 /* SignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignViewModel.swift; path = CLASS_WEEK13/SignViewModel.swift; sourceTree = SOURCE_ROOT; };
+		DC62BBD1277405FE00404492 /* SingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingViewController.swift; path = CLASS_WEEK13/SingViewController.swift; sourceTree = SOURCE_ROOT; };
+		DC62BBD32774061300404492 /* NASAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NASAViewController.swift; path = CLASS_WEEK13/NASAViewController.swift; sourceTree = SOURCE_ROOT; };
+		DC62BBDB2774077F00404492 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		DC89BA11277153E800E80C99 /* CLASS_WEEK13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLASS_WEEK13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC89BA14277153E800E80C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC89BA16277153E800E80C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC89BA18277153E800E80C99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC89BA1D277153EB00E80C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DC89BA20277153EB00E80C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC89BA22277153EB00E80C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC89BA2B27715BF000E80C99 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DC89BA2D2771673F00E80C99 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
@@ -53,8 +93,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC89BA2A277155D800E80C99 /* SnapKit in Frameworks */,
-				DC62BB542772BF8300404492 /* Alamofire in Frameworks */,
+				DC62BBDA2774073200404492 /* Alamofire in Frameworks */,
+				DC62BBCA2774012200404492 /* CLASS_WEEK13_FRAMEWORK.framework in Frameworks */,
+				DC62BBD72774072A00404492 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +105,7 @@
 		DC16E6D62772AE8000BB5DE7 /* NASA */ = {
 			isa = PBXGroup;
 			children = (
-				DC16E6D02772A79100BB5DE7 /* NASAViewController.swift */,
+				DC62BBD32774061300404492 /* NASAViewController.swift */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
@@ -72,11 +113,57 @@
 		DC16E6D72772AE8900BB5DE7 /* Sign */ = {
 			isa = PBXGroup;
 			children = (
-				DC62BB552772C6ED00404492 /* SignViewModel.swift */,
-				DC16E6D22772A91E00BB5DE7 /* SingViewController.swift */,
-				DC16E6D42772A99800BB5DE7 /* SignView.swift */,
+				DC62BBCF277405F800404492 /* SignViewModel.swift */,
+				DC62BBD1277405FE00404492 /* SingViewController.swift */,
+				DC62BBCD277405EE00404492 /* SignView.swift */,
 			);
 			path = Sign;
+			sourceTree = "<group>";
+		};
+		DC62BBAF2773FF1300404492 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC62BBB32773FF4200404492 /* CLASS_WEEK13_FRAMEWORK */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC62BBB32773FF4200404492 /* CLASS_WEEK13_FRAMEWORK */ = {
+			isa = PBXGroup;
+			children = (
+				DC62BBB42773FF4200404492 /* CLASS_WEEK13_FRAMEWORK */,
+				DC62BBB82773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.xcodeproj */,
+				DC62BBBB2773FF4200404492 /* CLASS_WEEK13_FRAMEWORKTests */,
+			);
+			name = CLASS_WEEK13_FRAMEWORK;
+			path = ../CLASS_WEEK13_FRAMEWORK;
+			sourceTree = "<group>";
+		};
+		DC62BBB42773FF4200404492 /* CLASS_WEEK13_FRAMEWORK */ = {
+			isa = PBXGroup;
+			children = (
+				DC62BBB52773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.docc */,
+				DC62BBB62773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.h */,
+				DC62BBB72773FF4200404492 /* SeSAC.swift */,
+			);
+			path = CLASS_WEEK13_FRAMEWORK;
+			sourceTree = "<group>";
+		};
+		DC62BBB92773FF4200404492 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC62BBC02773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.framework */,
+				DC62BBC22773FF4200404492 /* CLASS_WEEK13_FRAMEWORKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC62BBBB2773FF4200404492 /* CLASS_WEEK13_FRAMEWORKTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC62BBBC2773FF4200404492 /* CLASS_WEEK13_FRAMEWORKTests.swift */,
+			);
+			path = CLASS_WEEK13_FRAMEWORKTests;
 			sourceTree = "<group>";
 		};
 		DC89BA08277153E800E80C99 = {
@@ -84,6 +171,7 @@
 			children = (
 				DC89BA13277153E800E80C99 /* CLASS_WEEK13 */,
 				DC89BA12277153E800E80C99 /* Products */,
+				DC62BBAF2773FF1300404492 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,8 +198,9 @@
 				DC89BA18277153E800E80C99 /* ViewController.swift */,
 				DC89BA2F2771745300E80C99 /* UITableViewCell+Extension.swift */,
 				DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */,
+				DC62BBC52773FF8200404492 /* FrameworkViewController.swift */,
+				DC62BBDB2774077F00404492 /* Launch Screen.storyboard */,
 				DC89BA1D277153EB00E80C99 /* Assets.xcassets */,
-				DC89BA1F277153EB00E80C99 /* LaunchScreen.storyboard */,
 				DC89BA22277153EB00E80C99 /* Info.plist */,
 			);
 			path = CLASS_WEEK13;
@@ -127,6 +216,7 @@
 				DC89BA0D277153E800E80C99 /* Sources */,
 				DC89BA0E277153E800E80C99 /* Frameworks */,
 				DC89BA0F277153E800E80C99 /* Resources */,
+				DC62BBCC2774012200404492 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,8 +224,8 @@
 			);
 			name = CLASS_WEEK13;
 			packageProductDependencies = (
-				DC89BA29277155D800E80C99 /* SnapKit */,
-				DC62BB532772BF8300404492 /* Alamofire */,
+				DC62BBD62774072A00404492 /* SnapKit */,
+				DC62BBD92774073200404492 /* Alamofire */,
 			);
 			productName = CLASS_WEEK13;
 			productReference = DC89BA11277153E800E80C99 /* CLASS_WEEK13.app */;
@@ -166,11 +256,17 @@
 			);
 			mainGroup = DC89BA08277153E800E80C99;
 			packageReferences = (
-				DC89BA28277155D800E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				DC62BB522772BF8300404492 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DC62BBD52774072A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DC62BBD82774073200404492 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DC89BA12277153E800E80C99 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DC62BBB92773FF4200404492 /* Products */;
+					ProjectRef = DC62BBB82773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DC89BA10277153E800E80C99 /* CLASS_WEEK13 */,
@@ -178,12 +274,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		DC62BBC02773FF4200404492 /* CLASS_WEEK13_FRAMEWORK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CLASS_WEEK13_FRAMEWORK.framework;
+			remoteRef = DC62BBBF2773FF4200404492 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC62BBC22773FF4200404492 /* CLASS_WEEK13_FRAMEWORKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CLASS_WEEK13_FRAMEWORKTests.xctest;
+			remoteRef = DC62BBC12773FF4200404492 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		DC89BA0F277153E800E80C99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC89BA21277153EB00E80C99 /* LaunchScreen.storyboard in Resources */,
+				DC62BBDC2774077F00404492 /* Launch Screen.storyboard in Resources */,
 				DC89BA1E277153EB00E80C99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,34 +309,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC89BA36277178EA00E80C99 /* TableViewCellRepresentable.swift in Sources */,
-				DC62BB562772C6ED00404492 /* SignViewModel.swift in Sources */,
 				DC89BA342771772A00E80C99 /* DummyData.swift in Sources */,
+				DC62BBD2277405FE00404492 /* SingViewController.swift in Sources */,
 				DC89BA322771762E00E80C99 /* DummyViewController.swift in Sources */,
-				DC16E6D32772A91E00BB5DE7 /* SingViewController.swift in Sources */,
+				DC62BBD0277405F800404492 /* SignViewModel.swift in Sources */,
+				DC62BBD42774061300404492 /* NASAViewController.swift in Sources */,
+				DC62BBCE277405EE00404492 /* SignView.swift in Sources */,
 				DC89BA19277153E800E80C99 /* ViewController.swift in Sources */,
 				DC89BA302771745300E80C99 /* UITableViewCell+Extension.swift in Sources */,
 				DC16E6CF2772A5A000BB5DE7 /* BaseViewController.swift in Sources */,
 				DC89BA15277153E800E80C99 /* AppDelegate.swift in Sources */,
+				DC62BBC62773FF8200404492 /* FrameworkViewController.swift in Sources */,
 				DC89BA2E2771674000E80C99 /* Cast.swift in Sources */,
-				DC16E6D52772A99800BB5DE7 /* SignView.swift in Sources */,
-				DC16E6D12772A79100BB5DE7 /* NASAViewController.swift in Sources */,
 				DC89BA2C27715BF000E80C99 /* APIService.swift in Sources */,
 				DC89BA17277153E800E80C99 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		DC89BA1F277153EB00E80C99 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC89BA20277153EB00E80C99 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DC89BA23277153EB00E80C99 /* Debug */ = {
@@ -420,15 +523,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DC62BB522772BF8300404492 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		DC89BA28277155D800E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		DC62BBD52774072A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -436,18 +531,26 @@
 				kind = branch;
 			};
 		};
+		DC62BBD82774073200404492 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DC62BB532772BF8300404492 /* Alamofire */ = {
+		DC62BBD62774072A00404492 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC62BB522772BF8300404492 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		DC89BA29277155D800E80C99 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DC89BA28277155D800E80C99 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = DC62BBD52774072A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DC62BBD92774073200404492 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC62BBD82774073200404492 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
