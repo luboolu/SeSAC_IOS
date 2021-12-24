@@ -7,8 +7,12 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class BeerRecommandViewController: UIViewController {
+    
+    var apiService = APIService()
+    var beerData: Beer?
     
     
     let scrollView: UIScrollView = {
@@ -22,8 +26,10 @@ class BeerRecommandViewController: UIViewController {
     
     let image: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "cafe")
-        imageView.contentMode = .scaleAspectFill
+        
+        let url = URL(string: "https://images.punkapi.com/v2/keg.png")
+        imageView.kf.setImage(with: url)
+        imageView.contentMode = .scaleAspectFit
         
         return imageView
     }()
@@ -46,7 +52,7 @@ class BeerRecommandViewController: UIViewController {
     let beerTitle1: UILabel = {
         let titleLabel = UILabel()
         
-        titleLabel.text = "맥주 이름"
+        titleLabel.text = "Buzz"
         titleLabel.textAlignment = .center
         
         return titleLabel
@@ -55,7 +61,7 @@ class BeerRecommandViewController: UIViewController {
     let beerTitle2: UILabel = {
         let titleLabel = UILabel()
         
-        titleLabel.text = "맥주 한줄 설명"
+        titleLabel.text = "A Real Bitter Experience."
         titleLabel.textAlignment = .center
         
         return titleLabel
@@ -65,7 +71,7 @@ class BeerRecommandViewController: UIViewController {
         let beerTextView = UITextView()
         
         beerTextView.isEditable = false
-        beerTextView.text = "맥주 설명~~~~~~~~\n~~~~~~~\n~~~~~~~~~"
+        beerTextView.text = "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only"
         beerTextView.textAlignment = .center
         
         return beerTextView
@@ -133,13 +139,14 @@ class BeerRecommandViewController: UIViewController {
         
         imageContainer.snp.makeConstraints { make in
             make.left.right.top.equalToSuperview()
-            make.height.equalTo(150)
+            make.height.equalTo(250)
         }
         
         image.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalTo(imageContainer)
+            //make.height.equalTo(250)
         }
         
         containerView.snp.makeConstraints { make in
@@ -153,7 +160,7 @@ class BeerRecommandViewController: UIViewController {
 //            make.top.equalTo(image.snp.bottom)
 //            make.left.right.bottom.equalToSuperview()
 //
-            make.top.equalTo(imageContainer.snp.bottom)
+            make.top.equalTo(imageContainer.snp.bottom).offset(-50)
             make.trailing.equalTo(scrollView.snp.trailing).offset(-30)
             make.leading.equalTo(scrollView.snp.leading).offset(30)
             make.height.equalTo(200)
@@ -205,6 +212,14 @@ class BeerRecommandViewController: UIViewController {
             make.bottom.equalTo(bottomView.snp.bottom).offset(-5)
         }
         
+        
+        //api 통신
+        apiService.requestBeer { beer in
+            
+            self.beerData = beer
+            
+            
+        }
         
         
 

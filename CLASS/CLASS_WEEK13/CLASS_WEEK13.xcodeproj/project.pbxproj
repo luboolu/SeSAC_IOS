@@ -28,6 +28,7 @@
 		DC89BA322771762E00E80C99 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA312771762E00E80C99 /* DummyViewController.swift */; };
 		DC89BA342771772A00E80C99 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA332771772A00E80C99 /* DummyData.swift */; };
 		DC89BA36277178EA00E80C99 /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA35277178EA00E80C99 /* TableViewCellRepresentable.swift */; };
+		DCA66CC42775491F00B628CF /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66CC32775491F00B628CF /* TempViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DC89BA312771762E00E80C99 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		DC89BA332771772A00E80C99 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		DC89BA35277178EA00E80C99 /* TableViewCellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRepresentable.swift; sourceTree = "<group>"; };
+		DCA66CC32775491F00B628CF /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				DC89BA2F2771745300E80C99 /* UITableViewCell+Extension.swift */,
 				DC16E6CE2772A59F00BB5DE7 /* BaseViewController.swift */,
 				DC62BBC52773FF8200404492 /* FrameworkViewController.swift */,
+				DCA66CC32775491F00B628CF /* TempViewController.swift */,
 				DC62BBDB2774077F00404492 /* Launch Screen.storyboard */,
 				DC89BA1D277153EB00E80C99 /* Assets.xcassets */,
 				DC89BA22277153EB00E80C99 /* Info.plist */,
@@ -316,6 +319,7 @@
 				DC62BBD42774061300404492 /* NASAViewController.swift in Sources */,
 				DC62BBCE277405EE00404492 /* SignView.swift in Sources */,
 				DC89BA19277153E800E80C99 /* ViewController.swift in Sources */,
+				DCA66CC42775491F00B628CF /* TempViewController.swift in Sources */,
 				DC89BA302771745300E80C99 /* UITableViewCell+Extension.swift in Sources */,
 				DC16E6CF2772A5A000BB5DE7 /* BaseViewController.swift in Sources */,
 				DC89BA15277153E800E80C99 /* AppDelegate.swift in Sources */,

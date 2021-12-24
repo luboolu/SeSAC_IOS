@@ -13,6 +13,9 @@
 		DC89B9F92770BF5600E80C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC89B9F82770BF5600E80C99 /* Assets.xcassets */; };
 		DC89B9FC2770BF5600E80C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC89B9FA2770BF5600E80C99 /* LaunchScreen.storyboard */; };
 		DC89BA072770C24500E80C99 /* BeerRecommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89BA062770C24500E80C99 /* BeerRecommandViewController.swift */; };
+		DCA66CC92775FCC300B628CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCA66CC82775FCC300B628CF /* Kingfisher */; };
+		DCA66CCC27760D0200B628CF /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66CCB27760D0200B628CF /* Beer.swift */; };
+		DCA66CCE27760D6600B628CF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66CCD27760D6600B628CF /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		DC89B9FB2770BF5600E80C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC89B9FD2770BF5600E80C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC89BA062770C24500E80C99 /* BeerRecommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRecommandViewController.swift; sourceTree = "<group>"; };
+		DCA66CCB27760D0200B628CF /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		DCA66CCD27760D6600B628CF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA66CC92775FCC300B628CF /* Kingfisher in Frameworks */,
 				DC62BB592773272A00404492 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +64,9 @@
 			children = (
 				DC89B9EF2770BF5400E80C99 /* AppDelegate.swift */,
 				DC89B9F12770BF5400E80C99 /* SceneDelegate.swift */,
+				DCA66CCB27760D0200B628CF /* Beer.swift */,
 				DC89BA062770C24500E80C99 /* BeerRecommandViewController.swift */,
+				DCA66CCD27760D6600B628CF /* APIService.swift */,
 				DC89B9F82770BF5600E80C99 /* Assets.xcassets */,
 				DC89B9FA2770BF5600E80C99 /* LaunchScreen.storyboard */,
 				DC89B9FD2770BF5600E80C99 /* Info.plist */,
@@ -84,6 +92,7 @@
 			name = SeSAC_BEER;
 			packageProductDependencies = (
 				DC62BB582773272A00404492 /* SnapKit */,
+				DCA66CC82775FCC300B628CF /* Kingfisher */,
 			);
 			productName = SeSAC_BEER;
 			productReference = DC89B9EC2770BF5400E80C99 /* SeSAC_BEER.app */;
@@ -115,6 +124,7 @@
 			mainGroup = DC89B9E32770BF5300E80C99;
 			packageReferences = (
 				DC62BB572773272A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DCA66CC72775FCC200B628CF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DC89B9ED2770BF5400E80C99 /* Products */;
 			projectDirPath = "";
@@ -143,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC89BA072770C24500E80C99 /* BeerRecommandViewController.swift in Sources */,
+				DCA66CCE27760D6600B628CF /* APIService.swift in Sources */,
 				DC89B9F02770BF5400E80C99 /* AppDelegate.swift in Sources */,
 				DC89B9F22770BF5400E80C99 /* SceneDelegate.swift in Sources */,
+				DCA66CCC27760D0200B628CF /* Beer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +376,14 @@
 				kind = branch;
 			};
 		};
+		DCA66CC72775FCC200B628CF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -371,6 +391,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DC62BB572773272A00404492 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DCA66CC82775FCC300B628CF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA66CC72775FCC200B628CF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
