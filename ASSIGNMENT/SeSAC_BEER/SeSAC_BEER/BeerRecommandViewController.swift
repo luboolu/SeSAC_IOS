@@ -14,6 +14,10 @@ class BeerRecommandViewController: UIViewController {
     var apiService = APIService()
     var beerData: Beer?
     
+    var beerName = "맥주 이름"
+    var beerTagline = "설명"
+    var beerDescription = "설명2"
+    
     
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -52,7 +56,7 @@ class BeerRecommandViewController: UIViewController {
     let beerTitle1: UILabel = {
         let titleLabel = UILabel()
         
-        titleLabel.text = "Buzz"
+        titleLabel.text = "Mixtape 8"
         titleLabel.textAlignment = .center
         
         return titleLabel
@@ -216,11 +220,22 @@ class BeerRecommandViewController: UIViewController {
         //api 통신
         apiService.requestBeer { beer in
             
+            
             self.beerData = beer
             
+            print(self.beerData![Int.random(in: 0...self.beerData!.count - 1)].name)
+            
+            DispatchQueue.main.async {
+                self.beerTitle1.text = self.beerData![Int.random(in: 0...self.beerData!.count - 1)].name
+                self.beerTitle2.text = self.beerData![Int.random(in: 0...self.beerData!.count - 1)].tagline
+                self.beerInfo.text = self.beerData![Int.random(in: 0...self.beerData!.count - 1)].beerDescription
+                
+                self.view.reloadInputViews()
+            }
+            
+
             
         }
-        
         
 
 

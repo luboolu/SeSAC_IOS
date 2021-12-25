@@ -50,7 +50,7 @@ class APIService {
             }
             
             if let data = data, let beerData = try? JSONDecoder().decode(Beer.self, from: data) {
-                print("SUCCED", beerData)
+                print("SUCCED")
                 completion(beerData)
                 return
             }
