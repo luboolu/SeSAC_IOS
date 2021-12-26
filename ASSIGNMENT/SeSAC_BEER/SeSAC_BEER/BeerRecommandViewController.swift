@@ -18,6 +18,17 @@ class BeerRecommandViewController: UIViewController {
     var beerTagline = "설명"
     var beerDescription = "설명2"
     
+    private var isOversized = false {
+        didSet {
+            beerInfo.reloadInputViews()
+            //beerInfo.isScrollEnabled = isOversized
+        }
+    }
+    
+    var beerInfoHeightConstraint: Constraint!
+    private let maxHeight: CGFloat = 40
+    var isMoreButtonClicked = false
+    
     
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -58,6 +69,8 @@ class BeerRecommandViewController: UIViewController {
         
         titleLabel.text = "Mixtape 8"
         titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        titleLabel.numberOfLines = 0
         
         return titleLabel
     }()
@@ -79,6 +92,17 @@ class BeerRecommandViewController: UIViewController {
         beerTextView.textAlignment = .center
         
         return beerTextView
+    }()
+    
+    let moreButton: UIButton = {
+        let moreButton = UIButton()
+       
+        moreButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        moreButton.tintColor = .lightGray
+        moreButton.titleLabel?.font = UIFont.systemFont(ofSize: 11)
+        moreButton.titleLabel?.textAlignment = .center
+        
+        return moreButton
     }()
     
     let resetButton: UIButton = {
@@ -112,7 +136,10 @@ class BeerRecommandViewController: UIViewController {
     let bottomView = UIView()
 
     override func viewDidLoad() {
+        print(#function)
         super.viewDidLoad()
+        
+        beerInfo.delegate = self
         
         view.backgroundColor = .white
         scrollView.backgroundColor = .white
@@ -127,6 +154,7 @@ class BeerRecommandViewController: UIViewController {
         beerInfoView.addSubview(beerTitle1)
         beerInfoView.addSubview(beerTitle2)
         beerInfoView.addSubview(beerInfo)
+        beerInfoView.addSubview(moreButton)
         containerView.addSubview(beerInfoView)
         //scrollView.addSubview(image)
         scrollView.addSubview(containerView)
@@ -167,7 +195,7 @@ class BeerRecommandViewController: UIViewController {
             make.top.equalTo(imageContainer.snp.bottom).offset(-50)
             make.trailing.equalTo(scrollView.snp.trailing).offset(-30)
             make.leading.equalTo(scrollView.snp.leading).offset(30)
-            make.height.equalTo(200)
+            //make.height.equalTo(200)
 
         }
         
@@ -179,17 +207,27 @@ class BeerRecommandViewController: UIViewController {
         }
         
         beerTitle2.snp.makeConstraints { make in
-            make.top.equalTo(beerTitle1.snp.bottom).offset(20)
+            make.top.equalTo(beerTitle1.snp.bottom).offset(4)
             make.leading.equalTo(beerInfoView.snp.leading).offset(20)
             make.trailing.equalTo(beerInfoView.snp.trailing).offset(-20)
             make.height.equalTo(30)
         }
         
         beerInfo.snp.makeConstraints { make in
-            make.top.equalTo(beerTitle2.snp.bottom).offset(20)
+            make.top.equalTo(beerTitle2.snp.bottom).offset(4)
             make.leading.equalTo(beerInfoView.snp.leading).offset(20)
             make.trailing.equalTo(beerInfoView.snp.trailing).offset(-20)
-            make.bottom.equalTo(beerInfoView.snp.bottom).offset(-20)
+            //make.height.equalTo(40)
+            beerInfoHeightConstraint = make.height.equalTo(40).constraint
+            //make.bottom.equalTo(beerInfoView.snp.bottom).offset(-20)
+        }
+        
+        moreButton.snp.makeConstraints { make in
+            make.top.equalTo(beerInfo.snp.bottom).offset(4)
+            make.leading.equalTo(beerInfoView.snp.leading).offset(20)
+            make.trailing.equalTo(beerInfoView.snp.trailing).offset(-20)
+            make.bottom.equalTo(beerInfoView.snp.bottom).offset(-8)
+            make.height.equalTo(30)
         }
         
         
@@ -225,10 +263,17 @@ class BeerRecommandViewController: UIViewController {
             
             print(self.beerData![Int.random(in: 0...self.beerData!.count - 1)].name)
             
+            let randNum = Int.random(in: 0...self.beerData!.count - 1)
+            
             DispatchQueue.main.async {
-                self.beerTitle1.text = self.beerData![Int.random(in: 0...self.beerData!.count - 1)].name
-                self.beerTitle2.text = self.beerData![Int.random(in: 0...self.beerData!.count - 1)].tagline
-                self.beerInfo.text = self.beerData![Int.random(in: 0...self.beerData!.count - 1)].beerDescription
+                self.beerTitle1.text = self.beerData![randNum].name
+                self.beerTitle2.text = self.beerData![randNum].tagline
+                self.beerInfo.text = self.beerData![randNum].beerDescription
+                
+                
+                let url = URL(string: self.beerData![randNum].imageURL)
+                self.image.kf.setImage(with: url)
+                
                 
                 self.view.reloadInputViews()
             }
@@ -237,10 +282,79 @@ class BeerRecommandViewController: UIViewController {
             
         }
         
+        //button
+        moreButton.addTarget(self, action: #selector(moreButtonClicked), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(resetButtonClicked), for: .touchUpInside)
+        shareButton.addTarget(self, action: #selector(shareButtonClicked), for: .touchUpInside)
+        
 
 
     }
     
+    @objc func resetButtonClicked(_ sender: UIButton) {
+        print(#function)
+        
+        self.isMoreButtonClicked = false
+        let randNum = Int.random(in: 0...self.beerData!.count - 1)
+        
+        DispatchQueue.main.async {
+            self.beerTitle1.text = self.beerData![randNum].name
+            self.beerTitle2.text = self.beerData![randNum].tagline
+            self.beerInfo.text = self.beerData![randNum].beerDescription
+            
+            
+            let url = URL(string: self.beerData![randNum].imageURL)
+            self.image.kf.setImage(with: url)
+            
+            self.beerInfoHeightConstraint.deactivate()
+            self.beerInfo.snp.makeConstraints { make in
+                self.beerInfoHeightConstraint = make.height.equalTo(40).constraint
+            }
+            
+            self.view.reloadInputViews()
+        }
+    }
+    
+    @objc func shareButtonClicked(_ sender: UIButton) {
+        print(#function)
+        
+        
+    }
+    
+    @objc func moreButtonClicked(_ sender: UIButton) {
+        print(#function)
+        
+        self.isMoreButtonClicked = !self.isMoreButtonClicked //toggle
+        print(self.isMoreButtonClicked)
+        print(self.beerInfo.contentSize.height)
+        if self.isMoreButtonClicked {
+            //true면 버튼 타이틀 지우고 chevron 이미지로 변경
+            self.moreButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+            
+            if beerInfo.contentSize.height >= maxHeight {
+                print("늘려주기!")
+                isOversized = true
+                
+                beerInfoHeightConstraint.deactivate()
+                beerInfo.snp.makeConstraints { make in
+                    beerInfoHeightConstraint = make.height.equalTo(beerInfo.contentSize.height).constraint
+                }
+                
+            }
+        } else {
+            //
+            self.moreButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+            
+            beerInfoHeightConstraint.deactivate()
+            beerInfo.snp.makeConstraints { make in
+                beerInfoHeightConstraint = make.height.equalTo(40).constraint
+            }
+        }
+        
+        beerInfo.reloadInputViews()
+
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -251,5 +365,15 @@ class BeerRecommandViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension BeerRecommandViewController: UITextViewDelegate {
+    // MARK: - UITextViewDelegate
+    func textViewDidChange(_ textView: UITextView) {
+        print(#function)
+
+    }
+    
 
 }
