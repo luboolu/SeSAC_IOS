@@ -37,10 +37,10 @@ class APIService {
         let sourcrURLPage = URL(string: "https://api.themoviedb.org/3/tv/top_rated?api_key=5b2646eba70f38e9484223101e68395f&language=en-US&page=\(startPage)")!
         
         URLSession.shared.dataTask(with: sourceURL) { data, response, error in
-            print(data)
-            print(response)
-            print(error)
-            
+//            print(data)
+//            print(response)
+//            print(error)
+//            
             if let error = error {
                 self.showAlert(.unknownError)
                 return

@@ -14,28 +14,47 @@ class ViewController: UIViewController {
     var apiService = APIService()
     var tmdbTvData: TmdbTv?
     
-    let collectionViewReuseIdentifier = "DramaCollectionViewCell"
+    var collectionViewHeight: CGFloat = 0 {
+        didSet {
+            print(collectionViewHeight)
+        }
+    }
     
+    let collectionViewReuseIdentifier = "DramaCollectionViewCell"
+
     
     let collectionView: UICollectionView = {
+        //let cv = collectionView()
         
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 10
-        let width = UIScreen.main.bounds.width - (spacing * 4) - 0
-        let height = UIScreen.main.bounds.height - (spacing * 5) - 0
+        let width = UIScreen.main.bounds.width - (spacing * 2) - 8
+        let height = UIScreen.main.bounds.height - (spacing * 3) - 8 - 122
+
+        //let height = width * 10 / 8
+        
+
+        print(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        print(width, height)
+        print()
+        print("item: \(width / 3) \(height / 4)")
         
         
         layout.itemSize = CGSize(width: width / 3, height: (height / 4))
         //print(UIScreen.main.bounds.width, width / 3, width / 3)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
+        
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
         
         layout.scrollDirection = .vertical
         layout.sectionInset = .zero
+        layout.sectionInsetReference = .fromSafeArea
         
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .green
+        
+    
+        //cv.backgroundColor = .green
         
         return cv
     }()
@@ -48,18 +67,22 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        //searchControllerSetting()
+        searchControllerSetting()
         collectionViewSetting()
         
+        print("collection view height", collectionView.frame)
         apiService.requestTmdbTvTopRated(startPage: 1) { data in
         
             if let tmdbData = data {
                 self.tmdbTvData = TmdbTv(page: tmdbData.page, results: tmdbData.results, totalPages: tmdbData.totalPages, totalResults: tmdbData.totalResults)
             }
-            (self.tmdbTvData?.results[0])
+            //(self.tmdbTvData?.results[0])
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.collectionViewHeight = self.collectionView.frame.height
+                print("collection view height", self.collectionView.frame)
+                print("safe area: ", self.view.safeAreaLayoutGuide)
             }
             
         }
@@ -79,8 +102,11 @@ class ViewController: UIViewController {
     func collectionViewSetting() {
         
         collectionView.snp.makeConstraints { make in
-            make.leading.trailing.equalTo(self.view).offset(0)
-            make.top.bottom.equalTo(self.view).offset(0)
+            make.top.equalTo(self.view.safeAreaLayoutGuide).offset(4)
+            make.leading.equalTo(self.view).offset(4)
+            make.trailing.equalTo(self.view).offset(-4)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-4)
+            
         }
         
         collectionView.delegate = self
@@ -121,14 +147,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             myImage.rightAnchor.constraint(equalTo: cell.rightAnchor).isActive = true
             myImage.bottomAnchor.constraint(equalTo: cell.bottomAnchor).isActive = true
             
-            print(row.posterPath)
+            //print(row.posterPath)
             
             let url = URL(string: "https://image.tmdb.org/t/p/original\(row.posterPath)")
-            print(url)
+            //print(url)
             myImage.kf.setImage(with: url)
         }
         
-
+        cell.backgroundColor = .yellow
         
         return cell
     }
