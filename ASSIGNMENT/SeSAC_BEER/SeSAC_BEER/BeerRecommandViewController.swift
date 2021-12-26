@@ -42,8 +42,8 @@ class BeerRecommandViewController: UIViewController {
     let image: UIImageView = {
         let imageView = UIImageView()
         
-        let url = URL(string: "https://images.punkapi.com/v2/keg.png")
-        imageView.kf.setImage(with: url)
+        //let url = URL(string: "https://images.punkapi.com/v2/keg.png")
+        //imageView.kf.setImage(with: url)
         imageView.contentMode = .scaleAspectFit
         
         return imageView
@@ -67,7 +67,7 @@ class BeerRecommandViewController: UIViewController {
     let beerTitle1: UILabel = {
         let titleLabel = UILabel()
         
-        titleLabel.text = "Mixtape 8"
+        titleLabel.text = ""
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
         titleLabel.numberOfLines = 0
@@ -78,7 +78,7 @@ class BeerRecommandViewController: UIViewController {
     let beerTitle2: UILabel = {
         let titleLabel = UILabel()
         
-        titleLabel.text = "A Real Bitter Experience."
+        titleLabel.text = ""
         titleLabel.textAlignment = .center
         
         return titleLabel
@@ -88,7 +88,7 @@ class BeerRecommandViewController: UIViewController {
         let beerTextView = UITextView()
         
         beerTextView.isEditable = false
-        beerTextView.text = "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only"
+        beerTextView.text = ""
         beerTextView.textAlignment = .center
         
         return beerTextView
@@ -295,12 +295,15 @@ class BeerRecommandViewController: UIViewController {
         print(#function)
         
         self.isMoreButtonClicked = false
+        
         let randNum = Int.random(in: 0...self.beerData!.count - 1)
         
         DispatchQueue.main.async {
             self.beerTitle1.text = self.beerData![randNum].name
             self.beerTitle2.text = self.beerData![randNum].tagline
             self.beerInfo.text = self.beerData![randNum].beerDescription
+            
+            self.moreButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
             
             
             let url = URL(string: self.beerData![randNum].imageURL)
