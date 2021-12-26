@@ -7,8 +7,14 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class ViewController: UIViewController {
+    
+    var apiService = APIService()
+    var tmdbTvData: TmdbTv?
+    
+    let collectionViewReuseIdentifier = "DramaCollectionViewCell"
     
     
     let collectionView: UICollectionView = {
@@ -44,6 +50,19 @@ class ViewController: UIViewController {
         
         //searchControllerSetting()
         collectionViewSetting()
+        
+        apiService.requestTmdbTvTopRated(startPage: 1) { data in
+        
+            if let tmdbData = data {
+                self.tmdbTvData = TmdbTv(page: tmdbData.page, results: tmdbData.results, totalPages: tmdbData.totalPages, totalResults: tmdbData.totalResults)
+            }
+            (self.tmdbTvData?.results[0])
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            
+        }
 
     }
     
@@ -66,23 +85,56 @@ class ViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        //collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(DramaCollectionViewCell.self, forCellWithReuseIdentifier: collectionViewReuseIdentifier)
+        
+        collectionView.backgroundColor = .blue
     }
 
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewReuseIdentifier, for: indexPath)
+        if let row = self.tmdbTvData?.results[indexPath.row] {
+            
+            let myImage: UIImageView = {
+
+                let img = UIImageView()
+                img.translatesAutoresizingMaskIntoConstraints = false
+                img.contentMode = .scaleAspectFit
+
+                return img
+
+            }()
+            
+            cell.addSubview(myImage)
+
+            //제약조건 설정하기
+            myImage.topAnchor.constraint(equalTo: cell.topAnchor).isActive = true
+            myImage.leftAnchor.constraint(equalTo: cell.leftAnchor).isActive = true
+            myImage.rightAnchor.constraint(equalTo: cell.rightAnchor).isActive = true
+            myImage.bottomAnchor.constraint(equalTo: cell.bottomAnchor).isActive = true
+            
+            print(row.posterPath)
+            
+            let url = URL(string: "https://image.tmdb.org/t/p/original\(row.posterPath)")
+            print(url)
+            myImage.kf.setImage(with: url)
+        }
         
-        cell.backgroundColor = .yellow
+
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
     }
     
 

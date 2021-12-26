@@ -13,6 +13,10 @@
 		DC16E6C12772156C00BB5DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC16E6C02772156C00BB5DE7 /* Assets.xcassets */; };
 		DC16E6C42772156C00BB5DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC16E6C22772156C00BB5DE7 /* LaunchScreen.storyboard */; };
 		DC16E6CD2772175400BB5DE7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC16E6CC2772175400BB5DE7 /* SnapKit */; };
+		DCA66CD02778337500B628CF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66CCF2778337500B628CF /* APIService.swift */; };
+		DCA66CD4277837C100B628CF /* TmdbTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66CD3277837C100B628CF /* TmdbTV.swift */; };
+		DCA66CD72778725C00B628CF /* DramaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66CD62778725C00B628CF /* DramaCollectionViewCell.swift */; };
+		DCA66CDA277887DB00B628CF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DCA66CD9277887DB00B628CF /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,9 @@
 		DC16E6C02772156C00BB5DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC16E6C32772156C00BB5DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC16E6C52772156C00BB5DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA66CCF2778337500B628CF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DCA66CD3277837C100B628CF /* TmdbTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmdbTV.swift; sourceTree = "<group>"; };
+		DCA66CD62778725C00B628CF /* DramaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA66CDA277887DB00B628CF /* Kingfisher in Frameworks */,
 				DC16E6CD2772175400BB5DE7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +67,9 @@
 				DC16E6B72772156B00BB5DE7 /* AppDelegate.swift */,
 				DC16E6B92772156B00BB5DE7 /* SceneDelegate.swift */,
 				DC16E6BB2772156B00BB5DE7 /* ViewController.swift */,
+				DCA66CCF2778337500B628CF /* APIService.swift */,
+				DCA66CD3277837C100B628CF /* TmdbTV.swift */,
+				DCA66CD62778725C00B628CF /* DramaCollectionViewCell.swift */,
 				DC16E6C02772156C00BB5DE7 /* Assets.xcassets */,
 				DC16E6C22772156C00BB5DE7 /* LaunchScreen.storyboard */,
 				DC16E6C52772156C00BB5DE7 /* Info.plist */,
@@ -84,6 +95,7 @@
 			name = SeSAC_TMDBDRAMA;
 			packageProductDependencies = (
 				DC16E6CC2772175400BB5DE7 /* SnapKit */,
+				DCA66CD9277887DB00B628CF /* Kingfisher */,
 			);
 			productName = SeSAC_TMDBDRAMA;
 			productReference = DC16E6B42772156B00BB5DE7 /* SeSAC_TMDBDRAMA.app */;
@@ -115,6 +127,7 @@
 			mainGroup = DC16E6AB2772156B00BB5DE7;
 			packageReferences = (
 				DC16E6CB2772175400BB5DE7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DCA66CD8277887DB00B628CF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DC16E6B52772156B00BB5DE7 /* Products */;
 			projectDirPath = "";
@@ -142,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA66CD72778725C00B628CF /* DramaCollectionViewCell.swift in Sources */,
 				DC16E6BC2772156B00BB5DE7 /* ViewController.swift in Sources */,
+				DCA66CD4277837C100B628CF /* TmdbTV.swift in Sources */,
 				DC16E6B82772156B00BB5DE7 /* AppDelegate.swift in Sources */,
+				DCA66CD02778337500B628CF /* APIService.swift in Sources */,
 				DC16E6BA2772156B00BB5DE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +380,14 @@
 				kind = branch;
 			};
 		};
+		DCA66CD8277887DB00B628CF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -371,6 +395,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DC16E6CB2772175400BB5DE7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DCA66CD9277887DB00B628CF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA66CD8277887DB00B628CF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

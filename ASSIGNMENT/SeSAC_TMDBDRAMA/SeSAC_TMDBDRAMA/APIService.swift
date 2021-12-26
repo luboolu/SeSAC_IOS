@@ -1,8 +1,8 @@
 //
 //  APIService.swift
-//  SeSAC_BEER
+//  SeSAC_TMDBDRAMA
 //
-//  Created by 김진영 on 2021/12/24.
+//  Created by 김진영 on 2021/12/26.
 //
 
 import Foundation
@@ -29,10 +29,12 @@ extension APIError: LocalizedError {
 
 class APIService {
     
-    //Beer API
-    let sourceURL = URL(string: "https://api.punkapi.com/v2/beers")!
+    //TMDB TV Top Rated API
+    let sourceURL = URL(string: "https://api.themoviedb.org/3/tv/top_rated?api_key=5b2646eba70f38e9484223101e68395f&language=en-US&page=1")!
     
-    func requestBeer(completion: @escaping (Beer?) -> Void) {
+    func requestTmdbTvTopRated(startPage: Int, completion: @escaping (TmdbTv?) -> Void) {
+        
+        let sourcrURLPage = URL(string: "https://api.themoviedb.org/3/tv/top_rated?api_key=5b2646eba70f38e9484223101e68395f&language=en-US&page=\(startPage)")!
         
         URLSession.shared.dataTask(with: sourceURL) { data, response, error in
             print(data)
@@ -49,9 +51,9 @@ class APIService {
                 return
             }
             
-            if let data = data, let beerData = try? JSONDecoder().decode(Beer.self, from: data) {
+            if let data = data, let tmdbData = try? JSONDecoder().decode(TmdbTv.self, from: data) {
                 print("SUCCED")
-                completion(beerData)
+                completion(tmdbData)
                 return
             }
             
@@ -64,5 +66,5 @@ class APIService {
     func showAlert(_ msg: APIError) {
         print(msg)
     }
-
+    
 }
