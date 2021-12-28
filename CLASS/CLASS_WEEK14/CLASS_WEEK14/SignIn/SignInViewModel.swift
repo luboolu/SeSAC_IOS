@@ -10,7 +10,7 @@ import UIKit
 
 class SignInViewModel {
 
-    var username: Observable<String> = Observable("고래밥")
+    var username: Observable<String> = Observable("")
     var password: Observable<String> = Observable("")
     
     func postUserLogin(completion: @escaping () -> Void) {

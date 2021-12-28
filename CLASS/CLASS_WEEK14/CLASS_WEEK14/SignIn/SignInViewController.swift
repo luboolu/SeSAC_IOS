@@ -25,6 +25,7 @@ class SignInViewController: UIViewController {
         mainView.usernameTextField.addTarget(self, action: #selector(usernameTextFieldDidChange(_:)), for: .editingChanged)
         mainView.passwordTextField.addTarget(self, action: #selector(passwordTextFieldDidChange(_:)), for: .editingChanged)
         mainView.signInButton.addTarget(self, action: #selector(signInButtonClicked), for: .touchUpInside)
+        mainView.signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
     }
     
     @objc func usernameTextFieldDidChange(_ textfield: UITextField) {
@@ -37,7 +38,7 @@ class SignInViewController: UIViewController {
 
 
     @objc func signInButtonClicked() {
-        
+        print(#function)
         viewModel.postUserLogin {
             //escaping으로 통신이 끝나고 난 다음에 화면전환 실행
             DispatchQueue.main.async {
@@ -47,6 +48,16 @@ class SignInViewController: UIViewController {
             }
         }
 
+    }
+    
+    @objc func signUpButtonClicked() {
+        print(#function)
+        
+        let vc = SignUpViewController()
+        
+        self.present(vc, animated: true, completion: nil)
+        
+        
     }
 
 }
