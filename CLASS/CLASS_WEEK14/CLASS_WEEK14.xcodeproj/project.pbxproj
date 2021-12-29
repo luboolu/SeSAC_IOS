@@ -28,6 +28,7 @@
 		DCA66D1A277AA6AE00B628CF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66D19277AA6AE00B628CF /* Person.swift */; };
 		DCA66D1D277AAA8700B628CF /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66D1C277AAA8700B628CF /* PersonModel.swift */; };
 		DCA66D1F277AAB7500B628CF /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66D1E277AAB7500B628CF /* PersonViewController.swift */; };
+		DCA66D21277BF2A500B628CF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA66D20277BF2A400B628CF /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		DCA66D19277AA6AE00B628CF /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DCA66D1C277AAA8700B628CF /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		DCA66D1E277AAB7500B628CF /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		DCA66D20277BF2A400B628CF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +94,8 @@
 				DCA66D102779BDF900B628CF /* SignIn */,
 				DCA66CE7277947EE00B628CF /* AppDelegate.swift */,
 				DCA66CE9277947EE00B628CF /* SceneDelegate.swift */,
-				DCA66D19277AA6AE00B628CF /* Person.swift */,
 				DCA66D002779504B00B628CF /* APIService.swift */,
+				DCA66D20277BF2A400B628CF /* Endpoint.swift */,
 				DCA66D0427795B2D00B628CF /* MainViewController.swift */,
 				DCA66D0827795FC400B628CF /* Observable.swift */,
 				DCA66D022779574100B628CF /* User.swift */,
@@ -137,6 +139,7 @@
 		DCA66D1B277AAA7800B628CF /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				DCA66D19277AA6AE00B628CF /* Person.swift */,
 				DCA66D1C277AAA8700B628CF /* PersonModel.swift */,
 				DCA66D1E277AAB7500B628CF /* PersonViewController.swift */,
 			);
@@ -231,6 +234,7 @@
 				DCA66D032779574100B628CF /* User.swift in Sources */,
 				DCA66D0727795EE200B628CF /* SignInViewModel.swift in Sources */,
 				DCA66CE8277947EE00B628CF /* AppDelegate.swift in Sources */,
+				DCA66D21277BF2A500B628CF /* Endpoint.swift in Sources */,
 				DCA66CFC27794BB800B628CF /* SignInView.swift in Sources */,
 				DCA66D0F2779BDEC00B628CF /* SignUpViewModel.swift in Sources */,
 				DCA66D1D277AAA8700B628CF /* PersonModel.swift in Sources */,

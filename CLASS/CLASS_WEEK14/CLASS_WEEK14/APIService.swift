@@ -24,42 +24,10 @@ class APIService {
         request.httpMethod = "POST"
         //string -> date, dictionary -> JSONSerialization / Codable
         request.httpBody = "identifier=\(identifier)&password=\(password)".data(using: .utf8, allowLossyConversion: false)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            print(data)
-            print(response)
-            print(error)
-            
-            guard error == nil else {
-                completion(nil, .failed)
-                return
-            }
-            
-            guard let data = data else {
-                completion(nil, .noData)
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse else {
-                completion(nil, .invalidResponse)
-                return
-            }
-            
-            guard response.statusCode == 200 else {
-                completion(nil, .failed)
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let userData = try decoder.decode(User.self, from: data)
-                completion(userData, nil)
-            } catch {
-                completion(nil, .invalidData)
-            }
 
-            
-        }.resume()
+        URLSession.request(.shared, endpoint: request, completion: completion)
+        
+        
     }
     
     //회원가입 sign up
@@ -72,8 +40,11 @@ class APIService {
         request.httpBody = "username=\(username)&email=\(email)&password=\(password)".data(using: .utf8, allowLossyConversion: false)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
+            print("data==========================================")
             print(data)
+            print("response======================================")
             print(response)
+            print("error=========================================")
             print(error)
             
             guard error == nil else {

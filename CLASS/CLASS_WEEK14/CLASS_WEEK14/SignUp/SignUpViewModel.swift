@@ -22,8 +22,8 @@ class SignUpViewModel {
                 return
             }
             
-            print(userData)
-            print(error)
+            //print(userData)
+            print("error is : " ,error)
             
             completion()
             
