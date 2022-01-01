@@ -20,12 +20,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         mainView.signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         mainView.usernameTextField.addTarget(self, action: #selector(usernameTextFieldDidChange(_:)), for: .editingChanged)
         mainView.emailTextField.addTarget(self, action: #selector(emailTextFieldDidChange(_:)), for: .editingChanged)
         mainView.passwordTextField.addTarget(self, action: #selector(passwordTextFieldDidChange(_:)), for: .editingChanged)
+        
     }
     
     @objc func usernameTextFieldDidChange(_ textfield: UITextField) {
