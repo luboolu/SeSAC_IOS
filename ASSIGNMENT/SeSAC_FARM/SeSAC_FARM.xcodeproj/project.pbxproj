@@ -15,6 +15,12 @@
 		DCA680F227805166001E7598 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680F127805166001E7598 /* StartViewController.swift */; };
 		DCA680F527805177001E7598 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCA680F427805177001E7598 /* SnapKit */; };
 		DCA680F72780613D001E7598 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680F62780613D001E7598 /* SignUpViewController.swift */; };
+		DCA680F927806722001E7598 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680F827806722001E7598 /* Observable.swift */; };
+		DCA680FB27807375001E7598 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FA27807375001E7598 /* APIService.swift */; };
+		DCA680FD2780752D001E7598 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FC2780752D001E7598 /* Endpoint.swift */; };
+		DCA680FF2780763D001E7598 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FE2780763D001E7598 /* User.swift */; };
+		DCA6810127807FDB001E7598 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6810027807FDB001E7598 /* SignUpViewModel.swift */; };
+		DCA68103278092AC001E7598 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA68102278092AC001E7598 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		DCA680E827802C15001E7598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA680F127805166001E7598 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		DCA680F62780613D001E7598 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DCA680F827806722001E7598 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DCA680FA27807375001E7598 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DCA680FC2780752D001E7598 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DCA680FE2780763D001E7598 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DCA6810027807FDB001E7598 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		DCA68102278092AC001E7598 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,13 @@
 				DCA680EF27802C60001E7598 /* SignUp */,
 				DCA680EE27802C58001E7598 /* Start */,
 				DCA680DA27802C13001E7598 /* AppDelegate.swift */,
+				DCA680FA27807375001E7598 /* APIService.swift */,
+				DCA680FC2780752D001E7598 /* Endpoint.swift */,
+				DCA680FE2780763D001E7598 /* User.swift */,
+				DCA68102278092AC001E7598 /* Error.swift */,
 				DCA680DC27802C13001E7598 /* SceneDelegate.swift */,
 				DCA680DE27802C13001E7598 /* ViewController.swift */,
+				DCA680F827806722001E7598 /* Observable.swift */,
 				DCA680E327802C15001E7598 /* Assets.xcassets */,
 				DCA680E527802C15001E7598 /* LaunchScreen.storyboard */,
 				DCA680E827802C15001E7598 /* Info.plist */,
@@ -85,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				DCA680F62780613D001E7598 /* SignUpViewController.swift */,
+				DCA6810027807FDB001E7598 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -173,9 +191,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA680DF27802C13001E7598 /* ViewController.swift in Sources */,
+				DCA680FB27807375001E7598 /* APIService.swift in Sources */,
+				DCA6810127807FDB001E7598 /* SignUpViewModel.swift in Sources */,
+				DCA68103278092AC001E7598 /* Error.swift in Sources */,
+				DCA680FD2780752D001E7598 /* Endpoint.swift in Sources */,
 				DCA680F227805166001E7598 /* StartViewController.swift in Sources */,
 				DCA680DB27802C13001E7598 /* AppDelegate.swift in Sources */,
+				DCA680FF2780763D001E7598 /* User.swift in Sources */,
 				DCA680DD27802C13001E7598 /* SceneDelegate.swift in Sources */,
+				DCA680F927806722001E7598 /* Observable.swift in Sources */,
 				DCA680F72780613D001E7598 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

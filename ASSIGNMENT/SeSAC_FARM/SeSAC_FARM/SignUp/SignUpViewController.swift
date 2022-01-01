@@ -10,6 +10,8 @@ import SnapKit
 
 class SignUpViewController: UIViewController {
     
+    var viewModel = SignUpViewModel()
+    
     var emailTextField: UITextField = {
         let textfield = UITextField()
         
@@ -59,9 +61,10 @@ class SignUpViewController: UIViewController {
         
         button.setTitle("가입하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(named: "sesac_green")
+        button.backgroundColor = .lightGray
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
+        button.isEnabled = false
         
         return button
     }()
@@ -71,10 +74,104 @@ class SignUpViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        self.navigationController?.title = "새싹농장 가입하기"
+        self.navigationItem.title = "새싹농장 가입하기"
+
         
         settingUI()
+    
+        emailTextField.addTarget(self, action: #selector(emailTextFieldDidChange(_:)), for: .editingChanged)
+        nicknameTextField.addTarget(self, action: #selector(nicknameTextFieldDidChange(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordTextFieldDidChange(_:)), for: .editingChanged)
+        passwordConfirmTextField.addTarget(self, action: #selector(passwordConfirmTextFieldDidChange(_:)), for: .editingChanged)
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+        
     }
+    
+
+    
+    @objc func emailTextFieldDidChange(_ textfield: UITextField) {
+        viewModel.email.value = textfield.text ?? ""
+        
+        if viewModel.email.value != "" && viewModel.nickname.value != "" && viewModel.password.value != "" && viewModel.passwordConfirm.value != "" {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor(named: "sesac_green")
+                self.signUpButton.setTitle("시작하기", for: .normal)
+                self.signUpButton.isEnabled = true
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor.lightGray
+                self.signUpButton.setTitle("가입하기", for: .normal)
+                self.signUpButton.isEnabled = false
+            }
+        }
+    }
+    
+    @objc func nicknameTextFieldDidChange(_ textfield: UITextField) {
+        viewModel.nickname.value = textfield.text ?? ""
+        
+        if viewModel.email.value != "" && viewModel.nickname.value != "" && viewModel.password.value != "" && viewModel.passwordConfirm.value != "" {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor(named: "sesac_green")
+                self.signUpButton.setTitle("시작하기", for: .normal)
+                self.signUpButton.isEnabled = true
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor.lightGray
+                self.signUpButton.setTitle("가입하기", for: .normal)
+                self.signUpButton.isEnabled = false
+            }
+        }
+
+    }
+    
+    @objc func passwordTextFieldDidChange(_ textfield: UITextField) {
+        viewModel.password.value = textfield.text ?? ""
+        
+        if viewModel.email.value != "" && viewModel.nickname.value != "" && viewModel.password.value != "" && viewModel.passwordConfirm.value != "" {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor(named: "sesac_green")
+                self.signUpButton.setTitle("시작하기", for: .normal)
+                self.signUpButton.isEnabled = true
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor.lightGray
+                self.signUpButton.setTitle("가입하기", for: .normal)
+                self.signUpButton.isEnabled = false
+            }
+        }
+
+    }
+    
+    @objc func passwordConfirmTextFieldDidChange(_ textfield: UITextField) {
+        viewModel.passwordConfirm.value = textfield.text ?? ""
+        
+        if viewModel.email.value != "" && viewModel.nickname.value != "" && viewModel.password.value != "" && viewModel.passwordConfirm.value != "" {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor(named: "sesac_green")
+                self.signUpButton.setTitle("시작하기", for: .normal)
+                self.signUpButton.isEnabled = true
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.signUpButton.backgroundColor = UIColor.lightGray
+                self.signUpButton.setTitle("가입하기", for: .normal)
+                self.signUpButton.isEnabled = false
+            }
+        }
+
+    }
+    
+    @objc func signUpButtonClicked() {
+        print(#function)
+        viewModel.signUp {
+            print("completion")
+        }
+    }
+    
     
     func settingUI() {
         view.addSubview(emailTextField)

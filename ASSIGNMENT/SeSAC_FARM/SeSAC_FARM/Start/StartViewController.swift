@@ -92,6 +92,8 @@ class StartViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        //self.navigationController?.navigationBar.topItem?.title = ""
+        
         settingUI()
         
         startButton.addTarget(self, action: #selector(startButtonClicked), for: .touchUpInside)
