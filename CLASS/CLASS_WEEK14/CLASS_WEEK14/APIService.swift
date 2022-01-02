@@ -26,8 +26,7 @@ class APIService {
         request.httpBody = "identifier=\(identifier)&password=\(password)".data(using: .utf8, allowLossyConversion: false)
 
         URLSession.request(.shared, endpoint: request, completion: completion)
-        
-        
+
     }
     
     //회원가입 sign up

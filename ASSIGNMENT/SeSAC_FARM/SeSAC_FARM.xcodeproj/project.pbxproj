@@ -20,7 +20,9 @@
 		DCA680FD2780752D001E7598 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FC2780752D001E7598 /* Endpoint.swift */; };
 		DCA680FF2780763D001E7598 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FE2780763D001E7598 /* User.swift */; };
 		DCA6810127807FDB001E7598 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6810027807FDB001E7598 /* SignUpViewModel.swift */; };
-		DCA68103278092AC001E7598 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA68102278092AC001E7598 /* Error.swift */; };
+		DCA68103278092AC001E7598 /* SignUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA68102278092AC001E7598 /* SignUpError.swift */; };
+		DCA681052780B150001E7598 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681042780B150001E7598 /* SignUpView.swift */; };
+		DCA681072780B30F001E7598 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681062780B30F001E7598 /* StartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,9 @@
 		DCA680FC2780752D001E7598 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DCA680FE2780763D001E7598 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DCA6810027807FDB001E7598 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		DCA68102278092AC001E7598 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		DCA68102278092AC001E7598 /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
+		DCA681042780B150001E7598 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DCA681062780B30F001E7598 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,7 @@
 				DCA680FA27807375001E7598 /* APIService.swift */,
 				DCA680FC2780752D001E7598 /* Endpoint.swift */,
 				DCA680FE2780763D001E7598 /* User.swift */,
-				DCA68102278092AC001E7598 /* Error.swift */,
+				DCA68102278092AC001E7598 /* SignUpError.swift */,
 				DCA680DC27802C13001E7598 /* SceneDelegate.swift */,
 				DCA680DE27802C13001E7598 /* ViewController.swift */,
 				DCA680F827806722001E7598 /* Observable.swift */,
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DCA680F127805166001E7598 /* StartViewController.swift */,
+				DCA681062780B30F001E7598 /* StartView.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			children = (
 				DCA680F62780613D001E7598 /* SignUpViewController.swift */,
 				DCA6810027807FDB001E7598 /* SignUpViewModel.swift */,
+				DCA681042780B150001E7598 /* SignUpView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -193,7 +199,9 @@
 				DCA680DF27802C13001E7598 /* ViewController.swift in Sources */,
 				DCA680FB27807375001E7598 /* APIService.swift in Sources */,
 				DCA6810127807FDB001E7598 /* SignUpViewModel.swift in Sources */,
-				DCA68103278092AC001E7598 /* Error.swift in Sources */,
+				DCA68103278092AC001E7598 /* SignUpError.swift in Sources */,
+				DCA681052780B150001E7598 /* SignUpView.swift in Sources */,
+				DCA681072780B30F001E7598 /* StartView.swift in Sources */,
 				DCA680FD2780752D001E7598 /* Endpoint.swift in Sources */,
 				DCA680F227805166001E7598 /* StartViewController.swift in Sources */,
 				DCA680DB27802C13001E7598 /* AppDelegate.swift in Sources */,
