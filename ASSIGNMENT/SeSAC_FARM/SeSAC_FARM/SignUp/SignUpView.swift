@@ -81,9 +81,13 @@ class SignUpView: UIView, ViewRepresentable {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupView()
+        setupConstraints()
     }
     
     func setupView() {
+        self.backgroundColor = .white
+
         addSubview(emailTextField)
         addSubview(nicknameTextField)
         addSubview(passwordTextField)

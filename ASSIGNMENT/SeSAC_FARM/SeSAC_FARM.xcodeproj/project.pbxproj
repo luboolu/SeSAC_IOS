@@ -20,9 +20,16 @@
 		DCA680FD2780752D001E7598 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FC2780752D001E7598 /* Endpoint.swift */; };
 		DCA680FF2780763D001E7598 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA680FE2780763D001E7598 /* User.swift */; };
 		DCA6810127807FDB001E7598 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6810027807FDB001E7598 /* SignUpViewModel.swift */; };
-		DCA68103278092AC001E7598 /* SignUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA68102278092AC001E7598 /* SignUpError.swift */; };
+		DCA68103278092AC001E7598 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA68102278092AC001E7598 /* UserError.swift */; };
 		DCA681052780B150001E7598 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681042780B150001E7598 /* SignUpView.swift */; };
 		DCA681072780B30F001E7598 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681062780B30F001E7598 /* StartView.swift */; };
+		DCA681092781E055001E7598 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681082781E055001E7598 /* SignInViewController.swift */; };
+		DCA6810B2781E05E001E7598 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6810A2781E05E001E7598 /* SignInView.swift */; };
+		DCA6810D2781E066001E7598 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6810C2781E066001E7598 /* SignInViewModel.swift */; };
+		DCA681102781E8BD001E7598 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6810F2781E8BD001E7598 /* PostViewController.swift */; };
+		DCA681122781E8C2001E7598 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681112781E8C2001E7598 /* PostView.swift */; };
+		DCA681142781E8CA001E7598 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681132781E8CA001E7598 /* PostViewModel.swift */; };
+		DCA681162781ECA2001E7598 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA681152781ECA1001E7598 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +47,16 @@
 		DCA680FC2780752D001E7598 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DCA680FE2780763D001E7598 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DCA6810027807FDB001E7598 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		DCA68102278092AC001E7598 /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
+		DCA68102278092AC001E7598 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		DCA681042780B150001E7598 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DCA681062780B30F001E7598 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		DCA681082781E055001E7598 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DCA6810A2781E05E001E7598 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DCA6810C2781E066001E7598 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		DCA6810F2781E8BD001E7598 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		DCA681112781E8C2001E7598 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		DCA681132781E8CA001E7598 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		DCA681152781ECA1001E7598 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,7 @@
 		DCA680D927802C13001E7598 /* SeSAC_FARM */ = {
 			isa = PBXGroup;
 			children = (
+				DCA6810E2781E8B0001E7598 /* Post */,
 				DCA680F027802C71001E7598 /* SignIn */,
 				DCA680EF27802C60001E7598 /* SignUp */,
 				DCA680EE27802C58001E7598 /* Start */,
@@ -83,7 +98,7 @@
 				DCA680FA27807375001E7598 /* APIService.swift */,
 				DCA680FC2780752D001E7598 /* Endpoint.swift */,
 				DCA680FE2780763D001E7598 /* User.swift */,
-				DCA68102278092AC001E7598 /* SignUpError.swift */,
+				DCA68102278092AC001E7598 /* UserError.swift */,
 				DCA680DC27802C13001E7598 /* SceneDelegate.swift */,
 				DCA680DE27802C13001E7598 /* ViewController.swift */,
 				DCA680F827806722001E7598 /* Observable.swift */,
@@ -116,8 +131,22 @@
 		DCA680F027802C71001E7598 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				DCA681082781E055001E7598 /* SignInViewController.swift */,
+				DCA6810A2781E05E001E7598 /* SignInView.swift */,
+				DCA6810C2781E066001E7598 /* SignInViewModel.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		DCA6810E2781E8B0001E7598 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				DCA6810F2781E8BD001E7598 /* PostViewController.swift */,
+				DCA681152781ECA1001E7598 /* PostTableViewCell.swift */,
+				DCA681112781E8C2001E7598 /* PostView.swift */,
+				DCA681132781E8CA001E7598 /* PostViewModel.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,19 +225,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA681092781E055001E7598 /* SignInViewController.swift in Sources */,
 				DCA680DF27802C13001E7598 /* ViewController.swift in Sources */,
 				DCA680FB27807375001E7598 /* APIService.swift in Sources */,
+				DCA681102781E8BD001E7598 /* PostViewController.swift in Sources */,
 				DCA6810127807FDB001E7598 /* SignUpViewModel.swift in Sources */,
-				DCA68103278092AC001E7598 /* SignUpError.swift in Sources */,
+				DCA681162781ECA2001E7598 /* PostTableViewCell.swift in Sources */,
+				DCA6810D2781E066001E7598 /* SignInViewModel.swift in Sources */,
+				DCA68103278092AC001E7598 /* UserError.swift in Sources */,
 				DCA681052780B150001E7598 /* SignUpView.swift in Sources */,
 				DCA681072780B30F001E7598 /* StartView.swift in Sources */,
 				DCA680FD2780752D001E7598 /* Endpoint.swift in Sources */,
 				DCA680F227805166001E7598 /* StartViewController.swift in Sources */,
+				DCA6810B2781E05E001E7598 /* SignInView.swift in Sources */,
 				DCA680DB27802C13001E7598 /* AppDelegate.swift in Sources */,
 				DCA680FF2780763D001E7598 /* User.swift in Sources */,
 				DCA680DD27802C13001E7598 /* SceneDelegate.swift in Sources */,
 				DCA680F927806722001E7598 /* Observable.swift in Sources */,
+				DCA681122781E8C2001E7598 /* PostView.swift in Sources */,
 				DCA680F72780613D001E7598 /* SignUpViewController.swift in Sources */,
+				DCA681142781E8CA001E7598 /* PostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

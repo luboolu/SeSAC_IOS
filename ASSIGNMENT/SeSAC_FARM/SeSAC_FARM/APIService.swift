@@ -16,22 +16,8 @@ enum APIError: Error {
 
 class APIService {
     
-    //로그인
-//    static func login(identifier: String, password: String, completion: @escaping (User?, APIError?) -> (Void)) {
-//        let url = URL(string: "http://test.monocoding.com/auth/local")!
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        //string -> date, dictionary -> JSONSerialization / Codable
-//        request.httpBody = "identifier=\(identifier)&password=\(password)".data(using: .utf8, allowLossyConversion: false)
-//
-//        URLSession.request(.shared, endpoint: request, completion: completion)
-//
-//
-//    }
-    
     //회원가입 SignUp
-    static func signUp(username: String, email: String, password: String, completion: @escaping (User?, APIError?, SignUpError?) -> (Void)) {
+    static func signUp(username: String, email: String, password: String, completion: @escaping (User?, APIError?, UserError?) -> (Void)) {
         
         let url = URL(string: "\(URL.signup)")!
         var request = URLRequest(url: url)
@@ -62,7 +48,60 @@ class APIService {
                 guard response.statusCode == 200 else {
                     do {
                         let decoder = JSONDecoder()
-                        let errorData = try decoder.decode(SignUpError.self, from: data)
+                        let errorData = try decoder.decode(UserError.self, from: data)
+                        completion(nil, .invalidResponse, errorData)
+                        return
+                    } catch {
+                        completion(nil, .failed, nil)
+                        return
+                    }
+                }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let userData = try decoder.decode(User.self, from: data)
+                    completion(userData, nil, nil)
+                } catch {
+                    completion(nil, .invalidData, nil)
+                }
+            }
+        }).resume()
+  
+        
+    }
+    
+    //로그인 sign in
+    static func signIn(identifier: String, password: String, completion: @escaping (User?, APIError?, UserError?) -> (Void)) {
+        
+        let url = URL(string: "\(URL.signin)")!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.httpBody = "identifier=\(identifier)&password=\(password)".data(using: .utf8, allowLossyConversion: false)
+        
+        
+        URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+            DispatchQueue.main.async {
+
+                guard error == nil else {
+                    completion(nil, .failed, nil)
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(nil, .noData, nil)
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse else {
+                    completion(nil, .invalidResponse, nil)
+                    return
+                }
+                
+                guard response.statusCode == 200 else {
+                    do {
+                        let decoder = JSONDecoder()
+                        let errorData = try decoder.decode(UserError.self, from: data)
                         completion(nil, .invalidResponse, errorData)
                         return
                     } catch {

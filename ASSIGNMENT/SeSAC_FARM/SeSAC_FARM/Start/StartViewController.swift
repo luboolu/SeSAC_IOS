@@ -23,16 +23,17 @@ class StartViewController: UIViewController {
         
         
         mainView.startButton.addTarget(self, action: #selector(startButtonClicked), for: .touchUpInside)
+        mainView.loginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
     }
     
     @objc func startButtonClicked() {
         let vc = SignUpViewController()
-        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-
-    
-    
-    
+    @objc func loginButtonClicked() {
+        let vc = SignInViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+  
 }

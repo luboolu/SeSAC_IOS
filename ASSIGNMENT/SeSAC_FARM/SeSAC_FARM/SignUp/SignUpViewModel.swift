@@ -17,12 +17,12 @@ class SignUpViewModel {
     func signUp(completion: @escaping () -> Void) {
         print("sign up api start")
         
-        APIService.signUp(username: nickname.value, email: email.value, password: password.value) { data, error, signerror in
+        APIService.signUp(username: nickname.value, email: email.value, password: password.value) { data, error, usererror in
             print(data)
             print(error)
             
-            if let signerror = signerror {
-                print(signerror.message[0].messages[0].message)
+            if let usererror = usererror {
+                print(usererror.message[0].messages[0].message)
             }
             
             completion()

@@ -8,18 +8,18 @@
 import Foundation
 //
 // MARK: - Error
-struct SignUpError: Codable {
+struct UserError: Codable {
     let statusCode: Int
     let error: String
-    let message, data: [SignUpDatum]
+    let message, data: [UserDatum]
 }
 
 // MARK: - Datum
-struct SignUpDatum: Codable {
-    let messages: [SignUpMessage]
+struct UserDatum: Codable {
+    let messages: [UserMessage]
 }
 
 // MARK: - Message
-struct SignUpMessage: Codable {
+struct UserMessage: Codable {
     let id, message: String
 }
