@@ -14,11 +14,66 @@ enum ExampleError: Error {
 
 class Operator: UIViewController {
     
-    let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Observavle: 주어진 상황에 대해서 전달함
+        //create > subscribe > next > complete or error ( > dispose )
+        //dispose: 내부적으로 메모리를 관리. 뷰컨트롤러가 deinit 될때 호출됨
+        
+        Observable.from(["가", "나", "다"])
+            .subscribe { value in
+                print("next: \(value)")
+            } onError: { error in
+                print(error)
+            } onCompleted: {
+                print("complete")
+            } onDisposed: {
+                print("disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        Observable<Int>.interval(.seconds(2), scheduler: MainScheduler.instance)
+            .subscribe { value in
+                print("next: \(value)")
+            } onError: { error in
+                print(error)
+            } onCompleted: {
+                print("complete")
+            } onDisposed: {
+                print("disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        Observable.repeatElement("JACK")
+            .subscribe { value in
+                print("next: \(value)")
+            } onError: { error in
+                print(error)
+            } onCompleted: {
+                print("complete")
+            } onDisposed: {
+                print("disposed")
+            }
+            .disposed(by: disposeBag)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.disposeBag = DisposeBag()
+            //self.dismiss(animated: true, completion: nil)
+            
+        }
+
+        
+    }
+    
+    deinit {
+        print("Operator Deinit!")
+    }
+    
+    //1.3일 어제 수업
+    func basic () {
         let items = [3.3, 4.0, 5.0, 3.6, 4.8]
         
         Observable.just(items)
@@ -63,6 +118,6 @@ class Operator: UIViewController {
             print("disposed!")
         }
         .disposed(by: disposeBag)
-        
+
     }
 }

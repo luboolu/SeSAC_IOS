@@ -18,6 +18,14 @@
 		DC8559E527828CC500C99B5B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559E427828CC500C99B5B /* PickerViewController.swift */; };
 		DC8559E72782965800C99B5B /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559E62782965800C99B5B /* Operator.swift */; };
 		DC8559E927829BB800C99B5B /* GrafeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559E827829BB800C99B5B /* GrafeCalculator.swift */; };
+		DC8559F52783D53F00C99B5B /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559F42783D53F00C99B5B /* SubjectViewController.swift */; };
+		DC8559F72783E4BD00C99B5B /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559F62783E4BD00C99B5B /* NetworkViewController.swift */; };
+		DC8559FA2783E87000C99B5B /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC8559F92783E87000C99B5B /* RxAlamofire */; };
+		DC8559FC27851E3600C99B5B /* ReativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559FB27851E3600C99B5B /* ReativeViewController.swift */; };
+		DC8559FE278537BA00C99B5B /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559FD278537BA00C99B5B /* Lotto.swift */; };
+		DC855A0027853D1300C99B5B /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8559FF27853D1300C99B5B /* ValidationViewController.swift */; };
+		DC855A0927866E6400C99B5B /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC855A0827866E6400C99B5B /* ButtonViewController.swift */; };
+		DCB423A42787D27E00029D15 /* InAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB423A32787D27E00029D15 /* InAppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +39,13 @@
 		DC8559E427828CC500C99B5B /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		DC8559E62782965800C99B5B /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		DC8559E827829BB800C99B5B /* GrafeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrafeCalculator.swift; sourceTree = "<group>"; };
+		DC8559F42783D53F00C99B5B /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		DC8559F62783E4BD00C99B5B /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		DC8559FB27851E3600C99B5B /* ReativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReativeViewController.swift; sourceTree = "<group>"; };
+		DC8559FD278537BA00C99B5B /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		DC8559FF27853D1300C99B5B /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		DC855A0827866E6400C99B5B /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		DCB423A32787D27E00029D15 /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC8559E32782898900C99B5B /* SnapKit in Frameworks */,
+				DC8559FA2783E87000C99B5B /* RxAlamofire in Frameworks */,
 				DC8559E02782877700C99B5B /* RxSwift in Frameworks */,
 				DC8559DE2782877700C99B5B /* RxCocoa in Frameworks */,
 			);
@@ -71,6 +87,13 @@
 				DC8559CC2782872F00C99B5B /* ViewController.swift */,
 				DC8559E62782965800C99B5B /* Operator.swift */,
 				DC8559E827829BB800C99B5B /* GrafeCalculator.swift */,
+				DC8559F42783D53F00C99B5B /* SubjectViewController.swift */,
+				DC8559F62783E4BD00C99B5B /* NetworkViewController.swift */,
+				DC8559FF27853D1300C99B5B /* ValidationViewController.swift */,
+				DCB423A32787D27E00029D15 /* InAppViewController.swift */,
+				DC855A0827866E6400C99B5B /* ButtonViewController.swift */,
+				DC8559FD278537BA00C99B5B /* Lotto.swift */,
+				DC8559FB27851E3600C99B5B /* ReativeViewController.swift */,
 				DC8559E427828CC500C99B5B /* PickerViewController.swift */,
 				DC8559D12782873100C99B5B /* Assets.xcassets */,
 				DC8559D32782873100C99B5B /* LaunchScreen.storyboard */,
@@ -99,6 +122,7 @@
 				DC8559DD2782877700C99B5B /* RxCocoa */,
 				DC8559DF2782877700C99B5B /* RxSwift */,
 				DC8559E22782898900C99B5B /* SnapKit */,
+				DC8559F92783E87000C99B5B /* RxAlamofire */,
 			);
 			productName = CLASS_WEEK15;
 			productReference = DC8559C52782872F00C99B5B /* CLASS_WEEK15.app */;
@@ -131,6 +155,7 @@
 			packageReferences = (
 				DC8559DC2782877700C99B5B /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DC8559E12782898900C99B5B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DC8559F82783E87000C99B5B /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 			);
 			productRefGroup = DC8559C62782872F00C99B5B /* Products */;
 			projectDirPath = "";
@@ -162,8 +187,15 @@
 				DC8559C92782872F00C99B5B /* AppDelegate.swift in Sources */,
 				DC8559E72782965800C99B5B /* Operator.swift in Sources */,
 				DC8559E927829BB800C99B5B /* GrafeCalculator.swift in Sources */,
+				DC855A0927866E6400C99B5B /* ButtonViewController.swift in Sources */,
+				DC8559F52783D53F00C99B5B /* SubjectViewController.swift in Sources */,
+				DC8559FC27851E3600C99B5B /* ReativeViewController.swift in Sources */,
+				DC8559FE278537BA00C99B5B /* Lotto.swift in Sources */,
 				DC8559E527828CC500C99B5B /* PickerViewController.swift in Sources */,
+				DC855A0027853D1300C99B5B /* ValidationViewController.swift in Sources */,
 				DC8559CB2782872F00C99B5B /* SceneDelegate.swift in Sources */,
+				DC8559F72783E4BD00C99B5B /* NetworkViewController.swift in Sources */,
+				DCB423A42787D27E00029D15 /* InAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +423,14 @@
 				kind = branch;
 			};
 		};
+		DC8559F82783E87000C99B5B /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -408,6 +448,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DC8559E12782898900C99B5B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DC8559F92783E87000C99B5B /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC8559F82783E87000C99B5B /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

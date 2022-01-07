@@ -37,6 +37,11 @@ class ViewController: UIViewController {
             
             })
             .bind(to: label.rx.text).disposed(by: disposeBag)
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.present(Operator(), animated: true, completion: nil)
+        }
     }
     
     
