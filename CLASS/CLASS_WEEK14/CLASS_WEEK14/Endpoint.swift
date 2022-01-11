@@ -62,7 +62,7 @@ extension URLSession {
         return task
     }
     
-    static func request<T: Decodable>(_ session: URLSession = .shared, endpoint: URLRequest, completion: @escaping (T?, APIError?) -> Void) {
+    static func request<T: Decodable>(_ session: URLSession = .shared, endpoint: URLRequest, completion: @escaping (T?, APIError?) -> (Void)) {
         session.dataTask(endpoint) { data, response, error in
             
             DispatchQueue.main.async {
