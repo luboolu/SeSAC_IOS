@@ -14,6 +14,7 @@
 		DC039989278BB39700509BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC039988278BB39700509BC4 /* Assets.xcassets */; };
 		DC03998C278BB39700509BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC03998A278BB39700509BC4 /* LaunchScreen.storyboard */; };
 		DC039994278BD2B200509BC4 /* SwizzlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC039993278BD2B200509BC4 /* SwizzlingViewController.swift */; };
+		DCAA940E278E5C5A004AA9D2 /* ConcurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA940D278E5C5A004AA9D2 /* ConcurrencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DC03998B278BB39700509BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC03998D278BB39700509BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC039993278BD2B200509BC4 /* SwizzlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwizzlingViewController.swift; sourceTree = "<group>"; };
+		DCAA940D278E5C5A004AA9D2 /* ConcurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DC039983278BB39500509BC4 /* ViewController.swift */,
 				DC039993278BD2B200509BC4 /* SwizzlingViewController.swift */,
 				DC039985278BB39500509BC4 /* Main.storyboard */,
+				DCAA940D278E5C5A004AA9D2 /* ConcurrencyViewController.swift */,
 				DC039988278BB39700509BC4 /* Assets.xcassets */,
 				DC03998A278BB39700509BC4 /* LaunchScreen.storyboard */,
 				DC03998D278BB39700509BC4 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAA940E278E5C5A004AA9D2 /* ConcurrencyViewController.swift in Sources */,
 				DC039994278BD2B200509BC4 /* SwizzlingViewController.swift in Sources */,
 				DC039984278BB39500509BC4 /* ViewController.swift in Sources */,
 				DC039980278BB39500509BC4 /* AppDelegate.swift in Sources */,
