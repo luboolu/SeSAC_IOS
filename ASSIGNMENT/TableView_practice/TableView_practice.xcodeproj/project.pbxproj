@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCAA9418278FFE88004AA9D2 /* ScrollTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA9417278FFE88004AA9D2 /* ScrollTestViewController.swift */; };
+		DCAA941B278FFEF6004AA9D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCAA941A278FFEF6004AA9D2 /* SnapKit */; };
 		DCD91724271EEC0900196CC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91723271EEC0900196CC4 /* AppDelegate.swift */; };
 		DCD91726271EEC0900196CC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91725271EEC0900196CC4 /* SceneDelegate.swift */; };
 		DCD91728271EEC0900196CC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD91727271EEC0900196CC4 /* ViewController.swift */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCAA9417278FFE88004AA9D2 /* ScrollTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTestViewController.swift; sourceTree = "<group>"; };
 		DCD91720271EEC0900196CC4 /* TableView_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD91723271EEC0900196CC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCD91725271EEC0900196CC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAA941B278FFEF6004AA9D2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +79,7 @@
 				DCD91737271EEC3200196CC4 /* MainViewController.swift */,
 				DCD91741271EF39900196CC4 /* MovieTableViewHeader.swift */,
 				DCD91742271EF39900196CC4 /* MovieTableViewHeader.xib */,
+				DCAA9417278FFE88004AA9D2 /* ScrollTestViewController.swift */,
 				DCD9172C271EEC0C00196CC4 /* Assets.xcassets */,
 				DCD9172E271EEC0C00196CC4 /* LaunchScreen.storyboard */,
 				DCD91731271EEC0C00196CC4 /* Info.plist */,
@@ -98,6 +103,9 @@
 			dependencies = (
 			);
 			name = TableView_practice;
+			packageProductDependencies = (
+				DCAA941A278FFEF6004AA9D2 /* SnapKit */,
+			);
 			productName = TableView_practice;
 			productReference = DCD91720271EEC0900196CC4 /* TableView_practice.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +134,9 @@
 				Base,
 			);
 			mainGroup = DCD91717271EEC0900196CC4;
+			packageReferences = (
+				DCAA9419278FFEF6004AA9D2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DCD91721271EEC0900196CC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +170,7 @@
 				DCD91743271EF39900196CC4 /* MovieTableViewHeader.swift in Sources */,
 				DCD91728271EEC0900196CC4 /* ViewController.swift in Sources */,
 				DCD91724271EEC0900196CC4 /* AppDelegate.swift in Sources */,
+				DCAA9418278FFE88004AA9D2 /* ScrollTestViewController.swift in Sources */,
 				DCD91726271EEC0900196CC4 /* SceneDelegate.swift in Sources */,
 				DCD91738271EEC3200196CC4 /* MainViewController.swift in Sources */,
 			);
@@ -313,7 +325,6 @@
 				INFOPLIST_FILE = TableView_practice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -340,7 +351,6 @@
 				INFOPLIST_FILE = TableView_practice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -378,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCAA9419278FFEF6004AA9D2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCAA941A278FFEF6004AA9D2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCAA9419278FFEF6004AA9D2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCD91718271EEC0900196CC4 /* Project object */;
 }

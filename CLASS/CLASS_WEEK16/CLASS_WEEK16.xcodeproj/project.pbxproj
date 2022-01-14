@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC030E2A2790F98A000B83B9 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = DC030E292790F98A000B83B9 /* SocketIO */; };
+		DC030E2D2790FE5A000B83B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC030E2C2790FE5A000B83B9 /* Alamofire */; };
+		DC030E2F27910716000B83B9 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC030E2E27910716000B83B9 /* SocketManager.swift */; };
 		DC039980278BB39500509BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03997F278BB39500509BC4 /* AppDelegate.swift */; };
 		DC039982278BB39500509BC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC039981278BB39500509BC4 /* SceneDelegate.swift */; };
 		DC039984278BB39500509BC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC039983278BB39500509BC4 /* ViewController.swift */; };
@@ -15,9 +18,13 @@
 		DC03998C278BB39700509BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC03998A278BB39700509BC4 /* LaunchScreen.storyboard */; };
 		DC039994278BD2B200509BC4 /* SwizzlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC039993278BD2B200509BC4 /* SwizzlingViewController.swift */; };
 		DCAA940E278E5C5A004AA9D2 /* ConcurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA940D278E5C5A004AA9D2 /* ConcurrencyViewController.swift */; };
+		DCAA9412278FA88B004AA9D2 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA9411278FA88B004AA9D2 /* ButtonViewController.swift */; };
+		DCAA9414278FAE45004AA9D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA9413278FAE45004AA9D2 /* DetailViewController.swift */; };
+		DCAA9416278FB6ED004AA9D2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAA9415278FB6ED004AA9D2 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC030E2E27910716000B83B9 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		DC03997C278BB39500509BC4 /* CLASS_WEEK16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLASS_WEEK16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC03997F278BB39500509BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC039981278BB39500509BC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		DC03998D278BB39700509BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC039993278BD2B200509BC4 /* SwizzlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwizzlingViewController.swift; sourceTree = "<group>"; };
 		DCAA940D278E5C5A004AA9D2 /* ConcurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyViewController.swift; sourceTree = "<group>"; };
+		DCAA9411278FA88B004AA9D2 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		DCAA9413278FAE45004AA9D2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DCAA9415278FB6ED004AA9D2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC030E2A2790F98A000B83B9 /* SocketIO in Frameworks */,
+				DC030E2D2790FE5A000B83B9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +78,10 @@
 				DC039993278BD2B200509BC4 /* SwizzlingViewController.swift */,
 				DC039985278BB39500509BC4 /* Main.storyboard */,
 				DCAA940D278E5C5A004AA9D2 /* ConcurrencyViewController.swift */,
+				DCAA9411278FA88B004AA9D2 /* ButtonViewController.swift */,
+				DCAA9415278FB6ED004AA9D2 /* ChatViewController.swift */,
+				DCAA9413278FAE45004AA9D2 /* DetailViewController.swift */,
+				DC030E2E27910716000B83B9 /* SocketManager.swift */,
 				DC039988278BB39700509BC4 /* Assets.xcassets */,
 				DC03998A278BB39700509BC4 /* LaunchScreen.storyboard */,
 				DC03998D278BB39700509BC4 /* Info.plist */,
@@ -89,6 +105,10 @@
 			dependencies = (
 			);
 			name = CLASS_WEEK16;
+			packageProductDependencies = (
+				DC030E292790F98A000B83B9 /* SocketIO */,
+				DC030E2C2790FE5A000B83B9 /* Alamofire */,
+			);
 			productName = CLASS_WEEK16;
 			productReference = DC03997C278BB39500509BC4 /* CLASS_WEEK16.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +137,10 @@
 				Base,
 			);
 			mainGroup = DC039973278BB39400509BC4;
+			packageReferences = (
+				DC030E282790F98A000B83B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+				DC030E2B2790FE5A000B83B9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DC03997D278BB39500509BC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,9 +170,13 @@
 			files = (
 				DCAA940E278E5C5A004AA9D2 /* ConcurrencyViewController.swift in Sources */,
 				DC039994278BD2B200509BC4 /* SwizzlingViewController.swift in Sources */,
+				DCAA9416278FB6ED004AA9D2 /* ChatViewController.swift in Sources */,
 				DC039984278BB39500509BC4 /* ViewController.swift in Sources */,
 				DC039980278BB39500509BC4 /* AppDelegate.swift in Sources */,
+				DCAA9412278FA88B004AA9D2 /* ButtonViewController.swift in Sources */,
 				DC039982278BB39500509BC4 /* SceneDelegate.swift in Sources */,
+				DC030E2F27910716000B83B9 /* SocketManager.swift in Sources */,
+				DCAA9414278FAE45004AA9D2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +396,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC030E282790F98A000B83B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 16.0.1;
+			};
+		};
+		DC030E2B2790FE5A000B83B9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC030E292790F98A000B83B9 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC030E282790F98A000B83B9 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+		DC030E2C2790FE5A000B83B9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC030E2B2790FE5A000B83B9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC039974278BB39500509BC4 /* Project object */;
 }
