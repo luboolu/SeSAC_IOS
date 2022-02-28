@@ -13,9 +13,9 @@
 		DC143CC82795368B006F0244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC143CC72795368B006F0244 /* Assets.xcassets */; };
 		DC143CCB2795368B006F0244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC143CC92795368B006F0244 /* LaunchScreen.storyboard */; };
 		DC143CD4279536F5006F0244 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DC143CD3279536F5006F0244 /* FirebaseAuth */; };
-		DC143CD6279537BE006F0244 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC143CD5279537BD006F0244 /* GoogleService-Info.plist */; };
 		DC143CEF27953FD7006F0244 /* UserAuthentificationMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC143CEE27953FD7006F0244 /* UserAuthentificationMessageViewController.swift */; };
 		DC143CF2279544C5006F0244 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DC143CF1279544C5006F0244 /* SnapKit */; };
+		DCDE3677279C5BD40077847C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCDE3676279C5BD40077847C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,10 +39,10 @@
 		DC143CC72795368B006F0244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC143CCA2795368B006F0244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC143CCC2795368B006F0244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC143CD5279537BD006F0244 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC143CD7279538FC006F0244 /* SeSAC_Friends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeSAC_Friends.entitlements; sourceTree = "<group>"; };
 		DC143CDE27953B79006F0244 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		DC143CEE27953FD7006F0244 /* UserAuthentificationMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentificationMessageViewController.swift; sourceTree = "<group>"; };
+		DCDE3676279C5BD40077847C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 				DC143CC72795368B006F0244 /* Assets.xcassets */,
 				DC143CC92795368B006F0244 /* LaunchScreen.storyboard */,
 				DC143CCC2795368B006F0244 /* Info.plist */,
-				DC143CD5279537BD006F0244 /* GoogleService-Info.plist */,
+				DCDE3676279C5BD40077847C /* GoogleService-Info.plist */,
 			);
 			path = SeSAC_FirebaseNumberAuth;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC143CCB2795368B006F0244 /* LaunchScreen.storyboard in Resources */,
-				DC143CD6279537BE006F0244 /* GoogleService-Info.plist in Resources */,
+				DCDE3677279C5BD40077847C /* GoogleService-Info.plist in Resources */,
 				DC143CC82795368B006F0244 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

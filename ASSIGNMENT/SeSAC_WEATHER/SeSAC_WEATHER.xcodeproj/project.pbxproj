@@ -79,8 +79,8 @@
 				DCD6FA892726A29700FD9EF4 /* WeatherViewController.swift */,
 				DCF979F72729245500BE64A0 /* WeatherAPIManager'.swift */,
 				DCD6FA7827269EB600FD9EF4 /* Assets.xcassets */,
-				DCD6FA7A27269EB600FD9EF4 /* LaunchScreen.storyboard */,
 				DCD6FA7D27269EB600FD9EF4 /* Info.plist */,
+				DCD6FA7A27269EB600FD9EF4 /* LaunchScreen.storyboard */,
 			);
 			path = SeSAC_WEATHER;
 			sourceTree = "<group>";

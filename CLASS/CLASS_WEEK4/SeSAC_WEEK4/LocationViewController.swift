@@ -30,10 +30,6 @@ class LocationViewController: UIViewController {
             self.userCurrentLocationLable.alpha = 1
         }
         
-        
-        
-        
-        
         mapView.delegate = self
         
         //2.
