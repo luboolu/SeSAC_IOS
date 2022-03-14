@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC1BD3E9272F6F3900308E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */; };
+		DC1BD3EB272F6F3900308E15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */; };
+		DC1BD3ED272F6F3900308E15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD3EC272F6F3900308E15 /* ViewController.swift */; };
+		DC1BD3F0272F6F3900308E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3EE272F6F3900308E15 /* Main.storyboard */; };
+		DC1BD3F2272F6F3B00308E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */; };
+		DC1BD3F5272F6F3B00308E15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */; };
+		DC1BD400272F702400308E15 /* SCDream2.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3FE272F700D00308E15 /* SCDream2.otf */; };
+		DC1BD401272F702800308E15 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3FF272F700D00308E15 /* SCDream5.otf */; };
+		DC1BD402272F702D00308E15 /* SCDream8.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD3FD272F700D00308E15 /* SCDream8.otf */; };
+		DC1BD405272F739900308E15 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD404272F739900308E15 /* UIFont+Extension.swift */; };
+		DC1BD40B272F802000308E15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD40D272F802000308E15 /* Localizable.strings */; };
+		DC1BD412272F87BD00308E15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD414272F87BD00308E15 /* InfoPlist.strings */; };
+		DC1BD417272F88EA00308E15 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD416272F88EA00308E15 /* String+Extension.swift */; };
+		DC1BD419272F8A1E00308E15 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD418272F8A1E00308E15 /* LocalizableStrings.swift */; };
+		DC1BD41B2730270F00308E15 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD41A2730270F00308E15 /* Home.storyboard */; };
+		DC1BD41D2730271900308E15 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD41C2730271900308E15 /* Content.storyboard */; };
+		DC1BD41F2730272B00308E15 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD41E2730272B00308E15 /* Calendar.storyboard */; };
+		DC1BD4212730273100308E15 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4202730273100308E15 /* Search.storyboard */; };
+		DC1BD4232730273800308E15 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4222730273800308E15 /* Setting.storyboard */; };
+		DC1BD425273028E400308E15 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD424273028E400308E15 /* HomeViewController.swift */; };
+		DC1BD4272730290400308E15 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD4262730290400308E15 /* ContentViewController.swift */; };
+		DC1BD4292730291900308E15 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD4282730291900308E15 /* CalendarViewController.swift */; };
+		DC1BD42B2730293200308E15 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD42A2730293200308E15 /* SearchViewController.swift */; };
+		DC1BD42D2730294500308E15 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD42C2730294500308E15 /* SettingViewController.swift */; };
+		DC1BD42F273039CD00308E15 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD42E273039CD00308E15 /* AddViewController.swift */; };
+		DC1BD4332730414400308E15 /* KOTRA_SONGEULSSI.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4322730413900308E15 /* KOTRA_SONGEULSSI.otf */; };
+		DC1BD4352730419B00308E15 /* Bareun_hipi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC1BD4342730419B00308E15 /* Bareun_hipi.ttf */; };
+		DC1BD437273044E900308E15 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */; };
+		DC1BD43A2730C70400308E15 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DC1BD4392730C70400308E15 /* Realm */; };
+		DC1BD43C2730C70400308E15 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC1BD43B2730C70400308E15 /* RealmSwift */; };
+		DC1BD43F2730C98000308E15 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1BD43E2730C98000308E15 /* RealmModel.swift */; };
+		DC8FE9A12734ADBB005906C0 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = DC8FE9A02734ADBB005906C0 /* FSCalendar */; };
+		DC8FE9A32734B533005906C0 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */; };
+		DC8FE9A52734CE82005906C0 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9A42734CE82005906C0 /* RealmQuery.swift */; };
+		DC8FE9A72734D032005906C0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8FE9A62734D032005906C0 /* Date+Extension.swift */; };
+		DCA547B22738AAA300783CE4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */; };
+		DCA547B42738B19200783CE4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */; };
+		DCA6C30A27336DC6009DFFDC /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = DCA6C30927336DC6009DFFDC /* Zip */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC1BD3E5272F6F3900308E15 /* CLASS_WEEK6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLASS_WEEK6.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DC1BD3EC272F6F3900308E15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC1BD3EF272F6F3900308E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC1BD3F4272F6F3B00308E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC1BD3F6272F6F3B00308E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC1BD3FD272F700D00308E15 /* SCDream8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream8.otf; sourceTree = "<group>"; };
+		DC1BD3FE272F700D00308E15 /* SCDream2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream2.otf; sourceTree = "<group>"; };
+		DC1BD3FF272F700D00308E15 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		DC1BD404272F739900308E15 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		DC1BD406272F7C9F00308E15 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		DC1BD407272F7CA000308E15 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DC1BD40C272F802000308E15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC1BD40F272F804800308E15 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC1BD413272F87BD00308E15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC1BD415272F87BE00308E15 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC1BD416272F88EA00308E15 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		DC1BD418272F8A1E00308E15 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		DC1BD41A2730270F00308E15 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DC1BD41C2730271900308E15 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
+		DC1BD41E2730272B00308E15 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		DC1BD4202730273100308E15 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		DC1BD4222730273800308E15 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		DC1BD424273028E400308E15 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC1BD4262730290400308E15 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		DC1BD4282730291900308E15 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DC1BD42A2730293200308E15 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DC1BD42C2730294500308E15 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DC1BD42E273039CD00308E15 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DC1BD4322730413900308E15 /* KOTRA_SONGEULSSI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRA_SONGEULSSI.otf; sourceTree = "<group>"; };
+		DC1BD4342730419B00308E15 /* Bareun_hipi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bareun_hipi.ttf; sourceTree = "<group>"; };
+		DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		DC1BD43E2730C98000308E15 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		DC8FE9A42734CE82005906C0 /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
+		DC8FE9A62734D032005906C0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC1BD3E2272F6F3900308E15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA6C30A27336DC6009DFFDC /* Zip in Frameworks */,
+				DC8FE9A12734ADBB005906C0 /* FSCalendar in Frameworks */,
+				DC1BD43C2730C70400308E15 /* RealmSwift in Frameworks */,
+				DC1BD43A2730C70400308E15 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC1BD3DC272F6F3900308E15 = {
+			isa = PBXGroup;
+			children = (
+				DC1BD3E7272F6F3900308E15 /* CLASS_WEEK6 */,
+				DC1BD3E6272F6F3900308E15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC1BD3E6272F6F3900308E15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD3E5272F6F3900308E15 /* CLASS_WEEK6.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC1BD3E7272F6F3900308E15 /* CLASS_WEEK6 */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD3E8272F6F3900308E15 /* AppDelegate.swift */,
+				DC1BD3F1272F6F3B00308E15 /* Assets.xcassets */,
+				DC1BD403272F737E00308E15 /* Extension */,
+				DC1BD3FC272F6F7D00308E15 /* Font */,
+				DC1BD3F6272F6F3B00308E15 /* Info.plist */,
+				DC1BD408272F7FBA00308E15 /* Localization */,
+				DC1BD43D2730C96A00308E15 /* Realm */,
+				DC1BD3EA272F6F3900308E15 /* SceneDelegate.swift */,
+				DCB623BF273BA1EE00400A7C /* StoryBorad */,
+				DCB623C1273BA25600400A7C /* TableView */,
+				DCB623C0273BA1FD00400A7C /* ViewController */,
+			);
+			path = CLASS_WEEK6;
+			sourceTree = "<group>";
+		};
+		DC1BD3FC272F6F7D00308E15 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD3FE272F700D00308E15 /* SCDream2.otf */,
+				DC1BD3FF272F700D00308E15 /* SCDream5.otf */,
+				DC1BD3FD272F700D00308E15 /* SCDream8.otf */,
+				DC1BD4322730413900308E15 /* KOTRA_SONGEULSSI.otf */,
+				DC1BD4342730419B00308E15 /* Bareun_hipi.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DC1BD403272F737E00308E15 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD404272F739900308E15 /* UIFont+Extension.swift */,
+				DC1BD416272F88EA00308E15 /* String+Extension.swift */,
+				DC8FE9A62734D032005906C0 /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DC1BD408272F7FBA00308E15 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD40D272F802000308E15 /* Localizable.strings */,
+				DC1BD414272F87BD00308E15 /* InfoPlist.strings */,
+				DC1BD418272F8A1E00308E15 /* LocalizableStrings.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		DC1BD43D2730C96A00308E15 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD43E2730C98000308E15 /* RealmModel.swift */,
+				DC8FE9A42734CE82005906C0 /* RealmQuery.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		DCB623BF273BA1EE00400A7C /* StoryBorad */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD4222730273800308E15 /* Setting.storyboard */,
+				DC1BD4202730273100308E15 /* Search.storyboard */,
+				DC1BD41A2730270F00308E15 /* Home.storyboard */,
+				DC1BD41C2730271900308E15 /* Content.storyboard */,
+				DC1BD41E2730272B00308E15 /* Calendar.storyboard */,
+				DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */,
+				DC1BD3EE272F6F3900308E15 /* Main.storyboard */,
+			);
+			path = StoryBorad;
+			sourceTree = "<group>";
+		};
+		DCB623C0273BA1FD00400A7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD3EC272F6F3900308E15 /* ViewController.swift */,
+				DC1BD4282730291900308E15 /* CalendarViewController.swift */,
+				DC8FE9A22734B533005906C0 /* DatePickerViewController.swift */,
+				DC1BD42E273039CD00308E15 /* AddViewController.swift */,
+				DC1BD42A2730293200308E15 /* SearchViewController.swift */,
+				DC1BD4262730290400308E15 /* ContentViewController.swift */,
+				DC1BD42C2730294500308E15 /* SettingViewController.swift */,
+				DC1BD424273028E400308E15 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DCB623C1273BA25600400A7C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DC1BD436273044E900308E15 /* SearchResultTableViewCell.swift */,
+				DCA547B32738B19200783CE4 /* HomeCollectionViewCell.swift */,
+				DCA547B12738AAA200783CE4 /* HomeTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC1BD3E4272F6F3900308E15 /* CLASS_WEEK6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC1BD3F9272F6F3B00308E15 /* Build configuration list for PBXNativeTarget "CLASS_WEEK6" */;
+			buildPhases = (
+				DC1BD3E1272F6F3900308E15 /* Sources */,
+				DC1BD3E2272F6F3900308E15 /* Frameworks */,
+				DC1BD3E3272F6F3900308E15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLASS_WEEK6;
+			packageProductDependencies = (
+				DC1BD4392730C70400308E15 /* Realm */,
+				DC1BD43B2730C70400308E15 /* RealmSwift */,
+				DCA6C30927336DC6009DFFDC /* Zip */,
+				DC8FE9A02734ADBB005906C0 /* FSCalendar */,
+			);
+			productName = CLASS_WEEK6;
+			productReference = DC1BD3E5272F6F3900308E15 /* CLASS_WEEK6.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC1BD3DD272F6F3900308E15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					DC1BD3E4272F6F3900308E15 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = DC1BD3E0272F6F3900308E15 /* Build configuration list for PBXProject "CLASS_WEEK6" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ko,
+			);
+			mainGroup = DC1BD3DC272F6F3900308E15;
+			packageReferences = (
+				DC1BD4382730C70400308E15 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				DCA6C30827336DC6009DFFDC /* XCRemoteSwiftPackageReference "Zip" */,
+				DC8FE99F2734ADBB005906C0 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
+			productRefGroup = DC1BD3E6272F6F3900308E15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC1BD3E4272F6F3900308E15 /* CLASS_WEEK6 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC1BD3E3272F6F3900308E15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1BD4332730414400308E15 /* KOTRA_SONGEULSSI.otf in Resources */,
+				DC1BD402272F702D00308E15 /* SCDream8.otf in Resources */,
+				DC1BD412272F87BD00308E15 /* InfoPlist.strings in Resources */,
+				DC1BD4352730419B00308E15 /* Bareun_hipi.ttf in Resources */,
+				DC1BD401272F702800308E15 /* SCDream5.otf in Resources */,
+				DC1BD41B2730270F00308E15 /* Home.storyboard in Resources */,
+				DC1BD41D2730271900308E15 /* Content.storyboard in Resources */,
+				DC1BD41F2730272B00308E15 /* Calendar.storyboard in Resources */,
+				DC1BD400272F702400308E15 /* SCDream2.otf in Resources */,
+				DC1BD40B272F802000308E15 /* Localizable.strings in Resources */,
+				DC1BD3F5272F6F3B00308E15 /* LaunchScreen.storyboard in Resources */,
+				DC1BD3F2272F6F3B00308E15 /* Assets.xcassets in Resources */,
+				DC1BD4212730273100308E15 /* Search.storyboard in Resources */,
+				DC1BD3F0272F6F3900308E15 /* Main.storyboard in Resources */,
+				DC1BD4232730273800308E15 /* Setting.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC1BD3E1272F6F3900308E15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1BD42B2730293200308E15 /* SearchViewController.swift in Sources */,
+				DC1BD43F2730C98000308E15 /* RealmModel.swift in Sources */,
+				DC1BD42D2730294500308E15 /* SettingViewController.swift in Sources */,
+				DCA547B42738B19200783CE4 /* HomeCollectionViewCell.swift in Sources */,
+				DC1BD42F273039CD00308E15 /* AddViewController.swift in Sources */,
+				DC1BD4272730290400308E15 /* ContentViewController.swift in Sources */,
+				DC8FE9A52734CE82005906C0 /* RealmQuery.swift in Sources */,
+				DCA547B22738AAA300783CE4 /* HomeTableViewCell.swift in Sources */,
+				DC1BD3ED272F6F3900308E15 /* ViewController.swift in Sources */,
+				DC1BD419272F8A1E00308E15 /* LocalizableStrings.swift in Sources */,
+				DC1BD3E9272F6F3900308E15 /* AppDelegate.swift in Sources */,
+				DC8FE9A72734D032005906C0 /* Date+Extension.swift in Sources */,
+				DC1BD405272F739900308E15 /* UIFont+Extension.swift in Sources */,
+				DC1BD417272F88EA00308E15 /* String+Extension.swift in Sources */,
+				DC1BD4292730291900308E15 /* CalendarViewController.swift in Sources */,
+				DC8FE9A32734B533005906C0 /* DatePickerViewController.swift in Sources */,
+				DC1BD425273028E400308E15 /* HomeViewController.swift in Sources */,
+				DC1BD437273044E900308E15 /* SearchResultTableViewCell.swift in Sources */,
+				DC1BD3EB272F6F3900308E15 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC1BD3EE272F6F3900308E15 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1BD3EF272F6F3900308E15 /* Base */,
+				DC1BD406272F7C9F00308E15 /* ko */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC1BD3F3272F6F3B00308E15 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1BD3F4272F6F3B00308E15 /* Base */,
+				DC1BD407272F7CA000308E15 /* ko */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DC1BD40D272F802000308E15 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1BD40C272F802000308E15 /* en */,
+				DC1BD40F272F804800308E15 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DC1BD414272F87BD00308E15 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1BD413272F87BD00308E15 /* en */,
+				DC1BD415272F87BE00308E15 /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC1BD3F7272F6F3B00308E15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC1BD3F8272F6F3B00308E15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC1BD3FA272F6F3B00308E15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CLASS_WEEK6/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jy.CLASS-WEEK6";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC1BD3FB272F6F3B00308E15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H53VPN638;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CLASS_WEEK6/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jy.CLASS-WEEK6";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC1BD3E0272F6F3900308E15 /* Build configuration list for PBXProject "CLASS_WEEK6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1BD3F7272F6F3B00308E15 /* Debug */,
+				DC1BD3F8272F6F3B00308E15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC1BD3F9272F6F3B00308E15 /* Build configuration list for PBXNativeTarget "CLASS_WEEK6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1BD3FA272F6F3B00308E15 /* Debug */,
+				DC1BD3FB272F6F3B00308E15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC1BD4382730C70400308E15 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+		DC8FE99F2734ADBB005906C0 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		DCA6C30827336DC6009DFFDC /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC1BD4392730C70400308E15 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1BD4382730C70400308E15 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		DC1BD43B2730C70400308E15 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1BD4382730C70400308E15 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		DC8FE9A02734ADBB005906C0 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC8FE99F2734ADBB005906C0 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		DCA6C30927336DC6009DFFDC /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA6C30827336DC6009DFFDC /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DC1BD3DD272F6F3900308E15 /* Project object */;
+}

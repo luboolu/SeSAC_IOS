@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Newly View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewlyViewController" customModule="SSAC_NEWLYWORD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5U-6A-XGv" userLabel="Search Stack View">
+                                <rect key="frame" x="32" y="64" width="350" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="신조어를 입력해주세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N15-7E-bmU">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbp-JT-YCA">
+                                        <rect key="frame" x="305" y="0.0" width="45" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="bdI-AO-fv1"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                        <connections>
+                                            <action selector="searchButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0g-FJ-jHQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="MSw-my-Mug"/>
+                                    <constraint firstAttribute="height" constant="40" id="UK7-Jg-jID"/>
+                                    <constraint firstItem="Vbp-JT-YCA" firstAttribute="leading" secondItem="N15-7E-bmU" secondAttribute="trailing" id="hZP-jy-dIr"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="adU-qn-DxG" userLabel="Tag View">
+                                <rect key="frame" x="32" y="112" width="350" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-IO-xi9">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="pQu-ux-Xa5"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tag1">
+                                            <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="1">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tagButton1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="189-5S-5kJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FC-rs-IBZ">
+                                        <rect key="frame" x="93.5" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Pxs-2p-4iF"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tag2">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tagButton2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1WP-9d-e0X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGP-yS-96L">
+                                        <rect key="frame" x="186.5" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="wdc-b5-Gfu"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tag3">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tagButton3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHS-9G-tSn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxw-Fp-Zg6">
+                                        <rect key="frame" x="280" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="kMh-Dm-Z7q"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tag4">
+                                            <backgroundConfiguration key="background" cornerRadius="10">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tagButton4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hz-Zv-Ifg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sM9-2H-vrQ"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pzJ-jI-SN5">
+                                <rect key="frame" x="8" y="298" width="398" height="300"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신조어 사전입니다!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-0A-SP7">
+                                <rect key="frame" x="40" y="438" width="334" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zWk-0A-SP7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="00j-fh-kQF"/>
+                            <constraint firstItem="pzJ-jI-SN5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wf-9q-gGd"/>
+                            <constraint firstItem="pzJ-jI-SN5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5jy-z5-3PF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pzJ-jI-SN5" secondAttribute="trailing" constant="8" id="7jo-CX-YR2"/>
+                            <constraint firstItem="zWk-0A-SP7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="B55-d0-Y7V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p5U-6A-XGv" secondAttribute="trailing" constant="32" id="H1R-uy-j9O"/>
+                            <constraint firstItem="adU-qn-DxG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mtt-KL-j4D"/>
+                            <constraint firstItem="p5U-6A-XGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PUp-xR-Sqt"/>
+                            <constraint firstItem="p5U-6A-XGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="WJH-hX-Pco"/>
+                            <constraint firstItem="p5U-6A-XGv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aHd-5l-TTY"/>
+                            <constraint firstItem="adU-qn-DxG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="cHz-SX-fbp"/>
+                            <constraint firstItem="zWk-0A-SP7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5f-s8-0NI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adU-qn-DxG" secondAttribute="trailing" constant="32" id="ofh-cb-UT5"/>
+                            <constraint firstItem="pzJ-jI-SN5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u74-O5-lxl"/>
+                            <constraint firstItem="adU-qn-DxG" firstAttribute="top" secondItem="p5U-6A-XGv" secondAttribute="bottom" constant="8" id="zBx-vp-KVs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zWk-0A-SP7" secondAttribute="trailing" constant="40" id="zwg-6E-lcr"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5kK-dc-kfm" appends="YES" id="3Lh-mh-ula"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="zWk-0A-SP7" id="l3a-db-ViR"/>
+                        <outlet property="searchButton" destination="Vbp-JT-YCA" id="HLy-SM-7el"/>
+                        <outlet property="searchTextField" destination="N15-7E-bmU" id="rA0-Qa-SKc"/>
+                        <outlet property="tagButton1" destination="t5N-IO-xi9" id="FD7-uH-8rn"/>
+                        <outlet property="tagButton2" destination="5FC-rs-IBZ" id="W71-9Q-IWR"/>
+                        <outlet property="tagButton3" destination="KGP-yS-96L" id="wZw-K2-JT8"/>
+                        <outlet property="tagButton4" destination="Mxw-Fp-Zg6" id="0Uh-z4-p0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5kK-dc-kfm">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="BYZ-38-t0r" id="GhH-NQ-oit"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="300" height="300"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
