@@ -89,6 +89,8 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-ASSIGNMENT/**/GoogleService-Info.plist
+GoogleService-Info.plist
 
-ASSIGNMENT/**/Info.plist
+Info.plist
+
+pancakes.jpg
