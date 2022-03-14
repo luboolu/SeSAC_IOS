@@ -17,6 +17,13 @@
 		DC2285F027CC5A0F00089960 /* CLASS_WEEK23UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2285EF27CC5A0F00089960 /* CLASS_WEEK23UITests.swift */; };
 		DC2285F227CC5A0F00089960 /* CLASS_WEEK23UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2285F127CC5A0F00089960 /* CLASS_WEEK23UITestsLaunchTests.swift */; };
 		DC2285FF27CC624400089960 /* UserTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2285FE27CC624400089960 /* UserTextFieldTest.swift */; };
+		DC22860527CEFBA400089960 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22860427CEFBA400089960 /* LoginViewController.swift */; };
+		DC22860727CEFE4400089960 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22860627CEFE4400089960 /* LoginViewControllerTests.swift */; };
+		DC22860A27CF04D800089960 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22860927CF04D800089960 /* User.swift */; };
+		DC22860C27CF04FE00089960 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22860B27CF04FE00089960 /* Validator.swift */; };
+		DC22860E27CF065200089960 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22860D27CF065200089960 /* ValidatorTests.swift */; };
+		DC22861127D044A300089960 /* APIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22861027D044A300089960 /* APIServiceTest.swift */; };
+		DC22861327D044EB00089960 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22861227D044EA00089960 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		DC2285EF27CC5A0F00089960 /* CLASS_WEEK23UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLASS_WEEK23UITests.swift; sourceTree = "<group>"; };
 		DC2285F127CC5A0F00089960 /* CLASS_WEEK23UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLASS_WEEK23UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC2285FE27CC624400089960 /* UserTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextFieldTest.swift; sourceTree = "<group>"; };
+		DC22860427CEFBA400089960 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DC22860627CEFE4400089960 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		DC22860927CF04D800089960 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DC22860B27CF04FE00089960 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		DC22860D27CF065200089960 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		DC22861027D044A300089960 /* APIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTest.swift; sourceTree = "<group>"; };
+		DC22861227D044EA00089960 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,10 @@
 				DC2285CE27CC5A0D00089960 /* AppDelegate.swift */,
 				DC2285D027CC5A0D00089960 /* SceneDelegate.swift */,
 				DC2285D227CC5A0D00089960 /* ViewController.swift */,
+				DC22860427CEFBA400089960 /* LoginViewController.swift */,
+				DC22860927CF04D800089960 /* User.swift */,
+				DC22860B27CF04FE00089960 /* Validator.swift */,
+				DC22861227D044EA00089960 /* APIService.swift */,
 				DC2285D427CC5A0D00089960 /* Main.storyboard */,
 				DC2285D727CC5A0F00089960 /* Assets.xcassets */,
 				DC2285D927CC5A0F00089960 /* LaunchScreen.storyboard */,
@@ -116,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				DC2285E527CC5A0F00089960 /* CLASS_WEEK23Tests.swift */,
+				DC22860627CEFE4400089960 /* LoginViewControllerTests.swift */,
+				DC22860D27CF065200089960 /* ValidatorTests.swift */,
+				DC22861027D044A300089960 /* APIServiceTest.swift */,
 			);
 			path = CLASS_WEEK23Tests;
 			sourceTree = "<group>";
@@ -261,8 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC22860527CEFBA400089960 /* LoginViewController.swift in Sources */,
+				DC22861327D044EB00089960 /* APIService.swift in Sources */,
 				DC2285D327CC5A0D00089960 /* ViewController.swift in Sources */,
 				DC2285CF27CC5A0D00089960 /* AppDelegate.swift in Sources */,
+				DC22860A27CF04D800089960 /* User.swift in Sources */,
+				DC22860C27CF04FE00089960 /* Validator.swift in Sources */,
 				DC2285D127CC5A0D00089960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC22860E27CF065200089960 /* ValidatorTests.swift in Sources */,
+				DC22860727CEFE4400089960 /* LoginViewControllerTests.swift in Sources */,
+				DC22861127D044A300089960 /* APIServiceTest.swift in Sources */,
 				DC2285E627CC5A0F00089960 /* CLASS_WEEK23Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,12 +1,13 @@
 <h1>SeSAC iOS 앱 개발자 데뷔과정</h1>
+<h2>2021.9 ~ 2022.3</h2>
 
-<p><2021년 9월 27부터 <b>SSAC</b>(Seoul Software Academy Cluster)의 iOS 앱 개발자 데뷔과정에 참여하고 있습니다.</p>
-
-<p>이 과정에서 진행한 과제들을 올리고 있습니다.</p>
+<p><b>SSAC</b>(Seoul Software Academy Cluster)의 'iOS 앱 개발자 데뷔과정'에서 수업 외로 진행하는 데일리 미션으로 진행한 과제입니다.</p>
 
 <h2>NEWLY WORD</h2>
 
 ![simulator](https://user-images.githubusercontent.com/58027136/136218163-4deba495-6caa-42df-809f-29ad35c18eea.gif)
+<p>신조어 검색 사전 어플리케이션</p>
+
 
 
 <h2>EMOTION DIARY</h2>

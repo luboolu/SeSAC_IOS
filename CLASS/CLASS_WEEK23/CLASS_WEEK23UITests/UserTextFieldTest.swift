@@ -35,12 +35,14 @@ class UserTextFieldTest: XCTestCase {
         app.textFields["firstTextField"].typeText("안녕하세요")
         
         app.textFields["secondTextField"].tap()
-        app.textFields["secondTextField"].typeText("안녕하세요")
+        app.textFields["secondTextField"].typeText("1234")
         
         app.textFields["thirdTextField"].tap()
-        app.textFields["thirdTextField"].typeText("안녕하세요")
+        app.textFields["thirdTextField"].typeText("1234")
                 
-                
+        app.buttons["firstButton"].tap()
+        
+        XCTAssertEqual(app.staticTexts.element(matching: .any, identifier: "firstLabel").label, "안녕하세요", "잘못됐다. 수정해야한다.")
     }
 
 }

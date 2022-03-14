@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstTextField: UITextField!
     
+    @IBOutlet weak var firstLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,5 +22,8 @@ class ViewController: UIViewController {
         return firstTextField.text?.count ?? 0
     }
 
+    @IBAction func firstButtonClicked(_ sender: UIButton) {
+        firstLabel.text = firstTextField.text
+    }
 }
 
