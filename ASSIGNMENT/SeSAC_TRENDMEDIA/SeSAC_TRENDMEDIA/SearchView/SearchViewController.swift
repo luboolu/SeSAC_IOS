@@ -162,7 +162,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.titleLable.text = row.title
         cell.titleLable.font = .systemFont(ofSize: 18, weight: .light)
         
-        cell.overviewLable.text = "영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 영화 줄거리 "
+        cell.overviewLable.text = "\(row.userRatingData)"
         cell.overviewLable.font = .systemFont(ofSize: 15, weight: .light)
         
         return cell

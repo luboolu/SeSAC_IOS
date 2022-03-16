@@ -229,7 +229,7 @@ extension MovieTrendInfoViewController: UITableViewDelegate, UITableViewDataSour
             cell.movieTitleLable.text = row.title
             cell.movieTitleLable.font = .systemFont(ofSize: 25)
             
-            cell.movieCastLabel.text = "출연진"
+            cell.movieCastLabel.text = row.releaseDate
             cell.movieCastLabel.font = .systemFont(ofSize: 15, weight: .light)
             
             return cell

@@ -7,36 +7,50 @@
 
 ![simulator](https://user-images.githubusercontent.com/58027136/136218163-4deba495-6caa-42df-809f-29ad35c18eea.gif)
 <p>신조어 검색 사전<br>
-상단 textfield에 입력된 신조어에 대해서 뜻을 보여줌</p>
+- 상단 textfield에 입력된 신조어에 대해서 뜻을 보여줌</p>
 
 <h2>EMOTION DIARY</h2>
 
 ![simulator](https://user-images.githubusercontent.com/58027136/136218208-23bf66d8-034c-481e-94d5-ff9a09d70959.gif)
 <p>감정 다이어리<br>
-한달 동안 9가지의 감정을 얼마나 느꼈는지에 대해 기록할 수 있음</p>
+- 한달 동안 9가지의 감정을 얼마나 느꼈는지에 대해 기록할 수 있음</p>
 
 <h2>dday calculator</h2>
 
 ![simulator_dday](https://user-images.githubusercontent.com/58027136/136355563-c8c2b9ed-62a7-466c-b892-e101186a0b3f.gif)
+<p>디데이 달력<br>
+- FSCalendar를 사용하여 달력을 구현<br>
+- 달력에서 선택된 날짜를 기준으로 D+100, D+200, D+300, D+400이 언제인지 계산하여 보여줌</p>
 
 
 <h2>WATER</h2>
 
 ![Simulator Screen Recording - iPhone 11 - 2021-10-11 at 00 04 29](https://user-images.githubusercontent.com/58027136/136701612-7c05c810-b10d-43b4-bf41-b4bceb1b38dc.gif)
+<p>물 마시기<br>
+- 키, 몸무게를 입력받아 하루 권장 물 섭취량을 알려줌<br>
+- 위 정보를 기반으로 하루에 물을 얼마나 먹었는지 기록할 수 있음</p>
 
 
 <h2>MYSHOPPINGLIST</h2>
 
 ![Simulator Screen Recording - iPhone 11 - 2021-11-06 at 00 02 53](https://user-images.githubusercontent.com/58027136/140532059-71f344b0-d0eb-4595-853c-b1739ab9b24e.gif)
+<p>쇼핑 리스트<br>
+- TableView를 사용하여 구매할 상품들의 목록을 보여줌<br>
+- 추가된 목록을 swipe하여 삭제할 수 있음<br>
+- 즐겨찾기를 설정하면 목록의 상단으로 이동<br>
+- 체크 버튼을 통해 구매 여부를 표시할 수 있음</p>
 
-
-<a href="https://lumpy-chip-1b8.notion.site/SeSAC_MYSHOPPINGLIST-30fcfc1b0ca74367aa061e70f82bf048"><p>My ShoppingList Notion</p></a>
 
 <h2>TRENDMEDIA</h2>
 
-![Simulator Screen Recording - iPhone 11 - 2021-10-20 at 20 29 37](https://user-images.githubusercontent.com/58027136/138105918-78e379b4-b2b0-446e-a969-40d4ccbfb984.gif)
+![TrendMedia_Demo](https://user-images.githubusercontent.com/58027136/158573231-8e9d920b-4c79-4b27-981c-a47cdbcf14b0.gif)
 
 <a href="https://lumpy-chip-1b8.notion.site/SeSAC_TRENDMEDIA-12c9a3c34b2f413dbad4a2716dc87fad"><p>TrendMidia Notion</p></a>
+<p>Trend Media<br>
+- tmdb api를 사용하여 현재 있기있는 드라마, 영화 순위 및 정보를 보여줌
+- 드라마, 영화의 출연진을 확인할 수 있음
+- 검색 기능을 통해 영화 정보를 검색할 수 있음
+</p>
 
 
 <h2>WEATHER</h2>
