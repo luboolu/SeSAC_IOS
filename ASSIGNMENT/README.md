@@ -43,7 +43,7 @@
 
 <h2>TRENDMEDIA</h2>
 
-![TrendMedia_Demo](https://user-images.githubusercontent.com/58027136/158573231-8e9d920b-4c79-4b27-981c-a47cdbcf14b0.gif)
+<img src= "https://user-images.githubusercontent.com/58027136/158627139-08802fa6-8aa1-463d-90d1-807ffe6f2c3e.gif" width = 300>
 
 <a href="https://lumpy-chip-1b8.notion.site/SeSAC_TRENDMEDIA-12c9a3c34b2f413dbad4a2716dc87fad"><p>TrendMidia Notion</p></a>
 <p>Trend Media<br>
@@ -58,9 +58,14 @@
 ![Simulator Screen Recording - iPhone 11 - 2021-10-26 at 21 53 25](https://user-images.githubusercontent.com/58027136/138883390-1ed2bc00-010b-4022-88c9-2e74f6a1c6f4.gif)
 
 <a href="https://lumpy-chip-1b8.notion.site/SeSAC_WEATHER-a241cfd4bd24427b8035d4c712567058"><p>Weather Notion</p></a>
+<p>날씨 정보<br>
+- 사용자의 현재 위치를 기반으로 OpenWeather Api를 사용하여 날씨 정보를 보여줌 
+</p>
 
 
 <h2>KOFICMOVIE</h2>
 
-
 ![Simulator Screen Recording - iPhone 11 - 2021-11-03 at 22 36 46](https://user-images.githubusercontent.com/58027136/140070340-e86d7c90-74c7-4b63-94b3-ebe0cf3403a0.gif)
+<p>박스오피스 순위 <br>
+- 검색된 날짜의 박스오피스 순위를 Kofic Api를 사용하여 보여줌 
+</p>
