@@ -6,14 +6,14 @@
 <h2>NEWLY WORD</h2>
 
 ![simulator](https://user-images.githubusercontent.com/58027136/136218163-4deba495-6caa-42df-809f-29ad35c18eea.gif)
-신조어 검색 사전
-상단 textfield에 입력된 신조어에 대해서 뜻을 보여줌
+<p>신조어 검색 사전<br>
+상단 textfield에 입력된 신조어에 대해서 뜻을 보여줌</p>
 
 <h2>EMOTION DIARY</h2>
 
 ![simulator](https://user-images.githubusercontent.com/58027136/136218208-23bf66d8-034c-481e-94d5-ff9a09d70959.gif)
-감정 다이어리
-한달 동안 9가지의 감정을 얼마나 느꼈는지에 대해 기록할 수 있음
+<p>감정 다이어리<br>
+한달 동안 9가지의 감정을 얼마나 느꼈는지에 대해 기록할 수 있음</p>
 
 <h2>dday calculator</h2>
 
