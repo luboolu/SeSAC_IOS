@@ -28,7 +28,8 @@
 ![Simulator Screen Recording - iPhone 11 - 2021-10-11 at 00 04 29](https://user-images.githubusercontent.com/58027136/136701612-7c05c810-b10d-43b4-bf41-b4bceb1b38dc.gif)
 <p>물 마시기<br>
 - 키, 몸무게를 입력받아 하루 권장 물 섭취량을 알려줌<br>
-- 위 정보를 기반으로 하루에 물을 얼마나 먹었는지 기록할 수 있음</p>
+- 위 정보를 기반으로 하루에 물을 얼마나 먹었는지 기록할 수 있음<br>
+- 로컬 푸시 알림 구</p>
 
 
 <h2>MYSHOPPINGLIST</h2>
@@ -69,3 +70,16 @@
 <p>박스오피스 순위 <br>
 - 검색된 날짜의 박스오피스 순위를 Kofic Api를 사용하여 보여줌 
 </p>
+
+<h2>BEER</h2>
+
+![SeSAC_BEER](https://user-images.githubusercontent.com/58027136/158780319-199d5e08-023d-47a9-884d-6a2b3a50c608.gif)
+<p>맥주 정보<br>
+- beer open api를 사용하여 랜덤으로 맥주 정보를 보여줌<br>ß
+- tableview의 stretch header를 구현 </p>
+
+<h2>LOTTERTY</h2>
+![SeSAC_LOTTERY](https://user-images.githubusercontent.com/58027136/158780328-befae904-51fe-4175-b105-a457ab3b8406.gif)
+<p>로또 당첨 결과<br>
+- picker view에서 회차 정보를 입력 받고<br>
+- 입력된 회차의 로또 당첨 결과를 api 통신을 통해 보여줌</p>
