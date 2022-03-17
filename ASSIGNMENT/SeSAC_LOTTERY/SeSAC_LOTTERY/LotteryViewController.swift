@@ -25,7 +25,7 @@ class LotteryViewController: UIViewController {
     @IBOutlet weak var bonusNumLabel: UILabel!
     
     
-    let pickList = Array(1...986).sorted(by: >)
+    let pickList = Array(1...1006).sorted(by: >)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +88,7 @@ extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         //pickerView의 row가 선택되었을때!
         //API로부터 정보를 받아와야 한다.
         roundTextField.text = String(pickList[row])
+        resultRoundLabel.text = "\(pickList[row])회 당첨결과"
         getLotteryInfo(round: pickList[row])
         
     }
