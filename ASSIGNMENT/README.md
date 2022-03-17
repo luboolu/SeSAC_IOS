@@ -74,12 +74,15 @@
 <h2>BEER</h2>
 
 ![SeSAC_BEER](https://user-images.githubusercontent.com/58027136/158780319-199d5e08-023d-47a9-884d-6a2b3a50c608.gif)
+
 <p>맥주 정보<br>
-- beer open api를 사용하여 랜덤으로 맥주 정보를 보여줌<br>ß
+- beer open api를 사용하여 랜덤으로 맥주 정보를 보여줌<br>
 - tableview의 stretch header를 구현 </p>
 
 <h2>LOTTERTY</h2>
+
 ![SeSAC_LOTTERY](https://user-images.githubusercontent.com/58027136/158780328-befae904-51fe-4175-b105-a457ab3b8406.gif)
+
 <p>로또 당첨 결과<br>
 - picker view에서 회차 정보를 입력 받고<br>
 - 입력된 회차의 로또 당첨 결과를 api 통신을 통해 보여줌</p>
